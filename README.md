@@ -8,7 +8,7 @@ The Compiler Warnings Test Suite (CWTS) contains C++ source code files, and each
 Installation 
 -------------
 
-1. Download and unpack CWTS.zip
+1. Clone or download the CWTS repository
 2. Edit CMakeLists.txt and adapt (1) and (2)
 3. Execute "cmake .; make" and enjoy the compiler warnings: the more the better! 
 
