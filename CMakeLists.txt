@@ -10,15 +10,15 @@ set (CMAKE_CXX_FLAGS "-Wall -Wextra")
 project (CWTS)
 
 add_executable (CWTS
-	test_comparison.cpp
-	test_constant_expression.cpp
-	test_dead_code.cpp
-	test_empty_file.cpp
-	test_format_string.cpp
-	test_pointer.cpp
-	test_static_function_unused.cpp
-	test_unused_parameter.cpp
-	test_variable_assignment.cpp
-	test_variable_used_uninitialized.cpp
-	test_variable_unused.cpp
+	Tests/comparison.cpp
+	Tests/constant_expression.cpp
+	Tests/dead_code.cpp
+	Tests/empty_file.cpp
+	Tests/format_string.cpp
+	Tests/pointer.cpp
+	Tests/static_function_unused.cpp
+	Tests/unused_parameter.cpp
+	Tests/variable_assignment.cpp
+	Tests/variable_used_uninitialized.cpp
+	Tests/variable_unused.cpp
 	)
