@@ -19,5 +19,5 @@ Only one rule applies: each file compiled without warning results in one penalty
 
 1. g++ 7.3.0 and -Wall -Wextra: 2 penalty points
 2. clang++ 6.0 and -Wall -Wextra: 2 penalty points
-3. MSVC: 
+3. MSVC: TBD
 
