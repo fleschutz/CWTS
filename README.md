@@ -26,7 +26,7 @@ How to enable the highest warning level?
   ```
   NOTE: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
   ```
-* Clang on Apple: `-Weverything -pedantic`
+* Clang: `-Weverything -pedantic`
 * MSVC: ?
 
 C++ Compiler Ranking 
