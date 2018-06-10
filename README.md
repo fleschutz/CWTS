@@ -7,6 +7,10 @@ The Compiler Warnings Test Suite (CWTS) contains C++ test cases (see folder Test
 
 The current CWTS version 1.0 of June 10, 2018 contains 21 test cases.
 
+Requirements
+------------
+A C++ compiler and cmake. That's it.
+
 Installation 
 -------------
 
@@ -30,7 +34,7 @@ C++ Compiler Ranking
 
 Only one rule applies: each file compiled without warning/error results in one penalty point. Results are based on CWTS 1.0 and highest warning level.
 
-1. g++ 7.3.0: 5 penalty points
-2. clang++ 6.0: 5 penalty points
+1. clang++ 6.0.0: 2 penalty points
+2. g++ 7.3.0: 5 penalty points
 3. MSVC: ?
 
