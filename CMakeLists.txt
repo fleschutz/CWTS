@@ -17,6 +17,7 @@ add_executable (CWTS
 	Tests/constant_overflow.cpp
 	Tests/division_by_zero.cpp
 	Tests/enum_unhandled.cpp
+	Tests/extra_tokens.cpp
 	Tests/file_empty.cpp
 	Tests/format_string.cpp
 	Tests/parameter_unused.cpp
