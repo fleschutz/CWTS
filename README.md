@@ -1,9 +1,11 @@
-The Compiler Warnings Test Suite
-================================
+The Compiler Warnings Test Suite (CWTS)
+=======================================
 
-How good is your C++ compiler about warnings?
+Programmers love good compiler warnings to avoid bad code. But how good is your C++ compiler about warnings?
 
-The Compiler Warnings Test Suite (CWTS) contains C++ source code files, and each file should produce one warning only. The current CWTS version 1.0 of June 9, 2018 contains 11 tests.
+The Compiler Warnings Test Suite (CWTS) contains C++ test cases (see folder Tests/). For each test case there is one source code, and it should produce one warning only.
+
+The current CWTS version 1.0 of June 10, 2018 contains 14 test cases.
 
 Installation 
 -------------
@@ -12,12 +14,20 @@ Installation
 2. Edit CMakeLists.txt and adapt (1) and (2)
 3. Execute "cmake .; make" and enjoy the compiler warnings: the more the better! 
 
-C++ Compiler Ranking for CWTS 1.0
----------------------------------
+How to enable the highest warning level?
+----------------------------------------
 
-Only one rule applies: each file compiled without warning results in one penalty point.
+* GCC 7: -Wall -Wextra -pedantic
+  NOTE: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
+* Clang on Apple: -Weverything
+* MSVC: ?
 
-1. g++ 7.3.0 and -Wall -Wextra: 2 penalty points
-2. clang++ 6.0 and -Wall -Wextra: 2 penalty points
-3. MSVC: TBD
+C++ Compiler Ranking 
+--------------------
+
+Only one rule applies: each file compiled without warning results in one penalty point. Results are based on CWTS 1.0 and highest warning level.
+
+1. g++ 7.3.0: 5 penalty points
+2. clang++ 6.0: 5 penalty points
+3. MSVC: ?
 
