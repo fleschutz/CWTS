@@ -22,6 +22,7 @@ add_executable (CWTS
 	Tests/variable_assignment.cpp
 	Tests/variable_compare.cpp
 	Tests/variable_init_self.cpp
+	Tests/variable_shadowed.cpp
 	Tests/variable_used_uninitialized.cpp
 	Tests/variable_unused.cpp
 	)
