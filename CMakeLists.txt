@@ -12,6 +12,7 @@ add_executable (CWTS
 	Tests/code_unreachable_1.cpp
 	Tests/code_unreachable_2.cpp
 	Tests/code_unreachable_3.cpp
+	Tests/comment.cpp
 	Tests/constant_expression.cpp
 	Tests/constant_overflow.cpp
 	Tests/division_by_zero.cpp
