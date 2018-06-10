@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 2.6)
 
 # (1) Specify your C++ compiler here:
-set (CMAKE_CXX "/usr/bin/clang++")
+set (CMAKE_CXX "/usr/bin/g++")
 
 # (2) Specify your warning settings here:
 set (CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic")
@@ -13,6 +13,7 @@ add_executable (CWTS
 	Tests/code_unreachable_2.cpp
 	Tests/code_unreachable_3.cpp
 	Tests/constant_expression.cpp
+	Tests/enum_unhandled.cpp
 	Tests/file_empty.cpp
 	Tests/format_string.cpp
 	Tests/parameter_unused.cpp
