@@ -4,7 +4,7 @@ cmake_minimum_required (VERSION 2.6)
 set (CMAKE_CXX "/usr/bin/g++")
 
 # (2) Specify your warning settings here:
-set (CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic -Wundef")
+set (CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic -Wundef -Wshadow")
 
 project (CWTS)
 
@@ -13,6 +13,8 @@ add_executable (CWTS
 	Tests/code_unreachable_2.cpp
 	Tests/code_unreachable_3.cpp
 	Tests/constant_expression.cpp
+	Tests/constant_overflow.cpp
+	Tests/division_by_zero.cpp
 	Tests/enum_unhandled.cpp
 	Tests/file_empty.cpp
 	Tests/format_string.cpp
