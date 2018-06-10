@@ -1,4 +1,4 @@
-void test_variable_assignment()
+void variable_assignment()
 {
 	int a = 1, b = 2;
 

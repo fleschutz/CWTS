@@ -1,4 +1,4 @@
-void test_pointer()
+void pointer_null()
 {
 	int *ptr = nullptr;
 

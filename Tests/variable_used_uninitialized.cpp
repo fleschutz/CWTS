@@ -1,9 +1,7 @@
-void test_variable_used_unitialized()
+void variable_used_uninitialized()
 {
 	int a = 0, b;
 
 	if (a == 0)
-	{	
 		b++;
-	}
 }

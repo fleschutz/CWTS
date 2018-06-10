@@ -10,8 +10,8 @@ set (CMAKE_CXX_FLAGS "-Wall -Wextra")
 project (CWTS)
 
 add_executable (CWTS
+	Tests/code_unreachable.cpp
 	Tests/constant_expression.cpp
-	Tests/dead_code.cpp
 	Tests/file_empty.cpp
 	Tests/format_string.cpp
 	Tests/parameter_unused.cpp

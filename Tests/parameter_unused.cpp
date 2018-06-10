@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void test_unused_parameter(int a)
+void parameter_unused(int a)
 {
 	printf(" ");
 }

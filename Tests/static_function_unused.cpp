@@ -1,7 +1,4 @@
-void test_static_function_unused()
+static void static_function_unused()
 {
 }
 
-static void unused()
-{
-}
