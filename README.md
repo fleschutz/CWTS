@@ -10,7 +10,9 @@ The current CWTS version 1.0 of June 10, 2018 contains 21 test cases.
 Installation 
 -------------
 
-1. Clone or download the CWTS repository.
+1. Download the .zip file or clone the repository with:
+   git clone https://github.com/fleschutz/CWTS.git
+   cd CWTS
 2. Edit CMakeLists.txt and adapt your compiler (1) and your compiler warning settings (2).
 3. Execute "cmake .; make -k" and enjoy compiler warnings/errors: the more the better! 
 
