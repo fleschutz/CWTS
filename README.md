@@ -11,18 +11,18 @@ Installation
 -------------
 
 1. Download the .zip file or clone the repository with:
-   ´git clone https://github.com/fleschutz/CWTS.git´
+   `git clone https://github.com/fleschutz/CWTS.git`
 2. Enter the CWTS folder, edit CMakeLists.txt and adapt your compiler (1) and your compiler warning settings (2).
-3. Execute ´cmake .; make -k´ and enjoy compiler warnings/errors: the more the better! 
+3. Execute `cmake .; make -k` and enjoy compiler warnings/errors: the more the better! 
 
 How to enable the highest warning level?
 ----------------------------------------
 
-* GCC 7: -Wall -Wextra -pedantic -Wundef
-  ´´´
+* GCC 7: `-Wall -Wextra -pedantic -Wundef`
+  ```
   NOTE: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
-  ´´´
-* Clang on Apple: -Weverything -pedantic
+  ```
+* Clang on Apple: `-Weverything -pedantic`
 * MSVC: ?
 
 C++ Compiler Ranking 
