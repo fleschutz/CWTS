@@ -1,3 +1,6 @@
+extern void variable_used_uninitialized();
+
+
 void variable_used_uninitialized()
 {
 	int a = 0, b;
