@@ -25,6 +25,7 @@ add_executable (CWTS
 	Tests/function_without_return_value.cpp
 	Tests/identifier_undefined.cpp
 	Tests/label_unused.cpp
+	Tests/member_init_reorder.cpp
 	Tests/parameter_unused.cpp
 	Tests/parentheses.cpp
 	Tests/null_pointer_access.cpp
