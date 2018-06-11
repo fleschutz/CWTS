@@ -1,9 +1,9 @@
-extern void pointer_null();
+extern void null_pointer_access();
 
 
-void pointer_null()
+void null_pointer_access()
 {
-	int *ptr = nullptr;
+	static int *ptr;
 
 	*ptr = 0;
 }

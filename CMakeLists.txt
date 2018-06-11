@@ -9,6 +9,7 @@ set (CMAKE_CXX_FLAGS "-Weverything -pedantic")
 project (CWTS)
 
 add_executable (CWTS
+	Tests/array_bounds.cpp
 	Tests/code_unreachable_1.cpp
 	Tests/code_unreachable_2.cpp
 	Tests/code_unreachable_3.cpp
