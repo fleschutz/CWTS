@@ -20,6 +20,7 @@ add_executable (CWTS
 	Tests/extra_tokens.cpp
 	Tests/file_empty.cpp
 	Tests/format_string.cpp
+	Tests/function_without_prototype.cpp
 	Tests/parameter_unused.cpp
 	Tests/parentheses.cpp
 	Tests/null_pointer_access.cpp

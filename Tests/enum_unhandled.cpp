@@ -1,7 +1,7 @@
-extern int enum_unhandled(Color color);
-
-
 typedef enum { red, green, blue } Color;
+
+
+extern int enum_unhandled(Color color);
 
 
 int enum_unhandled(Color color)
