@@ -1,2 +1,0 @@
-#if NO_SUCH_IDENTIFIER_DEFINED
-#endif

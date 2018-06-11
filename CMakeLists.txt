@@ -22,12 +22,13 @@ add_executable (CWTS
 	Tests/file_empty.cpp
 	Tests/format_string.cpp
 	Tests/function_without_prototype.cpp
+	Tests/identifier_undefined.cpp
 	Tests/label_unused.cpp
 	Tests/parameter_unused.cpp
 	Tests/parentheses.cpp
 	Tests/null_pointer_access.cpp
 	Tests/static_function_unused.cpp
-	Tests/undefined_identifier.cpp
+	Tests/value_unused.cpp
 	Tests/variable_assignment.cpp
 	Tests/variable_compare.cpp
 	Tests/variable_init_self.cpp
