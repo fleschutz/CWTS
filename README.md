@@ -30,9 +30,9 @@ C++ Compiler Ranking
 
 Only one rule applies: each file compiled without any warning or error results in one penalty point. Results are based on CWTS 1.0 and highest warning level.
 
-1. *clang++ 6.0.0*: 2 penalty points
-2. *g++ 7.3.0*: 5 penalty points
-3. *MSVC*: ?
+1. **clang++ 6.0.0**: 2 penalty points
+2. **g++ 7.3.0**: 5 penalty points
+3. **MSVC**: ?
 
 Feedback
 ---------
