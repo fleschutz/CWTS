@@ -23,6 +23,7 @@ add_executable (CWTS
 	Tests/format_string.cpp
 	Tests/function_without_prototype.cpp
 	Tests/function_without_return_value.cpp
+	Tests/identical_branches.cpp
 	Tests/identifier_undefined.cpp
 	Tests/label_unused.cpp
 	Tests/member_init_reorder.cpp

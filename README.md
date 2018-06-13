@@ -1,7 +1,7 @@
 The Compiler Warnings Test Suite (CWTS)
 =======================================
 
-**Programmers love good compiler warnings to avoid bad code. But how good is your C++ compiler and your compiler settings about warnings? CWTS version 1.0 provides 30 test cases for C++. Each test case is handled by one source code file (see subfolder `Tests`), which should produce at least one warning or error.**
+**Programmers love good compiler warnings to avoid bad code. But how good is your C++ compiler and your compiler settings about warnings? CWTS version 1.0 provides 31 test cases for C++. Each test case is handled by one source code file (see subfolder `Tests`), which should produce at least one warning or error.**
 
 Requirements
 ------------
@@ -29,8 +29,8 @@ C++ Compiler Ranking
 
 Only one rule applies: each file compiled without any warning or error results in one penalty point. Results are based on CWTS 1.0 and highest warning level.
 
-1. **clang++ 6.0.0**: 2 penalty points
-2. **g++ 7.3.0**: 5 penalty points
+1. **clang++ 6.0.0**: 3 penalty points
+2. **g++ 7.3.0**: 6 penalty points
 3. **MSVC**: ?
 
 Feedback
