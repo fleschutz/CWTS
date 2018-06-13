@@ -36,6 +36,7 @@ add_executable (CWTS
 	Tests/variable_init_self.cpp
 	Tests/variable_size_array.cpp
 	Tests/variable_shadowed.cpp
-	Tests/variable_used_uninitialized.cpp
+	Tests/variable_unsequenced.cpp
 	Tests/variable_unused.cpp
+	Tests/variable_used_uninitialized.cpp
 	)
