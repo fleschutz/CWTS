@@ -10,8 +10,7 @@ Only a C++ compiler and cmake.
 Installation 
 -------------
 
-1. Download the .zip file or clone the repository with:
-   `git clone https://github.com/fleschutz/CWTS.git`
+1. Download the .zip file or clone the repository with `git clone https://github.com/fleschutz/CWTS.git`
 2. Enter the CWTS folder, edit `CMakeLists.txt` and adapt your compiler (1) and your compiler warning settings (2).
 3. Execute `cmake .; make -k` and enjoy compiler warnings/errors: the more the better! 
 
