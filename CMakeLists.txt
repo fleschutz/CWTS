@@ -3,7 +3,7 @@ cmake_minimum_required (VERSION 2.6)
 # (1) Specify your C++ compiler here:
 set (CMAKE_CXX_COMPILER "clang++")
 
-# (2) Specify your warning settings here:
+# (2) Specify your warning options here:
 set (CMAKE_CXX_FLAGS "-Weverything -pedantic")
 
 project (CWTS)
