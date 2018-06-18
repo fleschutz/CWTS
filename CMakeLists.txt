@@ -30,6 +30,7 @@ add_executable (CWTS
 	Tests/parameter_unused.cpp
 	Tests/parentheses.cpp
 	Tests/null_pointer_access.cpp
+	Tests/stack_address_returned.cpp
 	Tests/static_function_unused.cpp
 	Tests/value_unused.cpp
 	Tests/variable_assignment.cpp
