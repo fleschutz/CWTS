@@ -22,7 +22,9 @@ add_executable (CWTS
 	Tests/enum_unhandled.cpp
 	Tests/extra_tokens.cpp
 	Tests/file_empty.cpp
-	Tests/format_string.cpp
+	Tests/format_string_1.cpp
+	Tests/format_string_2.cpp
+	Tests/format_string_3.cpp
 	Tests/function_without_prototype.cpp
 	Tests/function_without_return_value.cpp
 	Tests/identifier_undefined.cpp
