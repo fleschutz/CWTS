@@ -33,6 +33,11 @@ Only one rule applies: each file compiled without any warning or error results i
 2. **g++ 7.3.0**: 6 penalty points
 3. **MSVC**: ?
 
+Links
+-----
+* [fuckingclangwarnings.com](http://fuckingclangwarnings.com)
+* [GCC Warning Options](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)
+
 Feedback
 ---------
 Your test case or your C++ compiler is missing? Any feedback is appreciated at markus (at) fleschutz (dot) de
