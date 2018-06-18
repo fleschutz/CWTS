@@ -5,7 +5,7 @@ The Compiler Warnings Test Suite (CWTS)
 
 Requirements
 ------------
-Only a C++ compiler and cmake. 
+A C++ compiler and cmake. 
 
 Installation 
 -------------
@@ -37,6 +37,6 @@ Feedback
 ---------
 Your test case or your C++ compiler is missing? Any feedback is appreciated at markus (at) fleschutz (dot) de
 
-Copyright
----------
-All trademarks are the property of their respective owners.
+License and Copyright
+---------------------
+This open source release is licensed under the MIT license. All trademarks are the property of their respective owners.
