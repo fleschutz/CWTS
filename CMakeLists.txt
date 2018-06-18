@@ -10,6 +10,7 @@ project (CWTS)
 
 add_executable (CWTS
 	Tests/array_bounds.cpp
+	Tests/branches_identical.cpp
 	Tests/code_unreachable_1.cpp
 	Tests/code_unreachable_2.cpp
 	Tests/code_unreachable_3.cpp
@@ -23,7 +24,6 @@ add_executable (CWTS
 	Tests/format_string.cpp
 	Tests/function_without_prototype.cpp
 	Tests/function_without_return_value.cpp
-	Tests/identical_branches.cpp
 	Tests/identifier_undefined.cpp
 	Tests/label_unused.cpp
 	Tests/member_init_reorder.cpp
