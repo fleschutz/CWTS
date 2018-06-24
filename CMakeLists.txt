@@ -23,6 +23,7 @@ add_executable (CWTS
 	Tests/constant_overflow.cpp
 	Tests/division_by_zero.cpp
 	Tests/enum_unhandled.cpp
+	Tests/enum_value.cpp
 	Tests/extra_tokens.cpp
 	Tests/file_empty.cpp
 	Tests/format_string_1.cpp
