@@ -41,6 +41,8 @@ add_executable (CWTS
 	Tests/stack_address_returned.cpp
 	Tests/static_function_unused.cpp
 	Tests/switch_body_empty.cpp
+	Tests/switch_code_unreachable.cpp
+	Tests/switch_default_missing.cpp
 	Tests/value_unused.cpp
 	Tests/variable_assignment.cpp
 	Tests/variable_compare.cpp
