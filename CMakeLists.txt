@@ -34,6 +34,8 @@ add_executable (CWTS
 	Tests/parameter_unused.cpp
 	Tests/parentheses.cpp
 	Tests/null_pointer_access.cpp
+	Tests/shift_count_negative.cpp
+	Tests/shift_count_overflow.cpp
 	Tests/stack_address_returned.cpp
 	Tests/static_function_unused.cpp
 	Tests/switch_body_empty.cpp
