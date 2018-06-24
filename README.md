@@ -1,7 +1,7 @@
 The Compiler Warnings Test Suite (CWTS)
 =======================================
 
-**Developers love good compiler warnings to avoid bad code. But how good is your C++ compiler and your compiler settings about warnings? CWTS version 1.0 provides 46 test cases for C++ to check this. Each test case is handled by one source code file (see subfolder `Tests`), which should produce at least one warning or error.**
+**Developers love good compiler warnings to avoid bad code. But how good is your C++ compiler and your compiler settings about warnings? CWTS version 1.0 provides 47 test cases for C++ to check this. Each test case is handled by one source code file (see subfolder `Tests`), which should produce at least one warning or error.**
 
 Requirements
 ------------
