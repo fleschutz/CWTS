@@ -12,6 +12,7 @@ add_executable (CWTS
 	Tests/array_bounds_1.cpp
 	Tests/array_bounds_2.cpp
 	Tests/array_braces_missing.cpp
+	Tests/bool_compare.cpp
 	Tests/branches_identical.cpp
 	Tests/code_unreachable_1.cpp
 	Tests/code_unreachable_2.cpp
@@ -39,6 +40,7 @@ add_executable (CWTS
 	Tests/shift_value_negative.cpp
 	Tests/shift_overflow.cpp
 	Tests/stack_address_returned.cpp
+	Tests/static_const_unused.cpp
 	Tests/static_function_unused.cpp
 	Tests/switch_body_empty.cpp
 	Tests/switch_code_unreachable.cpp
