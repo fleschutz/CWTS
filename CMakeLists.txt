@@ -11,6 +11,7 @@ project (CWTS)
 add_executable (CWTS
 	Tests/array_bounds_1.cpp
 	Tests/array_bounds_2.cpp
+	Tests/array_braces_missing.cpp
 	Tests/branches_identical.cpp
 	Tests/code_unreachable_1.cpp
 	Tests/code_unreachable_2.cpp
