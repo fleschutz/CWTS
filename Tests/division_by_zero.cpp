@@ -1,7 +1,7 @@
-extern double division_by_zero(double a);
+extern int division_by_zero(int a);
 
 
-double division_by_zero(double a)
+int division_by_zero(int a)
 {
-	return a / 0.0;
+	return a / 0;
 }
