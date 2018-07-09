@@ -36,6 +36,7 @@ add_executable (CWTS
 	Tests/member_init_reorder.cpp
 	Tests/parameter_unused.cpp
 	Tests/parentheses.cpp
+	Tests/pointer_compare.cpp
 	Tests/null_pointer_access.cpp
 	Tests/shift_count_negative.cpp
 	Tests/shift_count_overflow.cpp
