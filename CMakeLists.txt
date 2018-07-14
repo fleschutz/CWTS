@@ -41,6 +41,7 @@ add_executable (CWTS
 	Tests/parentheses.cpp
 	Tests/pointer_compare.cpp
 	Tests/null_pointer_access.cpp
+	Tests/recursive_include.cpp
 	Tests/shift_count_negative.cpp
 	Tests/shift_count_overflow.cpp
 	Tests/shift_value_negative.cpp
