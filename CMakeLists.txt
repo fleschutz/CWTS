@@ -32,6 +32,9 @@ add_executable (CWTS
 	Tests/function_without_prototype.cpp
 	Tests/function_without_return_value.cpp
 	Tests/identifier_undefined.cpp
+	Tests/implicit_conversion_1.cpp
+	Tests/implicit_conversion_2.cpp
+	Tests/implicit_conversion_3.cpp
 	Tests/label_unused.cpp
 	Tests/member_init_reorder.cpp
 	Tests/parameter_unused.cpp

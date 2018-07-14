@@ -1,7 +1,7 @@
 The Compiler Warnings Test Suite (CWTS)
 =======================================
 
-**Developers love good compiler warnings to avoid bad code. But how good is your C++ compiler and your compiler settings about warnings? CWTS version 1.0 provides 49 test cases for C++ to check this. Each test case is handled by one source code file (see subfolder `Tests`), which should produce at least one warning or error.**
+**Developers love good compiler warnings to avoid bad code. But how good is your C++ compiler and your compiler settings about warnings? CWTS version 1.0 provides 53 test cases for C++ to check this. Each test case is handled by one source code file (see subfolder `Tests`), which should produce at least one warning or error.**
 
 Requirements
 ------------
@@ -19,8 +19,8 @@ How to enable the highest warning level?
 > **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
 
 * Clang: `-Weverything -pedantic`
-
-* MSVC: TBD
+* Visual C++ compiler: TBD
+* Intel C++ compiler: TBD
 
 C++ Compiler Ranking 
 --------------------
@@ -37,7 +37,7 @@ If you are just starting to introduce the Zero Warnings Policy in your project y
 
 To enforce the Zero Warnings Policy turn warnings into errors. That way warnings can not be ignored because the build fails. This can be turned on for all warnings at once. The corresponding compiler options are `-Werror` for Clang and GCC and `/WX` for MSVC.
 
-Dear OS/framework/library developers: introducing the Zero Warnings Policy depends on the underlying operating system, framework and libraries beeing used. Please make sure your header files can be used without getting any compiler warnings!
+Dear OS/framework/library developers: introducing the Zero Warnings Policy heavily depends on the operating system, framework and libraries beeing used. Please make sure your header files can be used without getting any compiler warnings!
 
 Links
 -----
@@ -45,6 +45,7 @@ Links
 * [fuckingclangwarnings.com](http://fuckingclangwarnings.com)
 * [GCC Warning Options](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)
 * [MSVC Compiler Warnings](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warnings-by-compiler-version)
+* [Intel C++ Compilers](https://software.intel.com/en-us/c-compilers)
 
 Feedback
 ---------
