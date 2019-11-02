@@ -49,7 +49,7 @@ Links
 
 Feedback
 ---------
-A test case or a C++ compiler is missing? Your feedback is appreciated at markus (at) fleschutz (dot) de
+A test case or a C++ compiler is missing? Your feedback is appreciated at http://www.fleschutz.de
 
 License & Copyright
 -------------------
