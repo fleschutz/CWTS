@@ -9,9 +9,10 @@ Just a C++ compiler and cmake.
 
 Installation 
 -------------
-1. Download the .zip file or clone the repository with `git clone https://github.com/fleschutz/CWTS`
-2. Enter the CWTS folder, edit `CMakeLists.txt` and adapt your compiler (1) and your compiler warning options (2).
-3. Execute `cmake .; make -k` and enjoy compiler warnings/errors: the more the better! 
+1. Make sure cmake is installed.
+2. Download the .zip file or clone the repository with `git clone https://github.com/fleschutz/CWTS`
+3. Enter the CWTS folder, edit `CMakeLists.txt` and adapt your compiler (1) and your compiler warning options (2).
+4. Execute `cmake .; make -k` and enjoy compiler warnings/errors: the more the better! 
 
 How to enable the highest warning level?
 ----------------------------------------
