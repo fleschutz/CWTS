@@ -20,15 +20,17 @@ How to enable the highest warning level for my compiler?
 > **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
 
 * Clang: `-Weverything -pedantic`
-* Visual C++ compiler: TBD
-* Intel C++ compiler: TBD
+* MSVC: TBD
+* Intel C++: TBD
 
-C++ Compiler Ranking 
---------------------
-There is only one rule: each file compiled without any warning or error results in one penalty point. Results are based on CWTS 1.0 and highest warning level.
+Compiler Warnings Ranking 
+-------------------------
+Gentleman, there is just one rule for ranking: each test file compiled without any warning or error results in one penalty point. The following results are based on CWTS 1.0 and highest warning level enabled.
 
-1. **clang++ 6.0.0**: 9 penalty points
-2. **g++ 7.3.0**: 12 penalty points
+1. **Clang 6.0.0**: 9 penalty points
+2. **GCC 7.3.0**: 12 penalty points
+3. **MSVC**: TBD
+4. **Intel C++**: TBD
 
 The Zero Warnings Policy
 ------------------------
