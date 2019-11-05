@@ -14,8 +14,8 @@ Installation
 3. Enter the CWTS folder, edit `CMakeLists.txt` and adapt your compiler (1) and your compiler warning options (2).
 4. Execute `cmake .; make -k` and enjoy compiler warnings/errors: the more the better! 
 
-How to enable the highest warning level?
-----------------------------------------
+How to enable the highest compiler warning level?
+-------------------------------------------------
 * GCC 7: `-Wall -Wextra -pedantic -Wundef`
 > **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
 
