@@ -49,7 +49,7 @@ Links
 * [GCC Warning Options](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)
 * [MSVC Compiler Warnings](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warnings-by-compiler-version)
 * [Intel C++ Compilers](https://software.intel.com/en-us/c-compilers)
-* [More interesting projects](http://www.fleschutz.de/Service)
+* [More interesting projects](http://www.fleschutz.de/Service.html)
 
 Feedback
 ---------
