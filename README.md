@@ -1,7 +1,7 @@
 The Compiler Warnings Test Suite (CWTS)
 =======================================
 
-**Warnings are important, especially in C++. Developers do require an early warning system to prevent mistakes. However, not every C++ compiler detects and prints each and every possible warning. CWTS version 1.0 provides *56 test cases* to check this. In the subfolder  `Tests/` each test case is handled by a single source code file, which should produce at least one warning or error.**
+**Warnings are important, especially in C++. Developers do require an early warning system to prevent mistakes. However, not every C++ compiler detects and prints each and every possible warning. CWTS provide *56 test cases* to check this. In the subfolder  `Tests/` each test case is handled by a single .cpp source code file, which should produce at least one warning or error.**
 
 Requirements
 ------------
@@ -16,10 +16,11 @@ Installation
 
 How to enable the highest compiler warning level?
 -------------------------------------------------
-* GCC: `-Wall -Wextra -pedantic -Wundef`
-> **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
+Per default the compiler warning level is set to "normal". Each compiler supports different options to be more pedantic:
 
 * Clang: `-Weverything -pedantic`
+* GCC: `-Wall -Wextra -pedantic -Wundef`
+> **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
 * MSVC: TBD
 * Intel C++: TBD
 
