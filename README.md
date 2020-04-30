@@ -45,7 +45,6 @@ Dear OS/framework/library developers: introducing the Zero Warnings Policy heavi
 Links
 -----
 * [Diagnostic flags in Clang](https://clang.llvm.org/docs/DiagnosticsReference.html)
-* [fuckingclangwarnings.com](http://fuckingclangwarnings.com)
 * [GCC Warning Options](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)
 * [MSVC Compiler Warnings](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warnings-by-compiler-version)
 * [Intel C++ Compilers](https://software.intel.com/en-us/c-compilers)
