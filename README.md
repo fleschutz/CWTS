@@ -25,10 +25,10 @@ How to enable the highest warning level for my compiler?
 
 Compiler Warnings Ranking 
 -------------------------
-Gentleman, there is just one rule for ranking: each test file compiled without any warning or error results in one penalty point. The following results are based on CWTS 1.0 and highest warning level enabled.
+OK, there is just one rule for ranking: each test file compiled without any warning or error results in one penalty point. The following results are based on CWTS 1.0 and highest warning level enabled.
 
-1. **Clang 6.0.0**: 9 penalty points
-2. **GCC 7.3.0**: 12 penalty points
+1. **Clang 6.0.0** with 9 warnings missing
+2. **GCC 9.3.0 and 7.3.0** with 12 warnings missing
 3. **MSVC**: TBD
 4. **Intel C++**: TBD
 
