@@ -11,29 +11,29 @@ Installation
 -------------
 1. Make sure your C++ compiler and cmake is installed.
 2. Download the .zip file or clone the repository with `git clone https://github.com/fleschutz/CWTS`
-3. Enter the CWTS folder, edit `CMakeLists.txt` and adapt your compiler (1) and your compiler warning options (2).
-4. Execute `cmake .; make -k` and enjoy compiler warnings/errors: the more the better! 
+3. Enter the CWTS folder, edit `CMakeLists.txt` and uncomment your compiler and your compiler warning options.
+4. Execute `cmake .; make -k` and enjoy the compiler warnings: the more the better! 
 
-How to enable the highest warning level for my compiler?
---------------------------------------------------------
-* GCC 7: `-Wall -Wextra -pedantic -Wundef`
+How to enable the highest compiler warning level?
+-------------------------------------------------
+* GCC: `-Wall -Wextra -pedantic -Wundef`
 > **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
 
 * Clang: `-Weverything -pedantic`
 * MSVC: TBD
 * Intel C++: TBD
 
-Compiler Warnings Ranking 
--------------------------
-OK, there is just one rule for ranking: each test file compiled without any warning or error results in one penalty point. The following results are based on CWTS 1.0 and highest warning level enabled.
+Current Ranking of Compiler Warnings 
+------------------------------------
+The ranking has just one rule: each test file compiled without any warning or error counts as a miss. The following results are based on CWTS 1.0 with highest warning level enabled.
 
-1. **Clang 6.0.0** with 9 warnings missing
-2. **GCC 9.3.0 and 7.3.0** with 12 warnings missing
+1. **Clang 10.0.0** with 12 warnings missing
+2. **GCC 9.3.0** with 14 warnings missing
 3. **MSVC**: TBD
 4. **Intel C++**: TBD
 
-The Zero Warnings Policy
-------------------------
+Zero Warnings Policy
+--------------------
 This means that the source code is compiled with a high warning level and no compiler warning is acceptable.
 
 If you are just starting to introduce the Zero Warnings Policy in your project you may get hundreds or even thousands of warnings if you switch on all warnings. To get started you may want to start with a lower warning level. Fix the most severe warnings first and gradually dial up the warning level.
