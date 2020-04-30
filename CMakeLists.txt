@@ -3,8 +3,8 @@ cmake_minimum_required (VERSION 2.6)
 # Uncomment your C++ compiler and your warning options here:
 
 # clang:
-#set (CMAKE_CXX_COMPILER "clang++")
-#set (CMAKE_CXX_FLAGS "-Weverything -pedantic")
+set (CMAKE_CXX_COMPILER "clang++")
+set (CMAKE_CXX_FLAGS "-Weverything -pedantic")
 
 # gcc:
 #set (CMAKE_CXX_COMPILER "g++")
@@ -16,6 +16,7 @@ add_executable (CWTS
 	Tests/array_bounds_1.cpp
 	Tests/array_bounds_2.cpp
 	Tests/array_braces_missing.cpp
+	Tests/assignment_in_condition.cpp
 	Tests/bool_compare.cpp
 	Tests/branches_identical_1.cpp
 	Tests/branches_identical_2.cpp
