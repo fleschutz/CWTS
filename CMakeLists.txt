@@ -45,7 +45,8 @@ add_executable (CWTS
 	Tests/parameter_unused.cpp
 	Tests/parentheses.cpp
 	Tests/pointer_compare.cpp
-	Tests/null_pointer_access.cpp
+	Tests/null_pointer_access_1.cpp
+	Tests/null_pointer_access_2.cpp
 	Tests/recursive_include.cpp
 	Tests/shift_count_negative.cpp
 	Tests/shift_count_overflow.cpp
@@ -57,6 +58,7 @@ add_executable (CWTS
 	Tests/switch_body_empty.cpp
 	Tests/switch_code_unreachable.cpp
 	Tests/switch_default_missing.cpp
+	Tests/useless_cast.cpp
 	Tests/value_unused.cpp
 	Tests/variable_assignment.cpp
 	Tests/variable_compare.cpp
