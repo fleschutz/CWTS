@@ -1,5 +1,5 @@
-The Compiler Warnings Test Suite (CWTS) for C/C++
-=================================================
+The Compiler Warnings Test Suite (CWTS) for C++
+===============================================
 
 **Warnings are important, especially in C++. Developers do require an early warning system to prevent mistakes. However, not every C++ compiler detects and prints each and every possible warning. CWTS contains a collection of *57 test cases* to check this. See the subfolder `Tests/` where each test case is handled by a single .cpp source code file, which should produce at least one warning or error.**
 
@@ -14,9 +14,9 @@ Installation
 3. Enter the CWTS folder, edit `CMakeLists.txt` and uncomment your compiler and your compiler warning options.
 4. Execute `cmake .; make -k` and enjoy the compiler warnings: the more the better! 
 
-How to enable the highest compiler warning level?
--------------------------------------------------
-Per default the compiler warning level is set to "normal". Each compiler supports different options to be more pedantic:
+Enable the Highest Compiler Warning Level
+-----------------------------------------
+Each compiler sets the warning level to "normal" by default (whatever this is). And each compiler supports different options to be more pedantic:
 
 * Clang: `-Weverything -pedantic`
 * GCC: `-Wall -Wextra -pedantic -Wundef`
