@@ -57,4 +57,4 @@ A test case or a C++ compiler is missing? Send your feedback to markus at flesch
 
 License & Copyright
 -------------------
-This open source release is licensed under the MIT license. All trademarks are the property of their respective owners.
+This open source release is licensed under the CC0 license. All trademarks are the property of their respective owners.
