@@ -18,18 +18,18 @@ Enable the Highest Compiler Warning Level
 -----------------------------------------
 Each compiler sets the warning level to "normal" by default (whatever this is). And each compiler supports different options to be more pedantic:
 
-* Clang: `-Weverything -pedantic`
-* GCC: `-Wall -Wextra -pedantic -Wundef`
+* **Clang**: `-Weverything -pedantic`
+* **GCC**: `-Wall -Wextra -pedantic -Wundef`
 > **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
-* Visual Studio: /Wall
-* Intel C++: TBD
+* **Intel C++**: TBD
+* **Visual Studio**: `/Wall`
 
 Current Ranking of Compiler Warnings 
 ------------------------------------
 The ranking has just one rule: each test file compiled without any warning or error counts as a miss. The following results are based on CWTS 1.0 with highest warning level enabled.
 
-1. **Clang 10.0.0** with 12 warnings missing
-2. **GCC 9.3.0** with 14 warnings missing
+1. **Clang** 10.0.0 with 12 warnings missing
+2. **GCC** 9.3.0 with 14 warnings missing
 3. **Visual Studio**: TBD
 4. **Intel C++**: TBD
 
