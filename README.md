@@ -5,7 +5,7 @@ The Compiler Warnings Test Suite (CWTS) for C++
 
 Requirements
 ------------
-Just a C++ compiler and cmake. 
+cmake and a C++ compiler. 
 
 Installation 
 -------------
