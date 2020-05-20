@@ -21,6 +21,7 @@ add_executable (CWTS
 	Tests/branches_identical_1.cpp
 	Tests/branches_identical_2.cpp
 	Tests/branches_identical_3.cpp
+	Tests/cast_unnecessary.cpp
 	Tests/code_unreachable_1.cpp
 	Tests/code_unreachable_2.cpp
 	Tests/code_unreachable_3.cpp
@@ -59,7 +60,6 @@ add_executable (CWTS
 	Tests/switch_body_empty.cpp
 	Tests/switch_code_unreachable.cpp
 	Tests/switch_default_missing.cpp
-	Tests/useless_cast.cpp
 	Tests/value_unused.cpp
 	Tests/variable_assignment.cpp
 	Tests/variable_compare.cpp
