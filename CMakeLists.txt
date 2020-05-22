@@ -1,18 +1,16 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required(VERSION 2.6)
 
-# Uncomment your C++ compiler and your warning options here:
+if(MSVC)
+	add_compile_options(/W4)
+elseif(CMAKE_COMPILER_IS_GNUCXX)
+	add_compile_options(-Wall -Wextra -pedantic -Wundef)
+elseif(CMAKE_CXX_COMPILER MATCHES ".*clang")
+	add_compile_options(-Weverything -pedantic)
+endif()
 
-# clang:
-set (CMAKE_CXX_COMPILER "clang++")
-set (CMAKE_CXX_FLAGS "-Weverything -pedantic")
+project(CWTS)
 
-# gcc:
-#set (CMAKE_CXX_COMPILER "g++")
-#set (CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic -Wundef")
-
-project (CWTS)
-
-add_executable (CWTS
+add_executable(CWTS
 	Tests/array_bounds_1.cpp
 	Tests/array_bounds_2.cpp
 	Tests/array_braces_missing.cpp
