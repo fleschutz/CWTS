@@ -24,8 +24,8 @@ The more warnings the better: each test case compiled without any warning or err
 
 See the subfolder `CompilerOutput/` for details.
 
-How to Enable the Highest Compiler Warning Level 🔧
----------------------------------------------------
+How to Enable the Highest Warning Level 🔧
+------------------------------------------
 Each compiler sets the warning level to "normal" by default (whatever this is). And each compiler supports different options to be more pedantic:
 
 * **Clang**: `-Weverything -pedantic`
