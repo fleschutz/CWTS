@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 2.6)
 
-if(MSVC)
+if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
 	add_compile_options(/W4)
-elseif(CMAKE_COMPILER_IS_GNUCXX)
-	add_compile_options(-Wall -Wextra -pedantic -Wundef)
-elseif(CMAKE_CXX_COMPILER MATCHES ".*clang")
+elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	add_compile_options(-Weverything -pedantic)
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+	add_compile_options(-Wall -Wextra -pedantic -Wundef)
+else()
+	add_compile_options(-Wall -Wextra -pedantic -Wundef)
 endif()
 
 project(CWTS)
