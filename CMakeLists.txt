@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 
 if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-	add_compile_options(/W4)
+	add_compile_options(/Wall)
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	add_compile_options(-Weverything -pedantic)
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
