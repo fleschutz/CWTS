@@ -9,10 +9,9 @@ cmake and a C++ compiler.
 
 Installation 
 -------------
-1. Make sure your C++ compiler and cmake is installed.
+1. Make sure the C++ compiler and cmake is installed.
 2. Download the .zip file or clone the repository with `git clone https://github.com/fleschutz/CWTS`
-3. Enter the CWTS folder, edit `CMakeLists.txt` and uncomment your compiler and your compiler warning options.
-4. Execute `cmake .; make -k` and enjoy the compiler warnings: the more the better! 
+3. Execute `cd CWTS; cmake .; make -k` and enjoy a lot of compiler warnings ;-) 
 
 Enable the Highest Compiler Warning Level
 -----------------------------------------
@@ -32,6 +31,8 @@ The ranking has just one rule: each test file compiled without any warning or er
 2. **GCC** 9.3.0 with 14 warnings missing
 3. **Visual Studio**: TBD
 4. **Intel C++**: TBD
+
+See the subfolder `CompilerOutput/` for the exact output of each compiler and version.
 
 Zero Warnings Policy
 --------------------
