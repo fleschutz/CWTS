@@ -54,7 +54,7 @@ Links
 
 Feedback
 ---------
-A test case or a C++ compiler is missing? Send your feedback to markus at fleschutz dot de.
+A test case or a C++ compiler is missing? Send your email feedback to: markus <at> fleschutz <dot> de
 
 License & Copyright
 -------------------
