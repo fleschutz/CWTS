@@ -11,7 +11,7 @@ Installation
 -------------
 1. Make sure the C++ compiler and cmake is installed.
 2. Download the .zip file or clone the repository with `git clone https://github.com/fleschutz/CWTS`
-3. Execute `cd CWTS; cmake .; make -k` and enjoy a lot of compiler warnings ;-) 
+3. Execute `cd CWTS; cmake .; make -k` and enjoy a lot of compiler warnings 😀
 
 Enable the Highest Compiler Warning Level
 -----------------------------------------
@@ -34,8 +34,8 @@ The ranking has just one rule: each test file compiled without any warning or er
 
 See the subfolder `CompilerOutput/` for the exact output of each compiler and version.
 
-Zero Warnings Policy
---------------------
+Zero Warnings Policy 👮‍
+------------------------
 This means that the source code is compiled with a high warning level and no compiler warning is acceptable.
 
 If you are just starting to introduce the Zero Warnings Policy in your project you may get hundreds or even thousands of warnings if you switch on all warnings. To get started you may want to start with a lower warning level. Fix the most severe warnings first and gradually dial up the warning level.
