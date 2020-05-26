@@ -19,7 +19,7 @@ The more warnings the better: each test case compiled without any warning or err
 
 1. **Clang** 10.0.0 with 12 warnings missing
 2. **GCC** 9.3.0 with 14 warnings missing
-3. **Visual Studio**: TBD
+3. **Visual Studio** 2017 with 19 warnings missing
 4. **Intel C++**: TBD
 
 See the subfolder `CompilerOutput/` for details.
