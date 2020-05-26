@@ -1,4 +1,3 @@
-Scanning dependencies of target CWTS
 [  1%] Building CXX object CMakeFiles/CWTS.dir/Tests/array_bounds_1.cpp.o
 /home/mf/CWTS/Tests/array_bounds_1.cpp:8:2: warning: array index 1 is past the end of the array (which contains 1 element) [-Warray-bounds]
         abc[1] = 42;
@@ -24,7 +23,13 @@ int a[2][2] = { 0, 1, 2, 3 };
 int a[2][2] = { 0, 1, 2, 3 };
                       ^~~~
                       {   }
-2 warnings generated.
+/home/mf/CWTS/Tests/array_braces_missing.cpp:1:5: warning: no previous extern declaration for non-static variable 'a' [-Wmissing-variable-declarations]
+int a[2][2] = { 0, 1, 2, 3 };
+    ^
+/home/mf/CWTS/Tests/array_braces_missing.cpp:1:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int a[2][2] = { 0, 1, 2, 3 };
+^
+3 warnings generated.
 [  6%] Building CXX object CMakeFiles/CWTS.dir/Tests/assignment_in_condition.cpp.o
 /home/mf/CWTS/Tests/assignment_in_condition.cpp:5:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
         if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
@@ -42,20 +47,42 @@ int a[2][2] = { 0, 1, 2, 3 };
 /home/mf/CWTS/Tests/bool_compare.cpp:5:14: warning: result of comparison of constant 2 with expression of type 'bool' is always false [-Wtautological-constant-out-of-range-compare]
         if ((a > 0) == 2)
             ~~~~~~~ ^  ~
-1 warning generated.
+/home/mf/CWTS/Tests/bool_compare.cpp:6:10: warning: 'return' will never be executed [-Wunreachable-code-return]
+                return true;
+                       ^~~~
+2 warnings generated.
 [ 10%] Building CXX object CMakeFiles/CWTS.dir/Tests/branches_identical_1.cpp.o
 [ 12%] Building CXX object CMakeFiles/CWTS.dir/Tests/branches_identical_2.cpp.o
 [ 13%] Building CXX object CMakeFiles/CWTS.dir/Tests/branches_identical_3.cpp.o
 [ 15%] Building CXX object CMakeFiles/CWTS.dir/Tests/cast_unnecessary.cpp.o
 [ 17%] Building CXX object CMakeFiles/CWTS.dir/Tests/code_unreachable_1.cpp.o
+/home/mf/CWTS/Tests/code_unreachable_1.cpp:7:2: warning: code will never be executed [-Wunreachable-code]
+        i++;
+        ^
+1 warning generated.
 [ 18%] Building CXX object CMakeFiles/CWTS.dir/Tests/code_unreachable_2.cpp.o
+/home/mf/CWTS/Tests/code_unreachable_2.cpp:5:1: warning: function 'code_unreachable_2' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+/home/mf/CWTS/Tests/code_unreachable_2.cpp:7:2: warning: code will never be executed [-Wunreachable-code]
+        i++;
+        ^
+2 warnings generated.
 [ 20%] Building CXX object CMakeFiles/CWTS.dir/Tests/code_unreachable_3.cpp.o
+/home/mf/CWTS/Tests/code_unreachable_3.cpp:10:2: warning: code will never be executed [-Wunreachable-code]
+        i++;
+        ^
+1 warning generated.
 [ 22%] Building CXX object CMakeFiles/CWTS.dir/Tests/comment.cpp.o
 /home/mf/CWTS/Tests/comment.cpp:1:4: warning: '/*' within block comment [-Wcomment]
 /* /* comment in comment */
    ^
 1 warning generated.
 [ 24%] Building CXX object CMakeFiles/CWTS.dir/Tests/constant_expression.cpp.o
+/home/mf/CWTS/Tests/constant_expression.cpp:6:30: warning: result of comparison of unsigned expression >= 0 is always true [-Wtautological-unsigned-zero-compare]
+        for (unsigned int i = 10; i >= 0; i++)
+                                  ~ ^  ~
+1 warning generated.
 [ 25%] Building CXX object CMakeFiles/CWTS.dir/Tests/constant_overflow.cpp.o
 /home/mf/CWTS/Tests/constant_overflow.cpp:1:20: error: constant expression evaluates to 65535 which cannot be narrowed to type 'char' [-Wc++11-narrowing]
 char a[] = { 1, 2, 0xFFFF };
@@ -64,17 +91,27 @@ char a[] = { 1, 2, 0xFFFF };
 char a[] = { 1, 2, 0xFFFF };
                    ^~~~~~
                    static_cast<char>( )
-/home/mf/CWTS/Tests/constant_overflow.cpp:1:20: warning: implicit conversion from 'int' to 'char' changes value from 65535 to -1 [-Wconstant-conversion]
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:20: warning: implicit conversion from 'int' to 'char' changes value from 65535 to 255 [-Wconstant-conversion]
 char a[] = { 1, 2, 0xFFFF };
            ~       ^~~~~~
-1 warning and 1 error generated.
-make[2]: *** [CMakeFiles/CWTS.dir/build.make:265: CMakeFiles/CWTS.dir/Tests/constant_overflow.cpp.o] Error 1
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:6: warning: no previous extern declaration for non-static variable 'a' [-Wmissing-variable-declarations]
+char a[] = { 1, 2, 0xFFFF };
+     ^
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:1: note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char a[] = { 1, 2, 0xFFFF };
+^
+2 warnings and 1 error generated.
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:245: CMakeFiles/CWTS.dir/Tests/constant_overflow.cpp.o] Error 1
 [ 27%] Building CXX object CMakeFiles/CWTS.dir/Tests/division_by_zero.cpp.o
 /home/mf/CWTS/Tests/division_by_zero.cpp:6:11: warning: division by zero is undefined [-Wdivision-by-zero]
         return a / 0;
                  ^ ~
 1 warning generated.
 [ 29%] Building CXX object CMakeFiles/CWTS.dir/Tests/enum_unhandled.cpp.o
+/home/mf/CWTS/Tests/enum_unhandled.cpp:7:10: warning: enumeration value 'blue' not explicitly handled in switch [-Wswitch-enum]
+        switch (color)
+                ^
+1 warning generated.
 [ 31%] Building CXX object CMakeFiles/CWTS.dir/Tests/enum_value.cpp.o
 [ 32%] Building CXX object CMakeFiles/CWTS.dir/Tests/extra_tokens.cpp.o
 /home/mf/CWTS/Tests/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [-Wextra-tokens]
@@ -98,22 +135,49 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:265: CMakeFiles/CWTS.dir/Tests/cons
         printf(s);
                ^
                "%s", 
-1 warning generated.
+/home/mf/CWTS/Tests/format_string_3.cpp:5:6: warning: no previous prototype for function 'format_string_3' [-Wmissing-prototypes]
+void format_string_3(char *s)
+     ^
+/home/mf/CWTS/Tests/format_string_3.cpp:5:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void format_string_3(char *s)
+^
+static 
+2 warnings generated.
 [ 41%] Building CXX object CMakeFiles/CWTS.dir/Tests/function_without_prototype.cpp.o
+/home/mf/CWTS/Tests/function_without_prototype.cpp:1:6: warning: no previous prototype for function 'function_without_prototype' [-Wmissing-prototypes]
+void function_without_prototype()
+     ^
+/home/mf/CWTS/Tests/function_without_prototype.cpp:1:1: note: declare 'static' if the function is not intended to be used outside of this translation unit
+void function_without_prototype()
+^
+static 
+1 warning generated.
 [ 43%] Building CXX object CMakeFiles/CWTS.dir/Tests/function_without_return_value.cpp.o
 /home/mf/CWTS/Tests/function_without_return_value.cpp:6:2: error: non-void function 'function_without_return_value' should return a value [-Wreturn-type]
         return;
         ^
 1 error generated.
-make[2]: *** [CMakeFiles/CWTS.dir/build.make:395: CMakeFiles/CWTS.dir/Tests/function_without_return_value.cpp.o] Error 1
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:375: CMakeFiles/CWTS.dir/Tests/function_without_return_value.cpp.o] Error 1
 [ 44%] Building CXX object CMakeFiles/CWTS.dir/Tests/identifier_undefined.cpp.o
 /home/mf/CWTS/Tests/identifier_undefined.cpp:1:5: warning: 'IDENTIFIER_UNDEFINED' is not defined, evaluates to 0 [-Wundef]
 #if IDENTIFIER_UNDEFINED
     ^
 1 warning generated.
 [ 46%] Building CXX object CMakeFiles/CWTS.dir/Tests/implicit_conversion_1.cpp.o
+/home/mf/CWTS/Tests/implicit_conversion_1.cpp:6:9: warning: implicit conversion loses integer precision: 'short' to 'char' [-Wimplicit-int-conversion]
+        return a;
+        ~~~~~~ ^
+1 warning generated.
 [ 48%] Building CXX object CMakeFiles/CWTS.dir/Tests/implicit_conversion_2.cpp.o
+/home/mf/CWTS/Tests/implicit_conversion_2.cpp:6:9: warning: implicit conversion loses integer precision: 'int' to 'short' [-Wimplicit-int-conversion]
+        return a;
+        ~~~~~~ ^
+1 warning generated.
 [ 50%] Building CXX object CMakeFiles/CWTS.dir/Tests/implicit_conversion_3.cpp.o
+/home/mf/CWTS/Tests/implicit_conversion_3.cpp:6:9: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        return a;
+        ~~~~~~ ^
+1 warning generated.
 [ 51%] Building CXX object CMakeFiles/CWTS.dir/Tests/label_unused.cpp.o
 /home/mf/CWTS/Tests/label_unused.cpp:6:1: warning: unused label 'label_is_unused' [-Wunused-label]
 label_is_unused:
@@ -139,9 +203,14 @@ void parameter_unused(int a)
         if (ptr == '\0')
             ~~~ ^  ~~~~
 1 error generated.
-make[2]: *** [CMakeFiles/CWTS.dir/build.make:512: CMakeFiles/CWTS.dir/Tests/pointer_compare.cpp.o] Error 1
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:492: CMakeFiles/CWTS.dir/Tests/pointer_compare.cpp.o] Error 1
 [ 60%] Building CXX object CMakeFiles/CWTS.dir/Tests/null_pointer_access_1.cpp.o
 [ 62%] Building CXX object CMakeFiles/CWTS.dir/Tests/null_pointer_access_2.cpp.o
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:5:11: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+        int *q = 0;
+                 ^
+                 nullptr
+1 warning generated.
 [ 63%] Building CXX object CMakeFiles/CWTS.dir/Tests/recursive_include.cpp.o
 In file included from /home/mf/CWTS/Tests/recursive_include.cpp:1:
 In file included from /home/mf/CWTS/Tests/recursive_include.cpp:1:
@@ -346,7 +415,7 @@ In file included from /home/mf/CWTS/Tests/recursive_include.cpp:1:
 #include "recursive_include.cpp"
          ^
 1 error generated.
-make[2]: *** [CMakeFiles/CWTS.dir/build.make:551: CMakeFiles/CWTS.dir/Tests/recursive_include.cpp.o] Error 1
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:531: CMakeFiles/CWTS.dir/Tests/recursive_include.cpp.o] Error 1
 [ 65%] Building CXX object CMakeFiles/CWTS.dir/Tests/shift_count_negative.cpp.o
 /home/mf/CWTS/Tests/shift_count_negative.cpp:5:11: warning: shift count is negative [-Wshift-count-negative]
         return a << -1;
@@ -384,6 +453,10 @@ static void static_function_unused()
 1 warning generated.
 [ 77%] Building CXX object CMakeFiles/CWTS.dir/Tests/switch_body_empty.cpp.o
 [ 79%] Building CXX object CMakeFiles/CWTS.dir/Tests/switch_code_unreachable.cpp.o
+/home/mf/CWTS/Tests/switch_code_unreachable.cpp:9:2: warning: code will never be executed [-Wunreachable-code]
+        a *= 2;
+        ^
+1 warning generated.
 [ 81%] Building CXX object CMakeFiles/CWTS.dir/Tests/switch_default_missing.cpp.o
 [ 82%] Building CXX object CMakeFiles/CWTS.dir/Tests/value_unused.cpp.o
 /home/mf/CWTS/Tests/value_unused.cpp:6:4: warning: expression result unused [-Wunused-value]
@@ -417,9 +490,27 @@ static void static_function_unused()
 /home/mf/CWTS/Tests/variable_size_array.cpp:6:11: warning: variable length arrays are a C99 feature [-Wvla-extension]
         float abc[n];
                  ^
-1 warning generated.
+/home/mf/CWTS/Tests/variable_size_array.cpp:6:11: warning: variable length array used [-Wvla]
+/home/mf/CWTS/Tests/variable_size_array.cpp:7:11: warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+        abc[0] = 3.1415;
+               ~ ^~~~~~
+3 warnings generated.
 [ 91%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_shadowed_1.cpp.o
+/home/mf/CWTS/Tests/variable_shadowed_1.cpp:6:29: warning: declaration shadows a variable in the global namespace [-Wshadow]
+int variable_shadowed_1(int answer)
+                            ^
+/home/mf/CWTS/Tests/variable_shadowed_1.cpp:4:5: note: previous declaration is here
+int answer = 42;
+    ^
+1 warning generated.
 [ 93%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_shadowed_2.cpp.o
+/home/mf/CWTS/Tests/variable_shadowed_2.cpp:5:8: warning: declaration shadows a local variable [-Wshadow]
+        {       int a = 0;
+                    ^
+/home/mf/CWTS/Tests/variable_shadowed_2.cpp:3:29: note: previous declaration is here
+int variable_shadowed_2(int a)
+                            ^
+1 warning generated.
 [ 94%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_unsequenced.cpp.o
 /home/mf/CWTS/Tests/variable_unsequenced.cpp:7:21: warning: unsequenced modification and access to 'a' [-Wunsequenced]
         printf("%d,%d", a, ++a);
@@ -440,7 +531,7 @@ static void static_function_unused()
                      = 0
 1 warning generated.
 make[2]: Target 'CMakeFiles/CWTS.dir/build' not remade because of errors.
-make[1]: *** [CMakeFiles/Makefile2:96: CMakeFiles/CWTS.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:76: CMakeFiles/CWTS.dir/all] Error 2
 make[1]: Target 'all' not remade because of errors.
-make: *** [Makefile:104: all] Error 2
+make: *** [Makefile:84: all] Error 2
 make: Target 'default_target' not remade because of errors.
