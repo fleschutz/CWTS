@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
 
-if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+project(CWTS)
+
+if(MSVC)
 	add_compile_options(/Wall)
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	add_compile_options(-Weverything -pedantic)
@@ -9,8 +11,6 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 else()
 	add_compile_options(-Wall -Wextra -pedantic -Wundef)
 endif()
-
-project(CWTS)
 
 add_executable(CWTS
 	Tests/array_bounds_1.cpp
