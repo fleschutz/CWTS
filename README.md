@@ -30,7 +30,6 @@ Each compiler sets the warning level to "normal" by default (whatever this is). 
 * **Clang**: `-Weverything -pedantic`
 * **GCC**: `-Wall -Wextra -pedantic -Wundef`
 > **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
-* **Intel C++**: TBD
 * **Visual Studio**: `/Wall`
 
 Zero Warnings Policy 👮‍
