@@ -23,7 +23,7 @@ The more warnings the better: each test case compiled without any warning or err
 2. **GCC** 9.3.0 misses 14 warnings
 3. **Visual Studio** 2017 misses 19 warnings 
 
-See the subfolder `CompilerOutput/` for details.
+See the subfolder `Results/` for details.
 
 How to Enable the Highest Warning Level 🔧
 ------------------------------------------
