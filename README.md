@@ -36,7 +36,7 @@ Each compiler sets the warning level to "normal" by default (whatever this is). 
 
 Zero Warnings Policy 👮‍
 ------------------------
-This means that the source code is compiled with a high warning level and no compiler warning is acceptable.
+This means the source code is compiled with a high warning level and no compiler warning is acceptable.
 
 If you are just starting to introduce the Zero Warnings Policy in your project you may get hundreds or even thousands of warnings if you switch on all warnings. To get started you may want to start with a lower warning level. Fix the most severe warnings first and gradually dial up the warning level.
 
