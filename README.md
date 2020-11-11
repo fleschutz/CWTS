@@ -11,7 +11,9 @@ Installation
 -------------
 ```
 $ git clone https://github.com/fleschutz/CWTS
-$ cd CWTS; cmake .; make -k
+$ cd CWTS
+$ cmake .
+$ make -k
 ```
 and enjoy a lot of compiler warnings 😀
 
