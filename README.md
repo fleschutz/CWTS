@@ -27,7 +27,7 @@ See the subfolder `Results/` for details.
 
 How to Enable the Highest Warning Level 🔧
 ------------------------------------------
-Each compiler sets the warning level to "normal" by default (whatever this is). And each compiler supports different options to be more pedantic:
+Each compiler sets the warning level to "normal" by default - whatever this means. And each compiler supports different options to be more pedantic:
 
 * **Clang**: `-Weverything -pedantic`
 * **GCC**: `-Wall -Wextra -pedantic -Wundef`
