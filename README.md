@@ -29,12 +29,13 @@ For details see the [subfolder Results/](Results/)
 
 How to Enable the Highest Warning Level 🔧
 ------------------------------------------
-Each compiler sets the warning level to "normal" by default - whatever this means. And each compiler supports different options to be more pedantic:
+By default, every compiler sets the warning level to "normal" - whatever this means. And each compiler supports different options to be more pedantic:
 
 * **Clang**: `-Weverything -pedantic`
 * **GCC**: `-Wall -Wextra -pedantic -Wundef`
-> **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
 * **Visual Studio**: `/Wall`
+
+> **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
 
 Zero Warnings Policy 👮‍
 ------------------------
