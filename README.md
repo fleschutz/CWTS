@@ -21,9 +21,9 @@ Ranking of Compiler Warnings 🏆
 -------------------------------
 The more warnings the better: each test case compiled without any warning or error counts as a miss. The following results are based on the highest warning level enabled.
 
-1. **Clang** 10.0.0 misses 11 warnings 
-2. **GCC** 9.3.0 misses 14 warnings
-3. **Visual Studio** 2017 misses 19 warnings 
+1. **Clang 10.0.0:** 11 warnings missing
+2. **GCC 9.3.0:** 14 warnings missing
+3. **Visual Studio 2017:** 19 warnings missing
 
 For details see the [subfolder Results/](Results/)
 
