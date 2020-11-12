@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.6)
 project(CWTS)
 
 if(MSVC)
-	add_compile_options(/Wall)
+	add_compile_options(/Wall /wd4514 /wd4710)
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	add_compile_options(-Weverything -pedantic)
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")

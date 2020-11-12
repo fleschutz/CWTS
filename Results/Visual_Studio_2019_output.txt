@@ -1,0 +1,79 @@
+  [1/58] Building CXX object CMakeFiles\CWTS.dir\Tests\array_braces_missing.cpp.obj
+  [2/58] Building CXX object CMakeFiles\CWTS.dir\Tests\bool_compare.cpp.obj
+C:\Users\Markus\Source\Repos\CWTS\Tests\bool_compare.cpp(5): warning C4806: '==': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+  [3/58] Building CXX object CMakeFiles\CWTS.dir\Tests\branches_identical_2.cpp.obj
+  [4/58] Building CXX object CMakeFiles\CWTS.dir\Tests\array_bounds_1.cpp.obj
+C:\Users\Markus\source\repos\CWTS\Tests\array_bounds_1.cpp(8): warning C4789: buffer 'abc' of size 4 bytes will be overrun; 4 bytes will be written starting at offset 4
+  [5/58] Building CXX object CMakeFiles\CWTS.dir\Tests\array_bounds_2.cpp.obj
+  [6/58] Building CXX object CMakeFiles\CWTS.dir\Tests\branches_identical_1.cpp.obj
+  [7/58] Building CXX object CMakeFiles\CWTS.dir\Tests\cast_unnecessary.cpp.obj
+  [8/58] Building CXX object CMakeFiles\CWTS.dir\Tests\assignment_in_condition.cpp.obj
+C:\Users\Markus\source\repos\CWTS\Tests\assignment_in_condition.cpp(5): warning C4706: assignment within conditional expression
+  [9/58] Building CXX object CMakeFiles\CWTS.dir\Tests\branches_identical_3.cpp.obj
+  [10/58] Building CXX object CMakeFiles\CWTS.dir\Tests\division_by_zero.cpp.obj
+C:\Users\Markus\source\repos\CWTS\Tests\division_by_zero.cpp(6): warning C4723: potential divide by 0
+  [11/58] Building CXX object CMakeFiles\CWTS.dir\Tests\code_unreachable_1.cpp.obj
+C:\Users\Markus\source\repos\CWTS\Tests\code_unreachable_1.cpp(7): warning C4702: unreachable code
+  [12/58] Building CXX object CMakeFiles\CWTS.dir\Tests\code_unreachable_2.cpp.obj
+C:\Users\Markus\source\repos\CWTS\Tests\code_unreachable_2.cpp(7): warning C4702: unreachable code
+  [13/58] Building CXX object CMakeFiles\CWTS.dir\Tests\comment.cpp.obj
+  [14/58] Building CXX object CMakeFiles\CWTS.dir\Tests\code_unreachable_3.cpp.obj
+C:\Users\Markus\source\repos\CWTS\Tests\code_unreachable_3.cpp(10): warning C4702: unreachable code
+  [15/58] Building CXX object CMakeFiles\CWTS.dir\Tests\constant_overflow.cpp.obj
+C:\Users\Markus\Source\Repos\CWTS\Tests\constant_overflow.cpp(1): warning C4838: conversion from 'int' to 'char' requires a narrowing conversion
+C:\Users\Markus\Source\Repos\CWTS\Tests\constant_overflow.cpp(1): warning C4305: 'initializing': truncation from 'int' to 'char'
+C:\Users\Markus\Source\Repos\CWTS\Tests\constant_overflow.cpp(1): warning C4309: 'initializing': truncation of constant value
+  [16/58] Building CXX object CMakeFiles\CWTS.dir\Tests\constant_expression.cpp.obj
+C:\Users\Markus\Source\Repos\CWTS\Tests\constant_expression.cpp(6): warning C4296: '>=': expression is always true
+  [17/58] Building CXX object CMakeFiles\CWTS.dir\Tests\enum_value.cpp.obj
+  [18/58] Building CXX object CMakeFiles\CWTS.dir\Tests\enum_unhandled.cpp.obj
+C:\Users\Markus\Source\Repos\CWTS\Tests\enum_unhandled.cpp(12): warning C4061: enumerator 'blue' in switch of enum 'Color' is not explicitly handled by a case label
+  ..\..\..\Tests\enum_unhandled.cpp(1): note: see declaration of 'Color'
+  [19/58] Building CXX object CMakeFiles\CWTS.dir\Tests\extra_tokens.cpp.obj
+  [20/58] Building CXX object CMakeFiles\CWTS.dir\Tests\file_empty.cpp.obj
+  [21/58] Building CXX object CMakeFiles\CWTS.dir\Tests\identifier_undefined.cpp.obj
+C:\Users\Markus\Source\Repos\CWTS\Tests\identifier_undefined.cpp(1): warning C4668: 'IDENTIFIER_UNDEFINED' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  [22/58] Building CXX object CMakeFiles\CWTS.dir\Tests\function_without_prototype.cpp.obj
+  [23/58] Building CXX object CMakeFiles\CWTS.dir\Tests\format_string_1.cpp.obj
+  Note: including file: C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdio.h
+  Note: including file:  C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt.h
+  Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vcruntime.h
+  Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\sal.h
+  Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\concurrencysal.h
+  Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vadefs.h
+  Note: including file:  C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstdio.h
+  Note: including file:   C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_stdio_config.h
+C:\Users\Markus\Source\Repos\CWTS\Tests\format_string_1.cpp(7): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'int'
+C:\Users\Markus\Source\Repos\CWTS\Tests\format_string_1.cpp(7): warning C4313: 'printf': '%s' in format string conflicts with argument 1 of type 'int'
+  [24/58] Building CXX object CMakeFiles\CWTS.dir\Tests\function_without_return_value.cpp.obj
+  FAILED: CMakeFiles/CWTS.dir/Tests/function_without_return_value.cpp.obj 
+  C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /Wall /wd4514 /wd4710 /showIncludes /FoCMakeFiles\CWTS.dir\Tests\function_without_return_value.cpp.obj /FdCMakeFiles\CWTS.dir\ /FS -c ..\..\..\Tests\function_without_return_value.cpp
+C:\Users\Markus\Source\Repos\CWTS\Tests\function_without_return_value.cpp(6): error C2561: 'function_without_return_value': function must return a value
+  ..\..\..\Tests\function_without_return_value.cpp(4): note: see declaration of 'function_without_return_value'
+  [25/58] Building CXX object CMakeFiles\CWTS.dir\Tests\format_string_2.cpp.obj
+  Note: including file: C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdio.h
+  Note: including file:  C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt.h
+  Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vcruntime.h
+  Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\sal.h
+  Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\concurrencysal.h
+  Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vadefs.h
+  Note: including file:  C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstdio.h
+  Note: including file:   C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_stdio_config.h
+  [26/58] Building CXX object CMakeFiles\CWTS.dir\Tests\format_string_3.cpp.obj
+  Note: including file: C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\stdio.h
+  Note: including file:  C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt.h
+  Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vcruntime.h
+  Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\sal.h
+  Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\concurrencysal.h
+  Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vadefs.h
+  Note: including file:  C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wstdio.h
+  Note: including file:   C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_stdio_config.h
+C:\Users\Markus\Source\Repos\CWTS\Tests\format_string_3.cpp(7): warning C4774: 'printf' : format string expected in argument 1 is not a string literal
+  ..\..\..\Tests\format_string_3.cpp(7): note: e.g. instead of printf(name); use printf("%s", name); because format specifiers in 'name' may pose a security issue
+  ..\..\..\Tests\format_string_3.cpp(7): note: consider using constexpr specifier for named string literals
+  [27/58] Building CXX object CMakeFiles\CWTS.dir\Tests\implicit_conversion_1.cpp.obj
+C:\Users\Markus\Source\Repos\CWTS\Tests\implicit_conversion_1.cpp(6): warning C4244: 'return': conversion from 'short' to 'char', possible loss of data
+  [28/58] Building CXX object CMakeFiles\CWTS.dir\Tests\member_init_reorder.cpp.obj
+C:\Users\Markus\Source\Repos\CWTS\Tests\member_init_reorder.cpp(4): warning C5038: data member 'A::j' will be initialized after data member 'A::i'
+  [29/58] Building CXX object CMakeFiles\CWTS.dir\Tests\label_unused.cpp.obj
+C:\Users\Markus\Source\Repos\CWTS\Tests\label_unused.cpp(6): warning C4102: 'label_is_unused': unreferenced label
