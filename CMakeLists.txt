@@ -62,7 +62,10 @@ add_executable(CWTS
 	Tests/switch_default_missing.cpp
 	Tests/value_unused.cpp
 	Tests/variable_assignment.cpp
-	Tests/variable_compare.cpp
+	Tests/variable_compare_1.cpp
+	Tests/variable_compare_2.cpp
+	Tests/variable_compare_3.cpp
+	Tests/variable_compare_4.cpp
 	Tests/variable_init_self.cpp
 	Tests/variable_size_array.cpp
 	Tests/variable_shadowed_1.cpp
