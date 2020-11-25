@@ -1,6 +1,5 @@
 extern int parentheses(int a);
 
-
 int parentheses(int a)
 {
 	if (a > 0)

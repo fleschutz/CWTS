@@ -1,6 +1,5 @@
 extern int branches_identical_3(bool a);
 
-
 int branches_identical_3(bool a)
 {
 	if (a == true)

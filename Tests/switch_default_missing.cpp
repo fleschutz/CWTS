@@ -1,6 +1,5 @@
 bool switch_default_missing(int a);
 
-
 bool switch_default_missing(int a)
 {
 	switch (a)
