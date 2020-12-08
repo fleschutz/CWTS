@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 2.6)
+# Platform-independent Makefile - requires cmake 2.8 or higher
+cmake_minimum_required(VERSION 2.8)
 
-project(CWTS)
+# Static source code analysis:
+# set(CMAKE_CXX_CPPCHECK "cppcheck")
 
 if(MSVC)
 	add_compile_options(/Wall /wd4514 /wd4710)
@@ -11,6 +13,8 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 else()
 	add_compile_options(-Wall -Wextra -pedantic -Wundef)
 endif()
+
+project(CWTS)
 
 add_executable(CWTS
 	Tests/array_bounds_1.cpp
@@ -36,6 +40,7 @@ add_executable(CWTS
 	Tests/format_string_1.cpp
 	Tests/format_string_2.cpp
 	Tests/format_string_3.cpp
+	Tests/function_parameter_unused.cpp
 	Tests/function_without_prototype.cpp
 	Tests/function_without_return_value.cpp
 	Tests/identifier_undefined.cpp
@@ -44,7 +49,6 @@ add_executable(CWTS
 	Tests/implicit_conversion_3.cpp
 	Tests/label_unused.cpp
 	Tests/member_init_reorder.cpp
-	Tests/parameter_unused.cpp
 	Tests/parentheses.cpp
 	Tests/pointer_compare.cpp
 	Tests/null_pointer_access_1.cpp
