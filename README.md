@@ -19,15 +19,16 @@ and enjoy the flood of compiler warnings 😀
 
 Ranking of Compiler Warnings 🏆
 -------------------------------
-The more warnings the better: each test case compiled without any warning or error counts as a miss. The following results are based on the highest warning level enabled.
+The more warnings the better! Each test case compiled without any warning or error counts as a miss. 
 
 1. **clang-tidy 10.0:** 8 warnings missing
 2. **Clang 10.0.0:** 11 warnings missing
 3. **GCC 9.3.0:** 14 warnings missing
-4. **Visual Studio 2017:** 19 warnings missing
-5. **cppcheck 2.3:** 26 warnings missing
+4. **Visual Studio 2019:** 17 warnings missing
+5. **Visual Studio 2017:** 19 warnings missing
+6. **cppcheck 2.3:** 26 warnings missing
 
-For details see the [subfolder Results/](Results/)
+All results are based on the highest warning level enabled. For details see the [subfolder Results/](Results/)
 
 
 How to Enable the Highest Warning Level 🔧
