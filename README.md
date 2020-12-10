@@ -19,7 +19,7 @@ and enjoy the flood of compiler warnings 😀
 
 Ranking of Compiler Warnings 🏆
 -------------------------------
-The more warnings the better! Each test case compiled without any warning or error counts as a miss. 
+The more warnings the better! Each test case compiled without any warning or error counts as a miss. And the winner is:
 
 1. **clang-tidy 10.0:** 8 warnings missing
 2. **Clang 10.0.0:** 11 warnings missing
