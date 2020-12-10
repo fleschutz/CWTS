@@ -1,0 +1,280 @@
+Checking array_bounds_1.cpp ...
+array_bounds_1.cpp:7:5: error: Array 'abc[1]' accessed at index 1, which is out of bounds. [arrayIndexOutOfBounds]
+ abc[1] = 42;
+    ^
+array_bounds_1.cpp:7:9: style: Variable 'abc[1]' is assigned a value that is never used. [unreadVariable]
+ abc[1] = 42;
+        ^
+1/60 files checked 1% done
+Checking array_bounds_2.cpp ...
+array_bounds_2.cpp:7:5: error: Array 'abc[1]' accessed at index -1, which is out of bounds. [negativeIndex]
+ abc[-1] = 42;
+    ^
+array_bounds_2.cpp:7:10: style: Variable 'abc[-1]' is assigned a value that is never used. [unreadVariable]
+ abc[-1] = 42;
+         ^
+2/60 files checked 2% done
+Checking array_braces_missing.cpp ...
+3/60 files checked 3% done
+Checking assignment_in_condition.cpp ...
+assignment_in_condition.cpp:5:9: style: Variable 'x' is assigned a value that is never used. [unreadVariable]
+ if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+        ^
+4/60 files checked 6% done
+Checking bool_compare.cpp ...
+bool_compare.cpp:5:17: warning: Comparison of a boolean expression with an integer other than 0 or 1. [compareBoolExpressionWithInt]
+ return (a > 0) == 2;
+                ^
+5/60 files checked 8% done
+Checking branches_identical_1.cpp ...
+6/60 files checked 10% done
+Checking branches_identical_2.cpp ...
+branches_identical_2.cpp:5:23: style: Same value in both branches of ternary operator. [duplicateValueTernary]
+ return (a == 0) ? 42 : 42;
+                      ^
+7/60 files checked 12% done
+Checking branches_identical_3.cpp ...
+branches_identical_3.cpp:7:13: warning: Identical condition 'a==true', second condition is always false [identicalConditionAfterEarlyExit]
+ else if (a == true)
+            ^
+branches_identical_3.cpp:5:8: note: If condition 'a==true' is true, the function will return/exit
+ if (a == true)
+       ^
+branches_identical_3.cpp:7:13: note: Testing identical condition 'a==true'
+ else if (a == true)
+            ^
+8/60 files checked 14% done
+Checking cast_unnecessary.cpp ...
+9/60 files checked 16% done
+Checking code_unreachable_1.cpp ...
+code_unreachable_1.cpp:6:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+ i++;
+ ^
+code_unreachable_1.cpp:6:2: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+ i++;
+ ^
+code_unreachable_1.cpp:6:3: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+ i++;
+  ^
+10/60 files checked 18% done
+Checking code_unreachable_2.cpp ...
+code_unreachable_2.cpp:6:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+ i++;
+ ^
+code_unreachable_2.cpp:6:2: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+ i++;
+ ^
+code_unreachable_2.cpp:6:3: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+ i++;
+  ^
+11/60 files checked 20% done
+Checking code_unreachable_3.cpp ...
+code_unreachable_3.cpp:9:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+ i++;
+ ^
+code_unreachable_3.cpp:9:3: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+ i++;
+  ^
+12/60 files checked 22% done
+Checking comment.cpp ...
+13/60 files checked 23% done
+Checking constant_expression.cpp ...
+constant_expression.cpp:5:30: style: Unsigned expression 'i' can't be negative so it is unnecessary to test it. [unsignedPositive]
+ for (unsigned int i = 10; i >= 0; i++)
+                             ^
+14/60 files checked 25% done
+Checking constant_overflow.cpp ...
+15/60 files checked 25% done
+Checking division_by_zero.cpp ...
+division_by_zero.cpp:5:11: error: Division by zero. [zerodiv]
+ return a / 0;
+          ^
+16/60 files checked 27% done
+Checking enum_unhandled.cpp ...
+17/60 files checked 30% done
+Checking enum_value.cpp ...
+18/60 files checked 31% done
+Checking extra_tokens.cpp ...
+19/60 files checked 31% done
+Checking file_empty.cpp ...
+20/60 files checked 31% done
+Checking format_string_1.cpp ...
+format_string_1.cpp:7:2: warning: %s in format string (no. 1) requires 'char *' but the argument type is 'signed int'. [invalidPrintfArgType_s]
+ printf("%s", 0);
+ ^
+format_string_1.cpp:7:15: error: Null pointer dereference [nullPointer]
+ printf("%s", 0);
+              ^
+21/60 files checked 33% done
+Checking format_string_2.cpp ...
+22/60 files checked 34% done
+Checking format_string_3.cpp ...
+23/60 files checked 36% done
+Checking function_parameter_unused.cpp ...
+24/60 files checked 38% done
+Checking function_without_prototype.cpp ...
+25/60 files checked 39% done
+Checking function_without_return_value.cpp ...
+26/60 files checked 40% done
+Checking identifier_undefined.cpp ...
+Checking identifier_undefined.cpp: IDENTIFIER_UNDEFINED...
+27/60 files checked 41% done
+Checking implicit_conversion_1.cpp ...
+28/60 files checked 42% done
+Checking implicit_conversion_2.cpp ...
+29/60 files checked 44% done
+Checking implicit_conversion_3.cpp ...
+30/60 files checked 45% done
+Checking label_unused.cpp ...
+label_unused.cpp:5:1: style: Label 'label_is_unused' is not used. [unusedLabel]
+label_is_unused:
+^
+31/60 files checked 47% done
+Checking member_init_reorder.cpp ...
+32/60 files checked 48% done
+Checking null_pointer_access_1.cpp ...
+33/60 files checked 50% done
+Checking null_pointer_access_2.cpp ...
+null_pointer_access_2.cpp:8:3: warning: Possible null pointer dereference: q [nullPointer]
+ *q = 1;  // q may be NULL
+  ^
+null_pointer_access_2.cpp:5:11: note: Assignment 'q=0', assigned value is 0
+ int *q = 0;
+          ^
+null_pointer_access_2.cpp:6:13: note: Assuming condition is false
+ if (0 <= a && a < 10)
+            ^
+null_pointer_access_2.cpp:8:3: note: Null pointer dereference
+ *q = 1;  // q may be NULL
+  ^
+34/60 files checked 53% done
+Checking parentheses.cpp ...
+35/60 files checked 55% done
+Checking pointer_compare.cpp ...
+pointer_compare.cpp:5:10: warning: Char literal compared with pointer 'ptr'. Did you intend to dereference it? [charLiteralWithCharPtrCompare]
+ if (ptr == '\0')
+         ^
+36/60 files checked 57% done
+Checking recursive_include.cpp ...
+recursive_include.cpp:1:0: error: #include nested too deeply [preprocessorErrorDirective]
+#include "recursive_include.cpp"
+^
+37/60 files checked 58% done
+Checking shift_count_negative.cpp ...
+shift_count_negative.cpp:5:11: error: Shifting by a negative value is undefined behaviour [shiftNegative]
+ return a << -1;
+          ^
+38/60 files checked 59% done
+Checking shift_count_overflow.cpp ...
+shift_count_overflow.cpp:5:11: error: Shifting 32-bit value by 66 bits is undefined behaviour [shiftTooManyBits]
+ return a << 66;
+          ^
+39/60 files checked 61% done
+Checking shift_overflow.cpp ...
+40/60 files checked 63% done
+Checking shift_value_negative.cpp ...
+shift_value_negative.cpp:5:12: portability: Shifting a negative value is technically undefined behaviour [shiftNegativeLHS]
+ return -1 << 2;
+           ^
+41/60 files checked 64% done
+Checking stack_address_returned.cpp ...
+stack_address_returned.cpp:7:9: error: Returning pointer to local variable 'array' that will be invalid when returning. [returnDanglingLifetime]
+ return array;
+        ^
+stack_address_returned.cpp:7:9: note: Array decayed to pointer here.
+ return array;
+        ^
+stack_address_returned.cpp:5:6: note: Variable created here.
+ int array[10] = {};
+     ^
+stack_address_returned.cpp:7:9: note: Returning pointer to local variable 'array' that will be invalid when returning.
+ return array;
+        ^
+42/60 files checked 66% done
+Checking static_const_unused.cpp ...
+43/60 files checked 66% done
+Checking static_function_unused.cpp ...
+44/60 files checked 67% done
+Checking switch_body_empty.cpp ...
+45/60 files checked 69% done
+Checking switch_code_unreachable.cpp ...
+switch_code_unreachable.cpp:9:2: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+ a *= 2;
+ ^
+46/60 files checked 72% done
+Checking switch_default_missing.cpp ...
+47/60 files checked 75% done
+Checking value_unused.cpp ...
+48/60 files checked 76% done
+Checking variable_assignment.cpp ...
+variable_assignment.cpp:7:8: style: Variable 'a' is assigned a value that is never used. [unreadVariable]
+ if (a = b)
+       ^
+49/60 files checked 78% done
+Checking variable_compare_1.cpp ...
+50/60 files checked 80% done
+Checking variable_compare_2.cpp ...
+51/60 files checked 82% done
+Checking variable_compare_3.cpp ...
+52/60 files checked 84% done
+Checking variable_compare_4.cpp ...
+53/60 files checked 87% done
+Checking variable_init_self.cpp ...
+variable_init_self.cpp:5:8: warning: Redundant assignment of 'i' to itself. [selfAssignment]
+ int i = i;
+       ^
+variable_init_self.cpp:5:10: error: Uninitialized variable: i [uninitvar]
+ int i = i;
+         ^
+54/60 files checked 88% done
+Checking variable_shadowed_1.cpp ...
+55/60 files checked 90% done
+Checking variable_shadowed_2.cpp ...
+variable_shadowed_2.cpp:5:8: style: Local variable 'a' shadows outer argument [shadowArgument]
+ { int a = 0;
+       ^
+variable_shadowed_2.cpp:3:29: note: Shadowed declaration
+int variable_shadowed_2(int a)
+                            ^
+variable_shadowed_2.cpp:5:8: note: Shadow variable
+ { int a = 0;
+       ^
+variable_shadowed_2.cpp:6:4: style: Variable 'a' is assigned a value that is never used. [unreadVariable]
+  a++;
+   ^
+56/60 files checked 92% done
+Checking variable_size_array.cpp ...
+variable_size_array.cpp:6:9: style: Variable 'abc[0]' is assigned a value that is never used. [unreadVariable]
+ abc[0] = 3.1415;
+        ^
+57/60 files checked 94% done
+Checking variable_unsequenced.cpp ...
+58/60 files checked 96% done
+Checking variable_unused.cpp ...
+variable_unused.cpp:5:8: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+ int i = 0;
+       ^
+59/60 files checked 97% done
+Checking variable_used_uninitialized.cpp ...
+variable_used_uninitialized.cpp:7:8: style: The comparison 'a == 0' is always true. [knownConditionTrueFalse]
+ if (a == 0)
+       ^
+variable_used_uninitialized.cpp:5:10: note: 'a' is assigned value '0' here.
+ int a = 0, b;
+         ^
+variable_used_uninitialized.cpp:7:8: note: The comparison 'a == 0' is always true.
+ if (a == 0)
+       ^
+variable_used_uninitialized.cpp:5:13: style: The scope of the variable 'b' can be reduced. [variableScope]
+ int a = 0, b;
+            ^
+variable_used_uninitialized.cpp:8:3: error: Uninitialized variable: b [uninitvar]
+  b++;
+  ^
+variable_used_uninitialized.cpp:8:4: style: Variable 'b' is assigned a value that is never used. [unreadVariable]
+  b++;
+   ^
+variable_used_uninitialized.cpp:5:13: style: Variable 'b' is not assigned a value. [unassignedVariable]
+ int a = 0, b;
+            ^
+60/60 files checked 100% done

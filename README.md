@@ -24,6 +24,7 @@ The more warnings the better: each test case compiled without any warning or err
 1. **Clang 10.0.0:** 11 warnings missing
 2. **GCC 9.3.0:** 14 warnings missing
 3. **Visual Studio 2017:** 19 warnings missing
+4. **cppcheck 2.3:** 26 warnings missing
 
 For details see the [subfolder Results/](Results/)
 
@@ -32,6 +33,7 @@ How to Enable the Highest Warning Level 🔧
 By default, every compiler sets the warning level to "normal" - whatever this means. And each compiler supports different options to be more pedantic:
 
 * **Clang**: `-Weverything -pedantic`
+* **cppcheck**: --enable=all
 * **GCC**: `-Wall -Wextra -pedantic -Wundef`
 * **Visual Studio**: `/Wall`
 
