@@ -33,7 +33,7 @@ How to Enable the Highest Warning Level 🔧
 By default, every compiler sets the warning level to "normal" - whatever this means. And each compiler supports different options to be more pedantic:
 
 * **Clang**: `-Weverything -pedantic`
-* **cppcheck**: --enable=all
+* **cppcheck**: `--enable=all`
 * **GCC**: `-Wall -Wextra -pedantic -Wundef`
 * **Visual Studio**: `/Wall`
 
