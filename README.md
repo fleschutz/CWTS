@@ -1,7 +1,7 @@
 The Compiler Warnings Test Suite (CWTS) for C++
 ===============================================
 
-**Warnings are important, especially in C++. Developers do require an early warning system to prevent mistakes. However, not every C++ compiler detects and prints each and every possible warning. CWTS contains a collection of 60 test cases to check this. See the [subfolder Tests/](Tests/) where each test case is handled by a single .cpp source code file, which should generate at least one warning or error.**
+**Warnings are important, especially in C++. To prevent software bugs developers do require an early warning system. However, not every C++ compiler or static code analyzer detects and prints each and every possible warning. CWTS provides a collection of 60 test cases to check this. See the [subfolder Tests/](Tests/) where each test case is handled by a single .cpp source code file, which should generate at least one warning or error.**
 
 
 Requirements & Installation
@@ -35,8 +35,12 @@ How to Enable the Highest Warning Level 🔧
 By default, every compiler and analyzer sets the warning level to "normal" - whatever this means. And each one supports different options to be more pedantic:
 
 * **Clang**: `-Weverything -pedantic`
+<<<<<<< HEAD
 * **clang-tidy:** `-checks=*,-modernize*`
 * **cppcheck**: --enable=all
+=======
+* **cppcheck**: `--enable=all`
+>>>>>>> af57c55635db023c2eca6b63cdf054d24a4863e6
 * **GCC**: `-Wall -Wextra -pedantic -Wundef`
 * **Visual Studio**: `/Wall`
 
