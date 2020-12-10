@@ -1,8 +1,9 @@
 # Platform-independent Makefile - requires cmake 2.8 or higher
 cmake_minimum_required(VERSION 2.8)
 
-# Static source code analysis:
+# Static code analysis:
 # set(CMAKE_CXX_CPPCHECK "cppcheck")
+# set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*,-modernize*")
 
 if(MSVC)
 	add_compile_options(/Wall /wd4514 /wd4710)

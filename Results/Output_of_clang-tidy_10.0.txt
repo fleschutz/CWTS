@@ -1,0 +1,889 @@
+[  1%] Building CXX object CMakeFiles/CWTS.dir/Tests/array_bounds_1.cpp.o
+/home/mf/CWTS/Tests/array_bounds_1.cpp:5:2: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+        int abc[1];
+        ^
+/home/mf/CWTS/Tests/array_bounds_1.cpp:5:2: warning: do not declare C-style arrays, use std::array<> instead [hicpp-avoid-c-arrays]
+/home/mf/CWTS/Tests/array_bounds_1.cpp:7:2: warning: array index 1 is past the end of the array (which contains 1 element) [clang-diagnostic-array-bounds]
+        abc[1] = 42;
+        ^
+/home/mf/CWTS/Tests/array_bounds_1.cpp:5:2: note: array 'abc' declared here
+        int abc[1];
+        ^
+/home/mf/CWTS/Tests/array_bounds_1.cpp:7:11: warning: 42 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        abc[1] = 42;
+                 ^
+/home/mf/CWTS/Tests/array_bounds_1.cpp:7:11: warning: 42 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/array_bounds_1.cpp: In function ‘void array_bounds_1()’:
+/home/mf/CWTS/Tests/array_bounds_1.cpp:5:6: warning: variable ‘abc’ set but not used [-Wunused-but-set-variable]
+    5 |  int abc[1];
+      |      ^~~
+[  3%] Building CXX object CMakeFiles/CWTS.dir/Tests/array_bounds_2.cpp.o
+/home/mf/CWTS/Tests/array_bounds_2.cpp:5:2: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+        int abc[1];
+        ^
+/home/mf/CWTS/Tests/array_bounds_2.cpp:5:2: warning: do not declare C-style arrays, use std::array<> instead [hicpp-avoid-c-arrays]
+/home/mf/CWTS/Tests/array_bounds_2.cpp:7:2: warning: array index -1 is before the beginning of the array [clang-diagnostic-array-bounds]
+        abc[-1] = 42;
+        ^
+/home/mf/CWTS/Tests/array_bounds_2.cpp:5:2: note: array 'abc' declared here
+        int abc[1];
+        ^
+/home/mf/CWTS/Tests/array_bounds_2.cpp:7:12: warning: 42 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        abc[-1] = 42;
+                  ^
+/home/mf/CWTS/Tests/array_bounds_2.cpp:7:12: warning: 42 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/array_bounds_2.cpp: In function ‘void array_bounds_2()’:
+/home/mf/CWTS/Tests/array_bounds_2.cpp:5:6: warning: variable ‘abc’ set but not used [-Wunused-but-set-variable]
+    5 |  int abc[1];
+      |      ^~~
+[  4%] Building CXX object CMakeFiles/CWTS.dir/Tests/array_braces_missing.cpp.o
+/home/mf/CWTS/Tests/array_braces_missing.cpp:1:1: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+int a[2][2] = { 0, 1, 2, 3 };
+^
+/home/mf/CWTS/Tests/array_braces_missing.cpp:1:1: warning: do not declare C-style arrays, use std::array<> instead [hicpp-avoid-c-arrays]
+/home/mf/CWTS/Tests/array_braces_missing.cpp:1:17: warning: suggest braces around initialization of subobject [clang-diagnostic-missing-braces]
+int a[2][2] = { 0, 1, 2, 3 };
+                ^
+                {   }
+/home/mf/CWTS/Tests/array_braces_missing.cpp:1:23: warning: suggest braces around initialization of subobject [clang-diagnostic-missing-braces]
+int a[2][2] = { 0, 1, 2, 3 };
+                      ^
+                      {   }
+[  6%] Building CXX object CMakeFiles/CWTS.dir/Tests/assignment_in_condition.cpp.o
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:7: warning: Although the value stored to 'x' is used in the enclosing expression, the value is never actually read from 'x' [clang-analyzer-deadcode.DeadStores]
+        if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+             ^
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:7: note: Although the value stored to 'x' is used in the enclosing expression, the value is never actually read from 'x'
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:7: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
+        if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+             ^
+                   != 0
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:9: warning: using the result of an assignment as a condition without parentheses [clang-diagnostic-parentheses]
+        if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+               ^
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:9: note: place parentheses around the assignment to silence this warning
+        if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+               ^
+             (    )
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:9: note: use '==' to turn this assignment into an equality comparison
+        if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+               ^
+               ==
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:11: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+                 ^
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:11: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:14: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+                    ^
+                     {
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:14: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+                    ^
+                     {
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:14: warning: statement should be inside braces [readability-braces-around-statements]
+        if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+                    ^
+                     {
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:6:10: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
+                return true;
+                       ^
+/home/mf/CWTS/Tests/assignment_in_condition.cpp: In function ‘bool assignment_in_condition(int)’:
+/home/mf/CWTS/Tests/assignment_in_condition.cpp:5:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    5 |  if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+      |       ~~^~~
+[  8%] Building CXX object CMakeFiles/CWTS.dir/Tests/bool_compare.cpp.o
+/home/mf/CWTS/Tests/bool_compare.cpp:5:9: warning: implicit conversion bool -> 'int' [readability-implicit-bool-conversion]
+        return (a > 0) == 2;
+               ^
+               static_cast<int>
+/home/mf/CWTS/Tests/bool_compare.cpp:5:17: warning: result of comparison of constant 2 with expression of type 'bool' is always false [clang-diagnostic-tautological-constant-out-of-range-compare]
+        return (a > 0) == 2;
+                       ^
+/home/mf/CWTS/Tests/bool_compare.cpp: In function ‘bool bool_compare(int)’:
+/home/mf/CWTS/Tests/bool_compare.cpp:5:17: warning: comparison of constant ‘2’ with boolean expression is always false [-Wbool-compare]
+    5 |  return (a > 0) == 2;
+      |         ~~~~~~~~^~~~
+[  9%] Building CXX object CMakeFiles/CWTS.dir/Tests/branches_identical_1.cpp.o
+/home/mf/CWTS/Tests/branches_identical_1.cpp:5:2: warning: if with identical then and else branches [bugprone-branch-clone]
+        if (a == 0)
+        ^
+/home/mf/CWTS/Tests/branches_identical_1.cpp:7:2: note: else branch starts here
+        else
+        ^
+/home/mf/CWTS/Tests/branches_identical_1.cpp:5:13: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if (a == 0)
+                   ^
+                    {
+/home/mf/CWTS/Tests/branches_identical_1.cpp:5:13: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if (a == 0)
+                   ^
+                    {
+/home/mf/CWTS/Tests/branches_identical_1.cpp:5:13: warning: statement should be inside braces [readability-braces-around-statements]
+        if (a == 0)
+                   ^
+                    {
+/home/mf/CWTS/Tests/branches_identical_1.cpp:7:2: warning: do not use 'else' after 'return' [readability-else-after-return]
+        else
+        ^~~~
+                        return false
+/home/mf/CWTS/Tests/branches_identical_1.cpp:7:6: warning: statement should be inside braces [google-readability-braces-around-statements]
+        else
+            ^
+             {
+/home/mf/CWTS/Tests/branches_identical_1.cpp:7:6: warning: statement should be inside braces [hicpp-braces-around-statements]
+        else
+            ^
+             {
+/home/mf/CWTS/Tests/branches_identical_1.cpp:7:6: warning: statement should be inside braces [readability-braces-around-statements]
+        else
+            ^
+             {
+[ 11%] Building CXX object CMakeFiles/CWTS.dir/Tests/branches_identical_2.cpp.o
+/home/mf/CWTS/Tests/branches_identical_2.cpp:5:18: warning: conditional operator with identical true and false expressions [bugprone-branch-clone]
+        return (a == 0) ? 42 : 42;
+                        ^
+/home/mf/CWTS/Tests/branches_identical_2.cpp:5:20: warning: 42 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        return (a == 0) ? 42 : 42;
+                          ^
+/home/mf/CWTS/Tests/branches_identical_2.cpp:5:20: warning: 42 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/branches_identical_2.cpp:5:23: warning: 'true' and 'false' expressions are equivalent [misc-redundant-expression]
+        return (a == 0) ? 42 : 42;
+                             ^
+/home/mf/CWTS/Tests/branches_identical_2.cpp:5:25: warning: 42 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        return (a == 0) ? 42 : 42;
+                               ^
+/home/mf/CWTS/Tests/branches_identical_2.cpp:5:25: warning: 42 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+[ 13%] Building CXX object CMakeFiles/CWTS.dir/Tests/branches_identical_3.cpp.o
+/home/mf/CWTS/Tests/branches_identical_3.cpp:5:11: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+        if (a == true)
+            ~~~~~^~~~
+            a
+/home/mf/CWTS/Tests/branches_identical_3.cpp:5:16: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if (a == true)
+                      ^
+                       {
+/home/mf/CWTS/Tests/branches_identical_3.cpp:5:16: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if (a == true)
+                      ^
+                       {
+/home/mf/CWTS/Tests/branches_identical_3.cpp:5:16: warning: statement should be inside braces [readability-braces-around-statements]
+        if (a == true)
+                      ^
+                       {
+/home/mf/CWTS/Tests/branches_identical_3.cpp:7:2: warning: do not use 'else' after 'return' [readability-else-after-return]
+        else if (a == true)
+        ^~~~~~~~~~~~~~~~~~~
+/home/mf/CWTS/Tests/branches_identical_3.cpp:7:16: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+        else if (a == true)
+                      ^
+note: this fix will not be applied because it overlaps with another fix
+/home/mf/CWTS/Tests/branches_identical_3.cpp:7:21: warning: statement should be inside braces [google-readability-braces-around-statements]
+        else if (a == true)
+                           ^
+                            {
+/home/mf/CWTS/Tests/branches_identical_3.cpp:7:21: warning: statement should be inside braces [hicpp-braces-around-statements]
+        else if (a == true)
+                           ^
+                            {
+/home/mf/CWTS/Tests/branches_identical_3.cpp:7:21: warning: statement should be inside braces [readability-braces-around-statements]
+        else if (a == true)
+                           ^
+                            {
+[ 14%] Building CXX object CMakeFiles/CWTS.dir/Tests/cast_unnecessary.cpp.o
+[ 16%] Building CXX object CMakeFiles/CWTS.dir/Tests/code_unreachable_1.cpp.o
+[ 18%] Building CXX object CMakeFiles/CWTS.dir/Tests/code_unreachable_2.cpp.o
+/home/mf/CWTS/Tests/code_unreachable_2.cpp:5:8: warning: 20 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        throw 20;
+              ^
+/home/mf/CWTS/Tests/code_unreachable_2.cpp:5:8: warning: throwing an exception whose type 'int' is not derived from 'std::exception' [hicpp-exception-baseclass]
+/home/mf/CWTS/Tests/code_unreachable_2.cpp:5:8: warning: 20 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+[ 19%] Building CXX object CMakeFiles/CWTS.dir/Tests/code_unreachable_3.cpp.o
+/home/mf/CWTS/Tests/code_unreachable_3.cpp:5:13: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if (i == 0)
+                   ^
+                    {
+/home/mf/CWTS/Tests/code_unreachable_3.cpp:5:13: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if (i == 0)
+                   ^
+                    {
+/home/mf/CWTS/Tests/code_unreachable_3.cpp:5:13: warning: statement should be inside braces [readability-braces-around-statements]
+        if (i == 0)
+                   ^
+                    {
+/home/mf/CWTS/Tests/code_unreachable_3.cpp:7:2: warning: do not use 'else' after 'return' [readability-else-after-return]
+        else
+        ^~~~
+                        return 1
+/home/mf/CWTS/Tests/code_unreachable_3.cpp:7:6: warning: statement should be inside braces [google-readability-braces-around-statements]
+        else
+            ^
+             {
+/home/mf/CWTS/Tests/code_unreachable_3.cpp:7:6: warning: statement should be inside braces [hicpp-braces-around-statements]
+        else
+            ^
+             {
+/home/mf/CWTS/Tests/code_unreachable_3.cpp:7:6: warning: statement should be inside braces [readability-braces-around-statements]
+        else
+            ^
+             {
+[ 21%] Building CXX object CMakeFiles/CWTS.dir/Tests/comment.cpp.o
+/home/mf/CWTS/Tests/comment.cpp:1:4: warning: '/*' within block comment [clang-diagnostic-comment]
+/* /* comment in comment */
+   ^
+/home/mf/CWTS/Tests/comment.cpp:1:4: warning: "/*" within comment [-Wcomment]
+    1 | /* /* comment in comment */
+      |     
+[ 22%] Building CXX object CMakeFiles/CWTS.dir/Tests/constant_expression.cpp.o
+/home/mf/CWTS/Tests/constant_expression.cpp:5:24: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        for (unsigned int i = 10; i >= 0; i++)
+                              ^
+/home/mf/CWTS/Tests/constant_expression.cpp:5:24: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/constant_expression.cpp:5:40: warning: statement should be inside braces [google-readability-braces-around-statements]
+        for (unsigned int i = 10; i >= 0; i++)
+                                              ^
+                                               {
+/home/mf/CWTS/Tests/constant_expression.cpp:5:40: warning: statement should be inside braces [hicpp-braces-around-statements]
+        for (unsigned int i = 10; i >= 0; i++)
+                                              ^
+                                               {
+/home/mf/CWTS/Tests/constant_expression.cpp:5:40: warning: statement should be inside braces [readability-braces-around-statements]
+        for (unsigned int i = 10; i >= 0; i++)
+                                              ^
+                                               {
+/home/mf/CWTS/Tests/constant_expression.cpp: In function ‘void constant_expression()’:
+/home/mf/CWTS/Tests/constant_expression.cpp:5:30: warning: comparison of unsigned expression >= 0 is always true [-Wtype-limits]
+    5 |  for (unsigned int i = 10; i >= 0; i++)
+      |                            ~~^~~~
+[ 24%] Building CXX object CMakeFiles/CWTS.dir/Tests/constant_overflow.cpp.o
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:1: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+char a[] = { 1, 2, 0xFFFF };
+^
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:1: warning: do not declare C-style arrays, use std::array<> instead [hicpp-avoid-c-arrays]
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:20: error: constant expression evaluates to 65535 which cannot be narrowed to type 'char' [clang-diagnostic-c++11-narrowing]
+char a[] = { 1, 2, 0xFFFF };
+                   ^
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:20: note: insert an explicit cast to silence this issue
+char a[] = { 1, 2, 0xFFFF };
+                   ^
+                   static_cast<char>( )
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:20: warning: implicit conversion from 'int' to 'char' changes value from 65535 to 255 [clang-diagnostic-constant-conversion]
+char a[] = { 1, 2, 0xFFFF };
+                   ^
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:20: warning: 0xFFFF is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+/home/mf/CWTS/Tests/constant_overflow.cpp:1:20: warning: 0xFFFF is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+7 warnings and 1 error generated.
+Error while processing /home/mf/CWTS/Tests/constant_overflow.cpp.
+Found compiler error(s).
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:245: CMakeFiles/CWTS.dir/Tests/constant_overflow.cpp.o] Error 1
+[ 26%] Building CXX object CMakeFiles/CWTS.dir/Tests/division_by_zero.cpp.o
+/home/mf/CWTS/Tests/division_by_zero.cpp:5:11: warning: Division by zero [clang-analyzer-core.DivideZero]
+        return a / 0;
+                 ^
+/home/mf/CWTS/Tests/division_by_zero.cpp:5:11: note: Division by zero
+/home/mf/CWTS/Tests/division_by_zero.cpp:5:11: warning: division by zero is undefined [clang-diagnostic-division-by-zero]
+        return a / 0;
+                 ^
+/home/mf/CWTS/Tests/division_by_zero.cpp: In function ‘int division_by_zero(int)’:
+/home/mf/CWTS/Tests/division_by_zero.cpp:5:11: warning: division by zero [-Wdiv-by-zero]
+    5 |  return a / 0;
+      |         ~~^~~
+[ 27%] Building CXX object CMakeFiles/CWTS.dir/Tests/enum_unhandled.cpp.o
+[ 29%] Building CXX object CMakeFiles/CWTS.dir/Tests/enum_value.cpp.o
+[ 31%] Building CXX object CMakeFiles/CWTS.dir/Tests/extra_tokens.cpp.o
+/home/mf/CWTS/Tests/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [clang-diagnostic-extra-tokens]
+#endif BAD
+       ^
+       //
+/home/mf/CWTS/Tests/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+    2 | #endif BAD
+      |        ^~~
+[ 32%] Building CXX object CMakeFiles/CWTS.dir/Tests/file_empty.cpp.o
+[ 34%] Building CXX object CMakeFiles/CWTS.dir/Tests/format_string_1.cpp.o
+/home/mf/CWTS/Tests/format_string_1.cpp:1:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+#include <stdio.h>
+         ^~~~~~~~~
+         <cstdio>
+/home/mf/CWTS/Tests/format_string_1.cpp:7:15: warning: format specifies type 'char *' but the argument has type 'int' [clang-diagnostic-format]
+        printf("%s", 0);
+                ~~   ^
+                %d
+/home/mf/CWTS/Tests/format_string_1.cpp: In function ‘void format_string_1()’:
+/home/mf/CWTS/Tests/format_string_1.cpp:7:11: warning: format ‘%s’ expects argument of type ‘char*’, but argument 2 has type ‘int’ [-Wformat=]
+    7 |  printf("%s", 0);
+      |          ~^   ~
+      |           |   |
+      |           |   int
+      |           char*
+      |          %d
+/home/mf/CWTS/Tests/format_string_1.cpp:7:8: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+    7 |  printf("%s", 0);
+      |  ~~~~~~^~~~~~~~~
+[ 36%] Building CXX object CMakeFiles/CWTS.dir/Tests/format_string_2.cpp.o
+/home/mf/CWTS/Tests/format_string_2.cpp:1:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+#include <stdio.h>
+         ^~~~~~~~~
+         <cstdio>
+/home/mf/CWTS/Tests/format_string_2.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+        printf("");
+        ^
+/home/mf/CWTS/Tests/format_string_2.cpp:7:2: warning: do not call c-style vararg functions [hicpp-vararg]
+/home/mf/CWTS/Tests/format_string_2.cpp: In function ‘void format_string_2()’:
+/home/mf/CWTS/Tests/format_string_2.cpp:7:9: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+    7 |  printf("");
+      |         ^~
+[ 37%] Building CXX object CMakeFiles/CWTS.dir/Tests/format_string_3.cpp.o
+/home/mf/CWTS/Tests/format_string_3.cpp:1:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+#include <stdio.h>
+         ^~~~~~~~~
+         <cstdio>
+/home/mf/CWTS/Tests/format_string_3.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+        printf(s);
+        ^
+/home/mf/CWTS/Tests/format_string_3.cpp:7:2: warning: do not call c-style vararg functions [hicpp-vararg]
+/home/mf/CWTS/Tests/format_string_3.cpp:7:9: warning: format string is not a string literal (potentially insecure) [clang-diagnostic-format-security]
+        printf(s);
+               ^
+/home/mf/CWTS/Tests/format_string_3.cpp:7:9: note: treat the string as an argument to avoid this
+        printf(s);
+               ^
+               "%s", 
+/home/mf/CWTS/Tests/format_string_3.cpp: In function ‘void format_string_3(char*)’:
+/home/mf/CWTS/Tests/format_string_3.cpp:7:10: warning: format not a string literal and no format arguments [-Wformat-security]
+    7 |  printf(s);
+      |          ^
+[ 39%] Building CXX object CMakeFiles/CWTS.dir/Tests/function_parameter_unused.cpp.o
+/home/mf/CWTS/Tests/function_parameter_unused.cpp:1:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+#include <stdio.h>
+         ^~~~~~~~~
+         <cstdio>
+/home/mf/CWTS/Tests/function_parameter_unused.cpp:5:27: warning: unused parameter 'a' [clang-diagnostic-unused-parameter]
+void parameter_unused(int a)
+                          ^
+/home/mf/CWTS/Tests/function_parameter_unused.cpp:5:27: warning: parameter 'a' is unused [misc-unused-parameters]
+void parameter_unused(int a)
+                          ^
+                           /*a*/
+/home/mf/CWTS/Tests/function_parameter_unused.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+        printf(" ");
+        ^
+/home/mf/CWTS/Tests/function_parameter_unused.cpp:7:2: warning: do not call c-style vararg functions [hicpp-vararg]
+/home/mf/CWTS/Tests/function_parameter_unused.cpp: In function ‘void parameter_unused(int)’:
+/home/mf/CWTS/Tests/function_parameter_unused.cpp:5:27: warning: unused parameter ‘a’ [-Wunused-parameter]
+    5 | void parameter_unused(int a)
+      |                       ~~~~^
+[ 40%] Building CXX object CMakeFiles/CWTS.dir/Tests/function_without_prototype.cpp.o
+[ 42%] Building CXX object CMakeFiles/CWTS.dir/Tests/function_without_return_value.cpp.o
+/home/mf/CWTS/Tests/function_without_return_value.cpp:5:2: error: non-void function 'function_without_return_value' should return a value [clang-diagnostic-return-type]
+        return;
+        ^
+1 error generated.
+Error while processing /home/mf/CWTS/Tests/function_without_return_value.cpp.
+Found compiler error(s).
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:388: CMakeFiles/CWTS.dir/Tests/function_without_return_value.cpp.o] Error 1
+[ 44%] Building CXX object CMakeFiles/CWTS.dir/Tests/identifier_undefined.cpp.o
+/home/mf/CWTS/Tests/identifier_undefined.cpp:1:5: warning: 'IDENTIFIER_UNDEFINED' is not defined, evaluates to 0 [clang-diagnostic-undef]
+#if IDENTIFIER_UNDEFINED
+    ^
+/home/mf/CWTS/Tests/identifier_undefined.cpp:1:5: warning: "IDENTIFIER_UNDEFINED" is not defined, evaluates to 0 [-Wundef]
+    1 | #if IDENTIFIER_UNDEFINED
+      |     ^~~~~~~~~~~~~~~~~~~~
+[ 45%] Building CXX object CMakeFiles/CWTS.dir/Tests/implicit_conversion_1.cpp.o
+/home/mf/CWTS/Tests/implicit_conversion_1.cpp:1:35: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+extern char implicit_conversion_1(short a);
+                                  ^
+/home/mf/CWTS/Tests/implicit_conversion_1.cpp:3:28: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+char implicit_conversion_1(short a)
+                           ^
+[ 47%] Building CXX object CMakeFiles/CWTS.dir/Tests/implicit_conversion_2.cpp.o
+/home/mf/CWTS/Tests/implicit_conversion_2.cpp:1:8: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+extern short implicit_conversion_2(int a);
+       ^
+/home/mf/CWTS/Tests/implicit_conversion_2.cpp:3:1: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+short implicit_conversion_2(int a)
+^
+/home/mf/CWTS/Tests/implicit_conversion_2.cpp:5:9: warning: narrowing conversion from 'int' to signed type 'short' is implementation-defined [bugprone-narrowing-conversions]
+        return a;
+               ^
+/home/mf/CWTS/Tests/implicit_conversion_2.cpp:5:9: warning: narrowing conversion from 'int' to signed type 'short' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+[ 49%] Building CXX object CMakeFiles/CWTS.dir/Tests/implicit_conversion_3.cpp.o
+/home/mf/CWTS/Tests/implicit_conversion_3.cpp:1:34: warning: consider replacing 'long' with 'int64' [google-runtime-int]
+extern int implicit_conversion_3(long a);
+                                 ^
+/home/mf/CWTS/Tests/implicit_conversion_3.cpp:3:27: warning: consider replacing 'long' with 'int64' [google-runtime-int]
+int implicit_conversion_3(long a)
+                          ^
+/home/mf/CWTS/Tests/implicit_conversion_3.cpp:5:9: warning: narrowing conversion from 'long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions]
+        return a;
+               ^
+/home/mf/CWTS/Tests/implicit_conversion_3.cpp:5:9: warning: narrowing conversion from 'long' to signed type 'int' is implementation-defined [cppcoreguidelines-narrowing-conversions]
+[ 50%] Building CXX object CMakeFiles/CWTS.dir/Tests/label_unused.cpp.o
+/home/mf/CWTS/Tests/label_unused.cpp:5:1: warning: unused label 'label_is_unused' [clang-diagnostic-unused-label]
+label_is_unused:
+^~~~~~~~~~~~~~~~
+/home/mf/CWTS/Tests/label_unused.cpp: In function ‘int label_unused(int)’:
+/home/mf/CWTS/Tests/label_unused.cpp:5:1: warning: label ‘label_is_unused’ defined but not used [-Wunused-label]
+    5 | label_is_unused:
+      | ^~~~~~~~~~~~~~~
+[ 52%] Building CXX object CMakeFiles/CWTS.dir/Tests/member_init_reorder.cpp.o
+/home/mf/CWTS/Tests/member_init_reorder.cpp:2:6: warning: member variable 'i' has public visibility [misc-non-private-member-variables-in-classes]
+        int i;
+            ^
+/home/mf/CWTS/Tests/member_init_reorder.cpp:3:6: warning: member variable 'j' has public visibility [misc-non-private-member-variables-in-classes]
+        int j;
+            ^
+/home/mf/CWTS/Tests/member_init_reorder.cpp:4:7: warning: field 'j' will be initialized after field 'i' [clang-diagnostic-reorder-ctor]
+        A(): j(0), i(1) { }
+             ^
+/home/mf/CWTS/Tests/member_init_reorder.cpp: In constructor ‘A::A()’:
+/home/mf/CWTS/Tests/member_init_reorder.cpp:3:6: warning: ‘A::j’ will be initialized after [-Wreorder]
+    3 |  int j;
+      |      ^
+/home/mf/CWTS/Tests/member_init_reorder.cpp:2:6: warning:   ‘int A::i’ [-Wreorder]
+    2 |  int i;
+      |      ^
+/home/mf/CWTS/Tests/member_init_reorder.cpp:4:2: warning:   when initialized here [-Wreorder]
+    4 |  A(): j(0), i(1) { }
+      |  ^
+[ 54%] Building CXX object CMakeFiles/CWTS.dir/Tests/parentheses.cpp.o
+/home/mf/CWTS/Tests/parentheses.cpp:5:12: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if (a > 0)
+                  ^
+                   {
+/home/mf/CWTS/Tests/parentheses.cpp:5:12: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if (a > 0)
+                  ^
+                   {
+/home/mf/CWTS/Tests/parentheses.cpp:5:12: warning: statement should be inside braces [readability-braces-around-statements]
+        if (a > 0)
+                  ^
+                   {
+/home/mf/CWTS/Tests/parentheses.cpp:6:12: warning: 7 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+                if (a == 7)
+                         ^
+/home/mf/CWTS/Tests/parentheses.cpp:6:12: warning: 7 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/parentheses.cpp:6:14: warning: statement should be inside braces [google-readability-braces-around-statements]
+                if (a == 7)
+                           ^
+                            {
+/home/mf/CWTS/Tests/parentheses.cpp:6:14: warning: statement should be inside braces [hicpp-braces-around-statements]
+                if (a == 7)
+                           ^
+                            {
+/home/mf/CWTS/Tests/parentheses.cpp:6:14: warning: statement should be inside braces [readability-braces-around-statements]
+                if (a == 7)
+                           ^
+                            {
+/home/mf/CWTS/Tests/parentheses.cpp:8:2: warning: add explicit braces to avoid dangling else [clang-diagnostic-dangling-else]
+        else
+        ^
+/home/mf/CWTS/Tests/parentheses.cpp:8:2: warning: different indentation for 'if' and corresponding 'else' [readability-misleading-indentation]
+/home/mf/CWTS/Tests/parentheses.cpp:8:6: warning: statement should be inside braces [google-readability-braces-around-statements]
+        else
+            ^
+             {
+/home/mf/CWTS/Tests/parentheses.cpp:8:6: warning: statement should be inside braces [hicpp-braces-around-statements]
+        else
+            ^
+             {
+/home/mf/CWTS/Tests/parentheses.cpp:8:6: warning: statement should be inside braces [readability-braces-around-statements]
+        else
+            ^
+             {
+/home/mf/CWTS/Tests/parentheses.cpp: In function ‘int parentheses(int)’:
+/home/mf/CWTS/Tests/parentheses.cpp:5:5: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+    5 |  if (a > 0)
+      |     ^
+[ 55%] Building CXX object CMakeFiles/CWTS.dir/Tests/pointer_compare.cpp.o
+/home/mf/CWTS/Tests/pointer_compare.cpp:5:10: error: comparison between pointer and integer ('char *' and 'char') [clang-diagnostic-error]
+        if (ptr == '\0')
+                ^
+/home/mf/CWTS/Tests/pointer_compare.cpp:6:10: warning: 42 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+                return 42;
+                       ^
+/home/mf/CWTS/Tests/pointer_compare.cpp:6:10: warning: 42 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+2 warnings and 1 error generated.
+Error while processing /home/mf/CWTS/Tests/pointer_compare.cpp.
+Found compiler error(s).
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:492: CMakeFiles/CWTS.dir/Tests/pointer_compare.cpp.o] Error 1
+[ 57%] Building CXX object CMakeFiles/CWTS.dir/Tests/null_pointer_access_1.cpp.o
+/home/mf/CWTS/Tests/null_pointer_access_1.cpp:7:7: warning: Dereference of null pointer (loaded from variable 'ptr') [clang-analyzer-core.NullDereference]
+        *ptr = 42;
+             ^
+/home/mf/CWTS/Tests/null_pointer_access_1.cpp:5:2: note: 'ptr' initialized to a null pointer value
+        static int *ptr; // NULL by default
+        ^
+/home/mf/CWTS/Tests/null_pointer_access_1.cpp:7:7: note: Dereference of null pointer (loaded from variable 'ptr')
+        *ptr = 42;
+             ^
+/home/mf/CWTS/Tests/null_pointer_access_1.cpp:7:9: warning: 42 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        *ptr = 42;
+               ^
+/home/mf/CWTS/Tests/null_pointer_access_1.cpp:7:9: warning: 42 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+[ 59%] Building CXX object CMakeFiles/CWTS.dir/Tests/null_pointer_access_2.cpp.o
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:5:11: warning: use nullptr [hicpp-use-nullptr]
+        int *q = 0;
+                 ^
+                 nullptr
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:6:20: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        if (0 <= a && a < 10)
+                          ^
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:6:20: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:6:23: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if (0 <= a && a < 10)
+                             ^
+                              {
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:6:23: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if (0 <= a && a < 10)
+                             ^
+                              {
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:6:23: warning: statement should be inside braces [readability-braces-around-statements]
+        if (0 <= a && a < 10)
+                             ^
+                              {
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:7:16: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+                q = p + a;
+                      ^
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:8:5: warning: Dereference of null pointer (loaded from variable 'q') [clang-analyzer-core.NullDereference]
+        *q = 1;  // q may be NULL
+           ^
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:5:2: note: 'q' initialized to a null pointer value
+        int *q = 0;
+        ^
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:6:6: note: Assuming 'a' is < 0
+        if (0 <= a && a < 10)
+            ^
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:6:13: note: Left side of '&&' is false
+        if (0 <= a && a < 10)
+                   ^
+/home/mf/CWTS/Tests/null_pointer_access_2.cpp:8:5: note: Dereference of null pointer (loaded from variable 'q')
+        *q = 1;  // q may be NULL
+           ^
+[ 60%] Building CXX object CMakeFiles/CWTS.dir/Tests/recursive_include.cpp.o
+/home/mf/CWTS/Tests/recursive_include.cpp:1:10: error: #include nested too deeply [clang-diagnostic-error]
+#include "recursive_include.cpp"
+         ^
+1 error generated.
+Error while processing /home/mf/CWTS/Tests/recursive_include.cpp.
+Found compiler error(s).
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:531: CMakeFiles/CWTS.dir/Tests/recursive_include.cpp.o] Error 1
+[ 62%] Building CXX object CMakeFiles/CWTS.dir/Tests/shift_count_negative.cpp.o
+/home/mf/CWTS/Tests/shift_count_negative.cpp:5:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+        return a << -1;
+               ^
+/home/mf/CWTS/Tests/shift_count_negative.cpp:5:11: warning: shift count is negative [clang-diagnostic-shift-count-negative]
+        return a << -1;
+                 ^
+/home/mf/CWTS/Tests/shift_count_negative.cpp: In function ‘int shift_count_negative(int)’:
+/home/mf/CWTS/Tests/shift_count_negative.cpp:5:15: warning: left shift count is negative [-Wshift-count-negative]
+    5 |  return a << -1;
+      |               ^
+[ 63%] Building CXX object CMakeFiles/CWTS.dir/Tests/shift_count_overflow.cpp.o
+/home/mf/CWTS/Tests/shift_count_overflow.cpp:5:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+        return a << 66;
+               ^
+/home/mf/CWTS/Tests/shift_count_overflow.cpp:5:11: warning: shift count >= width of type [clang-diagnostic-shift-count-overflow]
+        return a << 66;
+                 ^
+/home/mf/CWTS/Tests/shift_count_overflow.cpp:5:14: warning: 66 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        return a << 66;
+                    ^
+/home/mf/CWTS/Tests/shift_count_overflow.cpp:5:14: warning: 66 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/shift_count_overflow.cpp: In function ‘int shift_count_overflow(int)’:
+/home/mf/CWTS/Tests/shift_count_overflow.cpp:5:14: warning: left shift count >= width of type [-Wshift-count-overflow]
+    5 |  return a << 66;
+      |              ^~
+[ 65%] Building CXX object CMakeFiles/CWTS.dir/Tests/shift_value_negative.cpp.o
+/home/mf/CWTS/Tests/shift_value_negative.cpp:5:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+        return -1 << 2;
+               ^
+/home/mf/CWTS/Tests/shift_value_negative.cpp:5:12: warning: The result of the left shift is undefined because the left operand is negative [clang-analyzer-core.UndefinedBinaryOperatorResult]
+        return -1 << 2;
+                  ^
+/home/mf/CWTS/Tests/shift_value_negative.cpp:5:12: note: The result of the left shift is undefined because the left operand is negative
+/home/mf/CWTS/Tests/shift_value_negative.cpp:5:12: warning: shifting a negative signed value is undefined [clang-diagnostic-shift-negative-value]
+        return -1 << 2;
+                  ^
+/home/mf/CWTS/Tests/shift_value_negative.cpp: In function ‘int shift_value_negative()’:
+/home/mf/CWTS/Tests/shift_value_negative.cpp:5:15: warning: left shift of negative value [-Wshift-negative-value]
+    5 |  return -1 << 2;
+      |               ^
+[ 67%] Building CXX object CMakeFiles/CWTS.dir/Tests/shift_overflow.cpp.o
+/home/mf/CWTS/Tests/shift_overflow.cpp:1:10: warning: inclusion of deprecated C++ header 'limits.h'; consider using 'climits' instead [hicpp-deprecated-headers]
+#include <limits.h>
+         ^~~~~~~~~~
+         <climits>
+/home/mf/CWTS/Tests/shift_overflow.cpp:7:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+        return INT_MAX << 10;
+               ^
+/usr/lib/llvm-10/lib/clang/10.0.0/include/limits.h:46:19: note: expanded from macro 'INT_MAX'
+#define INT_MAX   __INT_MAX__
+                  ^
+note: expanded from here
+/home/mf/CWTS/Tests/shift_overflow.cpp:7:17: warning: The result of the left shift is undefined due to shifting '2147483647' by '10', which is unrepresentable in the unsigned version of the return type 'int' [clang-analyzer-core.UndefinedBinaryOperatorResult]
+        return INT_MAX << 10;
+                       ^
+/home/mf/CWTS/Tests/shift_overflow.cpp:7:17: note: The result of the left shift is undefined due to shifting '2147483647' by '10', which is unrepresentable in the unsigned version of the return type 'int'
+/home/mf/CWTS/Tests/shift_overflow.cpp:7:17: warning: signed shift result (0x1FFFFFFFC00) requires 42 bits to represent, but 'int' only has 32 bits [clang-diagnostic-shift-overflow]
+        return INT_MAX << 10;
+                       ^
+/home/mf/CWTS/Tests/shift_overflow.cpp:7:20: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        return INT_MAX << 10;
+                          ^
+/home/mf/CWTS/Tests/shift_overflow.cpp:7:20: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/shift_overflow.cpp: In function ‘int shift_overflow()’:
+/home/mf/CWTS/Tests/shift_overflow.cpp:7:17: warning: result of ‘(2147483647 << 10)’ requires 42 bits to represent, but ‘int’ only has 32 bits [-Wshift-overflow=]
+    7 |  return INT_MAX << 10;
+      |                 ^
+[ 68%] Building CXX object CMakeFiles/CWTS.dir/Tests/stack_address_returned.cpp.o
+/home/mf/CWTS/Tests/stack_address_returned.cpp:5:2: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+        int array[10] = {};
+        ^
+/home/mf/CWTS/Tests/stack_address_returned.cpp:5:2: warning: do not declare C-style arrays, use std::array<> instead [hicpp-avoid-c-arrays]
+/home/mf/CWTS/Tests/stack_address_returned.cpp:5:12: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        int array[10] = {};
+                  ^
+/home/mf/CWTS/Tests/stack_address_returned.cpp:5:12: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/stack_address_returned.cpp:7:2: warning: Address of stack memory associated with local variable 'array' returned to caller [clang-analyzer-core.StackAddrEscapeBase]
+        return array;
+        ^
+/home/mf/CWTS/Tests/stack_address_returned.cpp:7:2: note: Address of stack memory associated with local variable 'array' returned to caller
+/home/mf/CWTS/Tests/stack_address_returned.cpp:7:9: warning: address of stack memory associated with local variable 'array' returned [clang-diagnostic-return-stack-address]
+        return array;
+               ^
+/home/mf/CWTS/Tests/stack_address_returned.cpp:7:9: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+/home/mf/CWTS/Tests/stack_address_returned.cpp:7:9: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [hicpp-no-array-decay]
+/home/mf/CWTS/Tests/stack_address_returned.cpp: In function ‘int* stack_address_returned()’:
+/home/mf/CWTS/Tests/stack_address_returned.cpp:7:9: warning: address of local variable ‘array’ returned [-Wreturn-local-addr]
+    7 |  return array;
+      |         ^~~~~
+/home/mf/CWTS/Tests/stack_address_returned.cpp:5:6: note: declared here
+    5 |  int array[10] = {};
+      |      ^~~~~
+[ 70%] Building CXX object CMakeFiles/CWTS.dir/Tests/static_const_unused.cpp.o
+/home/mf/CWTS/Tests/static_const_unused.cpp:1:18: warning: unused variable 'answer' [clang-diagnostic-unused-const-variable]
+static const int answer = 42;
+                 ^
+[ 72%] Building CXX object CMakeFiles/CWTS.dir/Tests/static_function_unused.cpp.o
+/home/mf/CWTS/Tests/static_function_unused.cpp:1:13: warning: unused function 'static_function_unused' [clang-diagnostic-unused-function]
+static void static_function_unused()
+            ^
+/home/mf/CWTS/Tests/static_function_unused.cpp:1:13: warning: ‘void static_function_unused()’ defined but not used [-Wunused-function]
+    1 | static void static_function_unused()
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+[ 73%] Building CXX object CMakeFiles/CWTS.dir/Tests/switch_body_empty.cpp.o
+/home/mf/CWTS/Tests/switch_body_empty.cpp:5:2: warning: switch statement without labels has no effect [hicpp-multiway-paths-covered]
+        switch (a)
+        ^
+[ 75%] Building CXX object CMakeFiles/CWTS.dir/Tests/switch_code_unreachable.cpp.o
+/home/mf/CWTS/Tests/switch_code_unreachable.cpp: In function ‘int switch_code_unreachable(int)’:
+/home/mf/CWTS/Tests/switch_code_unreachable.cpp:9:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    9 |  a *= 2;
+      |  ~~^~~~
+/home/mf/CWTS/Tests/switch_code_unreachable.cpp:10:2: note: here
+   10 |  default: a /= 2; break;
+      |  ^~~~~~~
+[ 77%] Building CXX object CMakeFiles/CWTS.dir/Tests/switch_default_missing.cpp.o
+/home/mf/CWTS/Tests/switch_default_missing.cpp:5:2: warning: potential uncovered code path; add a default label [hicpp-multiway-paths-covered]
+        switch (a)
+        ^
+[ 78%] Building CXX object CMakeFiles/CWTS.dir/Tests/value_unused.cpp.o
+/home/mf/CWTS/Tests/value_unused.cpp:5:4: warning: expression result unused [clang-diagnostic-unused-value]
+        a * b;
+          ^
+/home/mf/CWTS/Tests/value_unused.cpp: In function ‘int value_unused(int, int)’:
+/home/mf/CWTS/Tests/value_unused.cpp:5:4: warning: statement has no effect [-Wunused-value]
+    5 |  a * b;
+      |  ~~^~~
+[ 80%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_assignment.cpp.o
+/home/mf/CWTS/Tests/variable_assignment.cpp:5:2: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+        int a = 1, b = 2;
+        ^~~~~~~~~~~~~~~~~
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:6: warning: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a' [clang-analyzer-deadcode.DeadStores]
+        if (a = b)
+            ^
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:6: note: Although the value stored to 'a' is used in the enclosing expression, the value is never actually read from 'a'
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:6: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
+        if (a = b)
+            ^
+                  != 0
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:8: warning: using the result of an assignment as a condition without parentheses [clang-diagnostic-parentheses]
+        if (a = b)
+              ^
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:8: note: place parentheses around the assignment to silence this warning
+        if (a = b)
+              ^
+            (    )
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:8: note: use '==' to turn this assignment into an equality comparison
+        if (a = b)
+              ^
+              ==
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:12: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if (a = b)
+                  ^
+                   {
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:12: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if (a = b)
+                  ^
+                   {
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:12: warning: statement should be inside braces [readability-braces-around-statements]
+        if (a = b)
+                  ^
+                   {
+/home/mf/CWTS/Tests/variable_assignment.cpp: In function ‘void variable_assignment()’:
+/home/mf/CWTS/Tests/variable_assignment.cpp:7:8: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+    7 |  if (a = b)
+      |      ~~^~~
+[ 81%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_compare_1.cpp.o
+[ 83%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_compare_2.cpp.o
+/home/mf/CWTS/Tests/variable_compare_2.cpp:1:32: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+extern bool variable_compare_2(short a, unsigned short b);
+                               ^
+/home/mf/CWTS/Tests/variable_compare_2.cpp:1:41: warning: consider replacing 'unsigned short' with 'uint16' [google-runtime-int]
+extern bool variable_compare_2(short a, unsigned short b);
+                                        ^
+/home/mf/CWTS/Tests/variable_compare_2.cpp:3:25: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+bool variable_compare_2(short a, unsigned short b)
+                        ^
+/home/mf/CWTS/Tests/variable_compare_2.cpp:3:34: warning: consider replacing 'unsigned short' with 'uint16' [google-runtime-int]
+bool variable_compare_2(short a, unsigned short b)
+                                 ^
+[ 85%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_compare_3.cpp.o
+/home/mf/CWTS/Tests/variable_compare_3.cpp:5:11: warning: comparison of integers of different signs: 'int' and 'unsigned int' [clang-diagnostic-sign-compare]
+        return a == b;
+                 ^
+/home/mf/CWTS/Tests/variable_compare_3.cpp: In function ‘bool variable_compare_3(int, unsigned int)’:
+/home/mf/CWTS/Tests/variable_compare_3.cpp:5:11: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+    5 |  return a == b;
+      |         ~~^~~~
+[ 86%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_compare_4.cpp.o
+/home/mf/CWTS/Tests/variable_compare_4.cpp:1:32: warning: consider replacing 'long' with 'int64' [google-runtime-int]
+extern bool variable_compare_4(long a, unsigned long b);
+                               ^
+/home/mf/CWTS/Tests/variable_compare_4.cpp:1:40: warning: consider replacing 'unsigned long' with 'uint64' [google-runtime-int]
+extern bool variable_compare_4(long a, unsigned long b);
+                                       ^
+/home/mf/CWTS/Tests/variable_compare_4.cpp:3:25: warning: consider replacing 'long' with 'int64' [google-runtime-int]
+bool variable_compare_4(long a, unsigned long b)
+                        ^
+/home/mf/CWTS/Tests/variable_compare_4.cpp:3:33: warning: consider replacing 'unsigned long' with 'uint64' [google-runtime-int]
+bool variable_compare_4(long a, unsigned long b)
+                                ^
+/home/mf/CWTS/Tests/variable_compare_4.cpp:5:11: warning: comparison of integers of different signs: 'long' and 'unsigned long' [clang-diagnostic-sign-compare]
+        return a == b;
+                 ^
+/home/mf/CWTS/Tests/variable_compare_4.cpp: In function ‘bool variable_compare_4(long int, long unsigned int)’:
+/home/mf/CWTS/Tests/variable_compare_4.cpp:5:11: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘long unsigned int’ [-Wsign-compare]
+    5 |  return a == b;
+      |         ~~^~~~
+[ 88%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_init_self.cpp.o
+/home/mf/CWTS/Tests/variable_init_self.cpp:5:2: warning: Assigned value is garbage or undefined [clang-analyzer-core.uninitialized.Assign]
+        int i = i;
+        ^
+/home/mf/CWTS/Tests/variable_init_self.cpp:5:2: note: Assigned value is garbage or undefined
+/home/mf/CWTS/Tests/variable_init_self.cpp:5:10: warning: variable 'i' is uninitialized when used within its own initialization [clang-diagnostic-uninitialized]
+        int i = i;
+                ^
+/home/mf/CWTS/Tests/variable_init_self.cpp: In function ‘int variable_init_self()’:
+/home/mf/CWTS/Tests/variable_init_self.cpp:5:6: warning: ‘i’ is used uninitialized in this function [-Wuninitialized]
+    5 |  int i = i;
+      |      ^
+[ 90%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_size_array.cpp.o
+/home/mf/CWTS/Tests/variable_size_array.cpp:5:2: warning: do not declare C VLA arrays, use std::vector<> instead [cppcoreguidelines-avoid-c-arrays]
+        float abc[n];
+        ^
+/home/mf/CWTS/Tests/variable_size_array.cpp:5:2: warning: do not declare C VLA arrays, use std::vector<> instead [hicpp-avoid-c-arrays]
+/home/mf/CWTS/Tests/variable_size_array.cpp:5:11: warning: variable length arrays are a C99 feature [clang-diagnostic-vla-extension]
+        float abc[n];
+                 ^
+/home/mf/CWTS/Tests/variable_size_array.cpp:6:11: warning: 3.1415 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+        abc[0] = 3.1415;
+                 ^
+/home/mf/CWTS/Tests/variable_size_array.cpp:6:11: warning: 3.1415 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+/home/mf/CWTS/Tests/variable_size_array.cpp: In function ‘void variable_size_array(int)’:
+/home/mf/CWTS/Tests/variable_size_array.cpp:5:8: warning: ISO C++ forbids variable length array ‘abc’ [-Wvla]
+    5 |  float abc[n];
+      |        ^~~
+/home/mf/CWTS/Tests/variable_size_array.cpp:5:8: warning: variable ‘abc’ set but not used [-Wunused-but-set-variable]
+[ 91%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_shadowed_1.cpp.o
+/home/mf/CWTS/Tests/variable_shadowed_1.cpp:4:14: warning: 42 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers]
+int answer = 42;
+             ^
+/home/mf/CWTS/Tests/variable_shadowed_1.cpp:4:14: warning: 42 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+[ 93%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_shadowed_2.cpp.o
+[ 95%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_unsequenced.cpp.o
+/home/mf/CWTS/Tests/variable_unsequenced.cpp:1:10: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+#include <stdio.h>
+         ^~~~~~~~~
+         <cstdio>
+/home/mf/CWTS/Tests/variable_unsequenced.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+        printf("%d,%d", a, ++a);
+        ^
+/home/mf/CWTS/Tests/variable_unsequenced.cpp:7:2: warning: do not call c-style vararg functions [hicpp-vararg]
+/home/mf/CWTS/Tests/variable_unsequenced.cpp:7:21: warning: unsequenced modification and access to 'a' [clang-diagnostic-unsequenced]
+        printf("%d,%d", a, ++a);
+                           ^
+/home/mf/CWTS/Tests/variable_unsequenced.cpp: In function ‘void variable_unsequenced(int)’:
+/home/mf/CWTS/Tests/variable_unsequenced.cpp:7:21: warning: operation on ‘a’ may be undefined [-Wsequence-point]
+    7 |  printf("%d,%d", a, ++a);
+      |                     ^~~
+/home/mf/CWTS/Tests/variable_unsequenced.cpp:7:21: warning: operation on ‘a’ may be undefined [-Wsequence-point]
+[ 96%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_unused.cpp.o
+/home/mf/CWTS/Tests/variable_unused.cpp:5:6: warning: unused variable 'i' [clang-diagnostic-unused-variable]
+        int i = 0;
+            ^
+/home/mf/CWTS/Tests/variable_unused.cpp: In function ‘void variable_unused()’:
+/home/mf/CWTS/Tests/variable_unused.cpp:5:6: warning: unused variable ‘i’ [-Wunused-variable]
+    5 |  int i = 0;
+      |      ^
+[ 98%] Building CXX object CMakeFiles/CWTS.dir/Tests/variable_used_uninitialized.cpp.o
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:5:2: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+        int a = 0, b;
+        ^~~~~~~~~~~~~
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:5:13: warning: variable 'b' is not initialized [cppcoreguidelines-init-variables]
+        int a = 0, b;
+                   ^
+                     = 0
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:7:13: warning: statement should be inside braces [google-readability-braces-around-statements]
+        if (a == 0)
+                   ^
+                    {
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:7:13: warning: statement should be inside braces [hicpp-braces-around-statements]
+        if (a == 0)
+                   ^
+                    {
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:7:13: warning: statement should be inside braces [readability-braces-around-statements]
+        if (a == 0)
+                   ^
+                    {
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:8:3: warning: The expression is an uninitialized value. The computed value will also be garbage [clang-analyzer-core.uninitialized.Assign]
+                b++;
+                ^
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:5:13: note: 'b' declared without an initial value
+        int a = 0, b;
+                   ^
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:7:6: note: 'a' is equal to 0
+        if (a == 0)
+            ^
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:7:2: note: Taking true branch
+        if (a == 0)
+        ^
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:8:3: note: The expression is an uninitialized value. The computed value will also be garbage
+                b++;
+                ^
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:8:3: warning: variable 'b' is uninitialized when used here [clang-diagnostic-uninitialized]
+                b++;
+                ^
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:5:14: note: initialize the variable 'b' to silence this warning
+        int a = 0, b;
+                    ^
+                     = 0
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp: In function ‘void variable_used_uninitialized()’:
+/home/mf/CWTS/Tests/variable_used_uninitialized.cpp:8:4: warning: ‘b’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    8 |   b++;
+      |   ~^~
+make[2]: Target 'CMakeFiles/CWTS.dir/build' not remade because of errors.
+make[1]: *** [CMakeFiles/Makefile2:76: CMakeFiles/CWTS.dir/all] Error 2
+make[1]: Target 'all' not remade because of errors.
+make: *** [Makefile:84: all] Error 2
+make: Target 'default_target' not remade because of errors.

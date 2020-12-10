@@ -3,36 +3,39 @@ The Compiler Warnings Test Suite (CWTS) for C++
 
 **Warnings are important, especially in C++. Developers do require an early warning system to prevent mistakes. However, not every C++ compiler detects and prints each and every possible warning. CWTS contains a collection of 60 test cases to check this. See the [subfolder Tests/](Tests/) where each test case is handled by a single .cpp source code file, which should generate at least one warning or error.**
 
-Requirements
-------------
-Just a **C++ compiler** and **cmake**.
 
-Installation 
--------------
+Requirements & Installation
+---------------------------
+Just a **C++ compiler** and **cmake** is needed. Then execute:
+
 ```
 $ git clone https://github.com/fleschutz/CWTS
 $ cd CWTS
 $ cmake .
 $ make -k
 ```
-and enjoy a lot of compiler warnings 😀
+and enjoy the flood of compiler warnings 😀
+
 
 Ranking of Compiler Warnings 🏆
 -------------------------------
 The more warnings the better: each test case compiled without any warning or error counts as a miss. The following results are based on the highest warning level enabled.
 
-1. **Clang 10.0.0:** 11 warnings missing
-2. **GCC 9.3.0:** 14 warnings missing
-3. **Visual Studio 2017:** 19 warnings missing
-4. **cppcheck 2.3:** 26 warnings missing
+1. **clang-tidy 10.0:** 8 warnings missing
+2. **Clang 10.0.0:** 11 warnings missing
+3. **GCC 9.3.0:** 14 warnings missing
+4. **Visual Studio 2017:** 19 warnings missing
+5. **cppcheck 2.3:** 26 warnings missing
 
 For details see the [subfolder Results/](Results/)
 
+
 How to Enable the Highest Warning Level 🔧
 ------------------------------------------
-By default, every compiler sets the warning level to "normal" - whatever this means. And each compiler supports different options to be more pedantic:
+By default, every compiler and analyzer sets the warning level to "normal" - whatever this means. And each one supports different options to be more pedantic:
 
 * **Clang**: `-Weverything -pedantic`
+* **clang-tidy:** `-checks=*,-modernize*`
 * **cppcheck**: --enable=all
 * **GCC**: `-Wall -Wextra -pedantic -Wundef`
 * **Visual Studio**: `/Wall`
