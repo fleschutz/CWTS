@@ -28,7 +28,7 @@ The more warnings the better! Each test case compiled without any warning or err
 5. **Visual Studio 2017:** 19 warnings missing
 6. **cppcheck 2.3:** 26 warnings missing
 
-All results are based on the highest warning level enabled. For details see the [Results/ subfolder](Results/)
+All results are based on the highest warning level enabled. For details see the [Results/](Results/) subfolder.
 
 
 How to Enable the Highest Warning Level 🔧
