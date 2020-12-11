@@ -4,5 +4,5 @@ void null_pointer_access_1()
 {
 	static int *ptr; // NULL by default
 
-	*ptr = 42;
+	*ptr = 0;
 }

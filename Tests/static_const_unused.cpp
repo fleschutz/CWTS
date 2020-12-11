@@ -1,1 +1,1 @@
-static const int answer = 42;
+static const int static_const_unused = 0;
