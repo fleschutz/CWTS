@@ -4,5 +4,5 @@ extern int shift_overflow();
 
 int shift_overflow()
 {
-	return INT_MAX << 10;
+	return INT_MAX << 10; // bad
 }

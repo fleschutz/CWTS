@@ -20,6 +20,10 @@ project(CWTS)
 add_executable(CWTS
 	Tests/array_bounds_1.cpp
 	Tests/array_bounds_2.cpp
+	Tests/array_bounds_3.cpp
+	Tests/array_bounds_4.cpp
+	Tests/array_bounds_5.cpp
+	Tests/array_bounds_6.cpp
 	Tests/array_braces_missing.cpp
 	Tests/assignment_in_condition.cpp
 	Tests/bool_compare.cpp

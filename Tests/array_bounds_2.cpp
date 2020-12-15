@@ -1,8 +1,7 @@
-extern void array_bounds_2();
+extern int array_bounds_2();
+static int numbers[3] = { 0, 1, 2 };
 
-void array_bounds_2()
+int array_bounds_2()
 {
-	int abc[1];
-
-	abc[-1] = 0;
+	return numbers[3]; // bad
 }
