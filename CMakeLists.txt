@@ -1,5 +1,5 @@
-# Platform-independent Makefile - requires cmake 2.8 or higher
-cmake_minimum_required(VERSION 2.8)
+# Platform-independent Makefile - requires cmake 2.9 or higher
+cmake_minimum_required(VERSION 2.9)
 
 # Static code analysis:
 # set(CMAKE_CXX_CPPCHECK "cppcheck")
