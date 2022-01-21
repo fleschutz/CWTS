@@ -25,7 +25,8 @@ add_executable(CWTS
 	Tests/array_bounds_5.cpp
 	Tests/array_bounds_6.cpp
 	Tests/array_braces_missing.cpp
-	Tests/assignment_in_condition.cpp
+	Tests/assignment_in_condition_1.cpp
+	Tests/assignment_in_condition_2.cpp
 	Tests/bool_compare.cpp
 	Tests/branches_identical_1.cpp
 	Tests/branches_identical_2.cpp
