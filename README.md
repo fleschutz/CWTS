@@ -37,7 +37,7 @@ By default, every compiler and code analyzer sets the warning level to "normal" 
 
 * **Clang**: `-Weverything -pedantic`
 * **clang-tidy:** `-checks=*,-modernize*` (hints how to modernize the code are switched off)
-* **cppcheck**: `--enable=all`
+* **Cppcheck**: `--enable=all`
 * **GCC**: `-Wall -Wextra -pedantic -Wundef`
 * **Visual Studio**: `/Wall`
 
