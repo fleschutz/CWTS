@@ -33,7 +33,7 @@ See the subfolder [Results/](Results/) for details (all results based on the hig
 
 ⚠️ How to enable the Highest Warning Level 
 -------------------------------------------
-By default, every compiler and code analyzer sets the warning level to "normal" - whatever this means. And each one supports different options to be more pedantic:
+Please note that every compiler and code analyzer sets the default warning level to "normal" - whatever this means. And each one supports different options to be more pedantic:
 
 * **Clang**: `-Weverything -pedantic`
 * **clang-tidy:** `-checks=*,-modernize*` (hints how to modernize the code are switched off)
