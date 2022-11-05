@@ -38,7 +38,8 @@ add_executable(CWTS
 	Tests/comment.cpp
 	Tests/constant_expression.cpp
 	Tests/constant_overflow.cpp
-	Tests/division_by_zero.cpp
+	Tests/division_by_zero_1.cpp
+	Tests/division_by_zero_2.cpp
 	Tests/enum_unhandled.cpp
 	Tests/enum_value.cpp
 	Tests/extra_tokens.cpp

@@ -1,6 +1,6 @@
-extern int implicit_conversion_3(long a);
+extern int implicit_conversion_3(long alpha);
 
-int implicit_conversion_3(long a)
+int implicit_conversion_3(long alpha)
 {
-	return a;
+	return alpha;
 }

@@ -1,7 +1,7 @@
-extern int label_unused(int a);
+extern int label_unused(int alpha);
 
-int label_unused(int a)
+int label_unused(int alpha)
 {
 label_is_unused:
-	return a;
+	return alpha;
 }

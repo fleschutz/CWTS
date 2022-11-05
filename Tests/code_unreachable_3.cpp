@@ -1,12 +1,12 @@
-extern int code_unreachable_3(int i);
+extern int code_unreachable_3(int alpha);
 
-int code_unreachable_3(int i)
+int code_unreachable_3(int alpha)
 {
-	if (i == 0)
+	if (alpha == 0)
 		return 0;
 	else
 		return 1;
-	i++;
+	alpha++;
 	return 2;
 }
 

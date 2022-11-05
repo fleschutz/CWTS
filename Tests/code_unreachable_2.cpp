@@ -1,8 +1,8 @@
-extern void code_unreachable_2(int i);
+extern void code_unreachable_2(int alpha);
 
-void code_unreachable_2(int i)
+void code_unreachable_2(int alpha)
 {
 	throw 0;
-	i++;
+	alpha++;
 }
 

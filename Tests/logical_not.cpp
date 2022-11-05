@@ -1,7 +1,7 @@
-extern int logical_not(int a);
+extern int logical_not(int alpha);
 
-int logical_not(int a)
+int logical_not(int alpha)
 {
-	a &= !(1 << 7); // oops, I meant '~' instead of '!'
-	return a;
+	alpha &= !(1 << 7); // oops, I meant '~' instead of '!'
+	return alpha;
 }

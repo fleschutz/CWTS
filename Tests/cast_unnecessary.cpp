@@ -1,6 +1,6 @@
-extern int *cast_unnecessary(int *p);
+extern int *cast_unnecessary(int *ptr);
 
-int *cast_unnecessary(int *p)
+int *cast_unnecessary(int *ptr)
 {
-	  return static_cast<int *>(p);
+	  return static_cast<int *>(ptr);
 }

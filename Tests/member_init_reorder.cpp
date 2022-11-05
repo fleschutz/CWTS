@@ -1,5 +1,5 @@
-struct A {
-	int i;
-	int j;
-	A(): j(0), i(1) { }
+struct Alpha {
+	int beta;
+	int gamma;
+	Alpha(): gamma(0), beta(1) { }
 };

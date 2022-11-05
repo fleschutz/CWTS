@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-extern void variable_unsequenced(int a);
+extern void variable_unsequenced(int value);
 
-void variable_unsequenced(int a)
+void variable_unsequenced(int value)
 {
-	printf("%d,%d", a, ++a);
+	printf("%d,%d", value, ++value);
 }

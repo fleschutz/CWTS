@@ -1,8 +1,8 @@
-bool switch_default_missing(int a);
+bool switch_default_missing(int value);
 
-bool switch_default_missing(int a)
+bool switch_default_missing(int value)
 {
-	switch (a)
+	switch (value)
 	{
 	case 0:
 		return true;

@@ -2,7 +2,7 @@
 
 extern void format_string_3();
 
-void format_string_3(char *s)
+void format_string_3(char *str)
 {
-	printf(s); // bad
+	printf(str); // bad
 }

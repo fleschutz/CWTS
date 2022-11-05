@@ -1,6 +1,6 @@
-extern short implicit_conversion_2(int a);
+extern short implicit_conversion_2(int alpha);
 
-short implicit_conversion_2(int a)
+short implicit_conversion_2(int alpha)
 {
-	return a;
+	return alpha;
 }

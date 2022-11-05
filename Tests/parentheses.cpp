@@ -1,9 +1,9 @@
-extern int parentheses(int a);
+extern int parentheses(int value);
 
-int parentheses(int a)
+int parentheses(int value)
 {
-	if (a > 0)
-		if (a == 7)
+	if (value > 0)
+		if (value == 7)
 			return 1;
 	else
 		return 2;

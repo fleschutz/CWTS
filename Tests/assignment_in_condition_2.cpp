@@ -1,8 +1,8 @@
-extern bool assignment_in_condition_2(int x);
+extern bool assignment_in_condition_2(int alpha);
 
-bool assignment_in_condition_2(int x)
+bool assignment_in_condition_2(int alpha)
 {
-	if ( x =! 5 )   // oops, I meant '!='
+	if (alpha =! 5)   // oops, I meant '!='
 		return true;
 	return false;
 }

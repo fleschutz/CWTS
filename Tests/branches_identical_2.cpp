@@ -1,6 +1,6 @@
-extern int branches_identical_2(int a);
+extern int branches_identical_2(int alpha);
 
-int branches_identical_2(int a)
+int branches_identical_2(int alpha)
 {
-	return (a == 0) ? 0 : 0;
+	return (alpha == 0) ? 0 : 0;
 }

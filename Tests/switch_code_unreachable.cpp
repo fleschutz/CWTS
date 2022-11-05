@@ -1,13 +1,13 @@
-extern int switch_code_unreachable(int a);
+extern int switch_code_unreachable(int value);
 
-int switch_code_unreachable(int a)
+int switch_code_unreachable(int value)
 {
-	switch (a)
+	switch (value)
 	{
-	case 0: a += 2; break;
-	case 1: a -= 2; break;
-	a *= 2;
-	default: a /= 2; break;
+	case 0: value += 2; break;
+	case 1: value -= 2; break;
+	value *= 2;
+	default: value /= 2; break;
 	}
-	return a;
+	return value;
 }

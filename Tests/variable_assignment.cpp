@@ -2,9 +2,9 @@ extern void variable_assignment();
 
 void variable_assignment()
 {
-	int a = 1, b = 2;
+	int alpha = 1, beta = 2;
 
-	if (a = b)
+	if (alpha = beta) // oops, I meant "alpha == beta"
 		return;
 }
 

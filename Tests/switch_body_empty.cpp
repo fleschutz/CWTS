@@ -1,8 +1,8 @@
-extern void switch_body_empty(int a);
+extern void switch_body_empty(int value);
 
-void switch_body_empty(int a)
+void switch_body_empty(int value)
 {
-	switch (a)
+	switch (value)
 	{
 	}
 }

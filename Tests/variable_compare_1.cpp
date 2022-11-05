@@ -1,6 +1,6 @@
-extern bool variable_compare_1(char a, unsigned char b);
+extern bool variable_compare_1(char alpha, unsigned char beta);
 
-bool variable_compare_1(char a, unsigned char b)
+bool variable_compare_1(char alpha, unsigned char beta)
 {
-	return a == b;
+	return alpha == beta;
 }

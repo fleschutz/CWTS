@@ -1,6 +1,6 @@
-extern int shift_count_overflow(int a);
+extern int shift_count_overflow(int value);
 
-int shift_count_overflow(int a)
+int shift_count_overflow(int value)
 {
-	return a << 66; // bad
+	return value << 66; // bad
 }

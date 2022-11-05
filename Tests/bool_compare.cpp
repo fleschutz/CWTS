@@ -1,6 +1,6 @@
-extern bool bool_compare(int a);
+extern bool bool_compare(int alpha);
 
-bool bool_compare(int a)
+bool bool_compare(int alpha)
 {
-	return (a > 0) == 2;
+	return (alpha > 0) == 2;
 }

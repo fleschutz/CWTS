@@ -1,9 +1,9 @@
-extern void null_pointer_access_2(int *p, int a);
+extern void null_pointer_access_2(int *ptr, int value);
 
-void null_pointer_access_2(int *p, int a)
+void null_pointer_access_2(int *ptr, int value)
 {
-	int *q = 0;
-	if (0 <= a && a < 10)
-	        q = p + a;
-	*q = 1;  // bad, q may be NULL
+	int *tmp = 0;
+	if (0 <= value && value < 10)
+	        tmp = ptr + value;
+	*tmp = 1;  // bad, q may be NULL
 }

@@ -1,8 +1,8 @@
-extern bool branches_identical_1(int a);
+extern bool branches_identical_1(int alpha);
 
-bool branches_identical_1(int a)
+bool branches_identical_1(int alpha)
 {
-	if (a == 0)
+	if (alpha == 0)
 		return false;
 	else
 		return false;

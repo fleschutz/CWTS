@@ -2,8 +2,8 @@ extern void variable_used_uninitialized();
 
 void variable_used_uninitialized()
 {
-	int a = 0, b;
+	int alpha = 0, beta;
 
-	if (a == 0)
-		b++;
+	if (alpha == 0)
+		beta++;
 }

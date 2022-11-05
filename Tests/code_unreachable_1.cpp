@@ -1,9 +1,9 @@
-extern void code_unreachable_1(int i);
+extern void code_unreachable_1(int alpha);
 
-void code_unreachable_1(int i)
+void code_unreachable_1(int alpha)
 {
 	return;
-	i++;
+	alpha++;
 }
 
 int main() { return 0; } // to make the linker happy

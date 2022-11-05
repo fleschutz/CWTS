@@ -1,6 +1,6 @@
-extern bool variable_compare_4(long a, unsigned long b);
+extern bool variable_compare_4(long alpha, unsigned long beta);
 
-bool variable_compare_4(long a, unsigned long b)
+bool variable_compare_4(long alpha, unsigned long beta)
 {
-	return a == b;
+	return alpha == beta;
 }

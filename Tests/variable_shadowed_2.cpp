@@ -1,9 +1,10 @@
-extern int variable_shadowed_2(int a);
+extern int variable_shadowed_2(int value);
 
-int variable_shadowed_2(int a)
+int variable_shadowed_2(int value)
 {
-	{	int a = 0;
-		a++;
+	{
+		int value = 0;
+		value++;
 	}
-	return a;
+	return value;
 }

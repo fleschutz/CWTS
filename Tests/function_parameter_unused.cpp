@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-extern void parameter_unused(int a);
+extern void parameter_unused(int alpha);
 
-void parameter_unused(int a)
+void parameter_unused(int alpha)
 {
 	printf(" ");
 }
