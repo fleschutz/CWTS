@@ -54,6 +54,7 @@ add_executable(CWTS
 	Tests/implicit_conversion_2.cpp
 	Tests/implicit_conversion_3.cpp
 	Tests/label_unused.cpp
+	Tests/logical_not.cpp
 	Tests/member_init_reorder.cpp
 	Tests/parentheses.cpp
 	Tests/pointer_compare.cpp
