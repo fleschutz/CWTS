@@ -4,8 +4,8 @@ The Compiler Warnings Test Suite (CWTS) for C++
 **Warnings are important, especially in C++. To prevent software bugs developers do require an early warning system. However, not every C++ compiler or code analyzer detects and prints each and every possible warning. CWTS provides a collection of 66 test cases to check this. See the subfolder [Tests/](Tests/) where each test case is handled by a single .cpp source code file, which should generate at least one warning or error.**
 
 
-Requirements & Installation 🔧
------------------------------
+🔧 Requirements & Installation 
+-------------------------------
 Just a **C++ compiler** and **cmake** is needed. Then execute:
 
 ```
@@ -17,8 +17,8 @@ $ make -k
 and enjoy the flood of compiler warnings 😀
 
 
-The Ranking by Compiler Warnings 🏆
-------------------------------------
+🏆 Ranking by Compiler Warnings
+--------------------------------
 The more warnings the better! Each test case compiled without any warning or error counts as a miss. And the winner is:
 
 1. **clang-tidy 10.0:** 8 warnings missing
@@ -26,12 +26,12 @@ The more warnings the better! Each test case compiled without any warning or err
 3. **GCC 9.3.0:** 14 warnings missing
 4. **Visual Studio 2019:** 17 warnings missing
 5. **Visual Studio 2017:** 19 warnings missing
-6. **cppcheck 2.3:** 26 warnings missing
+6. **Cppcheck 2.3:** 26 warnings missing
 
 For details see the subfolder [Results/](Results/). Please note the results are based on the highest warning level enabled. 
 
 
-Enabling the Highest Warning Level 🔧
+🔧 Enabling the Highest Warning Level 
 --------------------------------------
 By default, every compiler and code analyzer sets the warning level to "normal" - whatever this means. And each one supports different options to be more pedantic:
 
@@ -43,7 +43,7 @@ By default, every compiler and code analyzer sets the warning level to "normal" 
 
 > **NOTE:** GCC and warnings sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.
 
-Zero Warnings Policy 👮‍
+👮‍ Zero Warnings Policy 
 ------------------------
 This means the source code is compiled with a high warning level and no compiler warning is acceptable.
 
