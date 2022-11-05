@@ -31,8 +31,8 @@ The more warnings the better! Each test case compiled without any warning or err
 See the subfolder [Results/](Results/) for details (all results based on the highest warning level). 
 
 
-⚠️ Enabling the Highest Warning Level 
---------------------------------------
+⚠️ How to enable the Highest Warning Level 
+-------------------------------------------
 By default, every compiler and code analyzer sets the warning level to "normal" - whatever this means. And each one supports different options to be more pedantic:
 
 * **Clang**: `-Weverything -pedantic`
