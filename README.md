@@ -21,12 +21,12 @@ and enjoy the flood of compiler warnings 😀
 --------------------------------
 The more warnings the better! Each test case compiled without any warning or error counts as a miss. And the winner is:
 
-1. **clang-tidy 10.0:** 8 warnings missing
-2. **Clang 10.0.0:** 11 warnings missing
-3. **GCC 9.3.0:** 14 warnings missing
-4. **Visual Studio 2019:** 17 warnings missing
-5. **Visual Studio 2017:** 19 warnings missing
-6. **Cppcheck 2.3:** 26 warnings missing
+1. **clang-tidy 10.0** which misses 8 warnings
+2. **Clang 10.0.0** which misses 11 warnings
+3. **GCC 9.3.0** which misses 14 warnings
+4. **Visual Studio 2019** which misses 17 warnings
+5. **Visual Studio 2017** which misses 19 warnings
+6. **Cppcheck 2.3** which misses 26 warnings
 
 See the subfolder [Results/](Results/) for details (all results based on the highest warning level). 
 
