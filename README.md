@@ -34,13 +34,13 @@ See the [📂Results](Results/) subfolder for details (all results based on the 
 -------------------------------------------
 Please note that every compiler and every code analyzer sets the default warning level to 'normal' - whatever this means. And each one supports different options to be more pedantic:
 
-| Compiler          | Option(s) needed                  | Comment                                           |
-| ------------------|-----------------------------------| --------------------------------------------------|
-| **Clang**         | `-Weverything -pedantic`          |                                                   |
-| **clang-tidy**    | `-checks=*,-modernize*`           | Hints how to modernize the code are switched off  |
-| **Cppcheck**      | `--enable=all`                    |                                                   |
-| **GCC**           | `-Wall -Wextra -pedantic -Wundef` | This sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.   |
-| **Visual Studio** | `/Wall`                           |                                                   |
+| Compiler      | Option(s)                         | Comment                                           |
+| --------------|-----------------------------------| --------------------------------------------------|
+| Clang         | `-Weverything -pedantic`          |                                                   |
+| clang-tidy    | `-checks=*,-modernize*`           | Hints how to modernize the code are switched off  |
+| Cppcheck      | `--enable=all`                    |                                                   |
+| GCC           | `-Wall -Wextra -pedantic -Wundef` | This sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.   |
+| Visual Studio | `/Wall`                           |                                                   |
 
 
 👮‍ Zero Warnings Policy 
