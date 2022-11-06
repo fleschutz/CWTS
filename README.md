@@ -32,7 +32,7 @@ See the [📂Results](Results/) subfolder for details. **Note:** all results wit
 
 ⚠️ How to enable the Highest Warning Level 
 -------------------------------------------
-Please note that every compiler and every code analyzer sets the default warning level to 'normal' - whatever this means. And each one supports different options to be more pedantic:
+Please note that every compiler sets the default warning level to 'normal' - whatever this means. And each one supports different options to be more pedantic:
 
 | Compiler      | Option(s)                       | Comment                                           |
 | --------------|---------------------------------| --------------------------------------------------|
