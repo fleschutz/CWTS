@@ -9,8 +9,7 @@ The Compiler Warnings Test Suite (CWTS) for C++
 Just a **C++ compiler, git, and cmake** is needed. Then execute:
 
 ```
-$ git clone https://github.com/fleschutz/CWTS
-$ cd CWTS
+$ git clone https://github.com/fleschutz/CWTS; cd CWTS
 $ cmake .
 $ make -k
 ```
