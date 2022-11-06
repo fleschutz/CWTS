@@ -27,20 +27,20 @@ The more warnings the better! Each test case compiled without any warning or err
 5. **Visual Studio 2017** which misses 19 warnings
 6. **Cppcheck 2.3** which misses 26 warnings
 
-See the [📂Results](Results/) subfolder for details. Note: all results with highest warning level enabled. 
+See the [📂Results](Results/) subfolder for details. **Note:** all results with highest warning level enabled. 
 
 
 ⚠️ How to enable the Highest Warning Level 
 -------------------------------------------
 Please note that every compiler and every code analyzer sets the default warning level to 'normal' - whatever this means. And each one supports different options to be more pedantic:
 
-| Compiler      | Option(s)                         | Comment                                           |
-| --------------|-----------------------------------| --------------------------------------------------|
-| Clang         | `-Weverything -pedantic`          |                                                   |
-| clang-tidy    | `-checks=*,-modernize*`           | Hints how to modernize the code are switched off  |
-| Cppcheck      | `--enable=all`                    |                                                   |
-| GCC           | `-Wall -Wextra -pedantic -Wundef` | This sucks: -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few.   |
-| Visual Studio | `/Wall`                           |                                                   |
+| Compiler      | Option(s)                       | Comment                                           |
+| --------------|---------------------------------| --------------------------------------------------|
+| Clang         | -Weverything -pedantic          |                                                   |
+| clang-tidy    | -checks=*,-modernize*           | Hints how to modernize the code are switched off  |
+| Cppcheck      | --enable=all                    |                                                   |
+| GCC           | -Wall -Wextra -pedantic -Wundef | -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few. |
+| Visual Studio | /Wall                           |                                                   |
 
 
 👮‍ Zero Warnings Policy 
