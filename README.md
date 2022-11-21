@@ -13,7 +13,7 @@ $ git clone https://github.com/fleschutz/CWTS; cd CWTS
 $ cmake .
 $ make -k
 ```
-and expect a ton of compiler warnings. Edit `CMakeLists.txt` before if you want to specify the C++ compiler.
+and expect a ton of compiler warnings. Edit `CMakeLists.txt` before if you want to force using a certain C++ compiler.
 
 
 🏆 Ranking by Compiler Warnings
