@@ -10,7 +10,11 @@ Just a **C++ compiler, git, and cmake** is needed. Then execute:
 
 ```
 $ git clone https://github.com/fleschutz/CWTS; cd CWTS
-$ cmake .
+
+$ cmake .                                 (use any C++ compiler)
+$ cmake -D CMAKE_CXX_COMPILER="gcc" .     (or force using gcc)
+$ cmake -D CMAKE_CXX_COMPILER="clang" .   (or force using clang)
+
 $ make -k
 ```
 and enjoy the flood of compiler warnings 😀
