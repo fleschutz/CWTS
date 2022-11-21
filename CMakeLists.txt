@@ -1,9 +1,11 @@
-# Platform-independent Makefile - requires cmake 2.9 or higher
+# Platform-independent Makefile (requires cmake version 2.9 or higher)
 cmake_minimum_required(VERSION 2.9)
 
-# Static code analysis:
-# set(CMAKE_CXX_CPPCHECK "cppcheck")
+# Uncomment one(!) of the following lines: (to force using a certain C++ compiler)
+# set(CMAKE_CXX_COMPILER   "clang")
 # set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*,-modernize*")
+# set(CMAKE_CXX_CPPCHECK   "cppcheck")
+# set(CMAKE_CXX_COMPILER   "gcc")
 
 if(MSVC)
 	add_compile_options(/Wall /wd4514 /wd4710)
