@@ -74,7 +74,8 @@ add_executable(CWTS
 	Tests/switch_body_empty.cpp
 	Tests/switch_code_unreachable.cpp
 	Tests/switch_default_missing.cpp
-	Tests/value_unused.cpp
+	Tests/value_unused_1.cpp
+	Tests/value_unused_2.cpp
 	Tests/variable_assignment.cpp
 	Tests/variable_compare_1.cpp
 	Tests/variable_compare_2.cpp
