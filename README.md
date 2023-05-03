@@ -1,5 +1,5 @@
-The Compiler Warnings Test Suite (CWTS) for C++
-===============================================
+The C++ Warnings Test Suite (CWTS)
+==================================
 
 **Warnings are important, especially in C++. To prevent software bugs developers do require an early warning system. However, not every C++ compiler or code analyzer detects and prints each and every possible warning. This repository provides a collection of 68 test cases to check this. See the [📂Tests](Tests/) subfolder where each test case is handled by a single .cpp source code file, which should generate at least one warning or error.**
 
