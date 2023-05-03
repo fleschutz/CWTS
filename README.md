@@ -6,12 +6,14 @@ The Compiler Warnings Test Suite (CWTS) for C++
 
 🔧 Installation 
 ----------------
-Just a **C++ compiler, git, and cmake** is needed. Then execute in a terminal window:
+First download und unzip the code (see green button), or execute: `git clone https://github.com/fleschutz/CWTS`
+
+Then execute in a terminal window: (requires cmake and a C++ compiler)
 
 ```
-$ git clone https://github.com/fleschutz/CWTS; cd CWTS
-$ cmake .
-$ make -k
+> cd CWTS
+> cmake .
+> make -k
 ```
 and expect a ton of compiler warnings. Edit `CMakeLists.txt` before if you want to force using a certain C++ compiler.
 
