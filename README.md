@@ -6,11 +6,10 @@ The C++ Warnings Test Suite (CWTS)
 
 🔧 Installation 
 ----------------
-First download und unzip the code (see green button), or execute: `git clone https://github.com/fleschutz/CWTS`
-
-Then execute in a terminal window: (requires cmake and a C++ compiler)
+Execute in a terminal window: (requires cmake and a C++ compiler)
 
 ```
+> git clone https://github.com/fleschutz/CWTS    # Or download and unzip the ZIP file (click green button)
 > cd CWTS
 > cmake .
 > make -k
