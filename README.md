@@ -62,8 +62,8 @@ Links
 * [Intel C++ Compilers](https://software.intel.com/en-us/c-compilers)
 * [More interesting projects](http://www.fleschutz.de/Service.html)
 
-Feedback
----------
+📧 Feedback
+------------
 Send your email feedback to: markus.fleschutz [at] gmail.com
 
 License & Copyright
