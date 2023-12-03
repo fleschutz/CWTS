@@ -14,12 +14,12 @@ Requires **cmake** and a **C++ compiler**. Then execute in a terminal window:
 > cmake .
 > make -k
 ```
-Now, expect a ton of compiler warnings (this is good!). Edit `CMakeLists.txt` before if you want to force using a certain C++ compiler.
+Now, expect a ton of compiler warnings - the more warnings the better! Edit `CMakeLists.txt` before if you want to force using a certain C++ compiler.
 
 
 🏆 Ranking by Compiler Warnings
 --------------------------------
-The more warnings the better! Each test case compiled without any warning or error counts as a miss. And the winner is:
+One simple rule: each .cpp file (a test case) compiled without any warning or error counts as a miss. And the winner is:
 
 1. **clang-tidy 10.0** which misses 8 warnings
 2. **Clang 10.0.0** which misses 11 warnings
