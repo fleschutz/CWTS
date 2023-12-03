@@ -1,7 +1,7 @@
 The C++ Warnings Test Suite (CWTS)
 ==================================
 
-**Compiler warnings are important, especially in C++. They are extremely helpful to prevent software bugs from the beginning. Problem is C++ compilers and code analyzers detect some but not every possible warning! To check the coverage of a given compiler/analyzer this repo provides a collection of 68 test cases (in the 📂[Tests](Tests/) subfolder with a .cpp source code file for each test case).**
+**Compiler warnings are important, especially in C++. They are extremely helpful to prevent software bugs from the beginning. Problem is C++ compilers and code analyzers detect some but not every possible warning! To check the coverage of a given compiler/analyzer this repo provides a collection of 68 test cases (in the 📂[tests](tests/) subfolder with a .cpp source code file for each test case).**
 
 
 🔧 Requirements & Installation 
@@ -28,7 +28,7 @@ There's one rule only: each .cpp file (a test case) compiled without any warning
 5. **Visual Studio 2017** which misses 19 warnings
 6. **Cppcheck 2.3** which misses 26 warnings
 
-See the 📂[Results](Results/) subfolder for details. **Note:** all results with highest warning level enabled (see below). 
+See the 📂[results](results/) subfolder for details. **Note:** all results with highest warning level enabled (see below). 
 
 
 ⚠️ How to enable the Highest Warning Level 
