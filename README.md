@@ -33,15 +33,15 @@ See the 📂[results](results/) subfolder for details. **Note:** all results wit
 
 ⚠️ How to enable the Highest Warning Level 
 -------------------------------------------
-Please note that every compiler sets the default warning level to 'normal' - whatever this means. And each one supports different options to be more pedantic:
+Please note every compiler sets the default warning level to 'normal', whatever this means. And each one supports different options to be more pedantic:
 
-| Compiler      | Compiler Options                  | Comment                                           |
-|---------------|-----------------------------------|---------------------------------------------------|
-| Clang         | `-Weverything -pedantic`          |                                                   |
-| clang-tidy    | `-checks=*,-modernize*`           | Hints how to modernize the code are switched off  |
-| Cppcheck      | `--enable=all`                    |                                                   |
-| GCC           | `-Wall -Wextra -pedantic -Wundef` | -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few. |
-| Visual Studio | `/Wall`                           |                                                   |
+| Compiler        | Compiler Options                  | Comment                                           |
+|-----------------|-----------------------------------|---------------------------------------------------|
+| *Clang*         | `-Weverything -pedantic`          |                                                   |
+| *clang-tidy*    | `-checks=*,-modernize*`           | hints how to modernize the code are switched off  |
+| *Cppcheck*      | `--enable=all`                    |                                                   |
+| *GCC*           | `-Wall -Wextra -pedantic -Wundef` | -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few. |
+| *Visual Studio* | `/Wall`                           |                                                   |
 
 
 👮‍ Zero Warnings Policy 
@@ -60,7 +60,6 @@ Links
 * [GCC Warning Options](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)
 * [Visual Studio Compiler Warnings](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warnings-by-compiler-version)
 * [Intel C++ Compilers](https://software.intel.com/en-us/c-compilers)
-* [More interesting projects](http://www.fleschutz.de/Service.html)
 
 📧 Feedback
 ------------
