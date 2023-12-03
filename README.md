@@ -46,11 +46,11 @@ Please note that every compiler sets the default warning level to 'normal' - wha
 
 👮‍ Zero Warnings Policy 
 ------------------------
-This means the source code is compiled with a high warning level and no compiler warning is acceptable.
+It means the source code is compiled with a high warning level and **no compiler warning is acceptable**.
 
-If you are just starting to introduce the Zero Warnings Policy in your project you may get hundreds or even thousands of warnings if you switch on all warnings. To get started you may want to start with a lower warning level. Fix the most severe warnings first and gradually dial up the warning level.
+If you are just starting to introduce the *Zero Warnings Policy* in your project you may get hundreds or even thousands of warnings if you switch on all warnings. To get started you may want to start with a lower warning level. Fix the most severe warnings first and gradually dial up the warning level.
 
-To enforce the Zero Warnings Policy turn warnings into errors. That way warnings can not be ignored because the build fails. This can be turned on for all warnings at once. The corresponding compiler options are `-Werror` for Clang and GCC and `/WX` for Visual Studio.
+As soon as there are no more warnings enforce the *Zero Warnings Policy* by turning warnings into errors. That way warnings can not be ignored because the build fails. This can be turned on for all warnings at once. The corresponding compiler options are `-Werror` for Clang and GCC and `/WX` for Visual Studio.
 
 Dear OS/framework/API/lib developers: introducing the Zero Warnings Policy heavily depends on the header files beeing used. Please make sure your header files can be used without getting any compiler warnings!
 
