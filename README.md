@@ -19,7 +19,7 @@ Now, expect a ton of compiler warnings - the more warnings the better! Edit `CMa
 
 🏆 Ranking by Compiler Warnings
 --------------------------------
-One simple rule: each .cpp file (a test case) compiled without any warning or error counts as a miss. And the winner is:
+There's one rule only: each .cpp file (a test case) compiled without any warning or error counts as a miss. And the winner is:
 
 1. **clang-tidy 10.0** which misses 8 warnings
 2. **Clang 10.0.0** which misses 11 warnings
