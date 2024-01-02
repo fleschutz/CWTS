@@ -6,7 +6,7 @@ int code_unreachable_3(int alpha)
 		return 0;
 	else
 		return 1;
-	alpha++;
+	alpha++; // oops, code is unreachable
 	return 2;
 }
 

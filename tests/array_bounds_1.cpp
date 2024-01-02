@@ -1,7 +1,8 @@
-extern void array_bounds_1();
+extern void array_bounds_1(void);
+
 static int numbers[3] = { 0, 1, 2 };
 
-void array_bounds_1()
+void array_bounds_1(void)
 {
-	numbers[3] = 0; // bad
+	numbers[3] = 3; // oops, array index out of bounds
 }

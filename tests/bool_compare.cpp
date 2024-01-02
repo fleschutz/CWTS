@@ -2,5 +2,5 @@ extern bool bool_compare(int alpha);
 
 bool bool_compare(int alpha)
 {
-	return (alpha > 0) == 2;
+	return (alpha > 0) == 2; // oops, condition is always false
 }
