@@ -8,6 +8,6 @@ int enum_unhandled(Color color)
 	{
 	case red: return 1;
 	case green: return 2;
-	default: return 4;
+	default: return 4; // oops, case 'blue' is unhandled
 	}
 }

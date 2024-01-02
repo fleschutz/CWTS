@@ -6,7 +6,7 @@ int switch_code_unreachable(int value)
 	{
 	case 0: value += 2; break;
 	case 1: value -= 2; break;
-	value *= 2;
+	value *= 2; // oops, the switch code is unreachable
 	default: value /= 2; break;
 	}
 	return value;

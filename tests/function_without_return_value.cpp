@@ -1,6 +1,6 @@
-extern int function_without_return_value();
+extern int function_without_return_value(void);
 
-int function_without_return_value()
+int function_without_return_value(void)
 {
-	return;
+	return; // oops, return value is missing
 }

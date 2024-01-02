@@ -4,5 +4,5 @@ extern void variable_unsequenced(int value);
 
 void variable_unsequenced(int value)
 {
-	printf("%d,%d", value, ++value);
+	printf("%d,%d", value, ++value); // oops, variable unsequenced
 }

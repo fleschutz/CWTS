@@ -5,5 +5,5 @@ int answer = 0;
 
 int variable_shadowed_1(int answer)
 {
-	return answer;
+	return answer; // oops, variable shadowed
 }

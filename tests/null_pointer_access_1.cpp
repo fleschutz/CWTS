@@ -1,8 +1,8 @@
-extern void null_pointer_access_1();
+extern void null_pointer_access_1(void);
 
-void null_pointer_access_1()
+void null_pointer_access_1(void)
 {
 	static int *ptr; // NULL by default
 
-	*ptr = 0; // bad
+	*ptr = 0; // oops, null pointer access
 }

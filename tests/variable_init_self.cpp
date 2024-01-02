@@ -1,7 +1,7 @@
-extern int variable_init_self();
+extern int variable_init_self(void);
 
-int variable_init_self()
+int variable_init_self(void)
 {
-	int alpha = alpha;
+	int alpha = alpha; // oops, variable initialized by itself
 	return alpha;
 }

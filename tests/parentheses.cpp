@@ -5,7 +5,7 @@ int parentheses(int value)
 	if (value > 0)
 		if (value == 7)
 			return 1;
-	else
+	else // oops, parentheses recommended
 		return 2;
 	return 3;
 }

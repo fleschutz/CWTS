@@ -1,8 +1,8 @@
 #include <limits.h>
 
-extern int shift_overflow();
+extern int shift_overflow(void);
 
-int shift_overflow()
+int shift_overflow(void)
 {
-	return INT_MAX << 10; // bad
+	return INT_MAX << 10; // oops, shift overflow
 }
