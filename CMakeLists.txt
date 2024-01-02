@@ -1,6 +1,9 @@
 # Platform-independent CMakefile to build CWTS
 # --------------------------------------------
+
 cmake_minimum_required (VERSION 3.5)
+
+project (CWTS)
 
 # Uncomment one(!) of the following lines to force using a certain C++ compiler:
 # set (CMAKE_CXX_COMPILER   "clang")
@@ -17,8 +20,6 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 else ()
 	add_compile_options (-Wall -Wextra -pedantic -Wundef)
 endif()
-
-project (CWTS)
 
 add_executable (CWTS
 	tests/array_bounds_1.cpp
