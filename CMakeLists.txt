@@ -1,7 +1,8 @@
-# Platform-independent Makefile (requires cmake version 2.9 or higher)
+# Platform-independent CMakefile to build CWTS
+# --------------------------------------------
 cmake_minimum_required(VERSION 2.9)
 
-# Uncomment one(!) of the following lines: (to force using a certain C++ compiler)
+# Uncomment one(!) of the following lines to force using a certain C++ compiler:
 # set(CMAKE_CXX_COMPILER   "clang")
 # set(CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*,-modernize*")
 # set(CMAKE_CXX_CPPCHECK   "cppcheck")
