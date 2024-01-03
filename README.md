@@ -35,7 +35,7 @@ See the 📂[results](results/) subfolder for details. **Note:** all results wit
 -------------------------------------------
 Please note every compiler sets the default warning level to 'normal', whatever this means. And each one supports different options to be more pedantic:
 
-| Compiler        | Option(s)                | Comment                                           |
+| Compiler        | Options                     | Comment                                           |
 |-----------------|-----------------------------------|---------------------------------------------------|
 | *Clang*         | `-Weverything -pedantic`          |                                                   |
 | *clang-tidy*    | `-checks=*,-modernize*`           | hints how to modernize the code are switched off  |
