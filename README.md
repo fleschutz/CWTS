@@ -17,7 +17,7 @@ Requires **cmake** and a **C++ compiler**. Then execute in a terminal window:
 Please expect a ton of compiler warnings - the more warnings the better! Edit `CMakeLists.txt` before to force using a certain C++ compiler.
 
 
-🏆 Ranking by Compiler Warnings
+🏆 Compiler Ranking by Warnings
 --------------------------------
 Each .cpp file (= a test case) compiled without any warning or error counts as a miss. And the winner is:
 
@@ -35,7 +35,7 @@ See the 📂[results](results/) subfolder for details. **Note:** all results wit
 -------------------------------------------
 Please note every compiler sets the default warning level to 'normal', whatever this means. And each one supports different options to be more pedantic:
 
-| Compiler        | Compiler Option(s)                | Comment                                           |
+| Compiler        | Option(s)                | Comment                                           |
 |-----------------|-----------------------------------|---------------------------------------------------|
 | *Clang*         | `-Weverything -pedantic`          |                                                   |
 | *clang-tidy*    | `-checks=*,-modernize*`           | hints how to modernize the code are switched off  |
