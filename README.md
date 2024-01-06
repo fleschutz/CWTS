@@ -26,7 +26,7 @@ Each .cpp file (= a test case) compiled without any warning or error counts as a
 3. **GCC 9.3.0** which misses 14 warnings
 4. **Visual Studio 2019** which misses 17 warnings
 5. **Visual Studio 2017** which misses 19 warnings
-6. **Cppcheck 2.3** which misses 26 warnings
+6. **Cppcheck 2.11** which misses 23 warnings
 
 See the 📂[results](results/) subfolder for details. **Note:** all results with highest warning level enabled (see below). 
 
