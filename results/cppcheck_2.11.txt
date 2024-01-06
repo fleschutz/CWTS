@@ -1,7 +1,7 @@
 ➤ cppcheck --version
 Cppcheck 2.11
 
-➤ cppcheck tests/*.cpp
+➤ cppcheck --enable=all tests/*.cpp
 Checking tests/array_bounds_1.cpp ...
 tests/array_bounds_1.cpp:7:9: error: Array 'numbers[3]' accessed at index 3, which is out of bounds. [arrayIndexOutOfBounds]
  numbers[3] = 3; // oops, array index out of bounds
@@ -35,28 +35,88 @@ tests/array_bounds_6.cpp:8:16: error: Array 'numbers[3]' accessed at index -1, w
 Checking tests/array_braces_missing.cpp ...
 7/68 files checked 10% done
 Checking tests/assignment_in_condition_1.cpp ...
+tests/assignment_in_condition_1.cpp:5:12: style: Condition 'alpha=5' is always true [knownConditionTrueFalse]
+ if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+           ^
+tests/assignment_in_condition_1.cpp:5:12: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
+ if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+           ^
 8/68 files checked 13% done
 Checking tests/assignment_in_condition_2.cpp ...
+tests/assignment_in_condition_2.cpp:5:12: style: Condition 'alpha=!5' is always false [knownConditionTrueFalse]
+ if (alpha =! 5)   // oops, I meant '!='
+           ^
+tests/assignment_in_condition_2.cpp:5:12: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
+ if (alpha =! 5)   // oops, I meant '!='
+           ^
 9/68 files checked 14% done
 Checking tests/bool_compare.cpp ...
+tests/bool_compare.cpp:5:21: warning: Comparison of a boolean expression with an integer other than 0 or 1. [compareBoolExpressionWithInt]
+ return (alpha > 0) == 2; // oops, condition is always false
+                    ^
+tests/bool_compare.cpp:5:21: style: Return value '(alpha>0)==2' is always false [knownConditionTrueFalse]
+ return (alpha > 0) == 2; // oops, condition is always false
+                    ^
 10/68 files checked 16% done
 Checking tests/branches_identical_1.cpp ...
 11/68 files checked 18% done
 Checking tests/branches_identical_2.cpp ...
+tests/branches_identical_2.cpp:5:26: style: Same value in both branches of ternary operator. [duplicateValueTernary]
+ return (alpha == 0) ? 0 : 0; // oops, both branches are identical
+                         ^
 12/68 files checked 19% done
 Checking tests/branches_identical_3.cpp ...
+tests/branches_identical_3.cpp:7:17: style: Expression is always false because 'else if' condition matches previous condition at line 5. [multiCondition]
+ else if (alpha == true) // oops, this condition is obsolete
+                ^
+tests/branches_identical_3.cpp:7:17: warning: Identical condition 'alpha==true', second condition is always false [identicalConditionAfterEarlyExit]
+ else if (alpha == true) // oops, this condition is obsolete
+                ^
+tests/branches_identical_3.cpp:5:12: note: If condition 'alpha==true' is true, the function will return/exit
+ if (alpha == true)
+           ^
+tests/branches_identical_3.cpp:7:17: note: Testing identical condition 'alpha==true'
+ else if (alpha == true) // oops, this condition is obsolete
+                ^
 13/68 files checked 21% done
 Checking tests/cast_unnecessary.cpp ...
 14/68 files checked 23% done
 Checking tests/code_unreachable_1.cpp ...
+tests/code_unreachable_1.cpp:6:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+ alpha++; // oops, code is unreachable
+ ^
+tests/code_unreachable_1.cpp:6:2: style: Statements following 'return' will never be executed. [unreachableCode]
+ alpha++; // oops, code is unreachable
+ ^
+tests/code_unreachable_1.cpp:6:7: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
+ alpha++; // oops, code is unreachable
+      ^
 15/68 files checked 25% done
 Checking tests/code_unreachable_2.cpp ...
+tests/code_unreachable_2.cpp:6:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+ alpha++; // oops, code is unreachable
+ ^
+tests/code_unreachable_2.cpp:6:2: style: Statements following 'throw' will never be executed. [unreachableCode]
+ alpha++; // oops, code is unreachable
+ ^
+tests/code_unreachable_2.cpp:6:7: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
+ alpha++; // oops, code is unreachable
+      ^
 16/68 files checked 26% done
 Checking tests/code_unreachable_3.cpp ...
+tests/code_unreachable_3.cpp:9:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+ alpha++; // oops, code is unreachable
+ ^
+tests/code_unreachable_3.cpp:9:7: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
+ alpha++; // oops, code is unreachable
+      ^
 17/68 files checked 28% done
 Checking tests/comment.cpp ...
 18/68 files checked 28% done
 Checking tests/constant_expression.cpp ...
+tests/constant_expression.cpp:5:30: style: Unsigned expression 'i' can't be negative so it is unnecessary to test it. [unsignedPositive]
+ for (unsigned int i = 10; i >= 0; i++) // oops, condition is always true
+                             ^
 19/68 files checked 30% done
 Checking tests/constant_overflow.cpp ...
 20/68 files checked 30% done
@@ -76,15 +136,30 @@ Checking tests/extra_tokens.cpp ...
 Checking tests/file_empty.cpp ...
 26/68 files checked 37% done
 Checking tests/format_string_1.cpp ...
+tests/format_string_1.cpp:1:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+tests/format_string_1.cpp:7:2: warning: %s in format string (no. 1) requires 'char *' but the argument type is 'signed int'. [invalidPrintfArgType_s]
+ printf("%s", 0); // oops, zero pointer access
+ ^
 tests/format_string_1.cpp:7:15: error: Null pointer dereference [nullPointer]
  printf("%s", 0); // oops, zero pointer access
               ^
 27/68 files checked 38% done
 Checking tests/format_string_2.cpp ...
+tests/format_string_2.cpp:1:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
 28/68 files checked 40% done
 Checking tests/format_string_3.cpp ...
+tests/format_string_3.cpp:1:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
 29/68 files checked 41% done
 Checking tests/function_parameter_unused.cpp ...
+tests/function_parameter_unused.cpp:1:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
 30/68 files checked 43% done
 Checking tests/function_without_prototype.cpp ...
 31/68 files checked 44% done
@@ -100,12 +175,18 @@ Checking tests/implicit_conversion_2.cpp ...
 Checking tests/implicit_conversion_3.cpp ...
 36/68 files checked 50% done
 Checking tests/label_unused.cpp ...
+tests/label_unused.cpp:5:1: style: Label 'label_is_unused' is not used. [unusedLabel]
+label_is_unused: // oops, label is unused
+^
 37/68 files checked 51% done
 Checking tests/logical_not.cpp ...
 38/68 files checked 53% done
 Checking tests/member_init_reorder.cpp ...
 39/68 files checked 54% done
 Checking tests/null_pointer_access_1.cpp ...
+tests/null_pointer_access_1.cpp:5:14: style: Variable 'ptr' is not assigned a value. [unassignedVariable]
+ static int *ptr; // NULL by default
+             ^
 40/68 files checked 55% done
 Checking tests/null_pointer_access_2.cpp ...
 tests/null_pointer_access_2.cpp:8:3: warning: Possible null pointer dereference: tmp [nullPointer]
@@ -124,6 +205,12 @@ tests/null_pointer_access_2.cpp:8:3: note: Null pointer dereference
 Checking tests/parentheses.cpp ...
 42/68 files checked 59% done
 Checking tests/pointer_compare.cpp ...
+tests/pointer_compare.cpp:3:27: style: Parameter 'ptr' can be declared as pointer to const [constParameterPointer]
+int pointer_compare(char *ptr)
+                          ^
+tests/pointer_compare.cpp:5:14: warning: Char literal compared with pointer 'ptr'. Did you intend to dereference it? [charLiteralWithCharPtrCompare]
+ return (ptr == '\0'); // oops, I meant "*ptr"
+             ^
 43/68 files checked 61% done
 Checking tests/recursive_include.cpp ...
 tests/recursive_include.cpp:1:0: error: #include nested too deeply [preprocessorErrorDirective]
@@ -141,8 +228,14 @@ tests/shift_count_overflow.cpp:5:15: error: Shifting 32-bit value by 66 bits is 
               ^
 46/68 files checked 64% done
 Checking tests/shift_overflow.cpp ...
+tests/shift_overflow.cpp:1:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
 47/68 files checked 66% done
 Checking tests/shift_value_negative.cpp ...
+tests/shift_value_negative.cpp:5:12: portability: Shifting a negative value is technically undefined behaviour [shiftNegativeLHS]
+ return -1 << 2; // oops, value to shift is negative
+           ^
 48/68 files checked 67% done
 Checking tests/stack_address_returned.cpp ...
 tests/stack_address_returned.cpp:7:9: error: Returning pointer to local variable 'array' that will be invalid when returning. [returnDanglingLifetime]
@@ -165,6 +258,9 @@ Checking tests/static_function_unused.cpp ...
 Checking tests/switch_body_empty.cpp ...
 52/68 files checked 71% done
 Checking tests/switch_code_unreachable.cpp ...
+tests/switch_code_unreachable.cpp:9:2: style: Statements following 'break' will never be executed. [unreachableCode]
+ value *= 2; // oops, the switch code is unreachable
+ ^
 53/68 files checked 74% done
 Checking tests/switch_default_missing.cpp ...
 54/68 files checked 76% done
@@ -173,6 +269,18 @@ Checking tests/value_unused_1.cpp ...
 Checking tests/value_unused_2.cpp ...
 56/68 files checked 79% done
 Checking tests/variable_assignment.cpp ...
+tests/variable_assignment.cpp:7:12: style: Condition 'alpha=beta' is always true [knownConditionTrueFalse]
+ if (alpha = beta) // oops, I meant "alpha == beta"
+           ^
+tests/variable_assignment.cpp:5:24: note: Assignment 'beta=2', assigned value is 2
+ int alpha = 1, beta = 2;
+                       ^
+tests/variable_assignment.cpp:7:12: note: Condition 'alpha=beta' is always true
+ if (alpha = beta) // oops, I meant "alpha == beta"
+           ^
+tests/variable_assignment.cpp:7:12: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
+ if (alpha = beta) // oops, I meant "alpha == beta"
+           ^
 57/68 files checked 81% done
 Checking tests/variable_compare_1.cpp ...
 58/68 files checked 83% done
@@ -183,6 +291,9 @@ Checking tests/variable_compare_3.cpp ...
 Checking tests/variable_compare_4.cpp ...
 61/68 files checked 88% done
 Checking tests/variable_init_self.cpp ...
+tests/variable_init_self.cpp:5:12: warning: Redundant assignment of 'alpha' to itself. [selfAssignment]
+ int alpha = alpha; // oops, variable initialized by itself
+           ^
 tests/variable_init_self.cpp:5:14: error: Uninitialized variable: alpha [legacyUninitvar]
  int alpha = alpha; // oops, variable initialized by itself
              ^
@@ -190,17 +301,64 @@ tests/variable_init_self.cpp:5:14: error: Uninitialized variable: alpha [legacyU
 Checking tests/variable_shadowed_1.cpp ...
 63/68 files checked 92% done
 Checking tests/variable_shadowed_2.cpp ...
+tests/variable_shadowed_2.cpp:6:7: style: Local variable 'value' shadows outer argument [shadowArgument]
+  int value = 0; // oops, variable shadowed
+      ^
+tests/variable_shadowed_2.cpp:3:29: note: Shadowed declaration
+int variable_shadowed_2(int value)
+                            ^
+tests/variable_shadowed_2.cpp:6:7: note: Shadow variable
+  int value = 0; // oops, variable shadowed
+      ^
+tests/variable_shadowed_2.cpp:7:8: style: Variable 'value' is assigned a value that is never used. [unreadVariable]
+  value++;
+       ^
 64/68 files checked 93% done
 Checking tests/variable_size_array.cpp ...
+tests/variable_size_array.cpp:6:9: style: Variable 'abc[0]' is assigned a value that is never used. [unreadVariable]
+ abc[0] = 3.1415;
+        ^
 65/68 files checked 95% done
 Checking tests/variable_unsequenced.cpp ...
+tests/variable_unsequenced.cpp:1:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
 66/68 files checked 97% done
 Checking tests/variable_unused.cpp ...
+tests/variable_unused.cpp:5:12: style: Variable 'value' is assigned a value that is never used. [unreadVariable]
+ int value = 0; // oops, variable is unused
+           ^
 67/68 files checked 98% done
 Checking tests/variable_used_uninitialized.cpp ...
+tests/variable_used_uninitialized.cpp:7:12: style: The comparison 'alpha == 0' is always true. [knownConditionTrueFalse]
+ if (alpha == 0)
+           ^
+tests/variable_used_uninitialized.cpp:5:14: note: 'alpha' is assigned value '0' here.
+ int alpha = 0, beta;
+             ^
+tests/variable_used_uninitialized.cpp:7:12: note: The comparison 'alpha == 0' is always true.
+ if (alpha == 0)
+           ^
+tests/variable_used_uninitialized.cpp:5:17: style: The scope of the variable 'beta' can be reduced. [variableScope]
+ int alpha = 0, beta;
+                ^
 tests/variable_used_uninitialized.cpp:8:3: error: Uninitialized variable: beta [uninitvar]
   beta++; // oops, variable used uninitialized
   ^
+tests/variable_used_uninitialized.cpp:8:7: style: Variable 'beta' is assigned a value that is never used. [unreadVariable]
+  beta++; // oops, variable used uninitialized
+      ^
+tests/variable_used_uninitialized.cpp:5:17: style: Variable 'beta' is not assigned a value. [unassignedVariable]
+ int alpha = 0, beta;
+                ^
 68/68 files checked 100% done
+tests/function_without_prototype.cpp:1:0: style: The function 'function_without_prototype' is never used. [unusedFunction]
+void function_without_prototype() // oops, function without prototype
+^
+tests/static_function_unused.cpp:1:0: style: The function 'static_function_unused' is never used. [unusedFunction]
+static void static_function_unused(void) // oops, static function is unused
+^
+tests/switch_default_missing.cpp:3:0: style: The function 'switch_default_missing' is never used. [unusedFunction]
+bool switch_default_missing(int value)
 
 ➤
