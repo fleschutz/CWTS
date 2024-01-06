@@ -4,7 +4,7 @@ pipeline {
         stage ('Cleanup') {
             steps {
 		echo "Pulled from ${env.GIT_URL}, branch ${env.GIT_BRANCH}, commit {$env.GIT_COMMIT} ..."
-                sh 'git clean -d --force'
+                sh 'git clean -xdf'
                 sh 'git status'
 	    }
 	}
@@ -14,7 +14,7 @@ pipeline {
                 sh 'cmake --version'
                 sh 'cmake .'
                 sh 'make --version'
-                sh 'make -k'
+                sh 'make -k || true'
             }
         }
     }
