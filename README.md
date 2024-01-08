@@ -19,7 +19,7 @@ It returns a lot of compiler warnings - the more warnings the better! Edit `CMak
 
 🏆 Compiler Ranking by Warnings
 --------------------------------
-Each .cpp file (a test case) compiled without warnings or errors is a miss. And the winner is:
+Each test case (or .cpp file) compiled without warnings or errors is a miss. And the winner is:
 
 1. **clang-tidy 10.0** which misses 8 warnings
 2. **Clang 10.0.0** which misses 11 warnings
