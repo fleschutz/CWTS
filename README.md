@@ -1,7 +1,7 @@
 The C++ Warnings Test Suite (CWTS)
 ==================================
 
-**C++ compiler warnings are extremely helpful to prevent software bugs from the beginning on. However, most warnings are either undetected or not shown by the current warning level. To check the coverage of your compiler this repo provides a collection of 68 test cases (in the 📂[tests](tests/) subfolder, each .cpp file is a test case).**
+**C++ compiler warnings are extremely helpful to prevent software bugs from the beginning on. However, most warnings are either undetected or not shown by the current warning level. This repo checks the coverage of your C++ compiler with a collection of 68 test cases (each .cpp file in the 📂[tests](tests/) subfolder is a test case).**
 
 
 ⚙️ Installation 
@@ -14,7 +14,7 @@ Requires **cmake** and a **C++ compiler**. Then execute in a terminal window:
 > cmake .
 > make -k
 ```
-Please expect a ton of compiler warnings - the more warnings the better! Edit `CMakeLists.txt` before to force using a certain C++ compiler.
+This should return a lot of compiler warnings - the more warnings the better! Edit `CMakeLists.txt` before to force using a certain C++ compiler.
 
 
 🏆 Compiler Ranking by Warnings
