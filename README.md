@@ -19,7 +19,7 @@ It returns a lot of compiler warnings - the more warnings the better! Edit `CMak
 
 🏆 Compiler Ranking by Warnings
 --------------------------------
-Each .cpp file (= a test case) compiled without any warning or error counts as a miss. And the winner is:
+Each .cpp file (a test case) compiled without warnings or errors is a miss. And the winner is:
 
 1. **clang-tidy 10.0** which misses 8 warnings
 2. **Clang 10.0.0** which misses 11 warnings
@@ -28,7 +28,7 @@ Each .cpp file (= a test case) compiled without any warning or error counts as a
 5. **Visual Studio 2017** which misses 19 warnings
 6. **Cppcheck 2.11** which misses 23 warnings
 
-See the 📂[results](results/) subfolder for details. **Note:** all results with highest warning level enabled (see below). 
+See the 📂[results](results/) subfolder for details and older versions. **Note:** all results with highest warning level enabled (see below). 
 
 
 ⚠️ How to enable the Highest Warning Level 
