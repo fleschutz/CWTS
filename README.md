@@ -12,7 +12,7 @@ Requires **cmake** and a **C++ compiler**. Then execute in a terminal window:
 > git clone https://github.com/fleschutz/CWTS  # or download and unzip the ZIP file (click the green button)
 > cd CWTS
 > cmake .
-> make -k
+> make -k                                      # option '-k': don't stop on first error
 ```
 It returns a lot of compiler warnings - the more warnings the better! Edit `CMakeLists.txt` before to force using a certain C++ compiler.
 
