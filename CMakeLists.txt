@@ -1,5 +1,5 @@
-# Platform-independent CMakefile to build CWTS
-# --------------------------------------------
+# Platform-independent CMakeLists.txt to build CWTS
+# -------------------------------------------------
 
 cmake_minimum_required (VERSION 3.5)
 
