@@ -1,4 +1,4 @@
-extern bool assignment_in_condition_1(int alpha);
+﻿extern bool assignment_in_condition_1(int alpha);
 
 bool assignment_in_condition_1(int alpha)
 {
