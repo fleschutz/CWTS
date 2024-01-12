@@ -12,7 +12,7 @@
 [  6%] Building CXX object CMakeFiles/CWTS.dir/Tests/assignment_in_condition.cpp.o
 /home/mf/CWTS/Tests/assignment_in_condition.cpp: In function ‘bool assignment_in_condition(int)’:
 /home/mf/CWTS/Tests/assignment_in_condition.cpp:5:9: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-    5 |  if ( x = 5 )   // uh oh, x = 5 will evaluate to the value 5, which is always true
+    5 |  if ( x = 5 )   // ⚠️ x = 5 will evaluate to the value 5, which is always true
       |       ~~^~~
 [  8%] Building CXX object CMakeFiles/CWTS.dir/Tests/bool_compare.cpp.o
 /home/mf/CWTS/Tests/bool_compare.cpp: In function ‘bool bool_compare(int)’:
