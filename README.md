@@ -1,7 +1,7 @@
 The C++ Warnings Test Suite (CWTS)
 ==================================
 
-**C++ compiler warnings are extremely helpful to prevent software bugs from the beginning on. Sadly, most warnings are either undetected or not shown by the current warning level. This repo checks the warning coverage of your C++ compiler with 68 test cases (each .cpp file in the 📂[test_cases](test_cases/) subfolder is a test case).**
+**C++ compiler warnings are extremely helpful to prevent software bugs from the beginning on. Sadly, most warnings are either undetected or not shown by the current warning level. This repo checks the warning coverage of your C++ compiler with 68 test cases (see the .cpp files in the 📂[test_cases](test_cases/) folder).**
 
 
 ⚙️ Installation 
@@ -12,7 +12,7 @@ Requires **cmake** and a **C++ compiler**. Then execute in a terminal window:
 > git clone https://github.com/fleschutz/CWTS  # or download and unzip the ZIP file (click the green button)
 > cd CWTS
 > cmake .
-> make -k
+> make -k                                      # option '-k': keep going, even on errors
 ```
 It returns a lot of compiler warnings - the more warnings the better! Edit `CMakeLists.txt` before to force using a certain C++ compiler.
 
@@ -28,7 +28,7 @@ Each test case (or .cpp file) compiled without warnings or errors is a miss. And
 5. **Visual Studio 2017** which misses 19 warnings.
 6. **Cppcheck 2.11** which misses 23 warnings.
 
-See the 📂[test_results](test_results/) subfolder for details and older versions. **Note:** all results with highest warning level enabled (see below). 
+See the 📂[test_results](test_results/) folder for details and older versions. **Note:** all results with highest warning level enabled (see below). 
 
 
 ⚠️ How to enable the Highest Warning Level 
