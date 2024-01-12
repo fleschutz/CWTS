@@ -1,7 +1,7 @@
-extern int value_unused_1(int alpha, int beta);
+﻿extern int value_unused_1(int alpha, int beta);
 
 int value_unused_1(int alpha, int beta)
 {
-	alpha * beta; // oops, the result is unused
+	alpha * beta; // ⚠️ the result is unused
 	return alpha + beta;
 }

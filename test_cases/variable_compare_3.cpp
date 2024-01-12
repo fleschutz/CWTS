@@ -1,6 +1,6 @@
-extern bool variable_compare_3(int alpha, unsigned int beta);
+﻿extern bool variable_compare_3(int alpha, unsigned int beta);
 
 bool variable_compare_3(int alpha, unsigned int beta)
 {
-	return alpha == beta; // oops, different datatypes
+	return alpha == beta; // ⚠️ different datatypes
 }

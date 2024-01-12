@@ -1,8 +1,8 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 
 extern void variable_unsequenced(int value);
 
 void variable_unsequenced(int value)
 {
-	printf("%d,%d", value, ++value); // oops, variable unsequenced
+	printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
 }

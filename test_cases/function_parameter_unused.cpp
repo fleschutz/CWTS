@@ -1,8 +1,6 @@
-#include <stdio.h>
+﻿extern int parameter_unused(int alpha, int beta);
 
-extern void parameter_unused(int alpha);
-
-void parameter_unused(int alpha) // oops, function parameter is unused
+int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
 {
-	printf(" "); 
+	return alpha / 2; 
 }

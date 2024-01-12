@@ -1,7 +1,7 @@
-extern void constant_expression(void);
+﻿extern void constant_expression(void);
 
 void constant_expression(void)
 {
-	for (unsigned int i = 10; i >= 0; i++) // oops, condition is always true
+	for (unsigned int i = 10; i >= 0; i++) // ⚠️ condition is always true
 		;
 }
