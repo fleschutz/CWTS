@@ -4,6 +4,7 @@ Ubuntu LLVM version 14.0.0
   Optimized build.
   Default target: x86_64-pc-linux-gnu
   Host CPU: cascadelake
+
 $ cmake .
 -- The C compiler identification is GNU 11.4.0
 -- The CXX compiler identification is Clang 14.0.0
@@ -20,6 +21,7 @@ $ cmake .
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/mf/Repos/CWTS
+
 $ make -k
 [  1%] Building CXX object CMakeFiles/CWTS.dir/tests/array_bounds_1.cpp.o
 extern void array_bounds_1(void);
@@ -33,13 +35,13 @@ static int numbers[3] = { 0, 1, 2 };
 void array_bounds_1(void)
      ^
 /home/mf/Repos/CWTS/tests/array_bounds_1.cpp:7:2: warning: array index 3 is past the end of the array (which contains 3 elements) [clang-diagnostic-array-bounds]
-        numbers[3] = 3; // oops, array index out of bounds
+        numbers[3] = 3; // ⚠️ array index out of bounds
         ^       ~
 /home/mf/Repos/CWTS/tests/array_bounds_1.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
 ^
 /home/mf/Repos/CWTS/tests/array_bounds_1.cpp:7:2: warning: array index 3 is past the end of the array (which contains 3 elements) [-Warray-bounds]
-        numbers[3] = 3; // oops, array index out of bounds
+        numbers[3] = 3; // ⚠️ array index out of bounds
         ^       ~
 /home/mf/Repos/CWTS/tests/array_bounds_1.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -57,13 +59,13 @@ static int numbers[3] = { 0, 1, 2 };
 int array_bounds_2(void)
     ^
 /home/mf/Repos/CWTS/tests/array_bounds_2.cpp:7:9: warning: array index 3 is past the end of the array (which contains 3 elements) [clang-diagnostic-array-bounds]
-        return numbers[3]; // oops, array index out of bounds
+        return numbers[3]; // ⚠️ array index out of bounds
                ^       ~
 /home/mf/Repos/CWTS/tests/array_bounds_2.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
 ^
 /home/mf/Repos/CWTS/tests/array_bounds_2.cpp:7:9: warning: array index 3 is past the end of the array (which contains 3 elements) [-Warray-bounds]
-        return numbers[3]; // oops, array index out of bounds
+        return numbers[3]; // ⚠️ array index out of bounds
                ^       ~
 /home/mf/Repos/CWTS/tests/array_bounds_2.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -81,13 +83,13 @@ static int numbers[3] = { 0, 1, 2 };
 int array_bounds_3(void)
     ^
 /home/mf/Repos/CWTS/tests/array_bounds_3.cpp:8:9: warning: array index 3 is past the end of the array (which contains 3 elements) [clang-diagnostic-array-bounds]
-        return numbers[index]; // oops, array index out of bounds
+        return numbers[index]; // ⚠️ array index out of bounds
                ^       ~~~~~
 /home/mf/Repos/CWTS/tests/array_bounds_3.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
 ^
 /home/mf/Repos/CWTS/tests/array_bounds_3.cpp:8:9: warning: array index 3 is past the end of the array (which contains 3 elements) [-Warray-bounds]
-        return numbers[index]; // oops, array index out of bounds
+        return numbers[index]; // ⚠️ array index out of bounds
                ^       ~~~~~
 /home/mf/Repos/CWTS/tests/array_bounds_3.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -105,13 +107,13 @@ static int numbers[3] = { 0, 1, 2 };
 void array_bounds_4(void)
      ^
 /home/mf/Repos/CWTS/tests/array_bounds_4.cpp:7:2: warning: array index -1 is before the beginning of the array [clang-diagnostic-array-bounds]
-        numbers[-1] = -1; // oops, array index out of bounds
+        numbers[-1] = -1; // ⚠️ array index out of bounds
         ^       ~~
 /home/mf/Repos/CWTS/tests/array_bounds_4.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
 ^
 /home/mf/Repos/CWTS/tests/array_bounds_4.cpp:7:2: warning: array index -1 is before the beginning of the array [-Warray-bounds]
-        numbers[-1] = -1; // oops, array index out of bounds
+        numbers[-1] = -1; // ⚠️ array index out of bounds
         ^       ~~
 /home/mf/Repos/CWTS/tests/array_bounds_4.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -129,13 +131,13 @@ static int numbers[3] = { 0, 1, 2 };
 int array_bounds_5(void)
     ^
 /home/mf/Repos/CWTS/tests/array_bounds_5.cpp:7:9: warning: array index -1 is before the beginning of the array [clang-diagnostic-array-bounds]
-        return numbers[-1]; // oops, array index out of bounds
+        return numbers[-1]; // ⚠️ array index out of bounds
                ^       ~~
 /home/mf/Repos/CWTS/tests/array_bounds_5.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
 ^
 /home/mf/Repos/CWTS/tests/array_bounds_5.cpp:7:9: warning: array index -1 is before the beginning of the array [-Warray-bounds]
-        return numbers[-1]; // oops, array index out of bounds
+        return numbers[-1]; // ⚠️ array index out of bounds
                ^       ~~
 /home/mf/Repos/CWTS/tests/array_bounds_5.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -153,13 +155,13 @@ static int numbers[3] = { 0, 1, 2 };
 int array_bounds_6(void)
     ^
 /home/mf/Repos/CWTS/tests/array_bounds_6.cpp:8:9: warning: array index -1 is before the beginning of the array [clang-diagnostic-array-bounds]
-        return numbers[index]; // oops, array index out of bounds
+        return numbers[index]; // ⚠️ array index out of bounds
                ^       ~~~~~
 /home/mf/Repos/CWTS/tests/array_bounds_6.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
 ^
 /home/mf/Repos/CWTS/tests/array_bounds_6.cpp:8:9: warning: array index -1 is before the beginning of the array [-Warray-bounds]
-        return numbers[index]; // oops, array index out of bounds
+        return numbers[index]; // ⚠️ array index out of bounds
                ^       ~~~~~
 /home/mf/Repos/CWTS/tests/array_bounds_6.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -167,25 +169,25 @@ static int numbers[3] = { 0, 1, 2 };
 1 warning generated.
 [ 10%] Building CXX object CMakeFiles/CWTS.dir/tests/array_braces_missing.cpp.o
 /home/mf/Repos/CWTS/tests/array_braces_missing.cpp:1:1: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
-int numbers[2][2] = { 0, 1, 2, 3 }; // oops, array braces are missing
+int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
 ^
 /home/mf/Repos/CWTS/tests/array_braces_missing.cpp:1:5: warning: variable 'numbers' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
-int numbers[2][2] = { 0, 1, 2, 3 }; // oops, array braces are missing
+int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
     ^
 /home/mf/Repos/CWTS/tests/array_braces_missing.cpp:1:23: warning: suggest braces around initialization of subobject [clang-diagnostic-missing-braces]
-int numbers[2][2] = { 0, 1, 2, 3 }; // oops, array braces are missing
+int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
                       ^~~~
                       {   }
 /home/mf/Repos/CWTS/tests/array_braces_missing.cpp:1:29: warning: suggest braces around initialization of subobject [clang-diagnostic-missing-braces]
-int numbers[2][2] = { 0, 1, 2, 3 }; // oops, array braces are missing
+int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
                             ^~~~
                             {   }
 /home/mf/Repos/CWTS/tests/array_braces_missing.cpp:1:23: warning: suggest braces around initialization of subobject [-Wmissing-braces]
-int numbers[2][2] = { 0, 1, 2, 3 }; // oops, array braces are missing
+int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
                       ^~~~
                       {   }
 /home/mf/Repos/CWTS/tests/array_braces_missing.cpp:1:29: warning: suggest braces around initialization of subobject [-Wmissing-braces]
-int numbers[2][2] = { 0, 1, 2, 3 }; // oops, array braces are missing
+int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
                             ^~~~
                             {   }
 2 warnings generated.
@@ -195,45 +197,45 @@ extern bool assignment_in_condition_1(int alpha);
 bool assignment_in_condition_1(int alpha)
      ^
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:6: warning: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha' [clang-analyzer-deadcode.DeadStores]
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
             ^       ~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:6: note: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha'
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
             ^       ~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:6: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
             ^
                       != 0
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [clang-diagnostic-parentheses]
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
             ~~~~~~^~~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:12: note: place parentheses around the assignment to silence this warning
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
                   ^
             (        )
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
                   ^
                   ==
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:14: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
                     ^
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:16: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
                       ^
                        {
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:6:10: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
                 return true;
                        ^
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
             ~~~~~~^~~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:12: note: place parentheses around the assignment to silence this warning
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
                   ^
             (        )
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
-        if (alpha = 5)   // oops, 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
                   ^
                   ==
 1 warning generated.
@@ -243,53 +245,53 @@ extern bool assignment_in_condition_2(int alpha);
 bool assignment_in_condition_2(int alpha)
      ^
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:6: warning: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha' [clang-analyzer-deadcode.DeadStores]
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
             ^      ~~~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:6: note: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha'
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
             ^      ~~~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:6: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
             ^
                        != 0
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [clang-diagnostic-parentheses]
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
             ~~~~~~^~~~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:12: note: place parentheses around the assignment to silence this warning
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
                   ^
             (         )
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
                   ^
                   ==
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:13: warning: implicit conversion bool -> 'int' [readability-implicit-bool-conversion]
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
                    ^
                    static_cast<int>( )
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:15: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
                      ^
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:15: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
                      ^
                      true
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:17: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
                        ^
                         {
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:6:10: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
                 return true;
                        ^
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
             ~~~~~~^~~~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:12: note: place parentheses around the assignment to silence this warning
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
                   ^
             (         )
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
-        if (alpha =! 5)   // oops, I meant '!='
+        if (alpha =! 5)   // ⚠️ I meant '!='
                   ^
                   ==
 1 warning generated.
@@ -299,14 +301,14 @@ extern bool bool_compare(int alpha);
 bool bool_compare(int alpha)
      ^
 /home/mf/Repos/CWTS/tests/bool_compare.cpp:5:9: warning: implicit conversion bool -> 'int' [readability-implicit-bool-conversion]
-        return (alpha > 0) == 2; // oops, condition is always false
+        return (alpha > 0) == 2; // ⚠️ condition is always false
                ^
                static_cast<int>
 /home/mf/Repos/CWTS/tests/bool_compare.cpp:5:21: warning: result of comparison of constant 2 with expression of type 'bool' is always false [clang-diagnostic-tautological-constant-out-of-range-compare]
-        return (alpha > 0) == 2; // oops, condition is always false
+        return (alpha > 0) == 2; // ⚠️ condition is always false
                ~~~~~~~~~~~ ^  ~
 /home/mf/Repos/CWTS/tests/bool_compare.cpp:5:21: warning: result of comparison of constant 2 with expression of type 'bool' is always false [-Wtautological-constant-out-of-range-compare]
-        return (alpha > 0) == 2; // oops, condition is always false
+        return (alpha > 0) == 2; // ⚠️ condition is always false
                ~~~~~~~~~~~ ^  ~
 1 warning generated.
 [ 15%] Building CXX object CMakeFiles/CWTS.dir/tests/branches_identical_1.cpp.o
@@ -338,10 +340,10 @@ extern int branches_identical_2(int alpha);
 int branches_identical_2(int alpha)
     ^
 /home/mf/Repos/CWTS/tests/branches_identical_2.cpp:5:22: warning: conditional operator with identical true and false expressions [bugprone-branch-clone]
-        return (alpha == 0) ? 0 : 0; // oops, both branches are identical
+        return (alpha == 0) ? 0 : 0; // ⚠️ both branches are identical
                             ^
 /home/mf/Repos/CWTS/tests/branches_identical_2.cpp:5:26: warning: 'true' and 'false' expressions are equivalent [misc-redundant-expression]
-        return (alpha == 0) ? 0 : 0; // oops, both branches are identical
+        return (alpha == 0) ? 0 : 0; // ⚠️ both branches are identical
                                 ^
 [ 18%] Building CXX object CMakeFiles/CWTS.dir/tests/branches_identical_3.cpp.o
 extern int branches_identical_3(bool alpha);
@@ -357,14 +359,14 @@ int branches_identical_3(bool alpha)
                           ^
                            {
 /home/mf/Repos/CWTS/tests/branches_identical_3.cpp:7:2: warning: do not use 'else' after 'return' [llvm-else-after-return,readability-else-after-return]
-        else if (alpha == true) // oops, this condition is obsolete
+        else if (alpha == true) // ⚠️ this condition is obsolete
         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/mf/Repos/CWTS/tests/branches_identical_3.cpp:7:20: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
-        else if (alpha == true) // oops, this condition is obsolete
+        else if (alpha == true) // ⚠️ this condition is obsolete
                           ^
 note: this fix will not be applied because it overlaps with another fix
 /home/mf/Repos/CWTS/tests/branches_identical_3.cpp:7:25: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
-        else if (alpha == true) // oops, this condition is obsolete
+        else if (alpha == true) // ⚠️ this condition is obsolete
                                ^
 note: this fix will not be applied because it overlaps with another fix
 [ 20%] Building CXX object CMakeFiles/CWTS.dir/tests/cast_unnecessary.cpp.o
@@ -406,10 +408,10 @@ int code_unreachable_3(int alpha)
 note: this fix will not be applied because it overlaps with another fix
 [ 26%] Building CXX object CMakeFiles/CWTS.dir/tests/comment.cpp.o
 /home/mf/Repos/CWTS/tests/comment.cpp:1:4: warning: '/*' within block comment [clang-diagnostic-comment]
-/* /* oops, comment in comment */
+/* /* ⚠️ comment in comment */
    ^
 /home/mf/Repos/CWTS/tests/comment.cpp:1:4: warning: '/*' within block comment [-Wcomment]
-/* /* oops, comment in comment */
+/* /* ⚠️ comment in comment */
    ^
 1 warning generated.
 [ 27%] Building CXX object CMakeFiles/CWTS.dir/tests/constant_expression.cpp.o
@@ -418,34 +420,34 @@ extern void constant_expression(void);
 void constant_expression(void)
      ^
 /home/mf/Repos/CWTS/tests/constant_expression.cpp:5:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
-        for (unsigned int i = 10; i >= 0; i++) // oops, condition is always true
+        for (unsigned int i = 10; i >= 0; i++) // ⚠️ condition is always true
         ^
 /home/mf/Repos/CWTS/tests/constant_expression.cpp:5:24: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
-        for (unsigned int i = 10; i >= 0; i++) // oops, condition is always true
+        for (unsigned int i = 10; i >= 0; i++) // ⚠️ condition is always true
                               ^
 /home/mf/Repos/CWTS/tests/constant_expression.cpp:5:40: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
-        for (unsigned int i = 10; i >= 0; i++) // oops, condition is always true
+        for (unsigned int i = 10; i >= 0; i++) // ⚠️ condition is always true
                                               ^
                                                {
 [ 28%] Building CXX object CMakeFiles/CWTS.dir/tests/constant_overflow.cpp.o
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:1: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
-char letters[] = { 1, 2, 0xFFFF }; // oops, 0xffff is too big for 'char'
+char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
 ^
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:6: warning: variable 'letters' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
-char letters[] = { 1, 2, 0xFFFF }; // oops, 0xffff is too big for 'char'
+char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
      ^
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:26: warning: narrowing conversion from constant value 65535 (0x0000FFFF) of type 'int' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
-char letters[] = { 1, 2, 0xFFFF }; // oops, 0xffff is too big for 'char'
+char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
                          ^
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:26: error: constant expression evaluates to 65535 which cannot be narrowed to type 'char' [clang-diagnostic-c++11-narrowing]
-char letters[] = { 1, 2, 0xFFFF }; // oops, 0xffff is too big for 'char'
+char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
                          ^~~~~~
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:26: note: insert an explicit cast to silence this issue
-char letters[] = { 1, 2, 0xFFFF }; // oops, 0xffff is too big for 'char'
+char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
                          ^~~~~~
                          static_cast<char>( )
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:26: warning: implicit conversion from 'int' to 'char' changes value from 65535 to -1 [clang-diagnostic-constant-conversion]
-char letters[] = { 1, 2, 0xFFFF }; // oops, 0xffff is too big for 'char'
+char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
                  ~       ^~~~~~
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:26: warning: 0xFFFF is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
 11 warnings and 1 error generated.
@@ -458,16 +460,16 @@ extern int division_by_zero_1(int alpha);
 int division_by_zero_1(int alpha)
     ^
 /home/mf/Repos/CWTS/tests/division_by_zero_1.cpp:5:15: warning: Division by zero [clang-analyzer-core.DivideZero]
-        return alpha / 0; // oops, division by zero
+        return alpha / 0; // ⚠️ division by zero
                ~~~~~~^~~
 /home/mf/Repos/CWTS/tests/division_by_zero_1.cpp:5:15: note: Division by zero
-        return alpha / 0; // oops, division by zero
+        return alpha / 0; // ⚠️ division by zero
                ~~~~~~^~~
 /home/mf/Repos/CWTS/tests/division_by_zero_1.cpp:5:15: warning: division by zero is undefined [clang-diagnostic-division-by-zero]
-        return alpha / 0; // oops, division by zero
+        return alpha / 0; // ⚠️ division by zero
                      ^ ~
 /home/mf/Repos/CWTS/tests/division_by_zero_1.cpp:5:15: warning: division by zero is undefined [-Wdivision-by-zero]
-        return alpha / 0; // oops, division by zero
+        return alpha / 0; // ⚠️ division by zero
                      ^ ~
 1 warning generated.
 [ 31%] Building CXX object CMakeFiles/CWTS.dir/tests/division_by_zero_2.cpp.o
@@ -476,7 +478,7 @@ extern float division_by_zero_2(float alpha);
 float division_by_zero_2(float alpha)
       ^
 /home/mf/Repos/CWTS/tests/division_by_zero_2.cpp:5:9: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
-        return alpha / 0.0; // oops, division by zero
+        return alpha / 0.0; // ⚠️ division by zero
                ^
 [ 33%] Building CXX object CMakeFiles/CWTS.dir/tests/enum_unhandled.cpp.o
 typedef enum { red, green, blue } Color;
@@ -488,17 +490,17 @@ extern int enum_unhandled(Color color);
 int enum_unhandled(Color color)
     ^
 [ 34%] Building CXX object CMakeFiles/CWTS.dir/tests/enum_value.cpp.o
-typedef enum { red = 0, green = 1, blue = 0 } Color; // oops, 'red' and 'blue' have the same value
+typedef enum { red = 0, green = 1, blue = 0 } Color; // ⚠️ 'red' and 'blue' have the same value
         ^
-typedef enum { red = 0, green = 1, blue = 0 } Color; // oops, 'red' and 'blue' have the same value
+typedef enum { red = 0, green = 1, blue = 0 } Color; // ⚠️ 'red' and 'blue' have the same value
                                               ^
 [ 36%] Building CXX object CMakeFiles/CWTS.dir/tests/extra_tokens.cpp.o
 /home/mf/Repos/CWTS/tests/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [clang-diagnostic-extra-tokens]
-#endif BAD // oops, #endif has no parameters
+#endif BAD // ⚠️ #endif has no parameters
        ^
        //
 /home/mf/Repos/CWTS/tests/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [-Wextra-tokens]
-#endif BAD // oops, #endif has no parameters
+#endif BAD // ⚠️ #endif has no parameters
        ^
        //
 1 warning generated.
@@ -516,11 +518,11 @@ extern void format_string_1();
 void format_string_1()
      ^
 /home/mf/Repos/CWTS/tests/format_string_1.cpp:7:15: warning: format specifies type 'char *' but the argument has type 'int' [clang-diagnostic-format]
-        printf("%s", 0); // oops, zero pointer access
+        printf("%s", 0); // ⚠️ zero pointer access
                 ~~   ^
                 %d
 /home/mf/Repos/CWTS/tests/format_string_1.cpp:7:15: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
-        printf("%s", 0); // oops, zero pointer access
+        printf("%s", 0); // ⚠️ zero pointer access
                 ~~   ^
                 %d
 1 warning generated.
@@ -537,7 +539,7 @@ extern void format_string_2(void);
 void format_string_2(void)
      ^
 /home/mf/Repos/CWTS/tests/format_string_2.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg,hicpp-vararg]
-        printf(""); // oops, empty format string
+        printf(""); // ⚠️ empty format string
         ^
 [ 42%] Building CXX object CMakeFiles/CWTS.dir/tests/format_string_3.cpp.o
 /home/mf/Repos/CWTS/tests/format_string_3.cpp:1:1: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
@@ -552,20 +554,20 @@ extern void format_string_3(char *str);
 void format_string_3(char *str)
      ^
 /home/mf/Repos/CWTS/tests/format_string_3.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg,hicpp-vararg]
-        printf(str); // oops, <str> is handled as format string
+        printf(str); // ⚠️ <str> is handled as format string
         ^
 /home/mf/Repos/CWTS/tests/format_string_3.cpp:7:9: warning: format string is not a string literal (potentially insecure) [clang-diagnostic-format-security]
-        printf(str); // oops, <str> is handled as format string
+        printf(str); // ⚠️ <str> is handled as format string
                ^~~
 /home/mf/Repos/CWTS/tests/format_string_3.cpp:7:9: note: treat the string as an argument to avoid this
-        printf(str); // oops, <str> is handled as format string
+        printf(str); // ⚠️ <str> is handled as format string
                ^
                "%s",
 /home/mf/Repos/CWTS/tests/format_string_3.cpp:7:9: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
-        printf(str); // oops, <str> is handled as format string
+        printf(str); // ⚠️ <str> is handled as format string
                ^~~
 /home/mf/Repos/CWTS/tests/format_string_3.cpp:7:9: note: treat the string as an argument to avoid this
-        printf(str); // oops, <str> is handled as format string
+        printf(str); // ⚠️ <str> is handled as format string
                ^
                "%s",
 1 warning generated.
@@ -579,24 +581,24 @@ void format_string_3(char *str)
 note: this fix will not be applied because it overlaps with another fix
 extern void parameter_unused(int alpha);
             ^
-void parameter_unused(int alpha) // oops, function parameter is unused
+void parameter_unused(int alpha) // ⚠️ function parameter is unused
      ^
 /home/mf/Repos/CWTS/tests/function_parameter_unused.cpp:5:27: warning: unused parameter 'alpha' [clang-diagnostic-unused-parameter]
-void parameter_unused(int alpha) // oops, function parameter is unused
+void parameter_unused(int alpha) // ⚠️ function parameter is unused
                           ^
 /home/mf/Repos/CWTS/tests/function_parameter_unused.cpp:5:27: warning: parameter 'alpha' is unused [misc-unused-parameters]
-void parameter_unused(int alpha) // oops, function parameter is unused
+void parameter_unused(int alpha) // ⚠️ function parameter is unused
                           ^~~~~
                            /*alpha*/
 /home/mf/Repos/CWTS/tests/function_parameter_unused.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg,hicpp-vararg]
         printf(" ");
         ^
 /home/mf/Repos/CWTS/tests/function_parameter_unused.cpp:5:27: warning: unused parameter 'alpha' [-Wunused-parameter]
-void parameter_unused(int alpha) // oops, function parameter is unused
+void parameter_unused(int alpha) // ⚠️ function parameter is unused
                           ^
 1 warning generated.
 [ 44%] Building CXX object CMakeFiles/CWTS.dir/tests/function_without_prototype.cpp.o
-void function_without_prototype() // oops, function without prototype
+void function_without_prototype() // ⚠️ function without prototype
      ^
 [ 46%] Building CXX object CMakeFiles/CWTS.dir/tests/function_without_return_value.cpp.o
 extern int function_without_return_value(void);
@@ -604,7 +606,7 @@ extern int function_without_return_value(void);
 int function_without_return_value(void)
     ^
 /home/mf/Repos/CWTS/tests/function_without_return_value.cpp:5:2: error: non-void function 'function_without_return_value' should return a value [clang-diagnostic-return-type]
-        return; // oops, return value is missing
+        return; // ⚠️ return value is missing
         ^
 2 warnings and 1 error generated.
 Error while processing /home/mf/Repos/CWTS/tests/function_without_return_value.cpp.
@@ -612,10 +614,10 @@ Found compiler error(s).
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:510: CMakeFiles/CWTS.dir/tests/function_without_return_value.cpp.o] Error 1
 [ 47%] Building CXX object CMakeFiles/CWTS.dir/tests/identifier_undefined.cpp.o
 /home/mf/Repos/CWTS/tests/identifier_undefined.cpp:1:5: warning: 'IDENTIFIER_UNDEFINED' is not defined, evaluates to 0 [clang-diagnostic-undef]
-#if IDENTIFIER_UNDEFINED // oops, identifier is undefined
+#if IDENTIFIER_UNDEFINED // ⚠️ identifier is undefined
     ^
 /home/mf/Repos/CWTS/tests/identifier_undefined.cpp:1:5: warning: 'IDENTIFIER_UNDEFINED' is not defined, evaluates to 0 [-Wundef]
-#if IDENTIFIER_UNDEFINED // oops, identifier is undefined
+#if IDENTIFIER_UNDEFINED // ⚠️ identifier is undefined
     ^
 1 warning generated.
 [ 49%] Building CXX object CMakeFiles/CWTS.dir/tests/implicit_conversion_1.cpp.o
@@ -630,7 +632,7 @@ char implicit_conversion_1(short alpha)
 char implicit_conversion_1(short alpha)
                            ^
 /home/mf/Repos/CWTS/tests/implicit_conversion_1.cpp:5:9: warning: narrowing conversion from 'short' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
-        return alpha; // oops, implicit conversion
+        return alpha; // ⚠️ implicit conversion
                ^
 [ 50%] Building CXX object CMakeFiles/CWTS.dir/tests/implicit_conversion_2.cpp.o
 /home/mf/Repos/CWTS/tests/implicit_conversion_2.cpp:1:8: warning: consider replacing 'short' with 'int16' [google-runtime-int]
@@ -644,7 +646,7 @@ short implicit_conversion_2(int alpha)
 short implicit_conversion_2(int alpha)
       ^
 /home/mf/Repos/CWTS/tests/implicit_conversion_2.cpp:5:9: warning: narrowing conversion from 'int' to signed type 'short' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
-        return alpha; // oops, implicit conversion
+        return alpha; // ⚠️ implicit conversion
                ^
 [ 52%] Building CXX object CMakeFiles/CWTS.dir/tests/implicit_conversion_3.cpp.o
 extern int implicit_conversion_3(long alpha);
@@ -658,7 +660,7 @@ int implicit_conversion_3(long alpha)
 int implicit_conversion_3(long alpha)
                           ^
 /home/mf/Repos/CWTS/tests/implicit_conversion_3.cpp:5:9: warning: narrowing conversion from 'long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
-        return alpha; // oops, implicit conversion
+        return alpha; // ⚠️ implicit conversion
                ^
 [ 53%] Building CXX object CMakeFiles/CWTS.dir/tests/label_unused.cpp.o
 extern int label_unused(int alpha);
@@ -666,10 +668,10 @@ extern int label_unused(int alpha);
 int label_unused(int alpha)
     ^
 /home/mf/Repos/CWTS/tests/label_unused.cpp:5:1: warning: unused label 'label_is_unused' [clang-diagnostic-unused-label]
-label_is_unused: // oops, label is unused
+label_is_unused: // ⚠️ label is unused
 ^~~~~~~~~~~~~~~~~
 /home/mf/Repos/CWTS/tests/label_unused.cpp:5:1: warning: unused label 'label_is_unused' [-Wunused-label]
-label_is_unused: // oops, label is unused
+label_is_unused: // ⚠️ label is unused
 ^~~~~~~~~~~~~~~~~
 1 warning generated.
 [ 55%] Building CXX object CMakeFiles/CWTS.dir/tests/logical_not.cpp.o
@@ -678,27 +680,27 @@ extern int logical_not(int alpha);
 int logical_not(int alpha)
     ^
 /home/mf/Repos/CWTS/tests/logical_not.cpp:5:2: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
-        alpha &= !(1 << 7); // oops, I meant '~' instead of '!'
+        alpha &= !(1 << 7); // ⚠️ I meant '~' instead of '!'
         ^~~~~
 /home/mf/Repos/CWTS/tests/logical_not.cpp:5:11: warning: implicit conversion bool -> 'int' [readability-implicit-bool-conversion]
-        alpha &= !(1 << 7); // oops, I meant '~' instead of '!'
+        alpha &= !(1 << 7); // ⚠️ I meant '~' instead of '!'
                  ^
                  static_cast<int>( )
 /home/mf/Repos/CWTS/tests/logical_not.cpp:5:12: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
-        alpha &= !(1 << 7); // oops, I meant '~' instead of '!'
+        alpha &= !(1 << 7); // ⚠️ I meant '~' instead of '!'
                  ~^
                            == 0
 /home/mf/Repos/CWTS/tests/logical_not.cpp:5:13: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
-        alpha &= !(1 << 7); // oops, I meant '~' instead of '!'
+        alpha &= !(1 << 7); // ⚠️ I meant '~' instead of '!'
                    ^
 /home/mf/Repos/CWTS/tests/logical_not.cpp:5:15: warning: converting the result of '<<' to a boolean always evaluates to true [clang-diagnostic-tautological-constant-compare]
-        alpha &= !(1 << 7); // oops, I meant '~' instead of '!'
+        alpha &= !(1 << 7); // ⚠️ I meant '~' instead of '!'
                      ^
 /home/mf/Repos/CWTS/tests/logical_not.cpp:5:18: warning: 7 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
-        alpha &= !(1 << 7); // oops, I meant '~' instead of '!'
+        alpha &= !(1 << 7); // ⚠️ I meant '~' instead of '!'
                         ^
 /home/mf/Repos/CWTS/tests/logical_not.cpp:5:15: warning: converting the result of '<<' to a boolean always evaluates to true [-Wtautological-constant-compare]
-        alpha &= !(1 << 7); // oops, I meant '~' instead of '!'
+        alpha &= !(1 << 7); // ⚠️ I meant '~' instead of '!'
                      ^
 1 warning generated.
 [ 56%] Building CXX object CMakeFiles/CWTS.dir/tests/member_init_reorder.cpp.o
@@ -715,11 +717,11 @@ struct Alpha {
         int gamma;
             ^
 /home/mf/Repos/CWTS/tests/member_init_reorder.cpp:4:11: warning: field 'gamma' will be initialized after field 'beta' [clang-diagnostic-reorder-ctor]
-        Alpha(): gamma(0), beta(1) { } // oops, member reordered
+        Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
                  ^~~~~~~~  ~~~~~~~
                  beta(1)   gamma(0)
 /home/mf/Repos/CWTS/tests/member_init_reorder.cpp:4:11: warning: field 'gamma' will be initialized after field 'beta' [-Wreorder-ctor]
-        Alpha(): gamma(0), beta(1) { } // oops, member reordered
+        Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
                  ^~~~~~~~  ~~~~~~~
                  beta(1)   gamma(0)
 1 warning generated.
@@ -732,13 +734,13 @@ void null_pointer_access_1(void)
         static int *ptr; // NULL by default
                     ^
 /home/mf/Repos/CWTS/tests/null_pointer_access_1.cpp:7:7: warning: Dereference of null pointer (loaded from variable 'ptr') [clang-analyzer-core.NullDereference]
-        *ptr = 0; // oops, null pointer access
+        *ptr = 0; // ⚠️ null pointer access
          ~~~ ^
 /home/mf/Repos/CWTS/tests/null_pointer_access_1.cpp:5:2: note: 'ptr' initialized to a null pointer value
         static int *ptr; // NULL by default
         ^~~~~~~~~~~~~~~
 /home/mf/Repos/CWTS/tests/null_pointer_access_1.cpp:7:7: note: Dereference of null pointer (loaded from variable 'ptr')
-        *ptr = 0; // oops, null pointer access
+        *ptr = 0; // ⚠️ null pointer access
          ~~~ ^
 [ 59%] Building CXX object CMakeFiles/CWTS.dir/tests/null_pointer_access_2.cpp.o
 extern void null_pointer_access_2(int *ptr, int value);
@@ -760,7 +762,7 @@ void null_pointer_access_2(int *ptr, int value)
                 tmp = ptr + value;
                           ^
 /home/mf/Repos/CWTS/tests/null_pointer_access_2.cpp:8:7: warning: Dereference of null pointer (loaded from variable 'tmp') [clang-analyzer-core.NullDereference]
-        *tmp = 1;  // oops, q may be NULL
+        *tmp = 1;  // ⚠️ q may be NULL
          ~~~ ^
 /home/mf/Repos/CWTS/tests/null_pointer_access_2.cpp:5:2: note: 'tmp' initialized to a null pointer value
         int *tmp = 0;
@@ -772,7 +774,7 @@ void null_pointer_access_2(int *ptr, int value)
         if (0 <= value && value < 10)
                        ^
 /home/mf/Repos/CWTS/tests/null_pointer_access_2.cpp:8:7: note: Dereference of null pointer (loaded from variable 'tmp')
-        *tmp = 1;  // oops, q may be NULL
+        *tmp = 1;  // ⚠️ q may be NULL
          ~~~ ^
 [ 60%] Building CXX object CMakeFiles/CWTS.dir/tests/parentheses.cpp.o
 extern int parentheses(int value);
@@ -780,7 +782,7 @@ extern int parentheses(int value);
 int parentheses(int value)
     ^
 /home/mf/Repos/CWTS/tests/parentheses.cpp:5:16: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
-        if (value > 0) // oops, explicit parentheses recommended
+        if (value > 0) // ⚠️ explicit parentheses recommended
                       ^
                        {
 /home/mf/Repos/CWTS/tests/parentheses.cpp:6:16: warning: 7 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
@@ -812,7 +814,7 @@ int pointer_compare(char *ptr)
                           ^
                     const
 /home/mf/Repos/CWTS/tests/pointer_compare.cpp:5:14: error: comparison between pointer and integer ('char *' and 'char') [clang-diagnostic-error]
-        return (ptr == '\0'); // oops, I meant "*ptr"
+        return (ptr == '\0'); // ⚠️ I meant "*ptr"
                 ~~~ ^  ~~~~
 3 warnings and 1 error generated.
 Error while processing /home/mf/Repos/CWTS/tests/pointer_compare.cpp.
@@ -820,10 +822,10 @@ Found compiler error(s).
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:664: CMakeFiles/CWTS.dir/tests/pointer_compare.cpp.o] Error 1
 [ 63%] Building CXX object CMakeFiles/CWTS.dir/tests/recursive_include.cpp.o
 /home/mf/Repos/CWTS/tests/recursive_include.cpp:1:10: error: #include nested too deeply [clang-diagnostic-error]
-#include "recursive_include.cpp" // oops, recursive #include
+#include "recursive_include.cpp" // ⚠️ recursive #include
          ^
 /home/mf/Repos/CWTS/tests/recursive_include.cpp:1:11: warning: suspicious #include of file with '.cpp' extension [bugprone-suspicious-include]
-#include "recursive_include.cpp" // oops, recursive #include
+#include "recursive_include.cpp" // ⚠️ recursive #include
           ^
 200 warnings and 1 error generated.
 Error while processing /home/mf/Repos/CWTS/tests/recursive_include.cpp.
@@ -837,13 +839,13 @@ extern int shift_count_negative(int value);
 int shift_count_negative(int value)
     ^
 /home/mf/Repos/CWTS/tests/shift_count_negative.cpp:5:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
-        return value << -1; // oops, shift count is negative
+        return value << -1; // ⚠️ shift count is negative
                ^~~~~
 /home/mf/Repos/CWTS/tests/shift_count_negative.cpp:5:15: warning: shift count is negative [clang-diagnostic-shift-count-negative]
-        return value << -1; // oops, shift count is negative
+        return value << -1; // ⚠️ shift count is negative
                      ^  ~~
 /home/mf/Repos/CWTS/tests/shift_count_negative.cpp:5:15: warning: shift count is negative [-Wshift-count-negative]
-        return value << -1; // oops, shift count is negative
+        return value << -1; // ⚠️ shift count is negative
                      ^  ~~
 1 warning generated.
 [ 66%] Building CXX object CMakeFiles/CWTS.dir/tests/shift_count_overflow.cpp.o
@@ -852,16 +854,16 @@ extern int shift_count_overflow(int value);
 int shift_count_overflow(int value)
     ^
 /home/mf/Repos/CWTS/tests/shift_count_overflow.cpp:5:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
-        return value << 66; // oops, shift count is too high
+        return value << 66; // ⚠️ shift count is too high
                ^~~~~
 /home/mf/Repos/CWTS/tests/shift_count_overflow.cpp:5:15: warning: shift count >= width of type [clang-diagnostic-shift-count-overflow]
-        return value << 66; // oops, shift count is too high
+        return value << 66; // ⚠️ shift count is too high
                      ^  ~~
 /home/mf/Repos/CWTS/tests/shift_count_overflow.cpp:5:18: warning: 66 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
-        return value << 66; // oops, shift count is too high
+        return value << 66; // ⚠️ shift count is too high
                         ^
 /home/mf/Repos/CWTS/tests/shift_count_overflow.cpp:5:15: warning: shift count >= width of type [-Wshift-count-overflow]
-        return value << 66; // oops, shift count is too high
+        return value << 66; // ⚠️ shift count is too high
                      ^  ~~
 1 warning generated.
 [ 68%] Building CXX object CMakeFiles/CWTS.dir/tests/shift_overflow.cpp.o
@@ -874,17 +876,17 @@ extern int shift_overflow(void);
 int shift_overflow(void)
     ^
 /home/mf/Repos/CWTS/tests/shift_overflow.cpp:7:17: warning: The result of the left shift is undefined due to shifting '2147483647' by '10', which is unrepresentable in the unsigned version of the return type 'int' [clang-analyzer-core.UndefinedBinaryOperatorResult]
-        return INT_MAX << 10; // oops, shift overflow
+        return INT_MAX << 10; // ⚠️ shift overflow
                        ^
 /home/mf/Repos/CWTS/tests/shift_overflow.cpp:7:17: note: The result of the left shift is undefined due to shifting '2147483647' by '10', which is unrepresentable in the unsigned version of the return type 'int'
 /home/mf/Repos/CWTS/tests/shift_overflow.cpp:7:17: warning: signed shift result (0x1FFFFFFFC00) requires 42 bits to represent, but 'int' only has 32 bits [clang-diagnostic-shift-overflow]
-        return INT_MAX << 10; // oops, shift overflow
+        return INT_MAX << 10; // ⚠️ shift overflow
                        ^  ~~
 /home/mf/Repos/CWTS/tests/shift_overflow.cpp:7:20: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
-        return INT_MAX << 10; // oops, shift overflow
+        return INT_MAX << 10; // ⚠️ shift overflow
                           ^
 /home/mf/Repos/CWTS/tests/shift_overflow.cpp:7:17: warning: signed shift result (0x1FFFFFFFC00) requires 42 bits to represent, but 'int' only has 32 bits [-Wshift-overflow]
-        return INT_MAX << 10; // oops, shift overflow
+        return INT_MAX << 10; // ⚠️ shift overflow
                ~~~~~~~ ^  ~~
 1 warning generated.
 [ 69%] Building CXX object CMakeFiles/CWTS.dir/tests/shift_value_negative.cpp.o
@@ -893,19 +895,19 @@ extern int shift_value_negative(void);
 int shift_value_negative(void)
     ^
 /home/mf/Repos/CWTS/tests/shift_value_negative.cpp:5:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
-        return -1 << 2; // oops, value to shift is negative
+        return -1 << 2; // ⚠️ value to shift is negative
                ^~
 /home/mf/Repos/CWTS/tests/shift_value_negative.cpp:5:12: warning: The result of the left shift is undefined because the left operand is negative [clang-analyzer-core.UndefinedBinaryOperatorResult]
-        return -1 << 2; // oops, value to shift is negative
+        return -1 << 2; // ⚠️ value to shift is negative
                ~~ ^
 /home/mf/Repos/CWTS/tests/shift_value_negative.cpp:5:12: note: The result of the left shift is undefined because the left operand is negative
-        return -1 << 2; // oops, value to shift is negative
+        return -1 << 2; // ⚠️ value to shift is negative
                ~~ ^
 /home/mf/Repos/CWTS/tests/shift_value_negative.cpp:5:12: warning: shifting a negative signed value is undefined [clang-diagnostic-shift-negative-value]
-        return -1 << 2; // oops, value to shift is negative
+        return -1 << 2; // ⚠️ value to shift is negative
                ~~ ^
 /home/mf/Repos/CWTS/tests/shift_value_negative.cpp:5:12: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
-        return -1 << 2; // oops, value to shift is negative
+        return -1 << 2; // ⚠️ value to shift is negative
                ~~ ^
 1 warning generated.
 [ 71%] Building CXX object CMakeFiles/CWTS.dir/tests/stack_address_returned.cpp.o
@@ -920,33 +922,33 @@ int *stack_address_returned(void)
         int array[10] = {};
                   ^
 /home/mf/Repos/CWTS/tests/stack_address_returned.cpp:7:2: warning: Address of stack memory associated with local variable 'array' returned to caller [clang-analyzer-core.StackAddressEscape]
-        return array; // oops, returns stack address
+        return array; // ⚠️ returns stack address
         ^      ~~~~~
 /home/mf/Repos/CWTS/tests/stack_address_returned.cpp:7:2: note: Address of stack memory associated with local variable 'array' returned to caller
-        return array; // oops, returns stack address
+        return array; // ⚠️ returns stack address
         ^      ~~~~~
 /home/mf/Repos/CWTS/tests/stack_address_returned.cpp:7:9: warning: address of stack memory associated with local variable 'array' returned [clang-diagnostic-return-stack-address]
-        return array; // oops, returns stack address
+        return array; // ⚠️ returns stack address
                ^~~~~
 /home/mf/Repos/CWTS/tests/stack_address_returned.cpp:7:9: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
 /home/mf/Repos/CWTS/tests/stack_address_returned.cpp:7:9: warning: address of stack memory associated with local variable 'array' returned [-Wreturn-stack-address]
-        return array; // oops, returns stack address
+        return array; // ⚠️ returns stack address
                ^~~~~
 1 warning generated.
 [ 72%] Building CXX object CMakeFiles/CWTS.dir/tests/static_const_unused.cpp.o
 /home/mf/Repos/CWTS/tests/static_const_unused.cpp:1:18: warning: unused variable 'static_const_unused' [clang-diagnostic-unused-const-variable]
-static const int static_const_unused = 0; // oops, static const is unused
+static const int static_const_unused = 0; // ⚠️ static const is unused
                  ^
 /home/mf/Repos/CWTS/tests/static_const_unused.cpp:1:18: warning: unused variable 'static_const_unused' [-Wunused-const-variable]
-static const int static_const_unused = 0; // oops, static const is unused
+static const int static_const_unused = 0; // ⚠️ static const is unused
                  ^
 1 warning generated.
 [ 73%] Building CXX object CMakeFiles/CWTS.dir/tests/static_function_unused.cpp.o
 /home/mf/Repos/CWTS/tests/static_function_unused.cpp:1:13: warning: unused function 'static_function_unused' [clang-diagnostic-unused-function]
-static void static_function_unused(void) // oops, static function is unused
+static void static_function_unused(void) // ⚠️ static function is unused
             ^
 /home/mf/Repos/CWTS/tests/static_function_unused.cpp:1:13: warning: unused function 'static_function_unused' [-Wunused-function]
-static void static_function_unused(void) // oops, static function is unused
+static void static_function_unused(void) // ⚠️ static function is unused
             ^
 1 warning generated.
 [ 75%] Building CXX object CMakeFiles/CWTS.dir/tests/switch_body_empty.cpp.o
@@ -955,7 +957,7 @@ extern void switch_body_empty(int value);
 void switch_body_empty(int value)
      ^
 /home/mf/Repos/CWTS/tests/switch_body_empty.cpp:5:2: warning: switch statement without labels has no effect [hicpp-multiway-paths-covered]
-        switch (value) // oops, the switch body is empty
+        switch (value) // ⚠️ the switch body is empty
         ^
 [ 76%] Building CXX object CMakeFiles/CWTS.dir/tests/switch_code_unreachable.cpp.o
 extern int switch_code_unreachable(int value);
@@ -968,7 +970,7 @@ bool switch_default_missing(int value);
 bool switch_default_missing(int value)
      ^
 /home/mf/Repos/CWTS/tests/switch_default_missing.cpp:5:2: warning: potential uncovered code path; add a default label [hicpp-multiway-paths-covered]
-        switch (value) // oops, the switch default is missing
+        switch (value) // ⚠️ the switch default is missing
         ^
 [ 79%] Building CXX object CMakeFiles/CWTS.dir/tests/value_unused_1.cpp.o
 extern int value_unused_1(int alpha, int beta);
@@ -976,10 +978,10 @@ extern int value_unused_1(int alpha, int beta);
 int value_unused_1(int alpha, int beta)
     ^
 /home/mf/Repos/CWTS/tests/value_unused_1.cpp:5:8: warning: expression result unused [clang-diagnostic-unused-value]
-        alpha * beta; // oops, the result is unused
+        alpha * beta; // ⚠️ the result is unused
         ~~~~~ ^ ~~~~
 /home/mf/Repos/CWTS/tests/value_unused_1.cpp:5:8: warning: expression result unused [-Wunused-value]
-        alpha * beta; // oops, the result is unused
+        alpha * beta; // ⚠️ the result is unused
         ~~~~~ ^ ~~~~
 1 warning generated.
 [ 81%] Building CXX object CMakeFiles/CWTS.dir/tests/value_unused_2.cpp.o
@@ -988,10 +990,10 @@ extern int value_unused_2(int alpha, int beta);
 int value_unused_2(int alpha, int beta)
     ^
 /home/mf/Repos/CWTS/tests/value_unused_2.cpp:5:9: warning: left operand of comma operator has no effect [clang-diagnostic-unused-value]
-        return alpha, beta; // oops, only one is used
+        return alpha, beta; // ⚠️ only one is used
                ^~~~~
 /home/mf/Repos/CWTS/tests/value_unused_2.cpp:5:9: warning: left operand of comma operator has no effect [-Wunused-value]
-        return alpha, beta; // oops, only one is used
+        return alpha, beta; // ⚠️ only one is used
                ^~~~~
 1 warning generated.
 [ 82%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_assignment.cpp.o
@@ -1003,39 +1005,39 @@ void variable_assignment()
         int alpha = 1, beta = 2;
         ^~~~~~~~~~~~~~~~~~~~~~~~
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:6: warning: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha' [clang-analyzer-deadcode.DeadStores]
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
             ^       ~~~~
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:6: note: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha'
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
             ^       ~~~~
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:6: warning: implicit conversion 'int' -> bool [readability-implicit-bool-conversion]
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
             ^
                          != 0
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:12: warning: using the result of an assignment as a condition without parentheses [clang-diagnostic-parentheses]
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
             ~~~~~~^~~~~~
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:12: note: place parentheses around the assignment to silence this warning
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
                   ^
             (           )
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:12: note: use '==' to turn this assignment into an equality comparison
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
                   ^
                   ==
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:19: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
                          ^
                           {
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
             ~~~~~~^~~~~~
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:12: note: place parentheses around the assignment to silence this warning
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
                   ^
             (           )
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:12: note: use '==' to turn this assignment into an equality comparison
-        if (alpha = beta) // oops, I meant "alpha == beta"
+        if (alpha = beta) // ⚠️ I meant "alpha == beta"
                   ^
                   ==
 1 warning generated.
@@ -1045,7 +1047,7 @@ extern bool variable_compare_1(char alpha, unsigned char beta);
 bool variable_compare_1(char alpha, unsigned char beta)
      ^
 /home/mf/Repos/CWTS/tests/variable_compare_1.cpp:5:9: warning: comparison between 'signed char' and 'unsigned char' [bugprone-signed-char-misuse]
-        return alpha == beta; // oops, not same datatype
+        return alpha == beta; // ⚠️ not same datatype
                ^
 [ 85%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_compare_2.cpp.o
 extern bool variable_compare_2(short alpha, unsigned short beta);
@@ -1070,10 +1072,10 @@ extern bool variable_compare_3(int alpha, unsigned int beta);
 bool variable_compare_3(int alpha, unsigned int beta)
      ^
 /home/mf/Repos/CWTS/tests/variable_compare_3.cpp:5:15: warning: comparison of integers of different signs: 'int' and 'unsigned int' [clang-diagnostic-sign-compare]
-        return alpha == beta; // oops, different datatypes
+        return alpha == beta; // ⚠️ different datatypes
                ~~~~~ ^  ~~~~
 /home/mf/Repos/CWTS/tests/variable_compare_3.cpp:5:15: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
-        return alpha == beta; // oops, different datatypes
+        return alpha == beta; // ⚠️ different datatypes
                ~~~~~ ^  ~~~~
 1 warning generated.
 [ 88%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_compare_4.cpp.o
@@ -1094,10 +1096,10 @@ bool variable_compare_4(long alpha, unsigned long beta)
 bool variable_compare_4(long alpha, unsigned long beta)
                                     ^
 /home/mf/Repos/CWTS/tests/variable_compare_4.cpp:5:15: warning: comparison of integers of different signs: 'long' and 'unsigned long' [clang-diagnostic-sign-compare]
-        return alpha == beta; // oops, different datatypes
+        return alpha == beta; // ⚠️ different datatypes
                ~~~~~ ^  ~~~~
 /home/mf/Repos/CWTS/tests/variable_compare_4.cpp:5:15: warning: comparison of integers of different signs: 'long' and 'unsigned long' [-Wsign-compare]
-        return alpha == beta; // oops, different datatypes
+        return alpha == beta; // ⚠️ different datatypes
                ~~~~~ ^  ~~~~
 1 warning generated.
 [ 89%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_init_self.cpp.o
@@ -1106,16 +1108,16 @@ extern int variable_init_self(void);
 int variable_init_self(void)
     ^
 /home/mf/Repos/CWTS/tests/variable_init_self.cpp:5:2: warning: Assigned value is garbage or undefined [clang-analyzer-core.uninitialized.Assign]
-        int alpha = alpha; // oops, variable initialized by itself
+        int alpha = alpha; // ⚠️ variable initialized by itself
         ^           ~~~~~
 /home/mf/Repos/CWTS/tests/variable_init_self.cpp:5:2: note: Assigned value is garbage or undefined
-        int alpha = alpha; // oops, variable initialized by itself
+        int alpha = alpha; // ⚠️ variable initialized by itself
         ^           ~~~~~
 /home/mf/Repos/CWTS/tests/variable_init_self.cpp:5:14: warning: variable 'alpha' is uninitialized when used within its own initialization [clang-diagnostic-uninitialized]
-        int alpha = alpha; // oops, variable initialized by itself
+        int alpha = alpha; // ⚠️ variable initialized by itself
             ~~~~~   ^~~~~
 /home/mf/Repos/CWTS/tests/variable_init_self.cpp:5:14: warning: variable 'alpha' is uninitialized when used within its own initialization [-Wuninitialized]
-        int alpha = alpha; // oops, variable initialized by itself
+        int alpha = alpha; // ⚠️ variable initialized by itself
             ~~~~~   ^~~~~
 1 warning generated.
 [ 91%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_shadowed_1.cpp.o
@@ -1140,10 +1142,10 @@ extern void variable_size_array(int size);
 void variable_size_array(int size)
      ^
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:5:2: warning: do not declare C VLA arrays, use std::vector<> instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
-        float abc[size]; // oops, array size is not constant
+        float abc[size]; // ⚠️ array size is not constant
         ^
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:5:12: warning: variable length arrays are a C99 feature [clang-diagnostic-vla-extension]
-        float abc[size]; // oops, array size is not constant
+        float abc[size]; // ⚠️ array size is not constant
                   ^~~~
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:5:12: note: function parameter 'size' with unknown value cannot be used in a constant expression
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:3:30: note: declared here
@@ -1153,7 +1155,7 @@ void variable_size_array(int size)
         abc[0] = 3.1415;
                  ^
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:5:12: warning: variable length arrays are a C99 feature [-Wvla-extension]
-        float abc[size]; // oops, array size is not constant
+        float abc[size]; // ⚠️ array size is not constant
                   ^~~~
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:5:12: note: function parameter 'size' with unknown value cannot be used in a constant expression
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:3:30: note: declared here
@@ -1173,13 +1175,13 @@ extern void variable_unsequenced(int value);
 void variable_unsequenced(int value)
      ^
 /home/mf/Repos/CWTS/tests/variable_unsequenced.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg,hicpp-vararg]
-        printf("%d,%d", value, ++value); // oops, variable unsequenced
+        printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
         ^
 /home/mf/Repos/CWTS/tests/variable_unsequenced.cpp:7:25: warning: unsequenced modification and access to 'value' [clang-diagnostic-unsequenced]
-        printf("%d,%d", value, ++value); // oops, variable unsequenced
+        printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
                         ~~~~~  ^
 /home/mf/Repos/CWTS/tests/variable_unsequenced.cpp:7:25: warning: unsequenced modification and access to 'value' [-Wunsequenced]
-        printf("%d,%d", value, ++value); // oops, variable unsequenced
+        printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
                         ~~~~~  ^
 1 warning generated.
 [ 97%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_unused.cpp.o
@@ -1188,10 +1190,10 @@ extern void variable_unused(void);
 void variable_unused(void)
      ^
 /home/mf/Repos/CWTS/tests/variable_unused.cpp:5:6: warning: unused variable 'value' [clang-diagnostic-unused-variable]
-        int value = 0; // oops, variable is unused
+        int value = 0; // ⚠️ variable is unused
             ^
 /home/mf/Repos/CWTS/tests/variable_unused.cpp:5:6: warning: unused variable 'value' [-Wunused-variable]
-        int value = 0; // oops, variable is unused
+        int value = 0; // ⚠️ variable is unused
             ^
 1 warning generated.
 [ 98%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_used_uninitialized.cpp.o
@@ -1211,7 +1213,7 @@ note: this fix will not be applied because it overlaps with another fix
                        ^
                         {
 /home/mf/Repos/CWTS/tests/variable_used_uninitialized.cpp:8:3: warning: The expression is an uninitialized value. The computed value will also be garbage [clang-analyzer-core.uninitialized.Assign]
-                beta++; // oops, variable used uninitialized
+                beta++; // ⚠️ variable used uninitialized
                 ^~~~
 /home/mf/Repos/CWTS/tests/variable_used_uninitialized.cpp:5:17: note: 'beta' declared without an initial value
         int alpha = 0, beta;
@@ -1223,17 +1225,17 @@ note: this fix will not be applied because it overlaps with another fix
         if (alpha == 0)
         ^
 /home/mf/Repos/CWTS/tests/variable_used_uninitialized.cpp:8:3: note: The expression is an uninitialized value. The computed value will also be garbage
-                beta++; // oops, variable used uninitialized
+                beta++; // ⚠️ variable used uninitialized
                 ^~~~
 /home/mf/Repos/CWTS/tests/variable_used_uninitialized.cpp:8:3: warning: variable 'beta' is uninitialized when used here [clang-diagnostic-uninitialized]
-                beta++; // oops, variable used uninitialized
+                beta++; // ⚠️ variable used uninitialized
                 ^~~~
 /home/mf/Repos/CWTS/tests/variable_used_uninitialized.cpp:5:21: note: initialize the variable 'beta' to silence this warning
         int alpha = 0, beta;
                            ^
                             = 0
 /home/mf/Repos/CWTS/tests/variable_used_uninitialized.cpp:8:3: warning: variable 'beta' is uninitialized when used here [-Wuninitialized]
-                beta++; // oops, variable used uninitialized
+                beta++; // ⚠️ variable used uninitialized
                 ^~~~
 /home/mf/Repos/CWTS/tests/variable_used_uninitialized.cpp:5:21: note: initialize the variable 'beta' to silence this warning
         int alpha = 0, beta;
@@ -1245,4 +1247,5 @@ make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/CWTS.dir/all] Error 2
 make[1]: Target 'all' not remade because of errors.
 make: *** [Makefile:136: all] Error 2
 make: Target 'default_target' not remade because of errors.
+
 $
