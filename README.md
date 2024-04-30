@@ -14,7 +14,7 @@ Requires **cmake** and a **C++ compiler**. Then execute in a terminal window:
 > cmake .
 > make -k                                      # option '-k': keep going, even on errors
 ```
-It returns a lot of compiler warnings - the more warnings the better! Edit `CMakeLists.txt` before to force using a certain C++ compiler.
+Expect a lot of compiler warnings but the more warnings the better! Edit `CMakeLists.txt` before to force using a certain C++ compiler.
 
 
 🏆 Compiler Ranking by Warnings
