@@ -2,6 +2,6 @@
 
 int logical_not(int alpha)
 {
-	alpha &= !(1 << 7); // ⚠️ I meant '~' instead of '!'
+	alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
 	return alpha;
 }

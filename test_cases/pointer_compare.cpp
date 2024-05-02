@@ -2,5 +2,5 @@
 
 int pointer_compare(char *ptr)
 {
-	return (ptr == '\0'); // ⚠️ I meant "*ptr"
+	return (ptr == '\0'); // ⚠️ Ups, I meant "*ptr"
 }
