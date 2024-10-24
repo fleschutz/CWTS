@@ -6,7 +6,7 @@ Compiler Warnings Test Suite (CWTS)
 
 ⚙️ Installation 
 ----------------
-Requires **cmake** and a **C++ compiler** installed. Then execute in a terminal window:
+Requires a **C++ compiler** and **cmake**, then execute in a terminal window:
 
 ```
 > git clone https://github.com/fleschutz/CWTS  # or download and unzip the ZIP file (click the green button)
