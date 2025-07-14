@@ -61,9 +61,12 @@ Links
 * [Visual Studio Compiler Warnings](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warnings-by-compiler-version)
 * [Intel C++ Compilers](https://software.intel.com/en-us/c-compilers)
 
-📧 Feedback
-------------
-Send your email feedback to: markus.fleschutz [at] gmail.com
+🤝 Contributing
+----------------
+* Contributions, suggestions, and improvements are welcome!
+* Open an Issue if you encounter bugs or have feature ideas.
+* Create a Pull Request if you'd like to improve something.
+* Or just send your feedback to: markus.fleschutz [at] gmail.com
 
 📜 License & Copyright
 -----------------------
