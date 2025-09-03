@@ -17,9 +17,9 @@ Requires a **C++ compiler** and **cmake**, then execute in a terminal window:
 Expect a lot of compiler warnings but the more warnings the better! Edit `CMakeLists.txt` before to force using a certain C++ compiler.
 
 
-🏆 Compiler Ranking by Warnings
---------------------------------
-Each test case (or .cpp file) compiled without warnings or errors is a miss. And the winner is:
+🏆 Compiler Ranking
+-------------------
+Each test case compiled without a warning or error is a miss. And the winners are:
 
 1. **clang-tidy 10.0** which misses 8 warnings only.
 2. **Clang 10.0.0** which misses 11 warnings.
@@ -71,3 +71,4 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
