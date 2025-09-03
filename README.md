@@ -46,7 +46,7 @@ No, the highest warning level is NOT enabled by default. Instead, every compiler
 
 👮‍ Zero Warnings Policy 
 ------------------------
-This means your project is compiled with the **highest** warning level and **zero** compiler warnings are acceptable.
+It means a project is compiled with the **highest** warning level and **zero** compiler warnings are acceptable.
 
 Introducing the *Zero Warnings Policy* by enabling the highest warning level often results in hundreds or even thousands of warnings. To get started you may want to begin with a lower warning level first. Now, fix those warnings and gradually dial up the warning level.
 
@@ -71,6 +71,7 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
 
 
