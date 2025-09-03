@@ -31,11 +31,11 @@ Each test case compiled without a warning or error is a miss. And the winners ar
 See the 📂[test_results](test_results/) folder for details and older versions. **Note:** all results with highest warning level enabled (see below). 
 
 
-⚠️ How to enable the Highest Warning Level 
--------------------------------------------
-Please note every compiler sets the default warning level to 'normal', whatever this means. And each one supports different options to be more pedantic:
+⚠️ Highest Warning Level 
+-------------------------
+No, the highest warning level is NOT enabled by default. Instead, every compiler sets the default warning level to 'normal', whatever this means. And each one supports different options to be more pedantic:
 
-| Compiler        | Options                     | Comment                                           |
+| Compiler        | Options                           | Comment                                           |
 |-----------------|-----------------------------------|---------------------------------------------------|
 | *Clang*         | `-Weverything -pedantic`          |                                                   |
 | *clang-tidy*    | `-checks=*,-modernize*`           | hints how to modernize the code are switched off  |
@@ -71,4 +71,5 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
