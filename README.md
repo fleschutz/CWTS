@@ -66,13 +66,7 @@ Links
 * Contributions, suggestions, and improvements are welcome!
 * Open an Issue if you encounter bugs or have feature ideas.
 * Create a Pull Request if you'd like to improve something.
-* Or just send your feedback to: markus.fleschutz [at] gmail.com
 
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
-
-
-
-
-
