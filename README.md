@@ -28,7 +28,7 @@ Each test case compiled without a warning or error is a miss. And the winners ar
 5. **Visual Studio 2017** missing 19 warnings.
 6. **Cppcheck 2.11** missing 23 warnings.
 
-See the 📂[test_results](test_results/) folder for details and older versions. **Note:** all results with highest warning level enabled (see below). 
+See the 📂[test_results](test_results/) folder for details and older versions. **Note:** all results produced with highest warning level enabled (see below). 
 
 
 ⚠️ Highest Warning Level 
@@ -71,6 +71,7 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
 
 
