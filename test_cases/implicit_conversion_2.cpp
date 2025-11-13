@@ -2,5 +2,5 @@
 
 short implicit_conversion_2(int alpha)
 {
-	return alpha; // ⚠️ implicit conversion
+	return alpha; // ⚠️ implicit conversion (int to short)
 }

@@ -2,5 +2,5 @@
 
 char implicit_conversion_1(short alpha)
 {
-	return alpha; // ⚠️ implicit conversion
+	return alpha; // ⚠️ implicit conversion (short to char)
 }
