@@ -22,10 +22,10 @@ Each test case compiled without a warning or error is a miss (👎). And the win
 2. **Clang 10.0.0** misses 11
 3. **Visual Studio 2019** misses 17
 4. **Visual Studio 2017** misses 19
-5. **GCC 15.2.0** misses 32
-6. **Cppcheck 2.17.1** misses 32
+5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt)
+6. **Cppcheck 2.17.1** misses [32](test_results/cppcheck_2.17.1.txt)
 
-See the 📂[test_results](test_results/) folder for details and older versions. **Note:** all results produced with highest warning level enabled (see below). 
+Please find all test results in 📂[test_results](test_results/) (also older versions). **Note:** all results produced with highest warning level enabled (see below). 
 
 
 ⚠️ Highest Warning Level 
@@ -67,6 +67,7 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
 
 
