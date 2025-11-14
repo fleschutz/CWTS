@@ -1,8 +1,11 @@
-extern int *stack_address_returned(void);
-
-int *stack_address_returned(void)
+namespace test_suite
 {
-	int array[10] = {};
+	extern int *stack_address_returned(void);
 
-	return array; // <- returns stack address
+	int *stack_address_returned(void)
+	{
+		int array[10] = {};
+
+		return array; // <- returns stack address
+	}
 }

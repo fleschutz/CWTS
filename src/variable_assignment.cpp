@@ -1,10 +1,12 @@
-extern void variable_assignment();
-
-void variable_assignment()
+namespace test_suite
 {
-	int alpha = 1, beta = 2;
+	extern void variable_assignment();
 
-	if (alpha = beta) // <- Ups, I meant "alpha == beta"
-		return;
+	void variable_assignment()
+	{
+		int alpha = 1, beta = 2;
+
+		if (alpha = beta) // <- Ups, I meant "alpha == beta"
+			return;
+	}
 }
-

@@ -1,9 +1,12 @@
-extern void variable_used_uninitialized(void);
-
-void variable_used_uninitialized(void)
+namespace test_suite
 {
-	int alpha = 0, beta;
+	extern void variable_used_uninitialized(void);
 
-	if (alpha == 0)
-		beta++; // <- variable used uninitialized
+	void variable_used_uninitialized(void)
+	{
+		int alpha = 0, beta;
+
+		if (alpha == 0)
+			beta++; // <- variable used uninitialized
+	}
 }

@@ -1,4 +1,4 @@
-namespace ABC
+namespace test_suite
 {
 	extern int array_bounds_5(void);
 

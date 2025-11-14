@@ -1,7 +1,10 @@
-extern void variable_size_array(int size);
-
-void variable_size_array(int size)
+namespace test_suite
 {
-	float abc[size]; // <- array size is not constant
-	abc[0] = 3.1415;
+	extern void variable_size_array(int size);
+
+	void variable_size_array(int size)
+	{
+		float abc[size]; // <- array size is not constant
+		abc[0] = 3.1415;
+	}
 }

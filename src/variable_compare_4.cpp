@@ -1,6 +1,9 @@
-extern bool variable_compare_4(long alpha, unsigned long beta);
-
-bool variable_compare_4(long alpha, unsigned long beta)
+namespace test_suite
 {
-	return alpha == beta; // <- different datatypes
+	extern bool variable_compare_4(long alpha, unsigned long beta);
+
+	bool variable_compare_4(long alpha, unsigned long beta)
+	{
+		return alpha == beta; // <- different datatypes
+	}
 }

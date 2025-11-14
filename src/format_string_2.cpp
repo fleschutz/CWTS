@@ -1,8 +1,11 @@
 #include <stdio.h>
 
-extern void format_string_2(void);
-
-void format_string_2(void)
+namespace test_suite
 {
-	printf(""); // <- empty format string
+	extern void format_string_2(void);
+
+	void format_string_2(void)
+	{
+		printf(""); // <- empty format string
+	}
 }

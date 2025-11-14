@@ -1,6 +1,9 @@
-extern int *cast_unnecessary(int *ptr);
-
-int *cast_unnecessary(int *ptr)
+namespace test_suite
 {
-	  return static_cast<int *>(ptr); // <- cast not necessary
+	extern int *cast_unnecessary(int *ptr);
+
+	int *cast_unnecessary(int *ptr)
+	{
+		  return static_cast<int *>(ptr); // <- cast not necessary
+	}
 }

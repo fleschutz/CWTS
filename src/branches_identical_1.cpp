@@ -1,13 +1,16 @@
-extern bool branches_identical_1(int alpha);
-
-bool branches_identical_1(int alpha)
+namespace test_suite
 {
-	if (alpha == 0)
+	extern bool branches_identical_1(int alpha);
+
+	bool branches_identical_1(int alpha)
 	{
-		return false; // <- both branches are identical
-	}
-	else
-	{
-		return false;
+		if (alpha == 0)
+		{
+			return false; // <- both branches are identical
+		}
+		else
+		{
+			return false;
+		}
 	}
 }

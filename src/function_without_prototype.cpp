@@ -1,4 +1,7 @@
-int function_without_prototype() // <- function without prototype
+namespace test_suite
 {
-	return 42;
+	int function_without_prototype() // <- function without prototype
+	{
+		return 42;
+	}
 }

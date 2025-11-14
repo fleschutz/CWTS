@@ -1,6 +1,9 @@
-extern bool variable_compare_3(int alpha, unsigned int beta);
-
-bool variable_compare_3(int alpha, unsigned int beta)
+namespace test_suite
 {
-	return alpha == beta; // <- different datatypes
+	extern bool variable_compare_3(int alpha, unsigned int beta);
+
+	bool variable_compare_3(int alpha, unsigned int beta)
+	{
+		return alpha == beta; // <- different datatypes
+	}
 }

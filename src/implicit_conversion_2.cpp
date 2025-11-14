@@ -1,6 +1,9 @@
-extern short implicit_conversion_2(int alpha);
-
-short implicit_conversion_2(int alpha)
+namespace test_suite
 {
-	return alpha; // <- implicit conversion (int to short)
+	extern short implicit_conversion_2(int alpha);
+
+	short implicit_conversion_2(int alpha)
+	{
+		return alpha; // <- implicit conversion (int to short)
+	}
 }

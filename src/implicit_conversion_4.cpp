@@ -1,6 +1,9 @@
-extern float implicit_conversion_4(double alpha);
-
-float implicit_conversion_4(double alpha)
+namespace test_suite
 {
-	return alpha; // <- implicit conversion (double to float)
+	extern float implicit_conversion_4(double alpha);
+
+	float implicit_conversion_4(double alpha)
+	{
+		return alpha; // <- implicit conversion (double to float)
+	}
 }

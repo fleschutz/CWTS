@@ -1,6 +1,9 @@
-extern bool variable_compare_2(short alpha, unsigned short beta);
-
-bool variable_compare_2(short alpha, unsigned short beta)
+namespace test_suite
 {
-	return alpha == beta; // <- different datatypes
+	extern bool variable_compare_2(short alpha, unsigned short beta);
+
+	bool variable_compare_2(short alpha, unsigned short beta)
+	{
+		return alpha == beta; // <- different datatypes
+	}
 }

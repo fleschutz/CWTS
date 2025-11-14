@@ -1,8 +1,11 @@
-extern void switch_body_empty(int value);
-
-void switch_body_empty(int value)
+namespace test_suite
 {
-	switch (value) // <- the switch body is empty
+	extern void switch_body_empty(int value);
+
+	void switch_body_empty(int value)
 	{
+		switch (value) // <- the switch body is empty
+		{
+		}
 	}
 }

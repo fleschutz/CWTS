@@ -1,13 +1,16 @@
-bool switch_default_missing(int value);
-
-bool switch_default_missing(int value)
+namespace test_suite
 {
-	switch (value) // <- the switch default is missing
+	bool switch_default_missing(int value);
+
+	bool switch_default_missing(int value)
 	{
-	case 0:
-		return true;
-	case 1:
+		switch (value) // <- the switch default is missing
+		{
+		case 0:
+			return true;
+		case 1:
+			return false;
+		}
 		return false;
 	}
-	return false;
 }

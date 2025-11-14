@@ -1,6 +1,9 @@
-extern int pointer_compare(char *ptr);
-
-int pointer_compare(char *ptr)
+namespace test_suite
 {
-	return (ptr == '\0'); // <- Ups, I meant "*ptr"
+	extern int pointer_compare(char *ptr);
+
+	int pointer_compare(char *ptr)
+	{
+		return (ptr == '\0'); // <- Ups, I meant "*ptr"
+	}
 }

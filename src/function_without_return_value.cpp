@@ -1,6 +1,9 @@
-extern int function_without_return_value(void);
-
-int function_without_return_value(void)
+namespace test_suite
 {
-	return; // <- return value is missing
+	extern int function_without_return_value(void);
+
+	int function_without_return_value(void)
+	{
+		return; // <- return value is missing
+	}
 }

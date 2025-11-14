@@ -1,7 +1,10 @@
-extern void code_unreachable_1(int alpha);
-
-void code_unreachable_1(int alpha)
+namespace test_suite
 {
-	return;
-	alpha++; // <- code is unreachable
+	extern void code_unreachable_1(int alpha);
+
+	void code_unreachable_1(int alpha)
+	{
+		return;
+		alpha++; // <- code is unreachable
+	}
 }

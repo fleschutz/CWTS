@@ -1,8 +1,11 @@
-extern void null_pointer_access_1(void);
-
-void null_pointer_access_1(void)
+namespace test_suite
 {
-	static int *ptr; // NULL by default
+	extern void null_pointer_access_1(void);
 
-	*ptr = 0; // <- null pointer access
+	void null_pointer_access_1(void)
+	{
+		static int *ptr; // NULL by default
+
+		*ptr = 0; // <- null pointer access
+	}
 }

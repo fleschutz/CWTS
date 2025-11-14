@@ -1,8 +1,11 @@
 #include <stdio.h>
 
-extern void format_string_3(const char *str);
-
-void format_string_3(const char *str)
+namespace test_suite
 {
-	printf(str); // <- <str> is handled as format string
+	extern void format_string_3(const char *str);
+
+	void format_string_3(const char *str)
+	{
+		printf(str); // <- <str> is handled as format string
+	}
 }

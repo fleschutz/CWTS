@@ -1,8 +1,11 @@
 #include <limits.h>
 
-extern int shift_overflow(void);
-
-int shift_overflow(void)
+namespace test_suite
 {
-	return INT_MAX << 10; // <- shift overflow
+	extern int shift_overflow(void);
+
+	int shift_overflow(void)
+	{
+		return INT_MAX << 10; // <- shift overflow
+	}
 }

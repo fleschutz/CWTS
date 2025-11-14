@@ -1,6 +1,9 @@
-extern char implicit_conversion_1(short alpha);
-
-char implicit_conversion_1(short alpha)
+namespace test_suite
 {
-	return alpha; // <- implicit conversion (short to char)
+	extern char implicit_conversion_1(short alpha);
+
+	char implicit_conversion_1(short alpha)
+	{
+		return alpha; // <- implicit conversion (short to char)
+	}
 }

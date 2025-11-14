@@ -1,14 +1,17 @@
-extern int branches_identical_3(bool alpha);
-
-int branches_identical_3(bool alpha)
+namespace test_suite
 {
-	if (alpha == true)
+	extern int branches_identical_3(bool alpha);
+
+	int branches_identical_3(bool alpha)
 	{
-		return 1;
+		if (alpha == true)
+		{
+			return 1;
+		}
+		else if (alpha == true) // <- this condition is obsolete
+		{	
+			return 2;
+		}
+		return 3;
 	}
-	else if (alpha == true) // <- this condition is obsolete
-	{	
-		return 2;
-	}
-	return 3;
 }

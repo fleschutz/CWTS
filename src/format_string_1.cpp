@@ -1,8 +1,11 @@
 #include <stdio.h>
 
-extern void format_string_1();
-
-void format_string_1()
+namespace test_suite
 {
-	printf("%s", 0); // <- zero pointer access
+	extern void format_string_1();
+
+	void format_string_1()
+	{
+		printf("%s", 0); // <- zero pointer access
+	}
 }

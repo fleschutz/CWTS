@@ -1,6 +1,9 @@
-extern bool bool_compare(int alpha);
-
-bool bool_compare(int alpha)
+namespace test_suite
 {
-	return (alpha > 0) == 2; // <- condition is always false
+	extern bool bool_compare(int alpha);
+
+	bool bool_compare(int alpha)
+	{
+		return (alpha > 0) == 2; // <- condition is always false
+	}
 }
