@@ -1,0 +1,1553 @@
+➤  uname -a
+Linux Tux 6.17.0-6-generic #6-Ubuntu SMP PREEMPT_DYNAMIC Tue Oct  7 13:34:17 UTC 2025 x86_64 GNU/Linux
+
+➤  clang-tidy --version
+Ubuntu LLVM version 20.1.8
+  Optimized build.
+
+➤  cmake .
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is Clang 20.1.8
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/clang - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Repos/CWTS
+
+➤  make -k
+[  1%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_1.cpp.o
+/Repos/CWTS/test_cases/array_bounds_1.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void array_bounds_1(void);
+      |                     ^
+/Repos/CWTS/test_cases/array_bounds_1.cpp:3:8: warning: do not declare C-style arrays, use 'std::array' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |        ^
+/Repos/CWTS/test_cases/array_bounds_1.cpp:3:12: warning: variable 'numbers' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |            ^
+/Repos/CWTS/test_cases/array_bounds_1.cpp:3:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/array_bounds_1.cpp:3:12: warning: variable 'numbers' declared 'static', move to anonymous namespace instead [misc-use-anonymous-namespace]
+/Repos/CWTS/test_cases/array_bounds_1.cpp:5:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | void array_bounds_1(void)
+      |      ^
+/Repos/CWTS/test_cases/array_bounds_1.cpp:7:2: warning: array index 3 is past the end of the array (that has type 'int[3]') [clang-diagnostic-array-bounds]
+    7 |         numbers[3] = 3; // ⚠️ array index out of bounds
+      |         ^       ~
+/Repos/CWTS/test_cases/array_bounds_1.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+/Repos/CWTS/test_cases/array_bounds_1.cpp:7:2: warning: array index 3 is past the end of the array (that has type 'int[3]') [-Warray-bounds]
+    7 |         numbers[3] = 3; // ⚠️ array index out of bounds
+      |         ^       ~
+/Repos/CWTS/test_cases/array_bounds_1.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+1 warning generated.
+[  2%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_2.cpp.o
+/Repos/CWTS/test_cases/array_bounds_2.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int array_bounds_2(void);
+      |                    ^
+/Repos/CWTS/test_cases/array_bounds_2.cpp:3:8: warning: do not declare C-style arrays, use 'std::array' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |        ^
+/Repos/CWTS/test_cases/array_bounds_2.cpp:3:12: warning: variable 'numbers' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |            ^
+/Repos/CWTS/test_cases/array_bounds_2.cpp:3:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/array_bounds_2.cpp:3:12: warning: variable 'numbers' declared 'static', move to anonymous namespace instead [misc-use-anonymous-namespace]
+/Repos/CWTS/test_cases/array_bounds_2.cpp:5:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | int array_bounds_2(void)
+      |     ^
+/Repos/CWTS/test_cases/array_bounds_2.cpp:7:9: warning: array index 3 is past the end of the array (that has type 'int[3]') [clang-diagnostic-array-bounds]
+    7 |         return numbers[3]; // ⚠️ array index out of bounds
+      |                ^       ~
+/Repos/CWTS/test_cases/array_bounds_2.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+/Repos/CWTS/test_cases/array_bounds_2.cpp:7:9: warning: array index 3 is past the end of the array (that has type 'int[3]') [-Warray-bounds]
+    7 |         return numbers[3]; // ⚠️ array index out of bounds
+      |                ^       ~
+/Repos/CWTS/test_cases/array_bounds_2.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+1 warning generated.
+[  4%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_3.cpp.o
+/Repos/CWTS/test_cases/array_bounds_3.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int array_bounds_3(void);
+      |                    ^
+/Repos/CWTS/test_cases/array_bounds_3.cpp:3:8: warning: do not declare C-style arrays, use 'std::array' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |        ^
+/Repos/CWTS/test_cases/array_bounds_3.cpp:3:12: warning: variable 'numbers' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |            ^
+/Repos/CWTS/test_cases/array_bounds_3.cpp:3:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/array_bounds_3.cpp:3:12: warning: variable 'numbers' declared 'static', move to anonymous namespace instead [misc-use-anonymous-namespace]
+/Repos/CWTS/test_cases/array_bounds_3.cpp:5:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | int array_bounds_3(void)
+      |     ^
+/Repos/CWTS/test_cases/array_bounds_3.cpp:8:9: warning: array index 3 is past the end of the array (that has type 'int[3]') [clang-diagnostic-array-bounds]
+    8 |         return numbers[index]; // ⚠️ array index out of bounds
+      |                ^       ~~~~~
+/Repos/CWTS/test_cases/array_bounds_3.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+/Repos/CWTS/test_cases/array_bounds_3.cpp:8:9: warning: array index 3 is past the end of the array (that has type 'int[3]') [-Warray-bounds]
+    8 |         return numbers[index]; // ⚠️ array index out of bounds
+      |                ^       ~~~~~
+/Repos/CWTS/test_cases/array_bounds_3.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+1 warning generated.
+[  5%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_4.cpp.o
+/Repos/CWTS/test_cases/array_bounds_4.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void array_bounds_4(void);
+      |                     ^
+/Repos/CWTS/test_cases/array_bounds_4.cpp:3:8: warning: do not declare C-style arrays, use 'std::array' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |        ^
+/Repos/CWTS/test_cases/array_bounds_4.cpp:3:12: warning: variable 'numbers' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |            ^
+/Repos/CWTS/test_cases/array_bounds_4.cpp:3:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/array_bounds_4.cpp:3:12: warning: variable 'numbers' declared 'static', move to anonymous namespace instead [misc-use-anonymous-namespace]
+/Repos/CWTS/test_cases/array_bounds_4.cpp:5:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | void array_bounds_4(void)
+      |      ^
+/Repos/CWTS/test_cases/array_bounds_4.cpp:7:2: warning: array index -1 is before the beginning of the array [clang-diagnostic-array-bounds]
+    7 |         numbers[-1] = -1; // ⚠️ array index out of bounds
+      |         ^       ~~
+/Repos/CWTS/test_cases/array_bounds_4.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+/Repos/CWTS/test_cases/array_bounds_4.cpp:7:2: warning: array index -1 is before the beginning of the array [-Warray-bounds]
+    7 |         numbers[-1] = -1; // ⚠️ array index out of bounds
+      |         ^       ~~
+/Repos/CWTS/test_cases/array_bounds_4.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+1 warning generated.
+[  6%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_5.cpp.o
+/Repos/CWTS/test_cases/array_bounds_5.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int array_bounds_5(void);
+      |                    ^
+/Repos/CWTS/test_cases/array_bounds_5.cpp:3:8: warning: do not declare C-style arrays, use 'std::array' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |        ^
+/Repos/CWTS/test_cases/array_bounds_5.cpp:3:12: warning: variable 'numbers' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |            ^
+/Repos/CWTS/test_cases/array_bounds_5.cpp:3:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/array_bounds_5.cpp:3:12: warning: variable 'numbers' declared 'static', move to anonymous namespace instead [misc-use-anonymous-namespace]
+/Repos/CWTS/test_cases/array_bounds_5.cpp:5:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | int array_bounds_5(void)
+      |     ^
+/Repos/CWTS/test_cases/array_bounds_5.cpp:7:9: warning: array index -1 is before the beginning of the array [clang-diagnostic-array-bounds]
+    7 |         return numbers[-1]; // ⚠️ array index out of bounds
+      |                ^       ~~
+/Repos/CWTS/test_cases/array_bounds_5.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+/Repos/CWTS/test_cases/array_bounds_5.cpp:7:9: warning: array index -1 is before the beginning of the array [-Warray-bounds]
+    7 |         return numbers[-1]; // ⚠️ array index out of bounds
+      |                ^       ~~
+/Repos/CWTS/test_cases/array_bounds_5.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+1 warning generated.
+[  8%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_6.cpp.o
+/Repos/CWTS/test_cases/array_bounds_6.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int array_bounds_6(void);
+      |                    ^
+/Repos/CWTS/test_cases/array_bounds_6.cpp:3:8: warning: do not declare C-style arrays, use 'std::array' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |        ^
+/Repos/CWTS/test_cases/array_bounds_6.cpp:3:12: warning: variable 'numbers' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    3 | static int numbers[3] = { 0, 1, 2 };
+      |            ^
+/Repos/CWTS/test_cases/array_bounds_6.cpp:3:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/array_bounds_6.cpp:3:12: warning: variable 'numbers' declared 'static', move to anonymous namespace instead [misc-use-anonymous-namespace]
+/Repos/CWTS/test_cases/array_bounds_6.cpp:5:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | int array_bounds_6(void)
+      |     ^
+/Repos/CWTS/test_cases/array_bounds_6.cpp:8:9: warning: array index -1 is before the beginning of the array [clang-diagnostic-array-bounds]
+    8 |         return numbers[index]; // ⚠️ array index out of bounds
+      |                ^       ~~~~~
+/Repos/CWTS/test_cases/array_bounds_6.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+/Repos/CWTS/test_cases/array_bounds_6.cpp:8:9: warning: array index -1 is before the beginning of the array [-Warray-bounds]
+    8 |         return numbers[index]; // ⚠️ array index out of bounds
+      |                ^       ~~~~~
+/Repos/CWTS/test_cases/array_bounds_6.cpp:3:1: note: array 'numbers' declared here
+    3 | static int numbers[3] = { 0, 1, 2 };
+      | ^
+1 warning generated.
+[  9%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_braces_missing.cpp.o
+/Repos/CWTS/test_cases/array_braces_missing.cpp:1:4: warning: do not declare C-style arrays, use 'std::array' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+      |         ^
+/Repos/CWTS/test_cases/array_braces_missing.cpp:1:8: warning: variable 'numbers' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+      |             ^
+/Repos/CWTS/test_cases/array_braces_missing.cpp:1:8: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/array_braces_missing.cpp:1:8: warning: variable 'numbers' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+      |             ^
+      |         static
+/Repos/CWTS/test_cases/array_braces_missing.cpp:1:26: warning: suggest braces around initialization of subobject [clang-diagnostic-missing-braces]
+    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+      |                               ^~~~
+      |                               {   }
+/Repos/CWTS/test_cases/array_braces_missing.cpp:1:32: warning: suggest braces around initialization of subobject [clang-diagnostic-missing-braces]
+    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+      |                                     ^~~~
+      |                                     {   }
+/Repos/CWTS/test_cases/array_braces_missing.cpp:1:26: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+      |                               ^~~~
+      |                               {   }
+/Repos/CWTS/test_cases/array_braces_missing.cpp:1:32: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+      |                                     ^~~~
+      |                                     {   }
+2 warnings generated.
+[ 11%] Building CXX object CMakeFiles/CWTS.dir/test_cases/assignment_in_condition_1.cpp.o
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern bool assignment_in_condition_1(int alpha);
+      |                     ^
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool assignment_in_condition_1(int alpha)
+      |      ^
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:6: warning: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha' [clang-analyzer-deadcode.DeadStores]
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |             ^       ~
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:6: note: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha'
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |             ^       ~
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:6: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |             ^
+      |                       != 0
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:12: warning: an assignment within an 'if' condition is bug-prone [bugprone-assignment-in-if-condition]
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |             ~~~~~~^~~
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:12: note: if it should be an assignment, move it out of the 'if' condition
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:12: note: if it is meant to be an equality check, change '=' to '=='
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [clang-diagnostic-parentheses]
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |             ~~~~~~^~~
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:12: note: place parentheses around the assignment to silence this warning
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |                   ^
+      |             (        )
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |                   ^
+      |                   ==
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:14: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |                     ^
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:16: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |                       ^
+      |                        {
+    6 |                 return true;
+      |
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:6:10: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
+    6 |                 return true;
+      |                        ^
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:6: note: conditions that can be simplified
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |             ^~~~~~~~~
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:7:2: note: return statement that can be simplified
+    7 |         return false;
+      |         ^~~~~~~~~~~~
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |             ~~~~~~^~~
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:12: note: place parentheses around the assignment to silence this warning
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |                   ^
+      |             (        )
+/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
+    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+      |                   ^
+      |                   ==
+1 warning generated.
+[ 12%] Building CXX object CMakeFiles/CWTS.dir/test_cases/assignment_in_condition_2.cpp.o
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern bool assignment_in_condition_2(int alpha);
+      |                     ^
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool assignment_in_condition_2(int alpha)
+      |      ^
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:6: warning: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha' [clang-analyzer-deadcode.DeadStores]
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |             ^      ~~~
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:6: note: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha'
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |             ^      ~~~
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:6: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |             ^
+      |                        != 0
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:12: warning: an assignment within an 'if' condition is bug-prone [bugprone-assignment-in-if-condition]
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |             ~~~~~~^~~~
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:12: note: if it should be an assignment, move it out of the 'if' condition
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:12: note: if it is meant to be an equality check, change '=' to '=='
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [clang-diagnostic-parentheses]
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |             ~~~~~~^~~~
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:12: note: place parentheses around the assignment to silence this warning
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |                   ^
+      |             (         )
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |                   ^
+      |                   ==
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:13: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |                    ^
+      |                    static_cast<int>( )
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:15: warning: 5 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |                      ^
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:15: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |                      ^
+      |                      true
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:17: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |                        ^
+      |                         {
+    6 |                 return true;
+      |
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:6:10: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
+    6 |                 return true;
+      |                        ^
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:6: note: conditions that can be simplified
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |             ^~~~~~~~~~
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:7:2: note: return statement that can be simplified
+    7 |         return false;
+      |         ^~~~~~~~~~~~
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |             ~~~~~~^~~~
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:12: note: place parentheses around the assignment to silence this warning
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |                   ^
+      |             (         )
+/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
+    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+      |                   ^
+      |                   ==
+1 warning generated.
+[ 13%] Building CXX object CMakeFiles/CWTS.dir/test_cases/bool_cast.cpp.o
+/Repos/CWTS/test_cases/bool_cast.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern bool bool_cast(int value);
+      |                     ^
+/Repos/CWTS/test_cases/bool_cast.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool bool_cast(int value)
+      |      ^
+/Repos/CWTS/test_cases/bool_cast.cpp:5:14: warning: 42 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    5 |         if (value > 42)
+      |                     ^
+/Repos/CWTS/test_cases/bool_cast.cpp:5:17: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    5 |         if (value > 42)
+      |                        ^
+      |                         {
+    6 |                 return true;
+      |
+/Repos/CWTS/test_cases/bool_cast.cpp:7:9: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+    7 |         return 0; // ⚠️ zero is NOT false
+      |                ^
+      |                false
+[ 15%] Building CXX object CMakeFiles/CWTS.dir/test_cases/bool_compare.cpp.o
+/Repos/CWTS/test_cases/bool_compare.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern bool bool_compare(int alpha);
+      |                     ^
+/Repos/CWTS/test_cases/bool_compare.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool bool_compare(int alpha)
+      |      ^
+/Repos/CWTS/test_cases/bool_compare.cpp:5:9: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+    5 |         return (alpha > 0) == 2; // ⚠️ condition is always false
+      |                ^
+      |                static_cast<int>
+/Repos/CWTS/test_cases/bool_compare.cpp:5:21: warning: result of comparison of constant 2 with expression of type 'bool' is always false [clang-diagnostic-tautological-constant-out-of-range-compare]
+    5 |         return (alpha > 0) == 2; // ⚠️ condition is always false
+      |                ~~~~~~~~~~~ ^  ~
+/Repos/CWTS/test_cases/bool_compare.cpp:5:21: warning: result of comparison of constant 2 with expression of type 'bool' is always false [-Wtautological-constant-out-of-range-compare]
+    5 |         return (alpha > 0) == 2; // ⚠️ condition is always false
+      |                ~~~~~~~~~~~ ^  ~
+1 warning generated.
+[ 16%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_1.cpp.o
+/Repos/CWTS/test_cases/branches_identical_1.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern bool branches_identical_1(int alpha);
+      |                     ^
+/Repos/CWTS/test_cases/branches_identical_1.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool branches_identical_1(int alpha)
+      |      ^
+/Repos/CWTS/test_cases/branches_identical_1.cpp:5:2: warning: if with identical then and else branches [bugprone-branch-clone]
+    5 |         if (alpha == 0)
+      |         ^
+/Repos/CWTS/test_cases/branches_identical_1.cpp:9:2: note: else branch starts here
+    9 |         else
+      |         ^
+/Repos/CWTS/test_cases/branches_identical_1.cpp:9:2: warning: do not use 'else' after 'return' [llvm-else-after-return,readability-else-after-return]
+    9 |         else
+      |         ^~~~
+   10 |         {
+      |         ~
+   11 |                 return false;
+      |                 ~~~~~~~~~~~~~
+   12 |         }
+      |         ~
+[ 18%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_2.cpp.o
+/Repos/CWTS/test_cases/branches_identical_2.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int branches_identical_2(int alpha);
+      |                    ^
+/Repos/CWTS/test_cases/branches_identical_2.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int branches_identical_2(int alpha)
+      |     ^
+/Repos/CWTS/test_cases/branches_identical_2.cpp:5:22: warning: conditional operator with identical true and false expressions [bugprone-branch-clone]
+    5 |         return (alpha == 0) ? 0 : 0; // ⚠️ both branches are identical
+      |                             ^
+/Repos/CWTS/test_cases/branches_identical_2.cpp:5:26: warning: 'true' and 'false' expressions are equivalent [misc-redundant-expression]
+    5 |         return (alpha == 0) ? 0 : 0; // ⚠️ both branches are identical
+      |                                 ^
+[ 19%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_3.cpp.o
+/Repos/CWTS/test_cases/branches_identical_3.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int branches_identical_3(bool alpha);
+      |                    ^
+/Repos/CWTS/test_cases/branches_identical_3.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int branches_identical_3(bool alpha)
+      |     ^
+/Repos/CWTS/test_cases/branches_identical_3.cpp:5:15: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+    5 |         if (alpha == true)
+      |             ~~~~~~~~~^~~~
+      |             alpha
+/Repos/CWTS/test_cases/branches_identical_3.cpp:9:2: warning: do not use 'else' after 'return' [llvm-else-after-return,readability-else-after-return]
+    9 |         else if (alpha == true) // ⚠️ this condition is obsolete
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   10 |         {
+      |         ~
+   11 |                 return 2;
+      |                 ~~~~~~~~~
+   12 |         }
+      |         ~
+/Repos/CWTS/test_cases/branches_identical_3.cpp:9:20: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+    9 |         else if (alpha == true) // ⚠️ this condition is obsolete
+      |                           ^
+note: this fix will not be applied because it overlaps with another fix
+[ 20%] Building CXX object CMakeFiles/CWTS.dir/test_cases/cast_unnecessary.cpp.o
+/Repos/CWTS/test_cases/cast_unnecessary.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int *cast_unnecessary(int *ptr);
+      |                     ^
+/Repos/CWTS/test_cases/cast_unnecessary.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int *cast_unnecessary(int *ptr)
+      |      ^
+/Repos/CWTS/test_cases/cast_unnecessary.cpp:5:11: warning: redundant explicit casting to the same type 'int *' as the sub-expression, remove this casting [readability-redundant-casting]
+    5 |           return static_cast<int *>(ptr); // ⚠️ cast not necessary
+      |                  ^~~~~~~~~~~~~~~~~~~   ~
+/Repos/CWTS/test_cases/cast_unnecessary.cpp:3:28: note: source type originates from referencing this parameter
+    3 | int *cast_unnecessary(int *ptr)
+      |                       ~~~~~^
+[ 22%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_1.cpp.o
+/Repos/CWTS/test_cases/code_unreachable_1.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void code_unreachable_1(int alpha);
+      |                     ^
+/Repos/CWTS/test_cases/code_unreachable_1.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void code_unreachable_1(int alpha)
+      |      ^
+/Repos/CWTS/test_cases/code_unreachable_1.cpp:3:29: warning: parameter 'alpha' set but not used [clang-diagnostic-unused-but-set-parameter]
+    3 | void code_unreachable_1(int alpha)
+      |                             ^
+/Repos/CWTS/test_cases/code_unreachable_1.cpp:3:29: warning: parameter 'alpha' set but not used [-Wunused-but-set-parameter]
+    3 | void code_unreachable_1(int alpha)
+      |                             ^
+1 warning generated.
+[ 23%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_2.cpp.o
+/Repos/CWTS/test_cases/code_unreachable_2.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void code_unreachable_2(int alpha);
+      |                     ^
+/Repos/CWTS/test_cases/code_unreachable_2.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void code_unreachable_2(int alpha)
+      |      ^
+/Repos/CWTS/test_cases/code_unreachable_2.cpp:3:29: warning: parameter 'alpha' set but not used [clang-diagnostic-unused-but-set-parameter]
+    3 | void code_unreachable_2(int alpha)
+      |                             ^
+/Repos/CWTS/test_cases/code_unreachable_2.cpp:5:8: warning: throwing an exception whose type 'int' is not derived from 'std::exception' [hicpp-exception-baseclass]
+    5 |         throw 0;
+      |         ~~~~~~^
+/Repos/CWTS/test_cases/code_unreachable_2.cpp:3:29: warning: parameter 'alpha' set but not used [-Wunused-but-set-parameter]
+    3 | void code_unreachable_2(int alpha)
+      |                             ^
+1 warning generated.
+[ 25%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_3.cpp.o
+/Repos/CWTS/test_cases/code_unreachable_3.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int code_unreachable_3(int alpha);
+      |                    ^
+/Repos/CWTS/test_cases/code_unreachable_3.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int code_unreachable_3(int alpha)
+      |     ^
+/Repos/CWTS/test_cases/code_unreachable_3.cpp:9:2: warning: do not use 'else' after 'return' [llvm-else-after-return,readability-else-after-return]
+    9 |         else
+      |         ^~~~
+   10 |         {
+      |         ~
+   11 |                 return 1;
+      |                 ~~~~~~~~~
+   12 |         }
+      |         ~
+[ 26%] Building CXX object CMakeFiles/CWTS.dir/test_cases/comment.cpp.o
+/Repos/CWTS/test_cases/comment.cpp:1:7: warning: '/*' within block comment [clang-diagnostic-comment]
+    1 | <U+FEFF>/* /* ⚠️ comment in comment */
+      |            ^
+/Repos/CWTS/test_cases/comment.cpp:1:7: warning: '/*' within block comment [-Wcomment]
+    1 | <U+FEFF>/* /* ⚠️ comment in comment */
+      |            ^
+1 warning generated.
+[ 27%] Building CXX object CMakeFiles/CWTS.dir/test_cases/constant_expression.cpp.o
+/Repos/CWTS/test_cases/constant_expression.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void constant_expression(void);
+      |                     ^
+/Repos/CWTS/test_cases/constant_expression.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void constant_expression(void)
+      |      ^
+/Repos/CWTS/test_cases/constant_expression.cpp:5:2: warning: kernel performance could be improved by unrolling this loop with a '#pragma unroll' directive [altera-unroll-loops]
+    5 |         for (unsigned int i = 10; i >= 0; i++) // ⚠️ condition is always true
+      |         ^
+/Repos/CWTS/test_cases/constant_expression.cpp:5:24: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    5 |         for (unsigned int i = 10; i >= 0; i++) // ⚠️ condition is always true
+      |                               ^
+/Repos/CWTS/test_cases/constant_expression.cpp:5:40: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    5 |         for (unsigned int i = 10; i >= 0; i++) // ⚠️ condition is always true
+      |                                               ^
+      |                                                {
+    6 |                 ;
+      |
+[ 29%] Building CXX object CMakeFiles/CWTS.dir/test_cases/constant_overflow.cpp.o
+/Repos/CWTS/test_cases/constant_overflow.cpp:1:4: warning: do not declare C-style arrays, use 'std::array' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+      |         ^
+/Repos/CWTS/test_cases/constant_overflow.cpp:1:9: warning: variable 'letters' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+      |              ^
+/Repos/CWTS/test_cases/constant_overflow.cpp:1:9: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/constant_overflow.cpp:1:9: warning: variable 'letters' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+      |              ^
+      |         static
+/Repos/CWTS/test_cases/constant_overflow.cpp:1:29: warning: narrowing conversion from constant value 65535 (0x0000FFFF) of type 'int' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+      |                                  ^
+/Repos/CWTS/test_cases/constant_overflow.cpp:1:29: error: constant expression evaluates to 65535 which cannot be narrowed to type 'char' [clang-diagnostic-c++11-narrowing]
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+      |                                  ^~~~~~
+/Repos/CWTS/test_cases/constant_overflow.cpp:1:29: note: insert an explicit cast to silence this issue
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+      |                                  ^~~~~~
+      |                                  static_cast<char>( )
+/Repos/CWTS/test_cases/constant_overflow.cpp:1:29: warning: implicit conversion from 'int' to 'char' changes value from 65535 to -1 [clang-diagnostic-constant-conversion]
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+      |                          ~       ^~~~~~
+/Repos/CWTS/test_cases/constant_overflow.cpp:1:29: warning: 0xFFFF is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+12 warnings and 1 error generated.
+Error while processing /Repos/CWTS/test_cases/constant_overflow.cpp.
+Found compiler error(s).
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:359: CMakeFiles/CWTS.dir/test_cases/constant_overflow.cpp.o] Error 1
+[ 30%] Building CXX object CMakeFiles/CWTS.dir/test_cases/division_by_zero_1.cpp.o
+/Repos/CWTS/test_cases/division_by_zero_1.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int division_by_zero_1(int alpha);
+      |                    ^
+/Repos/CWTS/test_cases/division_by_zero_1.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int division_by_zero_1(int alpha)
+      |     ^
+/Repos/CWTS/test_cases/division_by_zero_1.cpp:5:15: warning: Division by zero [clang-analyzer-core.DivideZero]
+    5 |         return alpha / 0; // ⚠️ division by zero
+      |                ~~~~~~^~~
+/Repos/CWTS/test_cases/division_by_zero_1.cpp:5:15: note: Division by zero
+    5 |         return alpha / 0; // ⚠️ division by zero
+      |                ~~~~~~^~~
+/Repos/CWTS/test_cases/division_by_zero_1.cpp:5:15: warning: division by zero is undefined [clang-diagnostic-division-by-zero]
+    5 |         return alpha / 0; // ⚠️ division by zero
+      |                      ^ ~
+/Repos/CWTS/test_cases/division_by_zero_1.cpp:5:15: warning: division by zero is undefined [-Wdivision-by-zero]
+    5 |         return alpha / 0; // ⚠️ division by zero
+      |                      ^ ~
+1 warning generated.
+[ 31%] Building CXX object CMakeFiles/CWTS.dir/test_cases/division_by_zero_2.cpp.o
+/Repos/CWTS/test_cases/division_by_zero_2.cpp:1:17: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern float division_by_zero_2(float alpha);
+      |                      ^
+/Repos/CWTS/test_cases/division_by_zero_2.cpp:3:7: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | float division_by_zero_2(float alpha)
+      |       ^
+/Repos/CWTS/test_cases/division_by_zero_2.cpp:5:9: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+    5 |         return alpha / 0.0; // ⚠️ division by zero
+      |                ^
+[ 33%] Building CXX object CMakeFiles/CWTS.dir/test_cases/enum_unhandled.cpp.o
+/Repos/CWTS/test_cases/enum_unhandled.cpp:1:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>typedef enum { red, green, blue } Color;
+      |                 ^
+/Repos/CWTS/test_cases/enum_unhandled.cpp:1:12: warning: enum 'Color' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+/Repos/CWTS/test_cases/enum_unhandled.cpp:1:38: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>typedef enum { red, green, blue } Color;
+      |                                           ^
+/Repos/CWTS/test_cases/enum_unhandled.cpp:3:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | extern int enum_unhandled(Color color);
+      |            ^
+/Repos/CWTS/test_cases/enum_unhandled.cpp:5:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | int enum_unhandled(Color color)
+      |     ^
+[ 34%] Building CXX object CMakeFiles/CWTS.dir/test_cases/enum_value.cpp.o
+/Repos/CWTS/test_cases/enum_value.cpp:1:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>typedef enum { red = 0, green = 1, blue = 0 } Color; // ⚠️ 'red' and 'blue' have the same value
+      |                 ^
+/Repos/CWTS/test_cases/enum_value.cpp:1:12: warning: enum 'Color' uses a larger base type ('unsigned int', size: 4 bytes) than necessary for its value set, consider using 'std::uint8_t' (1 byte) as the base type to reduce its size [performance-enum-size]
+/Repos/CWTS/test_cases/enum_value.cpp:1:50: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>typedef enum { red = 0, green = 1, blue = 0 } Color; // ⚠️ 'red' and 'blue' have the same value
+      |                                                       ^
+[ 36%] Building CXX object CMakeFiles/CWTS.dir/test_cases/extra_tokens.cpp.o
+/Repos/CWTS/test_cases/extra_tokens.cpp:1:5: warning: preprocessor condition is always 'false', consider removing both the condition and its contents [readability-avoid-unconditional-preprocessor-if]
+    1 | <U+FEFF>#if 0
+      |          ^
+/Repos/CWTS/test_cases/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [clang-diagnostic-extra-tokens]
+    2 | #endif BAD // ⚠️ #endif has no parameters
+      |        ^
+      |        //
+/Repos/CWTS/test_cases/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [-Wextra-tokens]
+    2 | #endif BAD // ⚠️ #endif has no parameters
+      |        ^
+      |        //
+1 warning generated.
+[ 37%] Building CXX object CMakeFiles/CWTS.dir/test_cases/file_empty.cpp.o
+[ 38%] Building CXX object CMakeFiles/CWTS.dir/test_cases/format_string_1.cpp.o
+/Repos/CWTS/test_cases/format_string_1.cpp:1:4: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
+    1 | <U+FEFF>#include <stdio.h>
+      |         ^~~~~~~~~~~~~~~~~~
+    2 |
+/Repos/CWTS/test_cases/format_string_1.cpp:1:13: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+    1 | <U+FEFF>#include <stdio.h>
+      |                  ^
+note: this fix will not be applied because it overlaps with another fix
+/Repos/CWTS/test_cases/format_string_1.cpp:3:13: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | extern void format_string_1();
+      |             ^
+/Repos/CWTS/test_cases/format_string_1.cpp:5:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | void format_string_1()
+      |      ^
+/Repos/CWTS/test_cases/format_string_1.cpp:7:15: warning: format specifies type 'char *' but the argument has type 'int' [clang-diagnostic-format]
+    7 |         printf("%s", 0); // ⚠️ zero pointer access
+      |                 ~~   ^
+      |                 %d
+/Repos/CWTS/test_cases/format_string_1.cpp:7:15: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
+    7 |         printf("%s", 0); // ⚠️ zero pointer access
+      |                 ~~   ^
+      |                 %d
+1 warning generated.
+[ 40%] Building CXX object CMakeFiles/CWTS.dir/test_cases/format_string_2.cpp.o
+/Repos/CWTS/test_cases/format_string_2.cpp:1:4: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
+    1 | <U+FEFF>#include <stdio.h>
+      |         ^~~~~~~~~~~~~~~~~~
+    2 |
+/Repos/CWTS/test_cases/format_string_2.cpp:1:13: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+    1 | <U+FEFF>#include <stdio.h>
+      |                  ^
+note: this fix will not be applied because it overlaps with another fix
+/Repos/CWTS/test_cases/format_string_2.cpp:3:13: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | extern void format_string_2(void);
+      |             ^
+/Repos/CWTS/test_cases/format_string_2.cpp:5:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | void format_string_2(void)
+      |      ^
+/Repos/CWTS/test_cases/format_string_2.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg,hicpp-vararg]
+    7 |         printf(""); // ⚠️ empty format string
+      |         ^
+[ 41%] Building CXX object CMakeFiles/CWTS.dir/test_cases/format_string_3.cpp.o
+/Repos/CWTS/test_cases/format_string_3.cpp:1:4: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
+    1 | <U+FEFF>#include <stdio.h>
+      |         ^~~~~~~~~~~~~~~~~~
+    2 |
+/Repos/CWTS/test_cases/format_string_3.cpp:1:13: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+    1 | <U+FEFF>#include <stdio.h>
+      |                  ^
+note: this fix will not be applied because it overlaps with another fix
+/Repos/CWTS/test_cases/format_string_3.cpp:3:13: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | extern void format_string_3(const char *str);
+      |             ^
+/Repos/CWTS/test_cases/format_string_3.cpp:5:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | void format_string_3(const char *str)
+      |      ^
+/Repos/CWTS/test_cases/format_string_3.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg,hicpp-vararg]
+    7 |         printf(str); // ⚠️ <str> is handled as format string
+      |         ^
+/Repos/CWTS/test_cases/format_string_3.cpp:7:9: warning: format string is not a string literal (potentially insecure) [clang-diagnostic-format-security]
+    7 |         printf(str); // ⚠️ <str> is handled as format string
+      |                ^~~
+/Repos/CWTS/test_cases/format_string_3.cpp:7:9: note: treat the string as an argument to avoid this
+    7 |         printf(str); // ⚠️ <str> is handled as format string
+      |                ^
+      |                "%s",
+/Repos/CWTS/test_cases/format_string_3.cpp:7:9: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+    7 |         printf(str); // ⚠️ <str> is handled as format string
+      |                ^~~
+/Repos/CWTS/test_cases/format_string_3.cpp:7:9: note: treat the string as an argument to avoid this
+    7 |         printf(str); // ⚠️ <str> is handled as format string
+      |                ^
+      |                "%s",
+1 warning generated.
+[ 43%] Building CXX object CMakeFiles/CWTS.dir/test_cases/function_parameter_unused.cpp.o
+/Repos/CWTS/test_cases/function_parameter_unused.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int parameter_unused(int alpha, int beta);
+      |                    ^
+/Repos/CWTS/test_cases/function_parameter_unused.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
+      |     ^
+/Repos/CWTS/test_cases/function_parameter_unused.cpp:3:22: warning: 2 adjacent parameters of 'parameter_unused' of similar type ('int') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+    3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
+      |                      ^~~~~~~~~~~~~~~~~~~
+/Repos/CWTS/test_cases/function_parameter_unused.cpp:3:26: note: the first parameter in the range is 'alpha'
+    3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
+      |                          ^~~~~
+/Repos/CWTS/test_cases/function_parameter_unused.cpp:3:37: note: the last parameter in the range is 'beta'
+    3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
+      |                                     ^~~~
+/Repos/CWTS/test_cases/function_parameter_unused.cpp:3:37: warning: unused parameter 'beta' [clang-diagnostic-unused-parameter]
+    3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
+      |                                     ^
+/Repos/CWTS/test_cases/function_parameter_unused.cpp:3:37: warning: parameter 'beta' is unused [misc-unused-parameters]
+    3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
+      |                                     ^~~~
+      |                                      /*beta*/
+/Repos/CWTS/test_cases/function_parameter_unused.cpp:3:37: warning: unused parameter 'beta' [-Wunused-parameter]
+    3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
+      |                                     ^
+1 warning generated.
+[ 44%] Building CXX object CMakeFiles/CWTS.dir/test_cases/function_without_prototype.cpp.o
+/Repos/CWTS/test_cases/function_without_prototype.cpp:1:8: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>int function_without_prototype() // ⚠️ function without prototype
+      |             ^
+/Repos/CWTS/test_cases/function_without_prototype.cpp:1:8: warning: function 'function_without_prototype' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+    1 | <U+FEFF>int function_without_prototype() // ⚠️ function without prototype
+      |             ^
+      |         static
+/Repos/CWTS/test_cases/function_without_prototype.cpp:3:9: warning: 42 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    3 |         return 42;
+      |                ^
+[ 45%] Building CXX object CMakeFiles/CWTS.dir/test_cases/function_without_return_value.cpp.o
+/Repos/CWTS/test_cases/function_without_return_value.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int function_without_return_value(void);
+      |                    ^
+/Repos/CWTS/test_cases/function_without_return_value.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int function_without_return_value(void)
+      |     ^
+/Repos/CWTS/test_cases/function_without_return_value.cpp:5:2: error: non-void function 'function_without_return_value' should return a value [clang-diagnostic-return-mismatch]
+    5 |         return; // ⚠️ return value is missing
+      |         ^
+2 warnings and 1 error generated.
+Error while processing /Repos/CWTS/test_cases/function_without_return_value.cpp.
+Found compiler error(s).
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:527: CMakeFiles/CWTS.dir/test_cases/function_without_return_value.cpp.o] Error 1
+[ 47%] Building CXX object CMakeFiles/CWTS.dir/test_cases/identifier_undefined.cpp.o
+/Repos/CWTS/test_cases/identifier_undefined.cpp:1:8: warning: 'IDENTIFIER_UNDEFINED' is not defined, evaluates to 0 [clang-diagnostic-undef]
+    1 | <U+FEFF>#if IDENTIFIER_UNDEFINED // ⚠️ identifier is undefined
+      |             ^
+/Repos/CWTS/test_cases/identifier_undefined.cpp:1:8: warning: 'IDENTIFIER_UNDEFINED' is not defined, evaluates to 0 [-Wundef]
+    1 | <U+FEFF>#if IDENTIFIER_UNDEFINED // ⚠️ identifier is undefined
+      |             ^
+1 warning generated.
+[ 48%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_1.cpp.o
+/Repos/CWTS/test_cases/implicit_conversion_1.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern char implicit_conversion_1(short alpha);
+      |                     ^
+/Repos/CWTS/test_cases/implicit_conversion_1.cpp:1:38: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+    1 | <U+FEFF>extern char implicit_conversion_1(short alpha);
+      |                                           ^
+/Repos/CWTS/test_cases/implicit_conversion_1.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | char implicit_conversion_1(short alpha)
+      |      ^
+/Repos/CWTS/test_cases/implicit_conversion_1.cpp:3:28: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+    3 | char implicit_conversion_1(short alpha)
+      |                            ^
+/Repos/CWTS/test_cases/implicit_conversion_1.cpp:5:9: warning: narrowing conversion from 'short' to signed type 'char' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+    5 |         return alpha; // ⚠️ implicit conversion (short to char)
+      |                ^
+[ 50%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_2.cpp.o
+/Repos/CWTS/test_cases/implicit_conversion_2.cpp:1:11: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+    1 | <U+FEFF>extern short implicit_conversion_2(int alpha);
+      |                ^
+/Repos/CWTS/test_cases/implicit_conversion_2.cpp:1:17: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern short implicit_conversion_2(int alpha);
+      |                      ^
+/Repos/CWTS/test_cases/implicit_conversion_2.cpp:3:1: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+    3 | short implicit_conversion_2(int alpha)
+      | ^
+/Repos/CWTS/test_cases/implicit_conversion_2.cpp:3:7: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | short implicit_conversion_2(int alpha)
+      |       ^
+/Repos/CWTS/test_cases/implicit_conversion_2.cpp:5:9: warning: narrowing conversion from 'int' to signed type 'short' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+    5 |         return alpha; // ⚠️ implicit conversion (int to short)
+      |                ^
+[ 51%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_3.cpp.o
+/Repos/CWTS/test_cases/implicit_conversion_3.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int implicit_conversion_3(long alpha);
+      |                    ^
+/Repos/CWTS/test_cases/implicit_conversion_3.cpp:1:37: warning: consider replacing 'long' with 'int64' [google-runtime-int]
+    1 | <U+FEFF>extern int implicit_conversion_3(long alpha);
+      |                                          ^
+/Repos/CWTS/test_cases/implicit_conversion_3.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int implicit_conversion_3(long alpha)
+      |     ^
+/Repos/CWTS/test_cases/implicit_conversion_3.cpp:3:27: warning: consider replacing 'long' with 'int64' [google-runtime-int]
+    3 | int implicit_conversion_3(long alpha)
+      |                           ^
+/Repos/CWTS/test_cases/implicit_conversion_3.cpp:5:9: warning: narrowing conversion from 'long' to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+    5 |         return alpha; // ⚠️ implicit conversion (long to int)
+      |                ^
+[ 52%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_4.cpp.o
+/Repos/CWTS/test_cases/implicit_conversion_4.cpp:1:17: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern float implicit_conversion_4(double alpha);
+      |                      ^
+/Repos/CWTS/test_cases/implicit_conversion_4.cpp:3:7: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | float implicit_conversion_4(double alpha)
+      |       ^
+/Repos/CWTS/test_cases/implicit_conversion_4.cpp:5:9: warning: narrowing conversion from 'double' to 'float' [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+    5 |         return alpha; // ⚠️ implicit conversion (double to float)
+      |                ^
+[ 54%] Building CXX object CMakeFiles/CWTS.dir/test_cases/label_unused.cpp.o
+/Repos/CWTS/test_cases/label_unused.cpp:1:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | extern int label_unused(int alpha);
+      |            ^
+/Repos/CWTS/test_cases/label_unused.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int label_unused(int alpha)
+      |     ^
+/Repos/CWTS/test_cases/label_unused.cpp:5:1: warning: unused label 'label_is_unused' [clang-diagnostic-unused-label]
+    5 | label_is_unused: // ⚠️ label is unused
+      | ^~~~~~~~~~~~~~~~
+/Repos/CWTS/test_cases/label_unused.cpp:5:1: warning: unused label 'label_is_unused' [-Wunused-label]
+    5 | label_is_unused: // ⚠️ label is unused
+      | ^~~~~~~~~~~~~~~~
+1 warning generated.
+[ 55%] Building CXX object CMakeFiles/CWTS.dir/test_cases/logical_not.cpp.o
+/Repos/CWTS/test_cases/logical_not.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int logical_not(int alpha);
+      |                    ^
+/Repos/CWTS/test_cases/logical_not.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int logical_not(int alpha)
+      |     ^
+/Repos/CWTS/test_cases/logical_not.cpp:5:2: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+    5 |         alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
+      |         ^~~~~ ~~
+/Repos/CWTS/test_cases/logical_not.cpp:5:11: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+    5 |         alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
+      |                  ^
+      |                  static_cast<int>( )
+/Repos/CWTS/test_cases/logical_not.cpp:5:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+    5 |         alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
+      |                  ~^
+      |                            == 0
+/Repos/CWTS/test_cases/logical_not.cpp:5:13: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+    5 |         alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
+      |                    ^ ~~
+/Repos/CWTS/test_cases/logical_not.cpp:5:15: warning: converting the result of '<<' to a boolean always evaluates to true [clang-diagnostic-tautological-constant-compare]
+    5 |         alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
+      |                      ^
+/Repos/CWTS/test_cases/logical_not.cpp:5:18: warning: 7 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    5 |         alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
+      |                         ^
+/Repos/CWTS/test_cases/logical_not.cpp:5:15: warning: converting the result of '<<' to a boolean always evaluates to true [-Wtautological-constant-compare]
+    5 |         alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
+      |                      ^
+1 warning generated.
+[ 56%] Building CXX object CMakeFiles/CWTS.dir/test_cases/main.cpp.o
+/Repos/CWTS/test_cases/main.cpp:1:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | int main() { return 0; } // to make the linker happy (no error here)
+      |     ^
+[ 58%] Building CXX object CMakeFiles/CWTS.dir/test_cases/member_init_reorder.cpp.o
+/Repos/CWTS/test_cases/member_init_reorder.cpp:1:11: warning: accessing fields in struct 'Alpha' is inefficient due to poor alignment; currently aligned to 4 bytes, but recommended alignment is 8 bytes [altera-struct-pack-align]
+    1 | <U+FEFF>struct Alpha {
+      |                ^
+    2 |         int beta;
+    3 |         int gamma;
+    4 |         Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
+    5 | };
+      |
+      |   __attribute__((aligned(8)))
+/Repos/CWTS/test_cases/member_init_reorder.cpp:1:11: note: use "__attribute__((aligned(8)))" to align struct 'Alpha' to 8 bytes
+/Repos/CWTS/test_cases/member_init_reorder.cpp:1:11: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>struct Alpha {
+      |                ^
+/Repos/CWTS/test_cases/member_init_reorder.cpp:2:6: warning: use default member initializer for 'beta' [cppcoreguidelines-use-default-member-init]
+    2 |         int beta;
+      |             ^
+      |                 {1}
+    3 |         int gamma;
+    4 |         Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
+      |                            ~~~~~~~
+/Repos/CWTS/test_cases/member_init_reorder.cpp:2:6: warning: member variable 'beta' has public visibility [misc-non-private-member-variables-in-classes]
+/Repos/CWTS/test_cases/member_init_reorder.cpp:3:6: warning: use default member initializer for 'gamma' [cppcoreguidelines-use-default-member-init]
+    3 |         int gamma;
+      |             ^
+note: this fix will not be applied because it overlaps with another fix
+/Repos/CWTS/test_cases/member_init_reorder.cpp:3:6: warning: member variable 'gamma' has public visibility [misc-non-private-member-variables-in-classes]
+/Repos/CWTS/test_cases/member_init_reorder.cpp:4:11: warning: field 'gamma' will be initialized after field 'beta' [clang-diagnostic-reorder-ctor]
+    4 |         Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
+      |                  ^
+note: this fix will not be applied because it overlaps with another fix
+/Repos/CWTS/test_cases/member_init_reorder.cpp:4:11: warning: field 'gamma' will be initialized after field 'beta' [-Wreorder-ctor]
+    4 |         Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
+      |                  ^~~~~~~~  ~~~~~~~
+      |                  beta(1)   gamma(0)
+1 warning generated.
+[ 59%] Building CXX object CMakeFiles/CWTS.dir/test_cases/null_pointer_access_1.cpp.o
+/Repos/CWTS/test_cases/null_pointer_access_1.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void null_pointer_access_1(void);
+      |                     ^
+/Repos/CWTS/test_cases/null_pointer_access_1.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void null_pointer_access_1(void)
+      |      ^
+/Repos/CWTS/test_cases/null_pointer_access_1.cpp:7:7: warning: Dereference of null pointer (loaded from variable 'ptr') [clang-analyzer-core.NullDereference]
+    7 |         *ptr = 0; // ⚠️ null pointer access
+      |          ~~~ ^
+/Repos/CWTS/test_cases/null_pointer_access_1.cpp:5:2: note: 'ptr' initialized to a null pointer value
+    5 |         static int *ptr; // NULL by default
+      |         ^~~~~~~~~~~~~~~
+/Repos/CWTS/test_cases/null_pointer_access_1.cpp:7:7: note: Dereference of null pointer (loaded from variable 'ptr')
+    7 |         *ptr = 0; // ⚠️ null pointer access
+      |          ~~~ ^
+[ 61%] Building CXX object CMakeFiles/CWTS.dir/test_cases/null_pointer_access_2.cpp.o
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void null_pointer_access_2(int *ptr, int value);
+      |                     ^
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void null_pointer_access_2(int *ptr, int value)
+      |      ^
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:5:13: warning: use nullptr [hicpp-use-nullptr]
+    5 |         int *tmp = 0;
+      |                    ^
+      |                    nullptr
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:6:28: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    6 |         if (0 <= value && value < 10)
+      |                                   ^
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:6:31: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    6 |         if (0 <= value && value < 10)
+      |                                      ^
+      |                                       {
+    7 |                 tmp = ptr + value;
+      |
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:7:20: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+    7 |                 tmp = ptr + value;
+      |                           ^
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:8:7: warning: Dereference of null pointer (loaded from variable 'tmp') [clang-analyzer-core.NullDereference]
+    8 |         *tmp = 1;  // ⚠️ tmp may be NULL
+      |          ~~~ ^
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:5:2: note: 'tmp' initialized to a null pointer value
+    5 |         int *tmp = 0;
+      |         ^~~~~~~~
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:6:6: note: Assuming 'value' is < 0
+    6 |         if (0 <= value && value < 10)
+      |             ^~~~~~~~~~
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:6:17: note: Left side of '&&' is false
+    6 |         if (0 <= value && value < 10)
+      |                        ^
+/Repos/CWTS/test_cases/null_pointer_access_2.cpp:8:7: note: Dereference of null pointer (loaded from variable 'tmp')
+    8 |         *tmp = 1;  // ⚠️ tmp may be NULL
+      |          ~~~ ^
+[ 62%] Building CXX object CMakeFiles/CWTS.dir/test_cases/parentheses.cpp.o
+/Repos/CWTS/test_cases/parentheses.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int parentheses(int value);
+      |                    ^
+/Repos/CWTS/test_cases/parentheses.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int parentheses(int value)
+      |     ^
+/Repos/CWTS/test_cases/parentheses.cpp:5:16: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    5 |         if (value > 0) // ⚠️ explicit parentheses recommended
+      |                       ^
+      |                        {
+    6 |                 if (value == 7)
+    7 |                         return 1;
+    8 |         else
+    9 |                 return 2;
+      |
+/Repos/CWTS/test_cases/parentheses.cpp:6:16: warning: 7 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    6 |                 if (value == 7)
+      |                              ^
+/Repos/CWTS/test_cases/parentheses.cpp:6:18: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    6 |                 if (value == 7)
+      |                                ^
+      |                                 {
+    7 |                         return 1;
+    8 |         else
+      |         }
+/Repos/CWTS/test_cases/parentheses.cpp:8:2: warning: add explicit braces to avoid dangling else [clang-diagnostic-dangling-else]
+    8 |         else
+      |         ^
+/Repos/CWTS/test_cases/parentheses.cpp:8:2: warning: different indentation for 'if' and corresponding 'else' [readability-misleading-indentation]
+/Repos/CWTS/test_cases/parentheses.cpp:8:6: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    8 |         else
+      |             ^
+      |              {
+    9 |                 return 2;
+      |
+/Repos/CWTS/test_cases/parentheses.cpp:8:2: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+    8 |         else
+      |         ^
+1 warning generated.
+[ 63%] Building CXX object CMakeFiles/CWTS.dir/test_cases/pointer_compare.cpp.o
+/Repos/CWTS/test_cases/pointer_compare.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int pointer_compare(char *ptr);
+      |                    ^
+/Repos/CWTS/test_cases/pointer_compare.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int pointer_compare(char *ptr)
+      |     ^
+/Repos/CWTS/test_cases/pointer_compare.cpp:3:27: warning: pointer parameter 'ptr' can be pointer to const [readability-non-const-parameter]
+    1 | <U+FEFF>extern int pointer_compare(char *ptr);
+      |
+      |                                    const
+    2 |
+    3 | int pointer_compare(char *ptr)
+      |                           ^
+      |                     const
+/Repos/CWTS/test_cases/pointer_compare.cpp:5:14: error: comparison between pointer and integer ('char *' and 'char') [clang-diagnostic-error]
+    5 |         return (ptr == '\0'); // ⚠️ Ups, I meant "*ptr"
+      |                 ~~~ ^  ~~~~
+3 warnings and 1 error generated.
+Error while processing /Repos/CWTS/test_cases/pointer_compare.cpp.
+Found compiler error(s).
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:709: CMakeFiles/CWTS.dir/test_cases/pointer_compare.cpp.o] Error 1
+[ 65%] Building CXX object CMakeFiles/CWTS.dir/test_cases/recursive_include.cpp.o
+/Repos/CWTS/test_cases/recursive_include.cpp:1:13: error: #include nested too deeply [clang-diagnostic-error]
+    1 | <U+FEFF>#include "recursive_include.cpp" // ⚠️ recursive #include
+      |                  ^
+/Repos/CWTS/test_cases/recursive_include.cpp:1:13: warning: direct self-inclusion of header file 'recursive_include.cpp' [misc-header-include-cycle]
+/Repos/CWTS/test_cases/recursive_include.cpp:1:14: warning: suspicious #include of file with '.cpp' extension [bugprone-suspicious-include]
+    1 | <U+FEFF>#include "recursive_include.cpp" // ⚠️ recursive #include
+      |                   ^
+400 warnings and 1 error generated.
+Error while processing /Repos/CWTS/test_cases/recursive_include.cpp.
+Suppressed 398 warnings (398 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+Found compiler error(s).
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/test_cases/recursive_include.cpp.o] Error 1
+[ 66%] Building CXX object CMakeFiles/CWTS.dir/test_cases/shift_count_negative.cpp.o
+/Repos/CWTS/test_cases/shift_count_negative.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int shift_count_negative(int value);
+      |                    ^
+/Repos/CWTS/test_cases/shift_count_negative.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int shift_count_negative(int value)
+      |     ^
+/Repos/CWTS/test_cases/shift_count_negative.cpp:5:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+    5 |         return value << -1; // ⚠️ shift count is negative
+      |                ^~~~~ ~~
+/Repos/CWTS/test_cases/shift_count_negative.cpp:5:15: warning: Right operand is negative in left shift [clang-analyzer-core.BitwiseShift]
+    5 |         return value << -1; // ⚠️ shift count is negative
+      |                ~~~~~~^~~~~
+/Repos/CWTS/test_cases/shift_count_negative.cpp:5:15: note: The result of left shift is undefined because the right operand is negative
+    5 |         return value << -1; // ⚠️ shift count is negative
+      |                ~~~~~~^~~~~
+/Repos/CWTS/test_cases/shift_count_negative.cpp:5:15: warning: shift count is negative [clang-diagnostic-shift-count-negative]
+    5 |         return value << -1; // ⚠️ shift count is negative
+      |                      ^  ~~
+/Repos/CWTS/test_cases/shift_count_negative.cpp:5:15: warning: shift count is negative [-Wshift-count-negative]
+    5 |         return value << -1; // ⚠️ shift count is negative
+      |                      ^  ~~
+1 warning generated.
+[ 68%] Building CXX object CMakeFiles/CWTS.dir/test_cases/shift_count_overflow.cpp.o
+/Repos/CWTS/test_cases/shift_count_overflow.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int shift_count_overflow(int value);
+      |                    ^
+/Repos/CWTS/test_cases/shift_count_overflow.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int shift_count_overflow(int value)
+      |     ^
+/Repos/CWTS/test_cases/shift_count_overflow.cpp:5:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+    5 |         return value << 66; // ⚠️ shift count is too high
+      |                ^~~~~ ~~
+/Repos/CWTS/test_cases/shift_count_overflow.cpp:5:15: warning: Left shift by '66' overflows the capacity of 'int' [clang-analyzer-core.BitwiseShift]
+    5 |         return value << 66; // ⚠️ shift count is too high
+      |                ~~~~~~^~~~~
+/Repos/CWTS/test_cases/shift_count_overflow.cpp:5:15: note: The result of left shift is undefined because the right operand '66' is not smaller than 32, the capacity of 'int'
+    5 |         return value << 66; // ⚠️ shift count is too high
+      |                ~~~~~~^~~~~
+/Repos/CWTS/test_cases/shift_count_overflow.cpp:5:15: warning: shift count >= width of type [clang-diagnostic-shift-count-overflow]
+    5 |         return value << 66; // ⚠️ shift count is too high
+      |                      ^  ~~
+/Repos/CWTS/test_cases/shift_count_overflow.cpp:5:18: warning: 66 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    5 |         return value << 66; // ⚠️ shift count is too high
+      |                         ^
+/Repos/CWTS/test_cases/shift_count_overflow.cpp:5:15: warning: shift count >= width of type [-Wshift-count-overflow]
+    5 |         return value << 66; // ⚠️ shift count is too high
+      |                      ^  ~~
+1 warning generated.
+[ 69%] Building CXX object CMakeFiles/CWTS.dir/test_cases/shift_overflow.cpp.o
+/Repos/CWTS/test_cases/shift_overflow.cpp:1:13: warning: inclusion of deprecated C++ header 'limits.h'; consider using 'climits' instead [hicpp-deprecated-headers]
+    1 | <U+FEFF>#include <limits.h>
+      |                  ^~~~~~~~~~
+      |                  <climits>
+/Repos/CWTS/test_cases/shift_overflow.cpp:3:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | extern int shift_overflow(void);
+      |            ^
+/Repos/CWTS/test_cases/shift_overflow.cpp:5:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | int shift_overflow(void)
+      |     ^
+/Repos/CWTS/test_cases/shift_overflow.cpp:7:17: warning: signed shift result (0x1FFFFFFFC00) requires 42 bits to represent, but 'int' only has 32 bits [clang-diagnostic-shift-overflow]
+    7 |         return INT_MAX << 10; // ⚠️ shift overflow
+      |                        ^  ~~
+/Repos/CWTS/test_cases/shift_overflow.cpp:7:20: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    7 |         return INT_MAX << 10; // ⚠️ shift overflow
+      |                           ^
+/Repos/CWTS/test_cases/shift_overflow.cpp:7:17: warning: signed shift result (0x1FFFFFFFC00) requires 42 bits to represent, but 'int' only has 32 bits [-Wshift-overflow]
+    7 |         return INT_MAX << 10; // ⚠️ shift overflow
+      |                ~~~~~~~ ^  ~~
+1 warning generated.
+[ 70%] Building CXX object CMakeFiles/CWTS.dir/test_cases/shift_value_negative.cpp.o
+/Repos/CWTS/test_cases/shift_value_negative.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int shift_value_negative(void);
+      |                    ^
+/Repos/CWTS/test_cases/shift_value_negative.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int shift_value_negative(void)
+      |     ^
+/Repos/CWTS/test_cases/shift_value_negative.cpp:5:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+    5 |         return -1 << 2; // ⚠️ value to shift is negative
+      |                ^~ ~~
+/Repos/CWTS/test_cases/shift_value_negative.cpp:5:12: warning: shifting a negative signed value is undefined [clang-diagnostic-shift-negative-value]
+    5 |         return -1 << 2; // ⚠️ value to shift is negative
+      |                ~~ ^
+/Repos/CWTS/test_cases/shift_value_negative.cpp:5:12: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+    5 |         return -1 << 2; // ⚠️ value to shift is negative
+      |                ~~ ^
+1 warning generated.
+[ 72%] Building CXX object CMakeFiles/CWTS.dir/test_cases/stack_address_returned.cpp.o
+/Repos/CWTS/test_cases/stack_address_returned.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int *stack_address_returned(void);
+      |                     ^
+/Repos/CWTS/test_cases/stack_address_returned.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int *stack_address_returned(void)
+      |      ^
+/Repos/CWTS/test_cases/stack_address_returned.cpp:5:2: warning: do not declare C-style arrays, use 'std::array' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    5 |         int array[10] = {};
+      |         ^
+/Repos/CWTS/test_cases/stack_address_returned.cpp:5:12: warning: 10 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    5 |         int array[10] = {};
+      |                   ^
+/Repos/CWTS/test_cases/stack_address_returned.cpp:7:2: warning: Address of stack memory associated with local variable 'array' returned to caller [clang-analyzer-core.StackAddressEscape]
+    5 |         int array[10] = {};
+      |         ~~~~~~~~~~~~~~~~~~
+    6 |
+    7 |         return array; // ⚠️ returns stack address
+      |         ^      ~~~~~
+/Repos/CWTS/test_cases/stack_address_returned.cpp:7:2: note: Address of stack memory associated with local variable 'array' returned to caller
+    5 |         int array[10] = {};
+      |         ~~~~~~~~~~~~~~~~~~
+    6 |
+    7 |         return array; // ⚠️ returns stack address
+      |         ^      ~~~~~
+/Repos/CWTS/test_cases/stack_address_returned.cpp:7:9: warning: address of stack memory associated with local variable 'array' returned [clang-diagnostic-return-stack-address]
+    7 |         return array; // ⚠️ returns stack address
+      |                ^~~~~
+/Repos/CWTS/test_cases/stack_address_returned.cpp:7:9: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/Repos/CWTS/test_cases/stack_address_returned.cpp:7:9: warning: address of stack memory associated with local variable 'array' returned [-Wreturn-stack-address]
+    7 |         return array; // ⚠️ returns stack address
+      |                ^~~~~
+1 warning generated.
+[ 73%] Building CXX object CMakeFiles/CWTS.dir/test_cases/static_const_unused.cpp.o
+/Repos/CWTS/test_cases/static_const_unused.cpp:1:21: warning: unused variable 'static_const_unused' [clang-diagnostic-unused-const-variable]
+    1 | <U+FEFF>static const int static_const_unused = 0; // ⚠️ static const is unused
+      |                          ^~~~~~~~~~~~~~~~~~~
+/Repos/CWTS/test_cases/static_const_unused.cpp:1:21: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/static_const_unused.cpp:1:21: warning: unused variable 'static_const_unused' [-Wunused-const-variable]
+    1 | <U+FEFF>static const int static_const_unused = 0; // ⚠️ static const is unused
+      |                          ^~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[ 75%] Building CXX object CMakeFiles/CWTS.dir/test_cases/static_function_unused.cpp.o
+/Repos/CWTS/test_cases/static_function_unused.cpp:1:16: warning: unused function 'static_function_unused' [clang-diagnostic-unused-function]
+    1 | <U+FEFF>static void static_function_unused(void) // ⚠️ static function is unused
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+/Repos/CWTS/test_cases/static_function_unused.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/static_function_unused.cpp:1:16: warning: function 'static_function_unused' declared 'static', move to anonymous namespace instead [misc-use-anonymous-namespace]
+/Repos/CWTS/test_cases/static_function_unused.cpp:1:16: warning: unused function 'static_function_unused' [-Wunused-function]
+    1 | <U+FEFF>static void static_function_unused(void) // ⚠️ static function is unused
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[ 76%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_body_empty.cpp.o
+/Repos/CWTS/test_cases/switch_body_empty.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void switch_body_empty(int value);
+      |                     ^
+/Repos/CWTS/test_cases/switch_body_empty.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void switch_body_empty(int value)
+      |      ^
+/Repos/CWTS/test_cases/switch_body_empty.cpp:5:2: warning: switching on non-enum value without default case may not cover all cases [bugprone-switch-missing-default-case]
+    5 |         switch (value) // ⚠️ the switch body is empty
+      |         ^
+/Repos/CWTS/test_cases/switch_body_empty.cpp:5:2: warning: switch statement without labels has no effect [hicpp-multiway-paths-covered]
+[ 77%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_code_unreachable.cpp.o
+/Repos/CWTS/test_cases/switch_code_unreachable.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int switch_code_unreachable(int value);
+      |                    ^
+/Repos/CWTS/test_cases/switch_code_unreachable.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int switch_code_unreachable(int value)
+      |     ^
+[ 79%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_default_missing.cpp.o
+/Repos/CWTS/test_cases/switch_default_missing.cpp:1:9: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>bool switch_default_missing(int value);
+      |              ^
+/Repos/CWTS/test_cases/switch_default_missing.cpp:1:9: warning: function 'switch_default_missing' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+    1 | <U+FEFF>bool switch_default_missing(int value);
+      |              ^
+      |         static
+/Repos/CWTS/test_cases/switch_default_missing.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool switch_default_missing(int value)
+      |      ^
+/Repos/CWTS/test_cases/switch_default_missing.cpp:5:2: warning: switching on non-enum value without default case may not cover all cases [bugprone-switch-missing-default-case]
+    5 |         switch (value) // ⚠️ the switch default is missing
+      |         ^
+/Repos/CWTS/test_cases/switch_default_missing.cpp:5:2: warning: potential uncovered code path; add a default label [hicpp-multiway-paths-covered]
+[ 80%] Building CXX object CMakeFiles/CWTS.dir/test_cases/value_unused_1.cpp.o
+/Repos/CWTS/test_cases/value_unused_1.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int value_unused_1(int alpha, int beta);
+      |                    ^
+/Repos/CWTS/test_cases/value_unused_1.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int value_unused_1(int alpha, int beta)
+      |     ^
+/Repos/CWTS/test_cases/value_unused_1.cpp:5:8: warning: expression result unused [clang-diagnostic-unused-value]
+    5 |         alpha * beta; // ⚠️ the result is unused
+      |         ~~~~~ ^ ~~~~
+/Repos/CWTS/test_cases/value_unused_1.cpp:5:8: warning: expression result unused [-Wunused-value]
+    5 |         alpha * beta; // ⚠️ the result is unused
+      |         ~~~~~ ^ ~~~~
+1 warning generated.
+[ 81%] Building CXX object CMakeFiles/CWTS.dir/test_cases/value_unused_2.cpp.o
+/Repos/CWTS/test_cases/value_unused_2.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int value_unused_2(int alpha, int beta);
+      |                    ^
+/Repos/CWTS/test_cases/value_unused_2.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int value_unused_2(int alpha, int beta)
+      |     ^
+/Repos/CWTS/test_cases/value_unused_2.cpp:5:9: warning: left operand of comma operator has no effect [clang-diagnostic-unused-value]
+    5 |         return alpha, beta; // ⚠️ only one is used
+      |                ^~~~~
+/Repos/CWTS/test_cases/value_unused_2.cpp:5:9: warning: left operand of comma operator has no effect [-Wunused-value]
+    5 |         return alpha, beta; // ⚠️ only one is used
+      |                ^~~~~
+1 warning generated.
+[ 83%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_assignment.cpp.o
+/Repos/CWTS/test_cases/variable_assignment.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void variable_assignment();
+      |                     ^
+/Repos/CWTS/test_cases/variable_assignment.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void variable_assignment()
+      |      ^
+/Repos/CWTS/test_cases/variable_assignment.cpp:5:2: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+    5 |         int alpha = 1, beta = 2;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:6: warning: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha' [clang-analyzer-deadcode.DeadStores]
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |             ^       ~~~~
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:6: note: Although the value stored to 'alpha' is used in the enclosing expression, the value is never actually read from 'alpha'
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |             ^       ~~~~
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:6: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |             ^
+      |                          != 0
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:12: warning: an assignment within an 'if' condition is bug-prone [bugprone-assignment-in-if-condition]
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |             ~~~~~~^~~~~~
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:12: note: if it should be an assignment, move it out of the 'if' condition
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:12: note: if it is meant to be an equality check, change '=' to '=='
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:12: warning: using the result of an assignment as a condition without parentheses [clang-diagnostic-parentheses]
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |             ~~~~~~^~~~~~
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:12: note: place parentheses around the assignment to silence this warning
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |                   ^
+      |             (           )
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:12: note: use '==' to turn this assignment into an equality comparison
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |                   ^
+      |                   ==
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:19: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |                          ^
+      |                           {
+    8 |                 return;
+      |
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |             ~~~~~~^~~~~~
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:12: note: place parentheses around the assignment to silence this warning
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |                   ^
+      |             (           )
+/Repos/CWTS/test_cases/variable_assignment.cpp:7:12: note: use '==' to turn this assignment into an equality comparison
+    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+      |                   ^
+      |                   ==
+1 warning generated.
+[ 84%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_1.cpp.o
+/Repos/CWTS/test_cases/variable_compare_1.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern bool variable_compare_1(char alpha, unsigned char beta);
+      |                     ^
+/Repos/CWTS/test_cases/variable_compare_1.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool variable_compare_1(char alpha, unsigned char beta)
+      |      ^
+/Repos/CWTS/test_cases/variable_compare_1.cpp:5:9: warning: comparison between 'signed char' and 'unsigned char' [bugprone-signed-char-misuse]
+    5 |         return alpha == beta; // ⚠️ not same datatype
+      |                ^
+[ 86%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_2.cpp.o
+/Repos/CWTS/test_cases/variable_compare_2.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern bool variable_compare_2(short alpha, unsigned short beta);
+      |                     ^
+/Repos/CWTS/test_cases/variable_compare_2.cpp:1:35: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+    1 | <U+FEFF>extern bool variable_compare_2(short alpha, unsigned short beta);
+      |                                        ^
+/Repos/CWTS/test_cases/variable_compare_2.cpp:1:48: warning: consider replacing 'unsigned short' with 'uint16' [google-runtime-int]
+    1 | <U+FEFF>extern bool variable_compare_2(short alpha, unsigned short beta);
+      |                                                     ^
+/Repos/CWTS/test_cases/variable_compare_2.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool variable_compare_2(short alpha, unsigned short beta)
+      |      ^
+/Repos/CWTS/test_cases/variable_compare_2.cpp:3:25: warning: consider replacing 'short' with 'int16' [google-runtime-int]
+    3 | bool variable_compare_2(short alpha, unsigned short beta)
+      |                         ^
+/Repos/CWTS/test_cases/variable_compare_2.cpp:3:38: warning: consider replacing 'unsigned short' with 'uint16' [google-runtime-int]
+    3 | bool variable_compare_2(short alpha, unsigned short beta)
+      |                                      ^
+[ 87%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_3.cpp.o
+/Repos/CWTS/test_cases/variable_compare_3.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern bool variable_compare_3(int alpha, unsigned int beta);
+      |                     ^
+/Repos/CWTS/test_cases/variable_compare_3.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool variable_compare_3(int alpha, unsigned int beta)
+      |      ^
+/Repos/CWTS/test_cases/variable_compare_3.cpp:5:15: warning: comparison of integers of different signs: 'int' and 'unsigned int' [clang-diagnostic-sign-compare]
+    5 |         return alpha == beta; // ⚠️ different datatypes
+      |                ~~~~~ ^  ~~~~
+/Repos/CWTS/test_cases/variable_compare_3.cpp:5:15: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    5 |         return alpha == beta; // ⚠️ different datatypes
+      |                ~~~~~ ^  ~~~~
+1 warning generated.
+[ 88%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_4.cpp.o
+/Repos/CWTS/test_cases/variable_compare_4.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern bool variable_compare_4(long alpha, unsigned long beta);
+      |                     ^
+/Repos/CWTS/test_cases/variable_compare_4.cpp:1:35: warning: consider replacing 'long' with 'int64' [google-runtime-int]
+    1 | <U+FEFF>extern bool variable_compare_4(long alpha, unsigned long beta);
+      |                                        ^
+/Repos/CWTS/test_cases/variable_compare_4.cpp:1:47: warning: consider replacing 'unsigned long' with 'uint64' [google-runtime-int]
+    1 | <U+FEFF>extern bool variable_compare_4(long alpha, unsigned long beta);
+      |                                                    ^
+/Repos/CWTS/test_cases/variable_compare_4.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | bool variable_compare_4(long alpha, unsigned long beta)
+      |      ^
+/Repos/CWTS/test_cases/variable_compare_4.cpp:3:25: warning: consider replacing 'long' with 'int64' [google-runtime-int]
+    3 | bool variable_compare_4(long alpha, unsigned long beta)
+      |                         ^
+/Repos/CWTS/test_cases/variable_compare_4.cpp:3:37: warning: consider replacing 'unsigned long' with 'uint64' [google-runtime-int]
+    3 | bool variable_compare_4(long alpha, unsigned long beta)
+      |                                     ^
+/Repos/CWTS/test_cases/variable_compare_4.cpp:5:15: warning: comparison of integers of different signs: 'long' and 'unsigned long' [clang-diagnostic-sign-compare]
+    5 |         return alpha == beta; // ⚠️ different datatypes
+      |                ~~~~~ ^  ~~~~
+/Repos/CWTS/test_cases/variable_compare_4.cpp:5:15: warning: comparison of integers of different signs: 'long' and 'unsigned long' [-Wsign-compare]
+    5 |         return alpha == beta; // ⚠️ different datatypes
+      |                ~~~~~ ^  ~~~~
+1 warning generated.
+[ 90%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_init_self.cpp.o
+/Repos/CWTS/test_cases/variable_init_self.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int variable_init_self(void);
+      |                    ^
+/Repos/CWTS/test_cases/variable_init_self.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int variable_init_self(void)
+      |     ^
+/Repos/CWTS/test_cases/variable_init_self.cpp:5:2: warning: Assigned value is garbage or undefined [clang-analyzer-core.uninitialized.Assign]
+    5 |         int alpha = alpha; // ⚠️ variable initialized by itself
+      |         ^           ~~~~~
+/Repos/CWTS/test_cases/variable_init_self.cpp:5:2: note: Assigned value is garbage or undefined
+    5 |         int alpha = alpha; // ⚠️ variable initialized by itself
+      |         ^           ~~~~~
+/Repos/CWTS/test_cases/variable_init_self.cpp:5:2: warning: variable 'alpha' of type 'int' can be declared 'const' [misc-const-correctness]
+    5 |         int alpha = alpha; // ⚠️ variable initialized by itself
+      |         ^
+      |             const
+/Repos/CWTS/test_cases/variable_init_self.cpp:5:14: warning: variable 'alpha' is uninitialized when used within its own initialization [clang-diagnostic-uninitialized]
+    5 |         int alpha = alpha; // ⚠️ variable initialized by itself
+      |             ~~~~~   ^~~~~
+/Repos/CWTS/test_cases/variable_init_self.cpp:5:14: warning: variable 'alpha' is uninitialized when used within its own initialization [-Wuninitialized]
+    5 |         int alpha = alpha; // ⚠️ variable initialized by itself
+      |             ~~~~~   ^~~~~
+1 warning generated.
+[ 91%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_shadowed_1.cpp.o
+/Repos/CWTS/test_cases/variable_shadowed_1.cpp:1:15: warning: variable 'answer' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    1 | <U+FEFF>extern int answer;
+      |                    ^
+/Repos/CWTS/test_cases/variable_shadowed_1.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/variable_shadowed_1.cpp:2:12: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    2 | extern int variable_shadowed_1(int answer);
+      |            ^
+/Repos/CWTS/test_cases/variable_shadowed_1.cpp:4:5: warning: variable 'answer' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+    4 | int answer = 0;
+      |     ^
+/Repos/CWTS/test_cases/variable_shadowed_1.cpp:4:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+/Repos/CWTS/test_cases/variable_shadowed_1.cpp:6:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    6 | int variable_shadowed_1(int answer)
+      |     ^
+[ 93%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_shadowed_2.cpp.o
+/Repos/CWTS/test_cases/variable_shadowed_2.cpp:1:15: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern int variable_shadowed_2(int value);
+      |                    ^
+/Repos/CWTS/test_cases/variable_shadowed_2.cpp:3:5: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | int variable_shadowed_2(int value)
+      |     ^
+/Repos/CWTS/test_cases/variable_shadowed_2.cpp:6:7: warning: variable 'value' set but not used [clang-diagnostic-unused-but-set-variable]
+    6 |                 int value = 0; // ⚠️ variable shadowed
+      |                     ^
+/Repos/CWTS/test_cases/variable_shadowed_2.cpp:6:7: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+    6 |                 int value = 0; // ⚠️ variable shadowed
+      |                     ^
+1 warning generated.
+[ 94%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_size_array.cpp.o
+/Repos/CWTS/test_cases/variable_size_array.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void variable_size_array(int size);
+      |                     ^
+/Repos/CWTS/test_cases/variable_size_array.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void variable_size_array(int size)
+      |      ^
+/Repos/CWTS/test_cases/variable_size_array.cpp:5:2: warning: do not declare C VLA arrays, use 'std::vector' instead [cppcoreguidelines-avoid-c-arrays,hicpp-avoid-c-arrays]
+    5 |         float abc[size]; // ⚠️ array size is not constant
+      |         ^
+/Repos/CWTS/test_cases/variable_size_array.cpp:5:12: warning: variable length arrays in C++ are a Clang extension [clang-diagnostic-vla-cxx-extension]
+    5 |         float abc[size]; // ⚠️ array size is not constant
+      |                   ^~~~
+/Repos/CWTS/test_cases/variable_size_array.cpp:5:12: note: function parameter 'size' with unknown value cannot be used in a constant expression
+/Repos/CWTS/test_cases/variable_size_array.cpp:3:30: note: declared here
+    3 | void variable_size_array(int size)
+      |                              ^
+/Repos/CWTS/test_cases/variable_size_array.cpp:6:11: warning: 3.1415 is a magic number; consider replacing it with a named constant [cppcoreguidelines-avoid-magic-numbers,readability-magic-numbers]
+    6 |         abc[0] = 3.1415;
+      |                  ^
+/Repos/CWTS/test_cases/variable_size_array.cpp:5:12: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
+    5 |         float abc[size]; // ⚠️ array size is not constant
+      |                   ^~~~
+/Repos/CWTS/test_cases/variable_size_array.cpp:5:12: note: function parameter 'size' with unknown value cannot be used in a constant expression
+/Repos/CWTS/test_cases/variable_size_array.cpp:3:30: note: declared here
+    3 | void variable_size_array(int size)
+      |                              ^
+1 warning generated.
+[ 95%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_unsequenced.cpp.o
+/Repos/CWTS/test_cases/variable_unsequenced.cpp:1:4: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
+    1 | <U+FEFF>#include <stdio.h>
+      |         ^~~~~~~~~~~~~~~~~~
+    2 |
+/Repos/CWTS/test_cases/variable_unsequenced.cpp:1:13: warning: inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [hicpp-deprecated-headers]
+    1 | <U+FEFF>#include <stdio.h>
+      |                  ^
+note: this fix will not be applied because it overlaps with another fix
+/Repos/CWTS/test_cases/variable_unsequenced.cpp:3:13: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | extern void variable_unsequenced(int value);
+      |             ^
+/Repos/CWTS/test_cases/variable_unsequenced.cpp:5:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    5 | void variable_unsequenced(int value)
+      |      ^
+/Repos/CWTS/test_cases/variable_unsequenced.cpp:7:2: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg,hicpp-vararg]
+    7 |         printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
+      |         ^
+/Repos/CWTS/test_cases/variable_unsequenced.cpp:7:25: warning: unsequenced modification and access to 'value' [clang-diagnostic-unsequenced]
+    7 |         printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
+      |                         ~~~~~  ^
+/Repos/CWTS/test_cases/variable_unsequenced.cpp:7:25: warning: unsequenced modification and access to 'value' [-Wunsequenced]
+    7 |         printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
+      |                         ~~~~~  ^
+1 warning generated.
+[ 97%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_unused.cpp.o
+/Repos/CWTS/test_cases/variable_unused.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void variable_unused(void);
+      |                     ^
+/Repos/CWTS/test_cases/variable_unused.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void variable_unused(void)
+      |      ^
+/Repos/CWTS/test_cases/variable_unused.cpp:5:2: warning: variable 'value' of type 'int' can be declared 'const' [misc-const-correctness]
+    5 |         int value = 0; // ⚠️ variable is unused
+      |         ^
+      |             const
+/Repos/CWTS/test_cases/variable_unused.cpp:5:6: warning: unused variable 'value' [clang-diagnostic-unused-variable]
+    5 |         int value = 0; // ⚠️ variable is unused
+      |             ^~~~~
+/Repos/CWTS/test_cases/variable_unused.cpp:5:6: warning: unused variable 'value' [-Wunused-variable]
+    5 |         int value = 0; // ⚠️ variable is unused
+      |             ^~~~~
+1 warning generated.
+[ 98%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_used_uninitialized.cpp.o
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:1:16: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    1 | <U+FEFF>extern void variable_used_uninitialized(void);
+      |                     ^
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:3:6: warning: declaration must be enclosed within the 'LIBC_NAMESPACE_DECL' namespace [llvmlibc-implementation-in-namespace]
+    3 | void variable_used_uninitialized(void)
+      |      ^
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:5:2: warning: variable 'alpha' of type 'int' can be declared 'const' [misc-const-correctness]
+    5 |         int alpha = 0, beta;
+      |         ^
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:5:2: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+    5 |         int alpha = 0, beta;
+      |         ^~~~~~~~~~~~~~~~~~~~
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:5:17: warning: variable 'beta' set but not used [clang-diagnostic-unused-but-set-variable]
+    5 |         int alpha = 0, beta;
+      |                        ^
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:5:17: warning: variable 'beta' is not initialized [cppcoreguidelines-init-variables]
+note: this fix will not be applied because it overlaps with another fix
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:7:17: warning: statement should be inside braces [google-readability-braces-around-statements,hicpp-braces-around-statements,readability-braces-around-statements]
+    7 |         if (alpha == 0)
+      |                        ^
+      |                         {
+    8 |                 beta++; // ⚠️ variable used uninitialized
+      |
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:8:3: warning: The expression is an uninitialized value. The computed value will also be garbage [clang-analyzer-core.uninitialized.Assign]
+    8 |                 beta++; // ⚠️ variable used uninitialized
+      |                 ^~~~
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:5:17: note: 'beta' declared without an initial value
+    5 |         int alpha = 0, beta;
+      |                        ^~~~
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:7:6: note: 'alpha' is equal to 0
+    7 |         if (alpha == 0)
+      |             ^~~~~
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:7:2: note: Taking true branch
+    7 |         if (alpha == 0)
+      |         ^
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:8:3: note: The expression is an uninitialized value. The computed value will also be garbage
+    8 |                 beta++; // ⚠️ variable used uninitialized
+      |                 ^~~~
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:8:3: warning: variable 'beta' is uninitialized when used here [clang-diagnostic-uninitialized]
+    8 |                 beta++; // ⚠️ variable used uninitialized
+      |                 ^~~~
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:5:21: note: initialize the variable 'beta' to silence this warning
+    5 |         int alpha = 0, beta;
+      |                            ^
+      |                             = 0
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:5:17: warning: variable 'beta' set but not used [-Wunused-but-set-variable]
+    5 |         int alpha = 0, beta;
+      |                        ^
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:8:3: warning: variable 'beta' is uninitialized when used here [-Wuninitialized]
+    8 |                 beta++; // ⚠️ variable used uninitialized
+      |                 ^~~~
+/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:5:21: note: initialize the variable 'beta' to silence this warning
+    5 |         int alpha = 0, beta;
+      |                            ^
+      |                             = 0
+2 warnings generated.
+make[2]: Target 'CMakeFiles/CWTS.dir/build' not remade because of errors.
+make[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/CWTS.dir/all] Error 2
+make[1]: Target 'all' not remade because of errors.
+make: *** [Makefile:136: all] Error 2
+make: Target 'default_target' not remade because of errors.
