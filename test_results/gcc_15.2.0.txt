@@ -35,446 +35,446 @@ CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
 -- Build files have been written to: /Repos/CWTS
 
 ➤  make -k
-[  1%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_1.cpp.o  👎
-[  2%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_2.cpp.o  👎
-[  4%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_3.cpp.o  👎
-[  5%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_4.cpp.o  👎
-[  6%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_5.cpp.o  👎
-[  8%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_6.cpp.o  👎
-[  9%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_braces_missing.cpp.o  👎
-[ 11%] Building CXX object CMakeFiles/CWTS.dir/test_cases/assignment_in_condition_1.cpp.o
-/Repos/CWTS/test_cases/assignment_in_condition_1.cpp: In function ‘bool assignment_in_condition_1(int)’:
-/Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:19: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+[  1%] Building CXX object CMakeFiles/CWTS.dir/src/array_bounds_1.cpp.o  👎
+[  2%] Building CXX object CMakeFiles/CWTS.dir/src/array_bounds_2.cpp.o  👎
+[  4%] Building CXX object CMakeFiles/CWTS.dir/src/array_bounds_3.cpp.o  👎
+[  5%] Building CXX object CMakeFiles/CWTS.dir/src/array_bounds_4.cpp.o  👎
+[  6%] Building CXX object CMakeFiles/CWTS.dir/src/array_bounds_5.cpp.o  👎
+[  8%] Building CXX object CMakeFiles/CWTS.dir/src/array_bounds_6.cpp.o  👎
+[  9%] Building CXX object CMakeFiles/CWTS.dir/src/array_braces_missing.cpp.o  👎
+[ 11%] Building CXX object CMakeFiles/CWTS.dir/src/assignment_in_condition_1.cpp.o
+/Repos/CWTS/src/assignment_in_condition_1.cpp: In function ‘bool assignment_in_condition_1(int)’:
+/Repos/CWTS/src/assignment_in_condition_1.cpp:5:19: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
     5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
       |             ~~~~~~^~~
-[ 12%] Building CXX object CMakeFiles/CWTS.dir/test_cases/assignment_in_condition_2.cpp.o
-/Repos/CWTS/test_cases/assignment_in_condition_2.cpp: In function ‘bool assignment_in_condition_2(int)’:
-/Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:19: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+[ 12%] Building CXX object CMakeFiles/CWTS.dir/src/assignment_in_condition_2.cpp.o
+/Repos/CWTS/src/assignment_in_condition_2.cpp: In function ‘bool assignment_in_condition_2(int)’:
+/Repos/CWTS/src/assignment_in_condition_2.cpp:5:19: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
     5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
       |             ~~~~~~^~~~
-[ 13%] Building CXX object CMakeFiles/CWTS.dir/test_cases/bool_cast.cpp.o  👎
-[ 15%] Building CXX object CMakeFiles/CWTS.dir/test_cases/bool_compare.cpp.o
-/Repos/CWTS/test_cases/bool_compare.cpp: In function ‘bool bool_compare(int)’:
-/Repos/CWTS/test_cases/bool_compare.cpp:5:28: warning: comparison of constant ‘2’ with boolean expression is always false [-Wbool-compare]
+[ 13%] Building CXX object CMakeFiles/CWTS.dir/src/bool_cast.cpp.o  👎
+[ 15%] Building CXX object CMakeFiles/CWTS.dir/src/bool_compare.cpp.o
+/Repos/CWTS/src/bool_compare.cpp: In function ‘bool bool_compare(int)’:
+/Repos/CWTS/src/bool_compare.cpp:5:28: warning: comparison of constant ‘2’ with boolean expression is always false [-Wbool-compare]
     5 |         return (alpha > 0) == 2; // ⚠️ condition is always false
       |                ~~~~~~~~~~~~^~~~
-[ 16%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_1.cpp.o  👎
-[ 18%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_2.cpp.o  👎
-[ 19%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_3.cpp.o  👎
-[ 20%] Building CXX object CMakeFiles/CWTS.dir/test_cases/cast_unnecessary.cpp.o  👎
-[ 22%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_1.cpp.o  👎
-[ 23%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_2.cpp.o  👎
-[ 25%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_3.cpp.o  👎
-[ 26%] Building CXX object CMakeFiles/CWTS.dir/test_cases/comment.cpp.o
-/Repos/CWTS/test_cases/comment.cpp:1:4: warning: ‘/*’ within comment [-Wcomment]
+[ 16%] Building CXX object CMakeFiles/CWTS.dir/src/branches_identical_1.cpp.o  👎
+[ 18%] Building CXX object CMakeFiles/CWTS.dir/src/branches_identical_2.cpp.o  👎
+[ 19%] Building CXX object CMakeFiles/CWTS.dir/src/branches_identical_3.cpp.o  👎
+[ 20%] Building CXX object CMakeFiles/CWTS.dir/src/cast_unnecessary.cpp.o  👎
+[ 22%] Building CXX object CMakeFiles/CWTS.dir/src/code_unreachable_1.cpp.o  👎
+[ 23%] Building CXX object CMakeFiles/CWTS.dir/src/code_unreachable_2.cpp.o  👎
+[ 25%] Building CXX object CMakeFiles/CWTS.dir/src/code_unreachable_3.cpp.o  👎
+[ 26%] Building CXX object CMakeFiles/CWTS.dir/src/comment.cpp.o
+/Repos/CWTS/src/comment.cpp:1:4: warning: ‘/*’ within comment [-Wcomment]
     1 | /* /* ⚠️ comment in comment */
-[ 27%] Building CXX object CMakeFiles/CWTS.dir/test_cases/constant_expression.cpp.o
-/Repos/CWTS/test_cases/constant_expression.cpp: In function ‘void constant_expression()’:
-/Repos/CWTS/test_cases/constant_expression.cpp:5:37: warning: comparison of unsigned expression in ‘>= 0’ is always true [-Wtype-limits]
+[ 27%] Building CXX object CMakeFiles/CWTS.dir/src/constant_expression.cpp.o
+/Repos/CWTS/src/constant_expression.cpp: In function ‘void constant_expression()’:
+/Repos/CWTS/src/constant_expression.cpp:5:37: warning: comparison of unsigned expression in ‘>= 0’ is always true [-Wtype-limits]
     5 |         for (unsigned int i = 10; i >= 0; i++) // ⚠️ condition is always true
       |                                   ~~^~~~
-[ 29%] Building CXX object CMakeFiles/CWTS.dir/test_cases/constant_overflow.cpp.o
-/Repos/CWTS/test_cases/constant_overflow.cpp:1:26: error: narrowing conversion of ‘65535’ from ‘int’ to ‘char’ [-Wnarrowing]
+[ 29%] Building CXX object CMakeFiles/CWTS.dir/src/constant_overflow.cpp.o
+/Repos/CWTS/src/constant_overflow.cpp:1:26: error: narrowing conversion of ‘65535’ from ‘int’ to ‘char’ [-Wnarrowing]
     1 | char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
       |                          ^~~~~~
-make[2]: *** [CMakeFiles/CWTS.dir/build.make:359: CMakeFiles/CWTS.dir/test_cases/constant_overflow.cpp.o] Error 1
-[ 30%] Building CXX object CMakeFiles/CWTS.dir/test_cases/division_by_zero_1.cpp.o
-/Repos/CWTS/test_cases/division_by_zero_1.cpp: In function ‘int division_by_zero_1(int)’:
-/Repos/CWTS/test_cases/division_by_zero_1.cpp:5:22: warning: division by zero [-Wdiv-by-zero]
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:359: CMakeFiles/CWTS.dir/src/constant_overflow.cpp.o] Error 1
+[ 30%] Building CXX object CMakeFiles/CWTS.dir/src/division_by_zero_1.cpp.o
+/Repos/CWTS/src/division_by_zero_1.cpp: In function ‘int division_by_zero_1(int)’:
+/Repos/CWTS/src/division_by_zero_1.cpp:5:22: warning: division by zero [-Wdiv-by-zero]
     5 |         return alpha / 0; // ⚠️ division by zero
       |                ~~~~~~^~~
-[ 31%] Building CXX object CMakeFiles/CWTS.dir/test_cases/division_by_zero_2.cpp.o  👎
-[ 33%] Building CXX object CMakeFiles/CWTS.dir/test_cases/enum_unhandled.cpp.o  👎
-[ 34%] Building CXX object CMakeFiles/CWTS.dir/test_cases/enum_value.cpp.o  👎
-[ 36%] Building CXX object CMakeFiles/CWTS.dir/test_cases/extra_tokens.cpp.o
-/Repos/CWTS/test_cases/extra_tokens.cpp:2:8: warning: extra tokens at end of ‘#endif’ directive [-Wendif-labels]
+[ 31%] Building CXX object CMakeFiles/CWTS.dir/src/division_by_zero_2.cpp.o  👎
+[ 33%] Building CXX object CMakeFiles/CWTS.dir/src/enum_unhandled.cpp.o  👎
+[ 34%] Building CXX object CMakeFiles/CWTS.dir/src/enum_value.cpp.o  👎
+[ 36%] Building CXX object CMakeFiles/CWTS.dir/src/extra_tokens.cpp.o
+/Repos/CWTS/src/extra_tokens.cpp:2:8: warning: extra tokens at end of ‘#endif’ directive [-Wendif-labels]
     2 | #endif BAD // ⚠️ #endif has no parameters
       |        ^~~
-[ 37%] Building CXX object CMakeFiles/CWTS.dir/test_cases/file_empty.cpp.o  👎
-[ 38%] Building CXX object CMakeFiles/CWTS.dir/test_cases/format_string_1.cpp.o
-/Repos/CWTS/test_cases/format_string_1.cpp: In function ‘void format_string_1()’:
-/Repos/CWTS/test_cases/format_string_1.cpp:7:18: warning: format ‘%s’ expects argument of type ‘char*’, but argument 2 has type ‘int’ [-Wformat=]
+[ 37%] Building CXX object CMakeFiles/CWTS.dir/src/file_empty.cpp.o  👎
+[ 38%] Building CXX object CMakeFiles/CWTS.dir/src/format_string_1.cpp.o
+/Repos/CWTS/src/format_string_1.cpp: In function ‘void format_string_1()’:
+/Repos/CWTS/src/format_string_1.cpp:7:18: warning: format ‘%s’ expects argument of type ‘char*’, but argument 2 has type ‘int’ [-Wformat=]
     7 |         printf("%s", 0); // ⚠️ zero pointer access
       |                 ~^   ~
       |                  |   |
       |                  |   int
       |                  char*
       |                 %d
-/Repos/CWTS/test_cases/format_string_1.cpp:7:17: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+/Repos/CWTS/src/format_string_1.cpp:7:17: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
     7 |         printf("%s", 0); // ⚠️ zero pointer access
       |                 ^~
-[ 40%] Building CXX object CMakeFiles/CWTS.dir/test_cases/format_string_2.cpp.o
-/Repos/CWTS/test_cases/format_string_2.cpp: In function ‘void format_string_2()’:
-/Repos/CWTS/test_cases/format_string_2.cpp:7:16: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+[ 40%] Building CXX object CMakeFiles/CWTS.dir/src/format_string_2.cpp.o
+/Repos/CWTS/src/format_string_2.cpp: In function ‘void format_string_2()’:
+/Repos/CWTS/src/format_string_2.cpp:7:16: warning: zero-length gnu_printf format string [-Wformat-zero-length]
     7 |         printf(""); // ⚠️ empty format string
       |                ^~
-[ 41%] Building CXX object CMakeFiles/CWTS.dir/test_cases/format_string_3.cpp.o
-/Repos/CWTS/test_cases/format_string_3.cpp: In function ‘void format_string_3(const char*)’:
-/Repos/CWTS/test_cases/format_string_3.cpp:7:15: warning: format not a string literal and no format arguments [-Wformat-security]
+[ 41%] Building CXX object CMakeFiles/CWTS.dir/src/format_string_3.cpp.o
+/Repos/CWTS/src/format_string_3.cpp: In function ‘void format_string_3(const char*)’:
+/Repos/CWTS/src/format_string_3.cpp:7:15: warning: format not a string literal and no format arguments [-Wformat-security]
     7 |         printf(str); // ⚠️ <str> is handled as format string
       |         ~~~~~~^~~~~
-[ 43%] Building CXX object CMakeFiles/CWTS.dir/test_cases/function_parameter_unused.cpp.o
-/Repos/CWTS/test_cases/function_parameter_unused.cpp: In function ‘int parameter_unused(int, int)’:
-/Repos/CWTS/test_cases/function_parameter_unused.cpp:3:37: warning: unused parameter ‘beta’ [-Wunused-parameter]
+[ 43%] Building CXX object CMakeFiles/CWTS.dir/src/function_parameter_unused.cpp.o
+/Repos/CWTS/src/function_parameter_unused.cpp: In function ‘int parameter_unused(int, int)’:
+/Repos/CWTS/src/function_parameter_unused.cpp:3:37: warning: unused parameter ‘beta’ [-Wunused-parameter]
     3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
       |                                 ~~~~^~~~
-[ 44%] Building CXX object CMakeFiles/CWTS.dir/test_cases/function_without_prototype.cpp.o
-[ 45%] Building CXX object CMakeFiles/CWTS.dir/test_cases/function_without_return_value.cpp.o
-/Repos/CWTS/test_cases/function_without_return_value.cpp: In function ‘int function_without_return_value()’:
-/Repos/CWTS/test_cases/function_without_return_value.cpp:5:9: error: return-statement with no value, in function returning ‘int’ [-fpermissive]
+[ 44%] Building CXX object CMakeFiles/CWTS.dir/src/function_without_prototype.cpp.o
+[ 45%] Building CXX object CMakeFiles/CWTS.dir/src/function_without_return_value.cpp.o
+/Repos/CWTS/src/function_without_return_value.cpp: In function ‘int function_without_return_value()’:
+/Repos/CWTS/src/function_without_return_value.cpp:5:9: error: return-statement with no value, in function returning ‘int’ [-fpermissive]
     5 |         return; // ⚠️ return value is missing
       |         ^~~~~~
-make[2]: *** [CMakeFiles/CWTS.dir/build.make:527: CMakeFiles/CWTS.dir/test_cases/function_without_return_value.cpp.o] Error 1
-[ 47%] Building CXX object CMakeFiles/CWTS.dir/test_cases/identifier_undefined.cpp.o
-/Repos/CWTS/test_cases/identifier_undefined.cpp:1:5: warning: ‘IDENTIFIER_UNDEFINED’ is not defined, evaluates to ‘0’ [-Wundef]
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:527: CMakeFiles/CWTS.dir/src/function_without_return_value.cpp.o] Error 1
+[ 47%] Building CXX object CMakeFiles/CWTS.dir/src/identifier_undefined.cpp.o
+/Repos/CWTS/src/identifier_undefined.cpp:1:5: warning: ‘IDENTIFIER_UNDEFINED’ is not defined, evaluates to ‘0’ [-Wundef]
     1 | #if IDENTIFIER_UNDEFINED // ⚠️ identifier is undefined
       |     ^~~~~~~~~~~~~~~~~~~~
-[ 48%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_1.cpp.o  👎
-[ 50%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_2.cpp.o  👎
-[ 51%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_3.cpp.o  👎
-[ 52%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_4.cpp.o  👎
-[ 54%] Building CXX object CMakeFiles/CWTS.dir/test_cases/label_unused.cpp.o
-/Repos/CWTS/test_cases/label_unused.cpp: In function ‘int label_unused(int)’:
-/Repos/CWTS/test_cases/label_unused.cpp:5:1: warning: label ‘label_is_unused’ defined but not used [-Wunused-label]
+[ 48%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_1.cpp.o  👎
+[ 50%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_2.cpp.o  👎
+[ 51%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_3.cpp.o  👎
+[ 52%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_4.cpp.o  👎
+[ 54%] Building CXX object CMakeFiles/CWTS.dir/src/label_unused.cpp.o
+/Repos/CWTS/src/label_unused.cpp: In function ‘int label_unused(int)’:
+/Repos/CWTS/src/label_unused.cpp:5:1: warning: label ‘label_is_unused’ defined but not used [-Wunused-label]
     5 | label_is_unused: // ⚠️ label is unused
       | ^~~~~~~~~~~~~~~
-[ 55%] Building CXX object CMakeFiles/CWTS.dir/test_cases/logical_not.cpp.o
-/Repos/CWTS/test_cases/logical_not.cpp: In function ‘int logical_not(int)’:
-/Repos/CWTS/test_cases/logical_not.cpp:5:22: warning: ‘<<’ in boolean context, did you mean ‘<’? [-Wint-in-bool-context]
+[ 55%] Building CXX object CMakeFiles/CWTS.dir/src/logical_not.cpp.o
+/Repos/CWTS/src/logical_not.cpp: In function ‘int logical_not(int)’:
+/Repos/CWTS/src/logical_not.cpp:5:22: warning: ‘<<’ in boolean context, did you mean ‘<’? [-Wint-in-bool-context]
     5 |         alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
       |                   ~~~^~~~~
-[ 56%] Building CXX object CMakeFiles/CWTS.dir/test_cases/main.cpp.o
-[ 58%] Building CXX object CMakeFiles/CWTS.dir/test_cases/member_init_reorder.cpp.o
-/Repos/CWTS/test_cases/member_init_reorder.cpp: In constructor ‘Alpha::Alpha()’:
-/Repos/CWTS/test_cases/member_init_reorder.cpp:3:13: warning: ‘Alpha::gamma’ will be initialized after [-Wreorder]
+[ 56%] Building CXX object CMakeFiles/CWTS.dir/src/main.cpp.o
+[ 58%] Building CXX object CMakeFiles/CWTS.dir/src/member_init_reorder.cpp.o
+/Repos/CWTS/src/member_init_reorder.cpp: In constructor ‘Alpha::Alpha()’:
+/Repos/CWTS/src/member_init_reorder.cpp:3:13: warning: ‘Alpha::gamma’ will be initialized after [-Wreorder]
     3 |         int gamma;
       |             ^~~~~
-/Repos/CWTS/test_cases/member_init_reorder.cpp:2:13: warning:   ‘int Alpha::beta’ [-Wreorder]
+/Repos/CWTS/src/member_init_reorder.cpp:2:13: warning:   ‘int Alpha::beta’ [-Wreorder]
     2 |         int beta;
       |             ^~~~
-/Repos/CWTS/test_cases/member_init_reorder.cpp:4:9: warning:   when initialized here [-Wreorder]
+/Repos/CWTS/src/member_init_reorder.cpp:4:9: warning:   when initialized here [-Wreorder]
     4 |         Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
       |         ^~~~~
-[ 59%] Building CXX object CMakeFiles/CWTS.dir/test_cases/null_pointer_access_1.cpp.o  👎
-[ 61%] Building CXX object CMakeFiles/CWTS.dir/test_cases/null_pointer_access_2.cpp.o  👎
-[ 62%] Building CXX object CMakeFiles/CWTS.dir/test_cases/parentheses.cpp.o
-/Repos/CWTS/test_cases/parentheses.cpp: In function ‘int parentheses(int)’:
-/Repos/CWTS/test_cases/parentheses.cpp:5:12: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-els]
+[ 59%] Building CXX object CMakeFiles/CWTS.dir/src/null_pointer_access_1.cpp.o  👎
+[ 61%] Building CXX object CMakeFiles/CWTS.dir/src/null_pointer_access_2.cpp.o  👎
+[ 62%] Building CXX object CMakeFiles/CWTS.dir/src/parentheses.cpp.o
+/Repos/CWTS/src/parentheses.cpp: In function ‘int parentheses(int)’:
+/Repos/CWTS/src/parentheses.cpp:5:12: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-els]
     5 |         if (value > 0) // ⚠️ explicit parentheses recommended
       |            ^
-[ 63%] Building CXX object CMakeFiles/CWTS.dir/test_cases/pointer_compare.cpp.o
-/Repos/CWTS/test_cases/pointer_compare.cpp: In function ‘int pointer_compare(char*)’:
-/Repos/CWTS/test_cases/pointer_compare.cpp:5:21: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+[ 63%] Building CXX object CMakeFiles/CWTS.dir/src/pointer_compare.cpp.o
+/Repos/CWTS/src/pointer_compare.cpp: In function ‘int pointer_compare(char*)’:
+/Repos/CWTS/src/pointer_compare.cpp:5:21: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
     5 |         return (ptr == '\0'); // ⚠️ Ups, I meant "*ptr"
       |                 ~~~~^~~~~~~
-make[2]: *** [CMakeFiles/CWTS.dir/build.make:709: CMakeFiles/CWTS.dir/test_cases/pointer_compare.cpp.o] Error 1
-[ 65%] Building CXX object CMakeFiles/CWTS.dir/test_cases/recursive_include.cpp.o
-In file included from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1,
-                 from /Repos/CWTS/test_cases/recursive_include.cpp:1:
-/Repos/CWTS/test_cases/recursive_include.cpp:1:57: error: ‘#include’ nested depth 200 exceeds maximum of 200 (use ‘-fmax-include-depth=DEPTH’ to increase the maximum)
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:709: CMakeFiles/CWTS.dir/src/pointer_compare.cpp.o] Error 1
+[ 65%] Building CXX object CMakeFiles/CWTS.dir/src/recursive_include.cpp.o
+In file included from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1,
+                 from /Repos/CWTS/src/recursive_include.cpp:1:
+/Repos/CWTS/src/recursive_include.cpp:1:57: error: ‘#include’ nested depth 200 exceeds maximum of 200 (use ‘-fmax-include-depth=DEPTH’ to increase the maximum)
     1 | #include "recursive_include.cpp" // ⚠️ recursive #include
       |                                                         ^
-make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/test_cases/recursive_include.cpp.o] Error 1
-[ 66%] Building CXX object CMakeFiles/CWTS.dir/test_cases/shift_count_negative.cpp.o
-/Repos/CWTS/test_cases/shift_count_negative.cpp: In function ‘int shift_count_negative(int)’:
-/Repos/CWTS/test_cases/shift_count_negative.cpp:5:22: warning: left shift count is negative [-Wshift-count-negative]
+make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/src/recursive_include.cpp.o] Error 1
+[ 66%] Building CXX object CMakeFiles/CWTS.dir/src/shift_count_negative.cpp.o
+/Repos/CWTS/src/shift_count_negative.cpp: In function ‘int shift_count_negative(int)’:
+/Repos/CWTS/src/shift_count_negative.cpp:5:22: warning: left shift count is negative [-Wshift-count-negative]
     5 |         return value << -1; // ⚠️ shift count is negative
       |                ~~~~~~^~~~~
-[ 68%] Building CXX object CMakeFiles/CWTS.dir/test_cases/shift_count_overflow.cpp.o
-/Repos/CWTS/test_cases/shift_count_overflow.cpp: In function ‘int shift_count_overflow(int)’:
-/Repos/CWTS/test_cases/shift_count_overflow.cpp:5:22: warning: left shift count >= width of type [-Wshift-count-overflo]
+[ 68%] Building CXX object CMakeFiles/CWTS.dir/src/shift_count_overflow.cpp.o
+/Repos/CWTS/src/shift_count_overflow.cpp: In function ‘int shift_count_overflow(int)’:
+/Repos/CWTS/src/shift_count_overflow.cpp:5:22: warning: left shift count >= width of type [-Wshift-count-overflo]
     5 |         return value << 66; // ⚠️ shift count is too high
       |                ~~~~~~^~~~~
-[ 69%] Building CXX object CMakeFiles/CWTS.dir/test_cases/shift_overflow.cpp.o
-/Repos/CWTS/test_cases/shift_overflow.cpp: In function ‘int shift_overflow()’:
-/Repos/CWTS/test_cases/shift_overflow.cpp:7:24: warning: result of ‘(2147483647 << 10)’ requires 42 bits to represent, but ‘int’ only has 32 bits [-Wshift-overflow=]
+[ 69%] Building CXX object CMakeFiles/CWTS.dir/src/shift_overflow.cpp.o
+/Repos/CWTS/src/shift_overflow.cpp: In function ‘int shift_overflow()’:
+/Repos/CWTS/src/shift_overflow.cpp:7:24: warning: result of ‘(2147483647 << 10)’ requires 42 bits to represent, but ‘int’ only has 32 bits [-Wshift-overflow=]
     7 |         return INT_MAX << 10; // ⚠️ shift overflow
       |                        ^
-[ 70%] Building CXX object CMakeFiles/CWTS.dir/test_cases/shift_value_negative.cpp.o
-/Repos/CWTS/test_cases/shift_value_negative.cpp: In function ‘int shift_value_negative()’:
-/Repos/CWTS/test_cases/shift_value_negative.cpp:5:19: warning: left shift of negative value [-Wshift-negative-value]
+[ 70%] Building CXX object CMakeFiles/CWTS.dir/src/shift_value_negative.cpp.o
+/Repos/CWTS/src/shift_value_negative.cpp: In function ‘int shift_value_negative()’:
+/Repos/CWTS/src/shift_value_negative.cpp:5:19: warning: left shift of negative value [-Wshift-negative-value]
     5 |         return -1 << 2; // ⚠️ value to shift is negative
       |                ~~~^~~~
-[ 72%] Building CXX object CMakeFiles/CWTS.dir/test_cases/stack_address_returned.cpp.o
-/Repos/CWTS/test_cases/stack_address_returned.cpp: In function ‘int* stack_address_returned()’:
-/Repos/CWTS/test_cases/stack_address_returned.cpp:7:16: warning: address of local variable ‘array’ returned [-Wreturn-local-addr]
+[ 72%] Building CXX object CMakeFiles/CWTS.dir/src/stack_address_returned.cpp.o
+/Repos/CWTS/src/stack_address_returned.cpp: In function ‘int* stack_address_returned()’:
+/Repos/CWTS/src/stack_address_returned.cpp:7:16: warning: address of local variable ‘array’ returned [-Wreturn-local-addr]
     7 |         return array; // ⚠️ returns stack address
       |                ^~~~~
-/Repos/CWTS/test_cases/stack_address_returned.cpp:5:13: note: declared here
+/Repos/CWTS/src/stack_address_returned.cpp:5:13: note: declared here
     5 |         int array[10] = {};
       |             ^~~~~
-[ 73%] Building CXX object CMakeFiles/CWTS.dir/test_cases/static_const_unused.cpp.o  👎
-[ 75%] Building CXX object CMakeFiles/CWTS.dir/test_cases/static_function_unused.cpp.o
-/Repos/CWTS/test_cases/static_function_unused.cpp:1:13: warning: ‘void static_function_unused()’ defined but not used [-Wunused-function]
+[ 73%] Building CXX object CMakeFiles/CWTS.dir/src/static_const_unused.cpp.o  👎
+[ 75%] Building CXX object CMakeFiles/CWTS.dir/src/static_function_unused.cpp.o
+/Repos/CWTS/src/static_function_unused.cpp:1:13: warning: ‘void static_function_unused()’ defined but not used [-Wunused-function]
     1 | static void static_function_unused(void) // ⚠️ static function is unused
       |             ^~~~~~~~~~~~~~~~~~~~~~
-[ 76%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_body_empty.cpp.o  👎
-[ 77%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_code_unreachable.cpp.o
-/Repos/CWTS/test_cases/switch_code_unreachable.cpp: In function ‘int switch_code_unreachable(int)’:
-/Repos/CWTS/test_cases/switch_code_unreachable.cpp:9:15: warning: this statement may fall through [-Wimplicit-fallthrough=]
+[ 76%] Building CXX object CMakeFiles/CWTS.dir/src/switch_body_empty.cpp.o  👎
+[ 77%] Building CXX object CMakeFiles/CWTS.dir/src/switch_code_unreachable.cpp.o
+/Repos/CWTS/src/switch_code_unreachable.cpp: In function ‘int switch_code_unreachable(int)’:
+/Repos/CWTS/src/switch_code_unreachable.cpp:9:15: warning: this statement may fall through [-Wimplicit-fallthrough=]
     9 |         value *= 2;                // ⚠️ the switch code is unreachable
       |         ~~~~~~^~~~
-/Repos/CWTS/test_cases/switch_code_unreachable.cpp:10:9: note: here
+/Repos/CWTS/src/switch_code_unreachable.cpp:10:9: note: here
    10 |         default: value /= 2; break;
       |         ^~~~~~~
-[ 79%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_default_missing.cpp.o  👎
-[ 80%] Building CXX object CMakeFiles/CWTS.dir/test_cases/value_unused_1.cpp.o
-/Repos/CWTS/test_cases/value_unused_1.cpp: In function ‘int value_unused_1(int, int)’:
-/Repos/CWTS/test_cases/value_unused_1.cpp:5:15: warning: statement has no effect [-Wunused-value]
+[ 79%] Building CXX object CMakeFiles/CWTS.dir/src/switch_default_missing.cpp.o  👎
+[ 80%] Building CXX object CMakeFiles/CWTS.dir/src/value_unused_1.cpp.o
+/Repos/CWTS/src/value_unused_1.cpp: In function ‘int value_unused_1(int, int)’:
+/Repos/CWTS/src/value_unused_1.cpp:5:15: warning: statement has no effect [-Wunused-value]
     5 |         alpha * beta; // ⚠️ the result is unused
       |         ~~~~~~^~~~~~
-[ 81%] Building CXX object CMakeFiles/CWTS.dir/test_cases/value_unused_2.cpp.o
-/Repos/CWTS/test_cases/value_unused_2.cpp: In function ‘int value_unused_2(int, int)’:
-/Repos/CWTS/test_cases/value_unused_2.cpp:5:16: warning: left operand of comma operator has no effect [-Wunused-value]
+[ 81%] Building CXX object CMakeFiles/CWTS.dir/src/value_unused_2.cpp.o
+/Repos/CWTS/src/value_unused_2.cpp: In function ‘int value_unused_2(int, int)’:
+/Repos/CWTS/src/value_unused_2.cpp:5:16: warning: left operand of comma operator has no effect [-Wunused-value]
     5 |         return alpha, beta; // ⚠️ only one is used
       |                ^~~~~
-[ 83%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_assignment.cpp.o
-/Repos/CWTS/test_cases/variable_assignment.cpp: In function ‘void variable_assignment()’:
-/Repos/CWTS/test_cases/variable_assignment.cpp:7:19: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+[ 83%] Building CXX object CMakeFiles/CWTS.dir/src/variable_assignment.cpp.o
+/Repos/CWTS/src/variable_assignment.cpp: In function ‘void variable_assignment()’:
+/Repos/CWTS/src/variable_assignment.cpp:7:19: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
     7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
       |             ~~~~~~^~~~~~
-[ 84%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_1.cpp.o  👎
-[ 86%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_2.cpp.o  👎
-[ 87%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_3.cpp.o
-/Repos/CWTS/test_cases/variable_compare_3.cpp: In function ‘bool variable_compare_3(int, unsigned int)’:
-/Repos/CWTS/test_cases/variable_compare_3.cpp:5:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+[ 84%] Building CXX object CMakeFiles/CWTS.dir/src/variable_compare_1.cpp.o  👎
+[ 86%] Building CXX object CMakeFiles/CWTS.dir/src/variable_compare_2.cpp.o  👎
+[ 87%] Building CXX object CMakeFiles/CWTS.dir/src/variable_compare_3.cpp.o
+/Repos/CWTS/src/variable_compare_3.cpp: In function ‘bool variable_compare_3(int, unsigned int)’:
+/Repos/CWTS/src/variable_compare_3.cpp:5:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
     5 |         return alpha == beta; // ⚠️ different datatypes
       |                ~~~~~~^~~~~~~
-[ 88%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_4.cpp.o
-/Repos/CWTS/test_cases/variable_compare_4.cpp: In function ‘bool variable_compare_4(long int, long unsigned int)’:
-/Repos/CWTS/test_cases/variable_compare_4.cpp:5:22: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘long unsigned int’ [-Wsign-compare]
+[ 88%] Building CXX object CMakeFiles/CWTS.dir/src/variable_compare_4.cpp.o
+/Repos/CWTS/src/variable_compare_4.cpp: In function ‘bool variable_compare_4(long int, long unsigned int)’:
+/Repos/CWTS/src/variable_compare_4.cpp:5:22: warning: comparison of integer expressions of different signedness: ‘long int’ and ‘long unsigned int’ [-Wsign-compare]
     5 |         return alpha == beta; // ⚠️ different datatypes
       |                ~~~~~~^~~~~~~
-[ 90%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_init_self.cpp.o
-/Repos/CWTS/test_cases/variable_init_self.cpp: In function ‘int variable_init_self()’:
-/Repos/CWTS/test_cases/variable_init_self.cpp:5:13: warning: ‘alpha’ is used uninitialized [-Wuninitialized]
+[ 90%] Building CXX object CMakeFiles/CWTS.dir/src/variable_init_self.cpp.o
+/Repos/CWTS/src/variable_init_self.cpp: In function ‘int variable_init_self()’:
+/Repos/CWTS/src/variable_init_self.cpp:5:13: warning: ‘alpha’ is used uninitialized [-Wuninitialized]
     5 |         int alpha = alpha; // ⚠️ variable initialized by itself
       |             ^~~~~
-/Repos/CWTS/test_cases/variable_init_self.cpp:5:13: note: ‘alpha’ was declared here
+/Repos/CWTS/src/variable_init_self.cpp:5:13: note: ‘alpha’ was declared here
     5 |         int alpha = alpha; // ⚠️ variable initialized by itself
       |             ^~~~~
-[ 91%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_shadowed_1.cpp.o  👎
-[ 93%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_shadowed_2.cpp.o  👎
-[ 94%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_size_array.cpp.o
-/Repos/CWTS/test_cases/variable_size_array.cpp: In function ‘void variable_size_array(int)’:
-/Repos/CWTS/test_cases/variable_size_array.cpp:5:15: warning: ISO C++ forbids variable length array ‘abc’ [-Wvla]
+[ 91%] Building CXX object CMakeFiles/CWTS.dir/src/variable_shadowed_1.cpp.o  👎
+[ 93%] Building CXX object CMakeFiles/CWTS.dir/src/variable_shadowed_2.cpp.o  👎
+[ 94%] Building CXX object CMakeFiles/CWTS.dir/src/variable_size_array.cpp.o
+/Repos/CWTS/src/variable_size_array.cpp: In function ‘void variable_size_array(int)’:
+/Repos/CWTS/src/variable_size_array.cpp:5:15: warning: ISO C++ forbids variable length array ‘abc’ [-Wvla]
     5 |         float abc[size]; // ⚠️ array size is not constant
       |               ^~~
-/Repos/CWTS/test_cases/variable_size_array.cpp:5:15: warning: variable ‘abc’ set but not used [-Wunused-but-set-variabl]
-[ 95%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_unsequenced.cpp.o
-/Repos/CWTS/test_cases/variable_unsequenced.cpp: In function ‘void variable_unsequenced(int)’:
-/Repos/CWTS/test_cases/variable_unsequenced.cpp:7:32: warning: operation on ‘value’ may be undefined [-Wsequence-point]
+/Repos/CWTS/src/variable_size_array.cpp:5:15: warning: variable ‘abc’ set but not used [-Wunused-but-set-variabl]
+[ 95%] Building CXX object CMakeFiles/CWTS.dir/src/variable_unsequenced.cpp.o
+/Repos/CWTS/src/variable_unsequenced.cpp: In function ‘void variable_unsequenced(int)’:
+/Repos/CWTS/src/variable_unsequenced.cpp:7:32: warning: operation on ‘value’ may be undefined [-Wsequence-point]
     7 |         printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
       |                                ^~~~~~~
-/Repos/CWTS/test_cases/variable_unsequenced.cpp:7:32: warning: operation on ‘value’ may be undefined [-Wsequence-point]
-[ 97%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_unused.cpp.o
-/Repos/CWTS/test_cases/variable_unused.cpp: In function ‘void variable_unused()’:
-/Repos/CWTS/test_cases/variable_unused.cpp:5:13: warning: unused variable ‘value’ [-Wunused-variable]
+/Repos/CWTS/src/variable_unsequenced.cpp:7:32: warning: operation on ‘value’ may be undefined [-Wsequence-point]
+[ 97%] Building CXX object CMakeFiles/CWTS.dir/src/variable_unused.cpp.o
+/Repos/CWTS/src/variable_unused.cpp: In function ‘void variable_unused()’:
+/Repos/CWTS/src/variable_unused.cpp:5:13: warning: unused variable ‘value’ [-Wunused-variable]
     5 |         int value = 0; // ⚠️ variable is unused
       |             ^~~~~
-[ 98%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_used_uninitialized.cpp.o
-/Repos/CWTS/test_cases/variable_used_uninitialized.cpp: In function ‘void variable_used_uninitialized()’:
-/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:8:21: warning: ‘beta’ is used uninitialized [-Wuninitialized]
+[ 98%] Building CXX object CMakeFiles/CWTS.dir/src/variable_used_uninitialized.cpp.o
+/Repos/CWTS/src/variable_used_uninitialized.cpp: In function ‘void variable_used_uninitialized()’:
+/Repos/CWTS/src/variable_used_uninitialized.cpp:8:21: warning: ‘beta’ is used uninitialized [-Wuninitialized]
     8 |                 beta++; // ⚠️ variable used uninitialized
       |                 ~~~~^~
-/Repos/CWTS/test_cases/variable_used_uninitialized.cpp:5:24: note: ‘beta’ was declared here
+/Repos/CWTS/src/variable_used_uninitialized.cpp:5:24: note: ‘beta’ was declared here
     5 |         int alpha = 0, beta;
       |                        ^~~~
 make[2]: Target 'CMakeFiles/CWTS.dir/build' not remade because of errors.
