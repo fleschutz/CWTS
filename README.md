@@ -10,7 +10,7 @@ Requires a **C++ compiler** and **cmake**. Edit `CMakeLists.txt` to force using 
 
 ```
 > git clone https://github.com/fleschutz/CWTS  # or download and unzip the ZIP file (click the green button)
-> cd CWTS; cmake .
+> cd CWTS/src; cmake .
 > make -k                                      # option '-k': keep going, even on errors
 ```
 
