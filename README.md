@@ -14,8 +14,8 @@ Requires a **C++ compiler** and **cmake**. Edit `CMakeLists.txt` to force using 
 > make -k                                      # option '-k': keep going, even on errors
 ```
 
-🏆 Hall of Fame
----------------
+🏆 Hall of Fame 2025
+--------------------
 Each test case compiled without a warning or error is a miss (👎). And the winners are:
 
 1. **clang-tidy 10.0** which misses 8 warnings only
@@ -23,7 +23,7 @@ Each test case compiled without a warning or error is a miss (👎). And the win
 3. **GCC 9.3.0** misses 14
 4. **Visual Studio 2019** misses 17
 5. **Visual Studio 2017** misses 19
-6. **Cppcheck 2.11** misses 23
+6. **Cppcheck 2.17.1** misses 33
 
 See the 📂[test_results](test_results/) folder for details and older versions. **Note:** all results produced with highest warning level enabled (see below). 
 
