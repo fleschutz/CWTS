@@ -16,7 +16,7 @@ Requires a **C++ compiler** and **cmake**. Edit `CMakeLists.txt` to force using 
 
 🏆 Hall of Fame 2025
 --------------------
-Each test case compiled without a warning or error is a miss (👎). And the winners are:
+Each test case compiled without a warning or error counts as a miss (👎). And the winners are:
 
 1. **clang-tidy 10.0** which misses 8 warnings only
 2. **Clang 10.0.0** misses 11
@@ -25,7 +25,7 @@ Each test case compiled without a warning or error is a miss (👎). And the win
 5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt)
 6. **Cppcheck 2.17.1** misses [32](test_results/cppcheck_2.17.1.txt)
 
-**Note:** All results produced with highest warning level enabled (see below). See 📂[test_results](test_results/) for all test results (including older versions).
+**Note:** All 📂[test_results](test_results/) produced with highest warning level enabled (see below).
 
 
 ⚠️ Highest Warning Level 
@@ -67,6 +67,7 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
 
 
