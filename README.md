@@ -21,12 +21,12 @@ Expect a lot of compiler warnings but the more warnings the better! Edit `CMakeL
 ---------------
 Each test case compiled without a warning or error is a miss. And the winners are:
 
-1. **clang-tidy 10.0** which misses 8 warnings only.
-2. **Clang 10.0.0** missing 11 warnings.
-3. **GCC 9.3.0** missing 14 warnings.
-4. **Visual Studio 2019** missing 17 warnings.
-5. **Visual Studio 2017** missing 19 warnings.
-6. **Cppcheck 2.11** missing 23 warnings.
+1. **clang-tidy 10.0** which misses 8 warnings only
+2. **Clang 10.0.0** misses 11
+3. **GCC 9.3.0** misses 14
+4. **Visual Studio 2019** misses 17
+5. **Visual Studio 2017** misses 19
+6. **Cppcheck 2.11** misses 23
 
 See the 📂[test_results](test_results/) folder for details and older versions. **Note:** all results produced with highest warning level enabled (see below). 
 
@@ -70,6 +70,7 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
 
 
