@@ -10,8 +10,7 @@ Requires a **C++ compiler** and **cmake**, then execute in a terminal window:
 
 ```
 > git clone https://github.com/fleschutz/CWTS  # or download and unzip the ZIP file (click the green button)
-> cd CWTS
-> cmake .
+> cd CWTS; cmake .
 > make -k                                      # option '-k': keep going, even on errors
 ```
 Expect a lot of compiler warnings but the more warnings the better! Edit `CMakeLists.txt` before to force using a certain C++ compiler.
@@ -19,7 +18,7 @@ Expect a lot of compiler warnings but the more warnings the better! Edit `CMakeL
 
 🏆 Hall of Fame
 ---------------
-Each test case compiled without a warning or error is a miss. And the winners are:
+Each test case compiled without a warning or error is a miss (👎). And the winners are:
 
 1. **clang-tidy 10.0** which misses 8 warnings only
 2. **Clang 10.0.0** misses 11
@@ -70,6 +69,7 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
 
 
