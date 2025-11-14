@@ -21,7 +21,7 @@ endif()
 
 project (CWTS)
 
-file (GLOB src "test_cases/*.cpp")
+file (GLOB src "src/*.cpp")
 add_executable (CWTS ${src})
 
 install (TARGETS CWTS DESTINATION . )
