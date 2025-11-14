@@ -1,13 +1,13 @@
 # Platform-independent CMakeLists.txt to build CWTS
-# -------------------------------------------------
+# =================================================
 
 cmake_minimum_required (VERSION 3.5)
 
 # Uncomment one(!) of the following lines to force using a certain C++ compiler:
-# SET (CMAKE_CXX_COMPILER "clang")
-# set (CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*,-modernize*")
-# set (CMAKE_CXX_CPPCHECK   "cppcheck")
-# set (CMAKE_CXX_COMPILER   "gcc")
+#set (CMAKE_CXX_COMPILER   "clang")
+#set (CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*,-modernize*")
+#set (CMAKE_CXX_CPPCHECK   "cppcheck")
+#set (CMAKE_CXX_COMPILER   "g++") 	# package 'g++' required
 
 if (MSVC)
 	add_compile_options (/Wall /wd4514 /wd4710)
@@ -21,7 +21,7 @@ endif()
 
 project (CWTS)
 
-file(GLOB src "test_cases/*.cpp")
+file (GLOB src "test_cases/*.cpp")
 add_executable (CWTS ${src})
 
 install (TARGETS CWTS DESTINATION . )
