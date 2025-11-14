@@ -14,82 +14,82 @@
 -- Generating done (0.0s)
 -- Build files have been written to: /home/markus/Repos/CWTS
 /home/markus/Repos/CWTS/src/array_bounds_1.cpp:7:2: warning: array index 3 is past the end of the array (that has type 'int[3]') [-Warray-bounds]
-    7 |         numbers[3] = 3; // ⚠️ array index out of bounds
+    7 |         numbers[3] = 3; // <- array index out of bounds
       |         ^       ~
 /home/markus/Repos/CWTS/src/array_bounds_1.cpp:3:1: note: array 'numbers' declared here
     3 | static int numbers[3] = { 0, 1, 2 };
       | ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/array_bounds_2.cpp:7:9: warning: array index 3 is past the end of the array (that has type 'int[3]') [-Warray-bounds]
-    7 |         return numbers[3]; // ⚠️ array index out of bounds
+    7 |         return numbers[3]; // <- array index out of bounds
       |                ^       ~
 /home/markus/Repos/CWTS/src/array_bounds_2.cpp:3:1: note: array 'numbers' declared here
     3 | static int numbers[3] = { 0, 1, 2 };
       | ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/array_bounds_3.cpp:8:9: warning: array index 3 is past the end of the array (that has type 'int[3]') [-Warray-bounds]
-    8 |         return numbers[index]; // ⚠️ array index out of bounds
+    8 |         return numbers[index]; // <- array index out of bounds
       |                ^       ~~~~~
 /home/markus/Repos/CWTS/src/array_bounds_3.cpp:3:1: note: array 'numbers' declared here
     3 | static int numbers[3] = { 0, 1, 2 };
       | ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/array_bounds_4.cpp:7:2: warning: array index -1 is before the beginning of the array [-Warray-bounds]
-    7 |         numbers[-1] = -1; // ⚠️ array index out of bounds
+    7 |         numbers[-1] = -1; // <- array index out of bounds
       |         ^       ~~
 /home/markus/Repos/CWTS/src/array_bounds_4.cpp:3:1: note: array 'numbers' declared here
     3 | static int numbers[3] = { 0, 1, 2 };
       | ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/array_bounds_5.cpp:7:9: warning: array index -1 is before the beginning of the array [-Warray-bounds]
-    7 |         return numbers[-1]; // ⚠️ array index out of bounds
+    7 |         return numbers[-1]; // <- array index out of bounds
       |                ^       ~~
 /home/markus/Repos/CWTS/src/array_bounds_5.cpp:3:1: note: array 'numbers' declared here
     3 | static int numbers[3] = { 0, 1, 2 };
       | ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/array_bounds_6.cpp:8:9: warning: array index -1 is before the beginning of the array [-Warray-bounds]
-    8 |         return numbers[index]; // ⚠️ array index out of bounds
+    8 |         return numbers[index]; // <- array index out of bounds
       |                ^       ~~~~~
 /home/markus/Repos/CWTS/src/array_bounds_6.cpp:3:1: note: array 'numbers' declared here
     3 | static int numbers[3] = { 0, 1, 2 };
       | ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/array_braces_missing.cpp:1:26: warning: suggest braces around initialization of subobject [-Wmissing-braces]
-    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // <- array braces are missing
       |                               ^~~~
       |                               {   }
 /home/markus/Repos/CWTS/src/array_braces_missing.cpp:1:32: warning: suggest braces around initialization of subobject [-Wmissing-braces]
-    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+    1 | <U+FEFF>int numbers[2][2] = { 0, 1, 2, 3 }; // <- array braces are missing
       |                                     ^~~~
       |                                     {   }
 2 warnings generated.
 /home/markus/Repos/CWTS/src/assignment_in_condition_1.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
-    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+    5 |         if (alpha = 5)   // <- 'alpha = 5' will evaluate to value 5, which is always true
       |             ~~~~~~^~~
 /home/markus/Repos/CWTS/src/assignment_in_condition_1.cpp:5:12: note: place parentheses around the assignment to silence this warning
-    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+    5 |         if (alpha = 5)   // <- 'alpha = 5' will evaluate to value 5, which is always true
       |                   ^  
       |             (        )
 /home/markus/Repos/CWTS/src/assignment_in_condition_1.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
-    5 |         if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+    5 |         if (alpha = 5)   // <- 'alpha = 5' will evaluate to value 5, which is always true
       |                   ^
       |                   ==
 1 warning generated.
 /home/markus/Repos/CWTS/src/assignment_in_condition_2.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
-    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+    5 |         if (alpha =! 5)   // <- Ups, I meant '!='
       |             ~~~~~~^~~~
 /home/markus/Repos/CWTS/src/assignment_in_condition_2.cpp:5:12: note: place parentheses around the assignment to silence this warning
-    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+    5 |         if (alpha =! 5)   // <- Ups, I meant '!='
       |                   ^   
       |             (         )
 /home/markus/Repos/CWTS/src/assignment_in_condition_2.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
-    5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+    5 |         if (alpha =! 5)   // <- Ups, I meant '!='
       |                   ^
       |                   ==
 1 warning generated.
 /home/markus/Repos/CWTS/src/bool_compare.cpp:5:21: warning: result of comparison of constant 2 with expression of type 'bool' is always false [-Wtautological-constant-out-of-range-compare]
-    5 |         return (alpha > 0) == 2; // ⚠️ condition is always false
+    5 |         return (alpha > 0) == 2; // <- condition is always false
       |                ~~~~~~~~~~~ ^  ~
 1 warning generated.
 /home/markus/Repos/CWTS/src/code_unreachable_1.cpp:3:29: warning: parameter 'alpha' set but not used [-Wunused-but-set-parameter]
@@ -101,66 +101,66 @@
       |                             ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/comment.cpp:1:7: warning: '/*' within block comment [-Wcomment]
-    1 | <U+FEFF>/* /* ⚠️ comment in comment */
+    1 | <U+FEFF>/* /* <- comment in comment */
       |            ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/constant_overflow.cpp:1:29: error: constant expression evaluates to 65535 which cannot be narrowed to type 'char' [-Wc++11-narrowing]
-    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // <- 0xffff is too big for 'char'
       |                                  ^~~~~~
 /home/markus/Repos/CWTS/src/constant_overflow.cpp:1:29: note: insert an explicit cast to silence this issue
-    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // <- 0xffff is too big for 'char'
       |                                  ^~~~~~
       |                                  static_cast<char>( )
 /home/markus/Repos/CWTS/src/constant_overflow.cpp:1:29: warning: implicit conversion from 'int' to 'char' changes value from 65535 to -1 [-Wconstant-conversion]
-    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+    1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // <- 0xffff is too big for 'char'
       |                          ~       ^~~~~~
 1 warning and 1 error generated.
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:342: CMakeFiles/CWTS.dir/src/constant_overflow.cpp.o] Error 1
 /home/markus/Repos/CWTS/src/division_by_zero_1.cpp:5:15: warning: division by zero is undefined [-Wdivision-by-zero]
-    5 |         return alpha / 0; // ⚠️ division by zero
+    5 |         return alpha / 0; // <- division by zero
       |                      ^ ~
 1 warning generated.
 /home/markus/Repos/CWTS/src/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [-Wextra-tokens]
-    2 | #endif BAD // ⚠️ #endif has no parameters
+    2 | #endif BAD // <- #endif has no parameters
       |        ^
       |        //
 1 warning generated.
 /home/markus/Repos/CWTS/src/format_string_1.cpp:7:15: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
-    7 |         printf("%s", 0); // ⚠️ zero pointer access
+    7 |         printf("%s", 0); // <- zero pointer access
       |                 ~~   ^
       |                 %d
 1 warning generated.
 /home/markus/Repos/CWTS/src/format_string_3.cpp:7:9: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
-    7 |         printf(str); // ⚠️ <str> is handled as format string
+    7 |         printf(str); // <- <str> is handled as format string
       |                ^~~
 /home/markus/Repos/CWTS/src/format_string_3.cpp:7:9: note: treat the string as an argument to avoid this
-    7 |         printf(str); // ⚠️ <str> is handled as format string
+    7 |         printf(str); // <- <str> is handled as format string
       |                ^
       |                "%s", 
 1 warning generated.
 /home/markus/Repos/CWTS/src/function_parameter_unused.cpp:3:37: warning: unused parameter 'beta' [-Wunused-parameter]
-    3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
+    3 | int parameter_unused(int alpha, int beta) // <- function parameter is unused
       |                                     ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/function_without_return_value.cpp:5:2: error: non-void function 'function_without_return_value' should return a value [-Wreturn-mismatch]
-    5 |         return; // ⚠️ return value is missing
+    5 |         return; // <- return value is missing
       |         ^
 1 error generated.
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:510: CMakeFiles/CWTS.dir/src/function_without_return_value.cpp.o] Error 1
 /home/markus/Repos/CWTS/src/identifier_undefined.cpp:1:8: warning: 'IDENTIFIER_UNDEFINED' is not defined, evaluates to 0 [-Wundef]
-    1 | <U+FEFF>#if IDENTIFIER_UNDEFINED // ⚠️ identifier is undefined
+    1 | <U+FEFF>#if IDENTIFIER_UNDEFINED // <- identifier is undefined
       |             ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/label_unused.cpp:5:1: warning: unused label 'label_is_unused' [-Wunused-label]
-    5 | label_is_unused: // ⚠️ label is unused
+    5 | label_is_unused: // <- label is unused
       | ^~~~~~~~~~~~~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/logical_not.cpp:5:15: warning: converting the result of '<<' to a boolean always evaluates to true [-Wtautological-constant-compare]
-    5 |         alpha &= !(1 << 7); // ⚠️ Ups, I meant '~' instead of '!'
+    5 |         alpha &= !(1 << 7); // <- Ups, I meant '~' instead of '!'
       |                      ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/member_init_reorder.cpp:4:11: warning: field 'gamma' will be initialized after field 'beta' [-Wreorder-ctor]
-    4 |         Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
+    4 |         Alpha(): gamma(0), beta(1) { } // <- member reordered
       |                  ^~~~~~~~  ~~~~~~~
       |                  beta(1)   gamma(0)
 1 warning generated.
@@ -169,7 +169,7 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:510: CMakeFiles/CWTS.dir/src/functi
       |         ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/pointer_compare.cpp:5:14: error: comparison between pointer and integer ('char *' and 'char')
-    5 |         return (ptr == '\0'); // ⚠️ Ups, I meant "*ptr"
+    5 |         return (ptr == '\0'); // <- Ups, I meant "*ptr"
       |                 ~~~ ^  ~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:664: CMakeFiles/CWTS.dir/src/pointer_compare.cpp.o] Error 1
@@ -373,76 +373,76 @@ In file included from /home/markus/Repos/CWTS/src/recursive_include.cpp:1:
 In file included from /home/markus/Repos/CWTS/src/recursive_include.cpp:1:
 In file included from /home/markus/Repos/CWTS/src/recursive_include.cpp:1:
 /home/markus/Repos/CWTS/src/recursive_include.cpp:1:13: error: #include nested too deeply
-    1 | <U+FEFF>#include "recursive_include.cpp" // ⚠️ recursive #include
+    1 | <U+FEFF>#include "recursive_include.cpp" // <- recursive #include
       |                  ^
 1 error generated.
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:678: CMakeFiles/CWTS.dir/src/recursive_include.cpp.o] Error 1
 /home/markus/Repos/CWTS/src/shift_count_negative.cpp:5:15: warning: shift count is negative [-Wshift-count-negative]
-    5 |         return value << -1; // ⚠️ shift count is negative
+    5 |         return value << -1; // <- shift count is negative
       |                      ^  ~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/shift_count_overflow.cpp:5:15: warning: shift count >= width of type [-Wshift-count-overflow]
-    5 |         return value << 66; // ⚠️ shift count is too high
+    5 |         return value << 66; // <- shift count is too high
       |                      ^  ~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/shift_overflow.cpp:7:17: warning: signed shift result (0x1FFFFFFFC00) requires 42 bits to represent, but 'int' only has 32 bits [-Wshift-overflow]
-    7 |         return INT_MAX << 10; // ⚠️ shift overflow
+    7 |         return INT_MAX << 10; // <- shift overflow
       |                ~~~~~~~ ^  ~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/shift_value_negative.cpp:5:12: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
-    5 |         return -1 << 2; // ⚠️ value to shift is negative
+    5 |         return -1 << 2; // <- value to shift is negative
       |                ~~ ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/stack_address_returned.cpp:7:9: warning: address of stack memory associated with local variable 'array' returned [-Wreturn-stack-address]
-    7 |         return array; // ⚠️ returns stack address
+    7 |         return array; // <- returns stack address
       |                ^~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/static_const_unused.cpp:1:21: warning: unused variable 'static_const_unused' [-Wunused-const-variable]
-    1 | <U+FEFF>static const int static_const_unused = 0; // ⚠️ static const is unused
+    1 | <U+FEFF>static const int static_const_unused = 0; // <- static const is unused
       |                          ^~~~~~~~~~~~~~~~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/static_function_unused.cpp:1:16: warning: unused function 'static_function_unused' [-Wunused-function]
-    1 | <U+FEFF>static void static_function_unused(void) // ⚠️ static function is unused
+    1 | <U+FEFF>static void static_function_unused(void) // <- static function is unused
       |                     ^~~~~~~~~~~~~~~~~~~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/value_unused_1.cpp:5:8: warning: expression result unused [-Wunused-value]
-    5 |         alpha * beta; // ⚠️ the result is unused
+    5 |         alpha * beta; // <- the result is unused
       |         ~~~~~ ^ ~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/value_unused_2.cpp:5:9: warning: left operand of comma operator has no effect [-Wunused-value]
-    5 |         return alpha, beta; // ⚠️ only one is used
+    5 |         return alpha, beta; // <- only one is used
       |                ^~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/variable_assignment.cpp:7:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
-    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+    7 |         if (alpha = beta) // <- Ups, I meant "alpha == beta"
       |             ~~~~~~^~~~~~
 /home/markus/Repos/CWTS/src/variable_assignment.cpp:7:12: note: place parentheses around the assignment to silence this warning
-    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+    7 |         if (alpha = beta) // <- Ups, I meant "alpha == beta"
       |                   ^     
       |             (           )
 /home/markus/Repos/CWTS/src/variable_assignment.cpp:7:12: note: use '==' to turn this assignment into an equality comparison
-    7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+    7 |         if (alpha = beta) // <- Ups, I meant "alpha == beta"
       |                   ^
       |                   ==
 1 warning generated.
 /home/markus/Repos/CWTS/src/variable_compare_3.cpp:5:15: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
-    5 |         return alpha == beta; // ⚠️ different datatypes
+    5 |         return alpha == beta; // <- different datatypes
       |                ~~~~~ ^  ~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/variable_compare_4.cpp:5:15: warning: comparison of integers of different signs: 'long' and 'unsigned long' [-Wsign-compare]
-    5 |         return alpha == beta; // ⚠️ different datatypes
+    5 |         return alpha == beta; // <- different datatypes
       |                ~~~~~ ^  ~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/variable_init_self.cpp:5:14: warning: variable 'alpha' is uninitialized when used within its own initialization [-Wuninitialized]
-    5 |         int alpha = alpha; // ⚠️ variable initialized by itself
+    5 |         int alpha = alpha; // <- variable initialized by itself
       |             ~~~~~   ^~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/variable_shadowed_2.cpp:6:7: warning: variable 'value' set but not used [-Wunused-but-set-variable]
-    6 |                 int value = 0; // ⚠️ variable shadowed
+    6 |                 int value = 0; // <- variable shadowed
       |                     ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/variable_size_array.cpp:5:12: warning: variable length arrays in C++ are a Clang extension [-Wvla-cxx-extension]
-    5 |         float abc[size]; // ⚠️ array size is not constant
+    5 |         float abc[size]; // <- array size is not constant
       |                   ^~~~
 /home/markus/Repos/CWTS/src/variable_size_array.cpp:5:12: note: function parameter 'size' with unknown value cannot be used in a constant expression
 /home/markus/Repos/CWTS/src/variable_size_array.cpp:3:30: note: declared here
@@ -450,18 +450,18 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:678: CMakeFiles/CWTS.dir/src/recurs
       |                              ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/variable_unsequenced.cpp:7:25: warning: unsequenced modification and access to 'value' [-Wunsequenced]
-    7 |         printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
+    7 |         printf("%d,%d", value, ++value); // <- variable unsequenced
       |                         ~~~~~  ^
 1 warning generated.
 /home/markus/Repos/CWTS/src/variable_unused.cpp:5:6: warning: unused variable 'value' [-Wunused-variable]
-    5 |         int value = 0; // ⚠️ variable is unused
+    5 |         int value = 0; // <- variable is unused
       |             ^~~~~
 1 warning generated.
 /home/markus/Repos/CWTS/src/variable_used_uninitialized.cpp:5:17: warning: variable 'beta' set but not used [-Wunused-but-set-variable]
     5 |         int alpha = 0, beta;
       |                        ^
 /home/markus/Repos/CWTS/src/variable_used_uninitialized.cpp:8:3: warning: variable 'beta' is uninitialized when used here [-Wuninitialized]
-    8 |                 beta++; // ⚠️ variable used uninitialized
+    8 |                 beta++; // <- variable used uninitialized
       |                 ^~~~
 /home/markus/Repos/CWTS/src/variable_used_uninitialized.cpp:5:21: note: initialize the variable 'beta' to silence this warning
     5 |         int alpha = 0, beta;

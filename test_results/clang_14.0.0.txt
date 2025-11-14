@@ -18,7 +18,7 @@
 ➤ make -k
 [  1%] Building CXX object CMakeFiles/CWTS.dir/tests/array_bounds_1.cpp.o
 /home/mf/Repos/CWTS/tests/array_bounds_1.cpp:7:2: warning: array index 3 is past the end of the array (which contains 3 elements) [-Warray-bounds]
-        numbers[3] = 3; // ⚠️ array index out of bounds
+        numbers[3] = 3; // <- array index out of bounds
         ^       ~
 /home/mf/Repos/CWTS/tests/array_bounds_1.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -26,7 +26,7 @@ static int numbers[3] = { 0, 1, 2 };
 1 warning generated.
 [  2%] Building CXX object CMakeFiles/CWTS.dir/tests/array_bounds_2.cpp.o
 /home/mf/Repos/CWTS/tests/array_bounds_2.cpp:7:9: warning: array index 3 is past the end of the array (which contains 3 elements) [-Warray-bounds]
-        return numbers[3]; // ⚠️ array index out of bounds
+        return numbers[3]; // <- array index out of bounds
                ^       ~
 /home/mf/Repos/CWTS/tests/array_bounds_2.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -34,7 +34,7 @@ static int numbers[3] = { 0, 1, 2 };
 1 warning generated.
 [  4%] Building CXX object CMakeFiles/CWTS.dir/tests/array_bounds_3.cpp.o
 /home/mf/Repos/CWTS/tests/array_bounds_3.cpp:8:9: warning: array index 3 is past the end of the array (which contains 3 elements) [-Warray-bounds]
-        return numbers[index]; // ⚠️ array index out of bounds
+        return numbers[index]; // <- array index out of bounds
                ^       ~~~~~
 /home/mf/Repos/CWTS/tests/array_bounds_3.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -42,7 +42,7 @@ static int numbers[3] = { 0, 1, 2 };
 1 warning generated.
 [  5%] Building CXX object CMakeFiles/CWTS.dir/tests/array_bounds_4.cpp.o
 /home/mf/Repos/CWTS/tests/array_bounds_4.cpp:7:2: warning: array index -1 is before the beginning of the array [-Warray-bounds]
-        numbers[-1] = -1; // ⚠️ array index out of bounds
+        numbers[-1] = -1; // <- array index out of bounds
         ^       ~~
 /home/mf/Repos/CWTS/tests/array_bounds_4.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -50,7 +50,7 @@ static int numbers[3] = { 0, 1, 2 };
 1 warning generated.
 [  7%] Building CXX object CMakeFiles/CWTS.dir/tests/array_bounds_5.cpp.o
 /home/mf/Repos/CWTS/tests/array_bounds_5.cpp:7:9: warning: array index -1 is before the beginning of the array [-Warray-bounds]
-        return numbers[-1]; // ⚠️ array index out of bounds
+        return numbers[-1]; // <- array index out of bounds
                ^       ~~
 /home/mf/Repos/CWTS/tests/array_bounds_5.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -58,7 +58,7 @@ static int numbers[3] = { 0, 1, 2 };
 1 warning generated.
 [  8%] Building CXX object CMakeFiles/CWTS.dir/tests/array_bounds_6.cpp.o
 /home/mf/Repos/CWTS/tests/array_bounds_6.cpp:8:9: warning: array index -1 is before the beginning of the array [-Warray-bounds]
-        return numbers[index]; // ⚠️ array index out of bounds
+        return numbers[index]; // <- array index out of bounds
                ^       ~~~~~
 /home/mf/Repos/CWTS/tests/array_bounds_6.cpp:3:1: note: array 'numbers' declared here
 static int numbers[3] = { 0, 1, 2 };
@@ -66,43 +66,43 @@ static int numbers[3] = { 0, 1, 2 };
 1 warning generated.
 [ 10%] Building CXX object CMakeFiles/CWTS.dir/tests/array_braces_missing.cpp.o
 /home/mf/Repos/CWTS/tests/array_braces_missing.cpp:1:23: warning: suggest braces around initialization of subobject [-Wmissing-braces]
-int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+int numbers[2][2] = { 0, 1, 2, 3 }; // <- array braces are missing
                       ^~~~
                       {   }
 /home/mf/Repos/CWTS/tests/array_braces_missing.cpp:1:29: warning: suggest braces around initialization of subobject [-Wmissing-braces]
-int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
+int numbers[2][2] = { 0, 1, 2, 3 }; // <- array braces are missing
                             ^~~~
                             {   }
 2 warnings generated.
 [ 11%] Building CXX object CMakeFiles/CWTS.dir/tests/assignment_in_condition_1.cpp.o
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
-        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // <- 'alpha = 5' will evaluate to value 5, which is always true
             ~~~~~~^~~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:12: note: place parentheses around the assignment to silence this warning
-        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // <- 'alpha = 5' will evaluate to value 5, which is always true
                   ^
             (        )
 /home/mf/Repos/CWTS/tests/assignment_in_condition_1.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
-        if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+        if (alpha = 5)   // <- 'alpha = 5' will evaluate to value 5, which is always true
                   ^
                   ==
 1 warning generated.
 [ 13%] Building CXX object CMakeFiles/CWTS.dir/tests/assignment_in_condition_2.cpp.o
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
-        if (alpha =! 5)   // ⚠️ I meant '!='
+        if (alpha =! 5)   // <- I meant '!='
             ~~~~~~^~~~
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:12: note: place parentheses around the assignment to silence this warning
-        if (alpha =! 5)   // ⚠️ I meant '!='
+        if (alpha =! 5)   // <- I meant '!='
                   ^
             (         )
 /home/mf/Repos/CWTS/tests/assignment_in_condition_2.cpp:5:12: note: use '==' to turn this assignment into an equality comparison
-        if (alpha =! 5)   // ⚠️ I meant '!='
+        if (alpha =! 5)   // <- I meant '!='
                   ^
                   ==
 1 warning generated.
 [ 14%] Building CXX object CMakeFiles/CWTS.dir/tests/bool_compare.cpp.o
 /home/mf/Repos/CWTS/tests/bool_compare.cpp:5:21: warning: result of comparison of constant 2 with expression of type 'bool' is always false [-Wtautological-constant-out-of-range-compare]
-        return (alpha > 0) == 2; // ⚠️ condition is always false
+        return (alpha > 0) == 2; // <- condition is always false
                ~~~~~~~~~~~ ^  ~
 1 warning generated.
 [ 15%] Building CXX object CMakeFiles/CWTS.dir/tests/branches_identical_1.cpp.o
@@ -114,26 +114,26 @@ int numbers[2][2] = { 0, 1, 2, 3 }; // ⚠️ array braces are missing
 [ 24%] Building CXX object CMakeFiles/CWTS.dir/tests/code_unreachable_3.cpp.o
 [ 26%] Building CXX object CMakeFiles/CWTS.dir/tests/comment.cpp.o
 /home/mf/Repos/CWTS/tests/comment.cpp:1:4: warning: '/*' within block comment [-Wcomment]
-/* /* ⚠️ comment in comment */
+/* /* <- comment in comment */
    ^
 1 warning generated.
 [ 27%] Building CXX object CMakeFiles/CWTS.dir/tests/constant_expression.cpp.o
 [ 28%] Building CXX object CMakeFiles/CWTS.dir/tests/constant_overflow.cpp.o
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:26: error: constant expression evaluates to 65535 which cannot be narrowed to type 'char' [-Wc++11-narrowing]
-char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+char letters[] = { 1, 2, 0xFFFF }; // <- 0xffff is too big for 'char'
                          ^~~~~~
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:26: note: insert an explicit cast to silence this issue
-char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+char letters[] = { 1, 2, 0xFFFF }; // <- 0xffff is too big for 'char'
                          ^~~~~~
                          static_cast<char>( )
 /home/mf/Repos/CWTS/tests/constant_overflow.cpp:1:26: warning: implicit conversion from 'int' to 'char' changes value from 65535 to -1 [-Wconstant-conversion]
-char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
+char letters[] = { 1, 2, 0xFFFF }; // <- 0xffff is too big for 'char'
                  ~       ^~~~~~
 1 warning and 1 error generated.
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:342: CMakeFiles/CWTS.dir/tests/constant_overflow.cpp.o] Error 1
 [ 30%] Building CXX object CMakeFiles/CWTS.dir/tests/division_by_zero_1.cpp.o
 /home/mf/Repos/CWTS/tests/division_by_zero_1.cpp:5:15: warning: division by zero is undefined [-Wdivision-by-zero]
-        return alpha / 0; // ⚠️ division by zero
+        return alpha / 0; // <- division by zero
                      ^ ~
 1 warning generated.
 [ 31%] Building CXX object CMakeFiles/CWTS.dir/tests/division_by_zero_2.cpp.o
@@ -141,42 +141,42 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:342: CMakeFiles/CWTS.dir/tests/cons
 [ 34%] Building CXX object CMakeFiles/CWTS.dir/tests/enum_value.cpp.o
 [ 36%] Building CXX object CMakeFiles/CWTS.dir/tests/extra_tokens.cpp.o
 /home/mf/Repos/CWTS/tests/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [-Wextra-tokens]
-#endif BAD // ⚠️ #endif has no parameters
+#endif BAD // <- #endif has no parameters
        ^
        //
 1 warning generated.
 [ 37%] Building CXX object CMakeFiles/CWTS.dir/tests/file_empty.cpp.o
 [ 39%] Building CXX object CMakeFiles/CWTS.dir/tests/format_string_1.cpp.o
 /home/mf/Repos/CWTS/tests/format_string_1.cpp:7:15: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
-        printf("%s", 0); // ⚠️ zero pointer access
+        printf("%s", 0); // <- zero pointer access
                 ~~   ^
                 %d
 1 warning generated.
 [ 40%] Building CXX object CMakeFiles/CWTS.dir/tests/format_string_2.cpp.o
 [ 42%] Building CXX object CMakeFiles/CWTS.dir/tests/format_string_3.cpp.o
 /home/mf/Repos/CWTS/tests/format_string_3.cpp:7:9: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
-        printf(str); // ⚠️ <str> is handled as format string
+        printf(str); // <- <str> is handled as format string
                ^~~
 /home/mf/Repos/CWTS/tests/format_string_3.cpp:7:9: note: treat the string as an argument to avoid this
-        printf(str); // ⚠️ <str> is handled as format string
+        printf(str); // <- <str> is handled as format string
                ^
                "%s",
 1 warning generated.
 [ 43%] Building CXX object CMakeFiles/CWTS.dir/tests/function_parameter_unused.cpp.o
 /home/mf/Repos/CWTS/tests/function_parameter_unused.cpp:5:27: warning: unused parameter 'alpha' [-Wunused-parameter]
-void parameter_unused(int alpha) // ⚠️ function parameter is unused
+void parameter_unused(int alpha) // <- function parameter is unused
                           ^
 1 warning generated.
 [ 44%] Building CXX object CMakeFiles/CWTS.dir/tests/function_without_prototype.cpp.o
 [ 46%] Building CXX object CMakeFiles/CWTS.dir/tests/function_without_return_value.cpp.o
 /home/mf/Repos/CWTS/tests/function_without_return_value.cpp:5:2: error: non-void function 'function_without_return_value' should return a value [-Wreturn-type]
-        return; // ⚠️ return value is missing
+        return; // <- return value is missing
         ^
 1 error generated.
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:510: CMakeFiles/CWTS.dir/tests/function_without_return_value.cpp.o] Error 1
 [ 47%] Building CXX object CMakeFiles/CWTS.dir/tests/identifier_undefined.cpp.o
 /home/mf/Repos/CWTS/tests/identifier_undefined.cpp:1:5: warning: 'IDENTIFIER_UNDEFINED' is not defined, evaluates to 0 [-Wundef]
-#if IDENTIFIER_UNDEFINED // ⚠️ identifier is undefined
+#if IDENTIFIER_UNDEFINED // <- identifier is undefined
     ^
 1 warning generated.
 [ 49%] Building CXX object CMakeFiles/CWTS.dir/tests/implicit_conversion_1.cpp.o
@@ -184,17 +184,17 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:510: CMakeFiles/CWTS.dir/tests/func
 [ 52%] Building CXX object CMakeFiles/CWTS.dir/tests/implicit_conversion_3.cpp.o
 [ 53%] Building CXX object CMakeFiles/CWTS.dir/tests/label_unused.cpp.o
 /home/mf/Repos/CWTS/tests/label_unused.cpp:5:1: warning: unused label 'label_is_unused' [-Wunused-label]
-label_is_unused: // ⚠️ label is unused
+label_is_unused: // <- label is unused
 ^~~~~~~~~~~~~~~~~
 1 warning generated.
 [ 55%] Building CXX object CMakeFiles/CWTS.dir/tests/logical_not.cpp.o
 /home/mf/Repos/CWTS/tests/logical_not.cpp:5:15: warning: converting the result of '<<' to a boolean always evaluates to true [-Wtautological-constant-compare]
-        alpha &= !(1 << 7); // ⚠️ I meant '~' instead of '!'
+        alpha &= !(1 << 7); // <- I meant '~' instead of '!'
                      ^
 1 warning generated.
 [ 56%] Building CXX object CMakeFiles/CWTS.dir/tests/member_init_reorder.cpp.o
 /home/mf/Repos/CWTS/tests/member_init_reorder.cpp:4:11: warning: field 'gamma' will be initialized after field 'beta' [-Wreorder-ctor]
-        Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
+        Alpha(): gamma(0), beta(1) { } // <- member reordered
                  ^~~~~~~~  ~~~~~~~
                  beta(1)   gamma(0)
 1 warning generated.
@@ -207,7 +207,7 @@ label_is_unused: // ⚠️ label is unused
 1 warning generated.
 [ 62%] Building CXX object CMakeFiles/CWTS.dir/tests/pointer_compare.cpp.o
 /home/mf/Repos/CWTS/tests/pointer_compare.cpp:5:14: error: comparison between pointer and integer ('char *' and 'char')
-        return (ptr == '\0'); // ⚠️ I meant "*ptr"
+        return (ptr == '\0'); // <- I meant "*ptr"
                 ~~~ ^  ~~~~
 1 error generated.
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:664: CMakeFiles/CWTS.dir/tests/pointer_compare.cpp.o] Error 1
@@ -412,43 +412,43 @@ In file included from /home/mf/Repos/CWTS/tests/recursive_include.cpp:1:
 In file included from /home/mf/Repos/CWTS/tests/recursive_include.cpp:1:
 In file included from /home/mf/Repos/CWTS/tests/recursive_include.cpp:1:
 /home/mf/Repos/CWTS/tests/recursive_include.cpp:1:10: error: #include nested too deeply
-#include "recursive_include.cpp" // ⚠️ recursive #include
+#include "recursive_include.cpp" // <- recursive #include
          ^
 1 error generated.
 make[2]: *** [CMakeFiles/CWTS.dir/build.make:678: CMakeFiles/CWTS.dir/tests/recursive_include.cpp.o] Error 1
 [ 65%] Building CXX object CMakeFiles/CWTS.dir/tests/shift_count_negative.cpp.o
 /home/mf/Repos/CWTS/tests/shift_count_negative.cpp:5:15: warning: shift count is negative [-Wshift-count-negative]
-        return value << -1; // ⚠️ shift count is negative
+        return value << -1; // <- shift count is negative
                      ^  ~~
 1 warning generated.
 [ 66%] Building CXX object CMakeFiles/CWTS.dir/tests/shift_count_overflow.cpp.o
 /home/mf/Repos/CWTS/tests/shift_count_overflow.cpp:5:15: warning: shift count >= width of type [-Wshift-count-overflow]
-        return value << 66; // ⚠️ shift count is too high
+        return value << 66; // <- shift count is too high
                      ^  ~~
 1 warning generated.
 [ 68%] Building CXX object CMakeFiles/CWTS.dir/tests/shift_overflow.cpp.o
 /home/mf/Repos/CWTS/tests/shift_overflow.cpp:7:17: warning: signed shift result (0x1FFFFFFFC00) requires 42 bits to represent, but 'int' only has 32 bits [-Wshift-overflow]
-        return INT_MAX << 10; // ⚠️ shift overflow
+        return INT_MAX << 10; // <- shift overflow
                ~~~~~~~ ^  ~~
 1 warning generated.
 [ 69%] Building CXX object CMakeFiles/CWTS.dir/tests/shift_value_negative.cpp.o
 /home/mf/Repos/CWTS/tests/shift_value_negative.cpp:5:12: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
-        return -1 << 2; // ⚠️ value to shift is negative
+        return -1 << 2; // <- value to shift is negative
                ~~ ^
 1 warning generated.
 [ 71%] Building CXX object CMakeFiles/CWTS.dir/tests/stack_address_returned.cpp.o
 /home/mf/Repos/CWTS/tests/stack_address_returned.cpp:7:9: warning: address of stack memory associated with local variable 'array' returned [-Wreturn-stack-address]
-        return array; // ⚠️ returns stack address
+        return array; // <- returns stack address
                ^~~~~
 1 warning generated.
 [ 72%] Building CXX object CMakeFiles/CWTS.dir/tests/static_const_unused.cpp.o
 /home/mf/Repos/CWTS/tests/static_const_unused.cpp:1:18: warning: unused variable 'static_const_unused' [-Wunused-const-variable]
-static const int static_const_unused = 0; // ⚠️ static const is unused
+static const int static_const_unused = 0; // <- static const is unused
                  ^
 1 warning generated.
 [ 73%] Building CXX object CMakeFiles/CWTS.dir/tests/static_function_unused.cpp.o
 /home/mf/Repos/CWTS/tests/static_function_unused.cpp:1:13: warning: unused function 'static_function_unused' [-Wunused-function]
-static void static_function_unused(void) // ⚠️ static function is unused
+static void static_function_unused(void) // <- static function is unused
             ^
 1 warning generated.
 [ 75%] Building CXX object CMakeFiles/CWTS.dir/tests/switch_body_empty.cpp.o
@@ -456,24 +456,24 @@ static void static_function_unused(void) // ⚠️ static function is unused
 [ 78%] Building CXX object CMakeFiles/CWTS.dir/tests/switch_default_missing.cpp.o
 [ 79%] Building CXX object CMakeFiles/CWTS.dir/tests/value_unused_1.cpp.o
 /home/mf/Repos/CWTS/tests/value_unused_1.cpp:5:8: warning: expression result unused [-Wunused-value]
-        alpha * beta; // ⚠️ the result is unused
+        alpha * beta; // <- the result is unused
         ~~~~~ ^ ~~~~
 1 warning generated.
 [ 81%] Building CXX object CMakeFiles/CWTS.dir/tests/value_unused_2.cpp.o
 /home/mf/Repos/CWTS/tests/value_unused_2.cpp:5:9: warning: left operand of comma operator has no effect [-Wunused-value]
-        return alpha, beta; // ⚠️ only one is used
+        return alpha, beta; // <- only one is used
                ^~~~~
 1 warning generated.
 [ 82%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_assignment.cpp.o
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
-        if (alpha = beta) // ⚠️ I meant "alpha == beta"
+        if (alpha = beta) // <- I meant "alpha == beta"
             ~~~~~~^~~~~~
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:12: note: place parentheses around the assignment to silence this warning
-        if (alpha = beta) // ⚠️ I meant "alpha == beta"
+        if (alpha = beta) // <- I meant "alpha == beta"
                   ^
             (           )
 /home/mf/Repos/CWTS/tests/variable_assignment.cpp:7:12: note: use '==' to turn this assignment into an equality comparison
-        if (alpha = beta) // ⚠️ I meant "alpha == beta"
+        if (alpha = beta) // <- I meant "alpha == beta"
                   ^
                   ==
 1 warning generated.
@@ -481,24 +481,24 @@ static void static_function_unused(void) // ⚠️ static function is unused
 [ 85%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_compare_2.cpp.o
 [ 86%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_compare_3.cpp.o
 /home/mf/Repos/CWTS/tests/variable_compare_3.cpp:5:15: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
-        return alpha == beta; // ⚠️ different datatypes
+        return alpha == beta; // <- different datatypes
                ~~~~~ ^  ~~~~
 1 warning generated.
 [ 88%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_compare_4.cpp.o
 /home/mf/Repos/CWTS/tests/variable_compare_4.cpp:5:15: warning: comparison of integers of different signs: 'long' and 'unsigned long' [-Wsign-compare]
-        return alpha == beta; // ⚠️ different datatypes
+        return alpha == beta; // <- different datatypes
                ~~~~~ ^  ~~~~
 1 warning generated.
 [ 89%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_init_self.cpp.o
 /home/mf/Repos/CWTS/tests/variable_init_self.cpp:5:14: warning: variable 'alpha' is uninitialized when used within its own initialization [-Wuninitialized]
-        int alpha = alpha; // ⚠️ variable initialized by itself
+        int alpha = alpha; // <- variable initialized by itself
             ~~~~~   ^~~~~
 1 warning generated.
 [ 91%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_shadowed_1.cpp.o
 [ 92%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_shadowed_2.cpp.o
 [ 94%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_size_array.cpp.o
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:5:12: warning: variable length arrays are a C99 feature [-Wvla-extension]
-        float abc[size]; // ⚠️ array size is not constant
+        float abc[size]; // <- array size is not constant
                   ^~~~
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:5:12: note: function parameter 'size' with unknown value cannot be used in a constant expression
 /home/mf/Repos/CWTS/tests/variable_size_array.cpp:3:30: note: declared here
@@ -507,17 +507,17 @@ void variable_size_array(int size)
 1 warning generated.
 [ 95%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_unsequenced.cpp.o
 /home/mf/Repos/CWTS/tests/variable_unsequenced.cpp:7:25: warning: unsequenced modification and access to 'value' [-Wunsequenced]
-        printf("%d,%d", value, ++value); // ⚠️ variable unsequenced
+        printf("%d,%d", value, ++value); // <- variable unsequenced
                         ~~~~~  ^
 1 warning generated.
 [ 97%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_unused.cpp.o
 /home/mf/Repos/CWTS/tests/variable_unused.cpp:5:6: warning: unused variable 'value' [-Wunused-variable]
-        int value = 0; // ⚠️ variable is unused
+        int value = 0; // <- variable is unused
             ^
 1 warning generated.
 [ 98%] Building CXX object CMakeFiles/CWTS.dir/tests/variable_used_uninitialized.cpp.o
 /home/mf/Repos/CWTS/tests/variable_used_uninitialized.cpp:8:3: warning: variable 'beta' is uninitialized when used here [-Wuninitialized]
-                beta++; // ⚠️ variable used uninitialized
+                beta++; // <- variable used uninitialized
                 ^~~~
 /home/mf/Repos/CWTS/tests/variable_used_uninitialized.cpp:5:21: note: initialize the variable 'beta' to silence this warning
         int alpha = 0, beta;

@@ -7,127 +7,127 @@ Cppcheck 2.17.1
 ➤  cppcheck --enable=all src/*.cpp
 Checking src/array_bounds_1.cpp ...
 src/array_bounds_1.cpp:7:9: error: Array 'numbers[3]' accessed at index 3, which is out of bounds. [arrayIndexOutOfBounds]
- numbers[3] = 3; // ⚠️ array index out of bounds
+ numbers[3] = 3; // <- array index out of bounds
         ^
 1/71 files checked 1% done
 Checking src/array_bounds_2.cpp ...
 src/array_bounds_2.cpp:7:16: error: Array 'numbers[3]' accessed at index 3, which is out of bounds. [arrayIndexOutOfBounds]
- return numbers[3]; // ⚠️ array index out of bounds
+ return numbers[3]; // <- array index out of bounds
                ^
 2/71 files checked 3% done
 Checking src/array_bounds_3.cpp ...
 src/array_bounds_3.cpp:8:16: error: Array 'numbers[3]' accessed at index 3, which is out of bounds. [arrayIndexOutOfBounds]
- return numbers[index]; // ⚠️ array index out of bounds
+ return numbers[index]; // <- array index out of bounds
                ^
 3/71 files checked 4% done
 Checking src/array_bounds_4.cpp ...
 src/array_bounds_4.cpp:7:9: error: Array 'numbers[3]' accessed at index -1, which is out of bounds. [negativeIndex]
- numbers[-1] = -1; // ⚠️ array index out of bounds
+ numbers[-1] = -1; // <- array index out of bounds
         ^
 4/71 files checked 6% done
 Checking src/array_bounds_5.cpp ...
 src/array_bounds_5.cpp:7:16: error: Array 'numbers[3]' accessed at index -1, which is out of bounds. [negativeIndex]
- return numbers[-1]; // ⚠️ array index out of bounds
+ return numbers[-1]; // <- array index out of bounds
                ^
 5/71 files checked 7% done
 Checking src/array_bounds_6.cpp ...
 src/array_bounds_6.cpp:8:16: error: Array 'numbers[3]' accessed at index -1, which is out of bounds. [negativeIndex]
- return numbers[index]; // ⚠️ array index out of bounds
+ return numbers[index]; // <- array index out of bounds
                ^
 6/71 files checked 9% done
 Checking src/array_braces_missing.cpp ...
 7/71 files checked 10% done  👎
 Checking src/assignment_in_condition_1.cpp ...
 src/assignment_in_condition_1.cpp:5:12: style: Condition 'alpha=5' is always true [knownConditionTrueFalse]
- if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+ if (alpha = 5)   // <- 'alpha = 5' will evaluate to value 5, which is always true
            ^
 src/assignment_in_condition_1.cpp:5:12: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
- if (alpha = 5)   // ⚠️ 'alpha = 5' will evaluate to value 5, which is always true
+ if (alpha = 5)   // <- 'alpha = 5' will evaluate to value 5, which is always true
            ^
 8/71 files checked 12% done
 Checking src/assignment_in_condition_2.cpp ...
 src/assignment_in_condition_2.cpp:5:12: style: Condition 'alpha=!5' is always false [knownConditionTrueFalse]
- if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+ if (alpha =! 5)   // <- Ups, I meant '!='
            ^
 src/assignment_in_condition_2.cpp:5:12: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
- if (alpha =! 5)   // ⚠️ Ups, I meant '!='
+ if (alpha =! 5)   // <- Ups, I meant '!='
            ^
 9/71 files checked 14% done
 Checking src/bool_cast.cpp ...
 10/71 files checked 15% done  👎
 Checking src/bool_compare.cpp ...
 src/bool_compare.cpp:5:21: warning: Comparison of a boolean expression with an integer other than 0 or 1. [compareBoolExpressionWithInt]
- return (alpha > 0) == 2; // ⚠️ condition is always false
+ return (alpha > 0) == 2; // <- condition is always false
                     ^
 src/bool_compare.cpp:5:21: style: Return value '(alpha>0)==2' is always false [knownConditionTrueFalse]
- return (alpha > 0) == 2; // ⚠️ condition is always false
+ return (alpha > 0) == 2; // <- condition is always false
                     ^
 11/71 files checked 16% done
 Checking src/branches_identical_1.cpp ...
 12/71 files checked 18% done  👎
 Checking src/branches_identical_2.cpp ...
 src/branches_identical_2.cpp:5:26: style: Same value in both branches of ternary operator. [duplicateValueTernary]
- return (alpha == 0) ? 0 : 0; // ⚠️ both branches are identical
+ return (alpha == 0) ? 0 : 0; // <- both branches are identical
                          ^
 13/71 files checked 20% done
 Checking src/branches_identical_3.cpp ...
 src/branches_identical_3.cpp:9:17: style: Expression is always false because 'else if' condition matches previous condition at line 5. [multiCondition]
- else if (alpha == true) // ⚠️ this condition is obsolete
+ else if (alpha == true) // <- this condition is obsolete
                 ^
 src/branches_identical_3.cpp:9:17: warning: Identical condition 'alpha==true', second condition is always false [identicalConditionAfterEarlyExit]
- else if (alpha == true) // ⚠️ this condition is obsolete
+ else if (alpha == true) // <- this condition is obsolete
                 ^
 src/branches_identical_3.cpp:5:12: note: If condition 'alpha==true' is true, the function will return/exit
  if (alpha == true)
            ^
 src/branches_identical_3.cpp:9:17: note: Testing identical condition 'alpha==true'
- else if (alpha == true) // ⚠️ this condition is obsolete
+ else if (alpha == true) // <- this condition is obsolete
                 ^
 14/71 files checked 22% done
 Checking src/cast_unnecessary.cpp ...  
 15/71 files checked 23% done  👎
 Checking src/code_unreachable_1.cpp ...
 src/code_unreachable_1.cpp:6:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
- alpha++; // ⚠️ code is unreachable
+ alpha++; // <- code is unreachable
  ^
 src/code_unreachable_1.cpp:6:2: style: Statements following 'return' will never be executed. [unreachableCode]
- alpha++; // ⚠️ code is unreachable
+ alpha++; // <- code is unreachable
  ^
 src/code_unreachable_1.cpp:6:7: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
- alpha++; // ⚠️ code is unreachable
+ alpha++; // <- code is unreachable
       ^
 16/71 files checked 24% done
 Checking src/code_unreachable_2.cpp ...
 src/code_unreachable_2.cpp:6:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
- alpha++; // ⚠️ code is unreachable
+ alpha++; // <- code is unreachable
  ^
 src/code_unreachable_2.cpp:6:2: style: Statements following 'throw' will never be executed. [unreachableCode]
- alpha++; // ⚠️ code is unreachable
+ alpha++; // <- code is unreachable
  ^
 src/code_unreachable_2.cpp:6:7: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
- alpha++; // ⚠️ code is unreachable
+ alpha++; // <- code is unreachable
       ^
 17/71 files checked 26% done
 Checking src/code_unreachable_3.cpp ...
 src/code_unreachable_3.cpp:13:2: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
- alpha++; // ⚠️ code is unreachable
+ alpha++; // <- code is unreachable
  ^
 src/code_unreachable_3.cpp:13:7: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
- alpha++; // ⚠️ code is unreachable
+ alpha++; // <- code is unreachable
       ^
 18/71 files checked 28% done
 Checking src/comment.cpp ...
 19/71 files checked 28% done  👎
 Checking src/constant_expression.cpp ...
 src/constant_expression.cpp:5:30: style: Unsigned expression 'i' can't be negative so it is unnecessary to test it. [unsignedPositive]
- for (unsigned int i = 10; i >= 0; i++) // ⚠️ condition is always true
+ for (unsigned int i = 10; i >= 0; i++) // <- condition is always true
                              ^
 20/71 files checked 30% done
 Checking src/constant_overflow.cpp ...
 21/71 files checked 30% done  👎
 Checking src/division_by_zero_1.cpp ...
 src/division_by_zero_1.cpp:5:15: error: Division by zero. [zerodiv]
- return alpha / 0; // ⚠️ division by zero
+ return alpha / 0; // <- division by zero
               ^
 22/71 files checked 32% done
 Checking src/division_by_zero_2.cpp ...
@@ -145,10 +145,10 @@ src/format_string_1.cpp:1:0: information: Include file: <stdio.h> not found. Ple
 ﻿#include <stdio.h>
 ^
 src/format_string_1.cpp:7:2: warning: %s in format string (no. 1) requires 'char *' but the argument type is 'signed int'. [invalidPrintfArgType_s]
- printf("%s", 0); // ⚠️ zero pointer access
+ printf("%s", 0); // <- zero pointer access
  ^
 src/format_string_1.cpp:7:15: error: Null pointer dereference [nullPointer]
- printf("%s", 0); // ⚠️ zero pointer access
+ printf("%s", 0); // <- zero pointer access
               ^
 28/71 files checked 38% done
 Checking src/format_string_2.cpp ...
@@ -180,7 +180,7 @@ Checking src/implicit_conversion_4.cpp ...
 38/71 files checked 51% done  👎
 Checking src/label_unused.cpp ...
 src/label_unused.cpp:5:1: style: Label 'label_is_unused' is not used. [unusedLabel]
-label_is_unused: // ⚠️ label is unused
+label_is_unused: // <- label is unused
 ^
 39/71 files checked 52% done
 Checking src/logical_not.cpp ...
@@ -196,7 +196,7 @@ src/null_pointer_access_1.cpp:5:14: style: Variable 'ptr' is not assigned a valu
 43/71 files checked 57% done
 Checking src/null_pointer_access_2.cpp ...
 src/null_pointer_access_2.cpp:8:3: warning: Possible null pointer dereference: tmp [nullPointer]
- *tmp = 1;  // ⚠️ tmp may be NULL
+ *tmp = 1;  // <- tmp may be NULL
   ^
 src/null_pointer_access_2.cpp:5:13: note: Assignment 'tmp=0', assigned value is 0
  int *tmp = 0;
@@ -205,7 +205,7 @@ src/null_pointer_access_2.cpp:6:17: note: Assuming condition is false
  if (0 <= value && value < 10)
                 ^
 src/null_pointer_access_2.cpp:8:3: note: Null pointer dereference
- *tmp = 1;  // ⚠️ tmp may be NULL
+ *tmp = 1;  // <- tmp may be NULL
   ^
 44/71 files checked 59% done
 Checking src/parentheses.cpp ...
@@ -215,22 +215,22 @@ src/pointer_compare.cpp:3:27: style: Parameter 'ptr' can be declared as pointer 
 int pointer_compare(char *ptr)
                           ^
 src/pointer_compare.cpp:5:14: warning: Char literal compared with pointer 'ptr'. Did you intend to dereference it? [charLiteralWithCharPtrCompare]
- return (ptr == '\0'); // ⚠️ Ups, I meant "*ptr"
+ return (ptr == '\0'); // <- Ups, I meant "*ptr"
              ^
 46/71 files checked 62% done
 Checking src/recursive_include.cpp ...
 src/recursive_include.cpp:1:0: error: #include nested too deeply [preprocessorErrorDirective]
-﻿#include "recursive_include.cpp" // ⚠️ recursive #include
+﻿#include "recursive_include.cpp" // <- recursive #include
 ^
 47/71 files checked 63% done
 Checking src/shift_count_negative.cpp ...
 src/shift_count_negative.cpp:5:15: error: Shifting by a negative value is undefined behaviour [shiftNegative]
- return value << -1; // ⚠️ shift count is negative
+ return value << -1; // <- shift count is negative
               ^
 48/71 files checked 64% done
 Checking src/shift_count_overflow.cpp ...
 src/shift_count_overflow.cpp:5:15: error: Shifting 32-bit value by 66 bits is undefined behaviour [shiftTooManyBits]
- return value << 66; // ⚠️ shift count is too high
+ return value << 66; // <- shift count is too high
               ^
 49/71 files checked 66% done
 Checking src/shift_overflow.cpp ...
@@ -238,26 +238,26 @@ src/shift_overflow.cpp:1:0: information: Include file: <limits.h> not found. Ple
 ﻿#include <limits.h>
 ^
 src/shift_overflow.cpp:7:17: error: Signed integer overflow for expression '2147483647<<10'. [integerOverflow]
- return INT_MAX << 10; // ⚠️ shift overflow
+ return INT_MAX << 10; // <- shift overflow
                 ^
 50/71 files checked 67% done
 Checking src/shift_value_negative.cpp ...
 src/shift_value_negative.cpp:5:12: portability: Shifting a negative value is technically undefined behaviour [shiftNegativeLHS]
- return -1 << 2; // ⚠️ value to shift is negative
+ return -1 << 2; // <- value to shift is negative
            ^
 51/71 files checked 68% done
 Checking src/stack_address_returned.cpp ...
 src/stack_address_returned.cpp:7:9: error: Returning pointer to local variable 'array' that will be invalid when returning. [returnDanglingLifetime]
- return array; // ⚠️ returns stack address
+ return array; // <- returns stack address
         ^
 src/stack_address_returned.cpp:7:9: note: Array decayed to pointer here.
- return array; // ⚠️ returns stack address
+ return array; // <- returns stack address
         ^
 src/stack_address_returned.cpp:5:6: note: Variable created here.
  int array[10] = {};
      ^
 src/stack_address_returned.cpp:7:9: note: Returning pointer to local variable 'array' that will be invalid when returning.
- return array; // ⚠️ returns stack address
+ return array; // <- returns stack address
         ^
 52/71 files checked 70% done
 Checking src/static_const_unused.cpp ...
@@ -268,7 +268,7 @@ Checking src/switch_body_empty.cpp ...
 55/71 files checked 73% done
 Checking src/switch_code_unreachable.cpp ...
 src/switch_code_unreachable.cpp:9:2: style: Statements following 'break' will never be executed. [unreachableCode]
- value *= 2;                // ⚠️ the switch code is unreachable
+ value *= 2;                // <- the switch code is unreachable
  ^
 56/71 files checked 75% done
 Checking src/switch_default_missing.cpp ...
@@ -279,16 +279,16 @@ Checking src/value_unused_2.cpp ...
 59/71 files checked 80% done  👎
 Checking src/variable_assignment.cpp ...
 src/variable_assignment.cpp:7:12: style: Condition 'alpha=beta' is always true [knownConditionTrueFalse]
- if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+ if (alpha = beta) // <- Ups, I meant "alpha == beta"
            ^
 src/variable_assignment.cpp:5:24: note: Assignment 'beta=2', assigned value is 2
  int alpha = 1, beta = 2;
                        ^
 src/variable_assignment.cpp:7:12: note: Condition 'alpha=beta' is always true
- if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+ if (alpha = beta) // <- Ups, I meant "alpha == beta"
            ^
 src/variable_assignment.cpp:7:12: style: Variable 'alpha' is assigned a value that is never used. [unreadVariable]
- if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
+ if (alpha = beta) // <- Ups, I meant "alpha == beta"
            ^
 60/71 files checked 82% done
 Checking src/variable_compare_1.cpp ...
@@ -301,23 +301,23 @@ Checking src/variable_compare_4.cpp ...
 64/71 files checked 89% done  👎
 Checking src/variable_init_self.cpp ...
 src/variable_init_self.cpp:5:12: style: Redundant assignment of 'alpha' to itself. [selfAssignment]
- int alpha = alpha; // ⚠️ variable initialized by itself
+ int alpha = alpha; // <- variable initialized by itself
            ^
 src/variable_init_self.cpp:5:14: error: Uninitialized variable: alpha [legacyUninitvar]
- int alpha = alpha; // ⚠️ variable initialized by itself
+ int alpha = alpha; // <- variable initialized by itself
              ^
 65/71 files checked 90% done
 Checking src/variable_shadowed_1.cpp ...
 66/71 files checked 92% done  👎
 Checking src/variable_shadowed_2.cpp ...
 src/variable_shadowed_2.cpp:6:7: style: Local variable 'value' shadows outer argument [shadowArgument]
-  int value = 0; // ⚠️ variable shadowed
+  int value = 0; // <- variable shadowed
       ^
 src/variable_shadowed_2.cpp:3:29: note: Shadowed declaration
 int variable_shadowed_2(int value)
                             ^
 src/variable_shadowed_2.cpp:6:7: note: Shadow variable
-  int value = 0; // ⚠️ variable shadowed
+  int value = 0; // <- variable shadowed
       ^
 src/variable_shadowed_2.cpp:7:8: style: Variable 'value' is assigned a value that is never used. [unreadVariable]
   value++;
@@ -335,7 +335,7 @@ src/variable_unsequenced.cpp:1:0: information: Include file: <stdio.h> not found
 69/71 files checked 97% done
 Checking src/variable_unused.cpp ...
 src/variable_unused.cpp:5:12: style: Variable 'value' is assigned a value that is never used. [unreadVariable]
- int value = 0; // ⚠️ variable is unused
+ int value = 0; // <- variable is unused
            ^
 70/71 files checked 98% done
 Checking src/variable_used_uninitialized.cpp ...
@@ -352,20 +352,20 @@ src/variable_used_uninitialized.cpp:5:17: style: The scope of the variable 'beta
  int alpha = 0, beta;
                 ^
 src/variable_used_uninitialized.cpp:8:3: error: Uninitialized variable: beta [uninitvar]
-  beta++; // ⚠️ variable used uninitialized
+  beta++; // <- variable used uninitialized
   ^
 src/variable_used_uninitialized.cpp:8:7: style: Variable 'beta' is assigned a value that is never used. [unreadVariable]
-  beta++; // ⚠️ variable used uninitialized
+  beta++; // <- variable used uninitialized
       ^
 src/variable_used_uninitialized.cpp:5:17: style: Variable 'beta' is not assigned a value. [unassignedVariable]
  int alpha = 0, beta;
                 ^
 71/71 files checked 100% done
 src/function_without_prototype.cpp:1:0: style: The function 'function_without_prototype' is never used. [unusedFunction]
-﻿int function_without_prototype() // ⚠️ function without prototype
+﻿int function_without_prototype() // <- function without prototype
 ^
 src/static_function_unused.cpp:1:0: style: The function 'static_function_unused' is never used. [unusedFunction]
-﻿static void static_function_unused(void) // ⚠️ static function is unused
+﻿static void static_function_unused(void) // <- static function is unused
 ^
 src/switch_default_missing.cpp:3:0: style: The function 'switch_default_missing' is never used. [unusedFunction]
 bool switch_default_missing(int value)
