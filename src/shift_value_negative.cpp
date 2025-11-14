@@ -1,6 +1,6 @@
-﻿extern int shift_value_negative(void);
+extern int shift_value_negative(void);
 
 int shift_value_negative(void)
 {
-	return -1 << 2; // ⚠️ value to shift is negative
+	return -1 << 2; // <- value to shift is negative
 }

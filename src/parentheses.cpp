@@ -1,8 +1,8 @@
-﻿extern int parentheses(int value);
+extern int parentheses(int value);
 
 int parentheses(int value)
 {
-	if (value > 0) // ⚠️ explicit parentheses recommended
+	if (value > 0) // <- explicit parentheses recommended
 		if (value == 7)
 			return 1;
 	else

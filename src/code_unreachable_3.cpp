@@ -1,4 +1,4 @@
-﻿extern int code_unreachable_3(int alpha);
+extern int code_unreachable_3(int alpha);
 
 int code_unreachable_3(int alpha)
 {
@@ -10,7 +10,7 @@ int code_unreachable_3(int alpha)
 	{
 		return 1;
 	}
-	alpha++; // ⚠️ code is unreachable
+	alpha++; // <- code is unreachable
 	return 2;
 }
 

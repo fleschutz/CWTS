@@ -1,9 +1,9 @@
-﻿extern void variable_used_uninitialized(void);
+extern void variable_used_uninitialized(void);
 
 void variable_used_uninitialized(void)
 {
 	int alpha = 0, beta;
 
 	if (alpha == 0)
-		beta++; // ⚠️ variable used uninitialized
+		beta++; // <- variable used uninitialized
 }

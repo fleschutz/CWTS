@@ -1,7 +1,7 @@
-﻿extern void code_unreachable_1(int alpha);
+extern void code_unreachable_1(int alpha);
 
 void code_unreachable_1(int alpha)
 {
 	return;
-	alpha++; // ⚠️ code is unreachable
+	alpha++; // <- code is unreachable
 }

@@ -1,6 +1,6 @@
-﻿extern int implicit_conversion_3(long alpha);
+extern int implicit_conversion_3(long alpha);
 
 int implicit_conversion_3(long alpha)
 {
-	return alpha; // ⚠️ implicit conversion (long to int)
+	return alpha; // <- implicit conversion (long to int)
 }
