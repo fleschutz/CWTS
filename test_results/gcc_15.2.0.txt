@@ -35,13 +35,13 @@ CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
 -- Build files have been written to: /Repos/CWTS
 
 ➤  make -k
-[  1%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_1.cpp.o
-[  2%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_2.cpp.o
-[  4%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_3.cpp.o
-[  5%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_4.cpp.o
-[  6%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_5.cpp.o
-[  8%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_6.cpp.o
-[  9%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_braces_missing.cpp.o
+[  1%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_1.cpp.o  👎
+[  2%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_2.cpp.o  👎
+[  4%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_3.cpp.o  👎
+[  5%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_4.cpp.o  👎
+[  6%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_5.cpp.o  👎
+[  8%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_bounds_6.cpp.o  👎
+[  9%] Building CXX object CMakeFiles/CWTS.dir/test_cases/array_braces_missing.cpp.o  👎
 [ 11%] Building CXX object CMakeFiles/CWTS.dir/test_cases/assignment_in_condition_1.cpp.o
 /Repos/CWTS/test_cases/assignment_in_condition_1.cpp: In function ‘bool assignment_in_condition_1(int)’:
 /Repos/CWTS/test_cases/assignment_in_condition_1.cpp:5:19: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
@@ -52,19 +52,19 @@ CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
 /Repos/CWTS/test_cases/assignment_in_condition_2.cpp:5:19: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
     5 |         if (alpha =! 5)   // ⚠️ Ups, I meant '!='
       |             ~~~~~~^~~~
-[ 13%] Building CXX object CMakeFiles/CWTS.dir/test_cases/bool_cast.cpp.o
+[ 13%] Building CXX object CMakeFiles/CWTS.dir/test_cases/bool_cast.cpp.o  👎
 [ 15%] Building CXX object CMakeFiles/CWTS.dir/test_cases/bool_compare.cpp.o
 /Repos/CWTS/test_cases/bool_compare.cpp: In function ‘bool bool_compare(int)’:
 /Repos/CWTS/test_cases/bool_compare.cpp:5:28: warning: comparison of constant ‘2’ with boolean expression is always false [-Wbool-compare]
     5 |         return (alpha > 0) == 2; // ⚠️ condition is always false
       |                ~~~~~~~~~~~~^~~~
-[ 16%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_1.cpp.o
-[ 18%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_2.cpp.o
-[ 19%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_3.cpp.o
-[ 20%] Building CXX object CMakeFiles/CWTS.dir/test_cases/cast_unnecessary.cpp.o
-[ 22%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_1.cpp.o
-[ 23%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_2.cpp.o
-[ 25%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_3.cpp.o
+[ 16%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_1.cpp.o  👎
+[ 18%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_2.cpp.o  👎
+[ 19%] Building CXX object CMakeFiles/CWTS.dir/test_cases/branches_identical_3.cpp.o  👎
+[ 20%] Building CXX object CMakeFiles/CWTS.dir/test_cases/cast_unnecessary.cpp.o  👎
+[ 22%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_1.cpp.o  👎
+[ 23%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_2.cpp.o  👎
+[ 25%] Building CXX object CMakeFiles/CWTS.dir/test_cases/code_unreachable_3.cpp.o  👎
 [ 26%] Building CXX object CMakeFiles/CWTS.dir/test_cases/comment.cpp.o
 /Repos/CWTS/test_cases/comment.cpp:1:4: warning: ‘/*’ within comment [-Wcomment]
     1 | /* /* ⚠️ comment in comment */
@@ -83,14 +83,14 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:359: CMakeFiles/CWTS.dir/test_cases
 /Repos/CWTS/test_cases/division_by_zero_1.cpp:5:22: warning: division by zero [-Wdiv-by-zero]
     5 |         return alpha / 0; // ⚠️ division by zero
       |                ~~~~~~^~~
-[ 31%] Building CXX object CMakeFiles/CWTS.dir/test_cases/division_by_zero_2.cpp.o
-[ 33%] Building CXX object CMakeFiles/CWTS.dir/test_cases/enum_unhandled.cpp.o
-[ 34%] Building CXX object CMakeFiles/CWTS.dir/test_cases/enum_value.cpp.o
+[ 31%] Building CXX object CMakeFiles/CWTS.dir/test_cases/division_by_zero_2.cpp.o  👎
+[ 33%] Building CXX object CMakeFiles/CWTS.dir/test_cases/enum_unhandled.cpp.o  👎
+[ 34%] Building CXX object CMakeFiles/CWTS.dir/test_cases/enum_value.cpp.o  👎
 [ 36%] Building CXX object CMakeFiles/CWTS.dir/test_cases/extra_tokens.cpp.o
 /Repos/CWTS/test_cases/extra_tokens.cpp:2:8: warning: extra tokens at end of ‘#endif’ directive [-Wendif-labels]
     2 | #endif BAD // ⚠️ #endif has no parameters
       |        ^~~
-[ 37%] Building CXX object CMakeFiles/CWTS.dir/test_cases/file_empty.cpp.o
+[ 37%] Building CXX object CMakeFiles/CWTS.dir/test_cases/file_empty.cpp.o  👎
 [ 38%] Building CXX object CMakeFiles/CWTS.dir/test_cases/format_string_1.cpp.o
 /Repos/CWTS/test_cases/format_string_1.cpp: In function ‘void format_string_1()’:
 /Repos/CWTS/test_cases/format_string_1.cpp:7:18: warning: format ‘%s’ expects argument of type ‘char*’, but argument 2 has type ‘int’ [-Wformat=]
@@ -129,10 +129,10 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:527: CMakeFiles/CWTS.dir/test_cases
 /Repos/CWTS/test_cases/identifier_undefined.cpp:1:5: warning: ‘IDENTIFIER_UNDEFINED’ is not defined, evaluates to ‘0’ [-Wundef]
     1 | #if IDENTIFIER_UNDEFINED // ⚠️ identifier is undefined
       |     ^~~~~~~~~~~~~~~~~~~~
-[ 48%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_1.cpp.o
-[ 50%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_2.cpp.o
-[ 51%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_3.cpp.o
-[ 52%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_4.cpp.o
+[ 48%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_1.cpp.o  👎
+[ 50%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_2.cpp.o  👎
+[ 51%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_3.cpp.o  👎
+[ 52%] Building CXX object CMakeFiles/CWTS.dir/test_cases/implicit_conversion_4.cpp.o  👎
 [ 54%] Building CXX object CMakeFiles/CWTS.dir/test_cases/label_unused.cpp.o
 /Repos/CWTS/test_cases/label_unused.cpp: In function ‘int label_unused(int)’:
 /Repos/CWTS/test_cases/label_unused.cpp:5:1: warning: label ‘label_is_unused’ defined but not used [-Wunused-label]
@@ -155,8 +155,8 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:527: CMakeFiles/CWTS.dir/test_cases
 /Repos/CWTS/test_cases/member_init_reorder.cpp:4:9: warning:   when initialized here [-Wreorder]
     4 |         Alpha(): gamma(0), beta(1) { } // ⚠️ member reordered
       |         ^~~~~
-[ 59%] Building CXX object CMakeFiles/CWTS.dir/test_cases/null_pointer_access_1.cpp.o
-[ 61%] Building CXX object CMakeFiles/CWTS.dir/test_cases/null_pointer_access_2.cpp.o
+[ 59%] Building CXX object CMakeFiles/CWTS.dir/test_cases/null_pointer_access_1.cpp.o  👎
+[ 61%] Building CXX object CMakeFiles/CWTS.dir/test_cases/null_pointer_access_2.cpp.o  👎
 [ 62%] Building CXX object CMakeFiles/CWTS.dir/test_cases/parentheses.cpp.o
 /Repos/CWTS/test_cases/parentheses.cpp: In function ‘int parentheses(int)’:
 /Repos/CWTS/test_cases/parentheses.cpp:5:12: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-els]
@@ -400,12 +400,12 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/test_cases
 /Repos/CWTS/test_cases/stack_address_returned.cpp:5:13: note: declared here
     5 |         int array[10] = {};
       |             ^~~~~
-[ 73%] Building CXX object CMakeFiles/CWTS.dir/test_cases/static_const_unused.cpp.o
+[ 73%] Building CXX object CMakeFiles/CWTS.dir/test_cases/static_const_unused.cpp.o  👎
 [ 75%] Building CXX object CMakeFiles/CWTS.dir/test_cases/static_function_unused.cpp.o
 /Repos/CWTS/test_cases/static_function_unused.cpp:1:13: warning: ‘void static_function_unused()’ defined but not used [-Wunused-function]
     1 | static void static_function_unused(void) // ⚠️ static function is unused
       |             ^~~~~~~~~~~~~~~~~~~~~~
-[ 76%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_body_empty.cpp.o
+[ 76%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_body_empty.cpp.o  👎
 [ 77%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_code_unreachable.cpp.o
 /Repos/CWTS/test_cases/switch_code_unreachable.cpp: In function ‘int switch_code_unreachable(int)’:
 /Repos/CWTS/test_cases/switch_code_unreachable.cpp:9:15: warning: this statement may fall through [-Wimplicit-fallthrough=]
@@ -414,7 +414,7 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/test_cases
 /Repos/CWTS/test_cases/switch_code_unreachable.cpp:10:9: note: here
    10 |         default: value /= 2; break;
       |         ^~~~~~~
-[ 79%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_default_missing.cpp.o
+[ 79%] Building CXX object CMakeFiles/CWTS.dir/test_cases/switch_default_missing.cpp.o  👎
 [ 80%] Building CXX object CMakeFiles/CWTS.dir/test_cases/value_unused_1.cpp.o
 /Repos/CWTS/test_cases/value_unused_1.cpp: In function ‘int value_unused_1(int, int)’:
 /Repos/CWTS/test_cases/value_unused_1.cpp:5:15: warning: statement has no effect [-Wunused-value]
@@ -430,8 +430,8 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/test_cases
 /Repos/CWTS/test_cases/variable_assignment.cpp:7:19: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
     7 |         if (alpha = beta) // ⚠️ Ups, I meant "alpha == beta"
       |             ~~~~~~^~~~~~
-[ 84%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_1.cpp.o
-[ 86%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_2.cpp.o
+[ 84%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_1.cpp.o  👎
+[ 86%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_2.cpp.o  👎
 [ 87%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_compare_3.cpp.o
 /Repos/CWTS/test_cases/variable_compare_3.cpp: In function ‘bool variable_compare_3(int, unsigned int)’:
 /Repos/CWTS/test_cases/variable_compare_3.cpp:5:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
@@ -450,8 +450,8 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/test_cases
 /Repos/CWTS/test_cases/variable_init_self.cpp:5:13: note: ‘alpha’ was declared here
     5 |         int alpha = alpha; // ⚠️ variable initialized by itself
       |             ^~~~~
-[ 91%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_shadowed_1.cpp.o
-[ 93%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_shadowed_2.cpp.o
+[ 91%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_shadowed_1.cpp.o  👎
+[ 93%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_shadowed_2.cpp.o  👎
 [ 94%] Building CXX object CMakeFiles/CWTS.dir/test_cases/variable_size_array.cpp.o
 /Repos/CWTS/test_cases/variable_size_array.cpp: In function ‘void variable_size_array(int)’:
 /Repos/CWTS/test_cases/variable_size_array.cpp:5:15: warning: ISO C++ forbids variable length array ‘abc’ [-Wvla]

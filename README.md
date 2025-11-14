@@ -20,10 +20,10 @@ Each test case compiled without a warning or error is a miss (👎). And the win
 
 1. **clang-tidy 10.0** which misses 8 warnings only
 2. **Clang 10.0.0** misses 11
-3. **GCC 9.3.0** misses 14
-4. **Visual Studio 2019** misses 17
-5. **Visual Studio 2017** misses 19
-6. **Cppcheck 2.17.1** misses 33
+3. **Visual Studio 2019** misses 17
+4. **Visual Studio 2017** misses 19
+5. **GCC 15.2.0** misses 32
+6. **Cppcheck 2.17.1** misses 32
 
 See the 📂[test_results](test_results/) folder for details and older versions. **Note:** all results produced with highest warning level enabled (see below). 
 
