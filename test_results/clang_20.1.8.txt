@@ -109,16 +109,16 @@ InstalledDir: /usr/lib/llvm-20/bin
       |                   ^
       |                   ==
 1 warning generated.
-[ 13%] Building CXX object CMakeFiles/CWTS.dir/src/bool_cast.cpp.o
+[ 13%] Building CXX object CMakeFiles/CWTS.dir/src/bool_cast.cpp.o  👎
 [ 15%] Building CXX object CMakeFiles/CWTS.dir/src/bool_compare.cpp.o
 /Repos/CWTS/src/bool_compare.cpp:5:21: warning: result of comparison of constant 2 with expression of type 'bool' is always false [-Wtautological-constant-out-of-range-compare]
     5 |         return (alpha > 0) == 2; // ⚠️ condition is always false
       |                ~~~~~~~~~~~ ^  ~
 1 warning generated.
-[ 16%] Building CXX object CMakeFiles/CWTS.dir/src/branches_identical_1.cpp.o
-[ 18%] Building CXX object CMakeFiles/CWTS.dir/src/branches_identical_2.cpp.o
-[ 19%] Building CXX object CMakeFiles/CWTS.dir/src/branches_identical_3.cpp.o
-[ 20%] Building CXX object CMakeFiles/CWTS.dir/src/cast_unnecessary.cpp.o
+[ 16%] Building CXX object CMakeFiles/CWTS.dir/src/branches_identical_1.cpp.o  👎
+[ 18%] Building CXX object CMakeFiles/CWTS.dir/src/branches_identical_2.cpp.o  👎
+[ 19%] Building CXX object CMakeFiles/CWTS.dir/src/branches_identical_3.cpp.o  👎
+[ 20%] Building CXX object CMakeFiles/CWTS.dir/src/cast_unnecessary.cpp.o  👎
 [ 22%] Building CXX object CMakeFiles/CWTS.dir/src/code_unreachable_1.cpp.o
 /Repos/CWTS/src/code_unreachable_1.cpp:3:29: warning: parameter 'alpha' set but not used [-Wunused-but-set-parameter]
     3 | void code_unreachable_1(int alpha)
@@ -129,13 +129,13 @@ InstalledDir: /usr/lib/llvm-20/bin
     3 | void code_unreachable_2(int alpha)
       |                             ^
 1 warning generated.
-[ 25%] Building CXX object CMakeFiles/CWTS.dir/src/code_unreachable_3.cpp.o
+[ 25%] Building CXX object CMakeFiles/CWTS.dir/src/code_unreachable_3.cpp.o  👎
 [ 26%] Building CXX object CMakeFiles/CWTS.dir/src/comment.cpp.o
 /Repos/CWTS/src/comment.cpp:1:7: warning: '/*' within block comment [-Wcomment]
     1 | <U+FEFF>/* /* ⚠️ comment in comment */
       |            ^
 1 warning generated.
-[ 27%] Building CXX object CMakeFiles/CWTS.dir/src/constant_expression.cpp.o
+[ 27%] Building CXX object CMakeFiles/CWTS.dir/src/constant_expression.cpp.o  👎
 [ 29%] Building CXX object CMakeFiles/CWTS.dir/src/constant_overflow.cpp.o
 /Repos/CWTS/src/constant_overflow.cpp:1:29: error: constant expression evaluates to 65535 which cannot be narrowed to type 'char' [-Wc++11-narrowing]
     1 | <U+FEFF>char letters[] = { 1, 2, 0xFFFF }; // ⚠️ 0xffff is too big for 'char'
@@ -154,23 +154,23 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:359: CMakeFiles/CWTS.dir/src/consta
     5 |         return alpha / 0; // ⚠️ division by zero
       |                      ^ ~
 1 warning generated.
-[ 31%] Building CXX object CMakeFiles/CWTS.dir/src/division_by_zero_2.cpp.o
-[ 33%] Building CXX object CMakeFiles/CWTS.dir/src/enum_unhandled.cpp.o
-[ 34%] Building CXX object CMakeFiles/CWTS.dir/src/enum_value.cpp.o
+[ 31%] Building CXX object CMakeFiles/CWTS.dir/src/division_by_zero_2.cpp.o  👎
+[ 33%] Building CXX object CMakeFiles/CWTS.dir/src/enum_unhandled.cpp.o  👎
+[ 34%] Building CXX object CMakeFiles/CWTS.dir/src/enum_value.cpp.o  👎
 [ 36%] Building CXX object CMakeFiles/CWTS.dir/src/extra_tokens.cpp.o
 /Repos/CWTS/src/extra_tokens.cpp:2:8: warning: extra tokens at end of #endif directive [-Wextra-tokens]
     2 | #endif BAD // ⚠️ #endif has no parameters
       |        ^
       |        //
 1 warning generated.
-[ 37%] Building CXX object CMakeFiles/CWTS.dir/src/file_empty.cpp.o
+[ 37%] Building CXX object CMakeFiles/CWTS.dir/src/file_empty.cpp.o  👎
 [ 38%] Building CXX object CMakeFiles/CWTS.dir/src/format_string_1.cpp.o
 /Repos/CWTS/src/format_string_1.cpp:7:15: warning: format specifies type 'char *' but the argument has type 'int' [-Wformat]
     7 |         printf("%s", 0); // ⚠️ zero pointer access
       |                 ~~   ^
       |                 %d
 1 warning generated.
-[ 40%] Building CXX object CMakeFiles/CWTS.dir/src/format_string_2.cpp.o
+[ 40%] Building CXX object CMakeFiles/CWTS.dir/src/format_string_2.cpp.o  👎
 [ 41%] Building CXX object CMakeFiles/CWTS.dir/src/format_string_3.cpp.o
 /Repos/CWTS/src/format_string_3.cpp:7:9: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
     7 |         printf(str); // ⚠️ <str> is handled as format string
@@ -185,7 +185,7 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:359: CMakeFiles/CWTS.dir/src/consta
     3 | int parameter_unused(int alpha, int beta) // ⚠️ function parameter is unused
       |                                     ^
 1 warning generated.
-[ 44%] Building CXX object CMakeFiles/CWTS.dir/src/function_without_prototype.cpp.o
+[ 44%] Building CXX object CMakeFiles/CWTS.dir/src/function_without_prototype.cpp.o  👎
 [ 45%] Building CXX object CMakeFiles/CWTS.dir/src/function_without_return_value.cpp.o
 /Repos/CWTS/src/function_without_return_value.cpp:5:2: error: non-void function 'function_without_return_value' should return a value [-Wreturn-mismatch]
     5 |         return; // ⚠️ return value is missing
@@ -197,10 +197,10 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:527: CMakeFiles/CWTS.dir/src/functi
     1 | <U+FEFF>#if IDENTIFIER_UNDEFINED // ⚠️ identifier is undefined
       |             ^
 1 warning generated.
-[ 48%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_1.cpp.o
-[ 50%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_2.cpp.o
-[ 51%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_3.cpp.o
-[ 52%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_4.cpp.o
+[ 48%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_1.cpp.o  👎
+[ 50%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_2.cpp.o  👎
+[ 51%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_3.cpp.o  👎
+[ 52%] Building CXX object CMakeFiles/CWTS.dir/src/implicit_conversion_4.cpp.o  👎
 [ 54%] Building CXX object CMakeFiles/CWTS.dir/src/label_unused.cpp.o
 /Repos/CWTS/src/label_unused.cpp:5:1: warning: unused label 'label_is_unused' [-Wunused-label]
     5 | label_is_unused: // ⚠️ label is unused
@@ -218,8 +218,8 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:527: CMakeFiles/CWTS.dir/src/functi
       |                  ^~~~~~~~  ~~~~~~~
       |                  beta(1)   gamma(0)
 1 warning generated.
-[ 59%] Building CXX object CMakeFiles/CWTS.dir/src/null_pointer_access_1.cpp.o
-[ 61%] Building CXX object CMakeFiles/CWTS.dir/src/null_pointer_access_2.cpp.o
+[ 59%] Building CXX object CMakeFiles/CWTS.dir/src/null_pointer_access_1.cpp.o  👎
+[ 61%] Building CXX object CMakeFiles/CWTS.dir/src/null_pointer_access_2.cpp.o  👎
 [ 62%] Building CXX object CMakeFiles/CWTS.dir/src/parentheses.cpp.o
 /Repos/CWTS/src/parentheses.cpp:8:2: warning: add explicit braces to avoid dangling else [-Wdangling-else]
     8 |         else
@@ -471,9 +471,9 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/src/recurs
     1 | <U+FEFF>static void static_function_unused(void) // ⚠️ static function is unused
       |                     ^~~~~~~~~~~~~~~~~~~~~~
 1 warning generated.
-[ 76%] Building CXX object CMakeFiles/CWTS.dir/src/switch_body_empty.cpp.o
-[ 77%] Building CXX object CMakeFiles/CWTS.dir/src/switch_code_unreachable.cpp.o
-[ 79%] Building CXX object CMakeFiles/CWTS.dir/src/switch_default_missing.cpp.o
+[ 76%] Building CXX object CMakeFiles/CWTS.dir/src/switch_body_empty.cpp.o  👎
+[ 77%] Building CXX object CMakeFiles/CWTS.dir/src/switch_code_unreachable.cpp.o  👎
+[ 79%] Building CXX object CMakeFiles/CWTS.dir/src/switch_default_missing.cpp.o  👎
 [ 80%] Building CXX object CMakeFiles/CWTS.dir/src/value_unused_1.cpp.o
 /Repos/CWTS/src/value_unused_1.cpp:5:8: warning: expression result unused [-Wunused-value]
     5 |         alpha * beta; // ⚠️ the result is unused
@@ -497,8 +497,8 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/src/recurs
       |                   ^
       |                   ==
 1 warning generated.
-[ 84%] Building CXX object CMakeFiles/CWTS.dir/src/variable_compare_1.cpp.o
-[ 86%] Building CXX object CMakeFiles/CWTS.dir/src/variable_compare_2.cpp.o
+[ 84%] Building CXX object CMakeFiles/CWTS.dir/src/variable_compare_1.cpp.o  👎
+[ 86%] Building CXX object CMakeFiles/CWTS.dir/src/variable_compare_2.cpp.o  👎
 [ 87%] Building CXX object CMakeFiles/CWTS.dir/src/variable_compare_3.cpp.o
 /Repos/CWTS/src/variable_compare_3.cpp:5:15: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
     5 |         return alpha == beta; // ⚠️ different datatypes
@@ -514,7 +514,7 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:723: CMakeFiles/CWTS.dir/src/recurs
     5 |         int alpha = alpha; // ⚠️ variable initialized by itself
       |             ~~~~~   ^~~~~
 1 warning generated.
-[ 91%] Building CXX object CMakeFiles/CWTS.dir/src/variable_shadowed_1.cpp.o
+[ 91%] Building CXX object CMakeFiles/CWTS.dir/src/variable_shadowed_1.cpp.o  👎
 [ 93%] Building CXX object CMakeFiles/CWTS.dir/src/variable_shadowed_2.cpp.o
 /Repos/CWTS/src/variable_shadowed_2.cpp:6:7: warning: variable 'value' set but not used [-Wunused-but-set-variable]
     6 |                 int value = 0; // ⚠️ variable shadowed

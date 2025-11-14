@@ -19,9 +19,9 @@ Requires a **C++ compiler** and **cmake**. Edit `CMakeLists.txt` to force using 
 Each test case compiled without a warning or error counts as a miss (👎). And the winners are:
 
 1. **clang-tidy 10.0** which misses 8 warnings only
-2. **Clang 10.0.0** misses 11
-3. **Visual Studio 2019** misses 17
-4. **Visual Studio 2017** misses 19
+2. **Visual Studio 2019** misses 17
+3. **Visual Studio 2017** misses 19
+4. **Clang 20.1.8** misses [25](test_results/clang_20.1.8.txt)
 5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt)
 6. **Cppcheck 2.17.1** misses [32](test_results/cppcheck_2.17.1.txt)
 
