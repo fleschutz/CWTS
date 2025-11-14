@@ -633,7 +633,7 @@ make[2]: *** [CMakeFiles/CWTS.dir/build.make:359: CMakeFiles/CWTS.dir/src/consta
       |        ^
       |        //
 1 warning generated.
-[ 37%] Building CXX object CMakeFiles/CWTS.dir/src/file_empty.cpp.o
+[ 37%] Building CXX object CMakeFiles/CWTS.dir/src/file_empty.cpp.o  👎
 [ 38%] Building CXX object CMakeFiles/CWTS.dir/src/format_string_1.cpp.o
 /Repos/CWTS/src/format_string_1.cpp:1:4: warning: system include stdio.h not allowed [llvmlibc-restrict-system-libc-headers]
     1 | <U+FEFF>#include <stdio.h>
