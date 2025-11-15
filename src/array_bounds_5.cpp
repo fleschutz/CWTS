@@ -8,4 +8,4 @@ namespace test_suite
 	{
 		return numbers[-1]; // <- array index out of bounds
 	}
-}
+} // namespace test_suite

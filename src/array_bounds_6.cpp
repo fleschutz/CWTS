@@ -9,4 +9,4 @@ namespace test_suite
 		const int index = -1;
 		return numbers[index]; // <- array index out of bounds
 	}
-}
+} // namespace test_suite

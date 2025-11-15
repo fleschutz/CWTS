@@ -5,7 +5,7 @@ cmake_minimum_required (VERSION 3.11)
 
 # Uncomment one(!) of the following lines to force using a certain C++ compiler:
 #set (CMAKE_CXX_COMPILER   "clang")		# requires package 'clang'
-#set (CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*,-modernize*")
+#set (CMAKE_CXX_CLANG_TIDY "clang-tidy;-checks=*,-modernize*,-llvmlibc*")
 #set (CMAKE_CXX_COMPILER   "g++") 		# requires package 'g++'
 #set (CMAKE_CXX_CPPCHECK   "cppcheck")		# requires package 'cppcheck'
 
