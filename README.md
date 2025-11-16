@@ -27,7 +27,7 @@ Each test case compiled without a warning or error counts as a miss (👎). And 
 5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt)
 6. **Cppcheck 2.17.1** misses [32](test_results/cppcheck_2.17.1.txt)
 
-**Note:** All 📂[test_results](test_results/) produced with highest warning level enabled (see below).
+**Note:** Test results based on highest warning level (see below). See 📂[test_results](test_results/) for details.
 
 
 ⚠️ Highest Warning Level 
@@ -67,6 +67,7 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
 
 
