@@ -20,7 +20,7 @@ Requires a **C++ compiler** and **cmake**. Then execute in a terminal window:
 --------------------
 Each test case compiled without a warning or error counts as a miss (👎). And the winner is:
 
-1. **clang-tidy 20.1.8** which misses [1](test_results/clang-tidy_20.1.8.txt) warning only
+1. **clang-tidy 20.1.8** which misses [2](test_results/clang-tidy_20.1.8.txt) only
 2. **Visual Studio 2019** misses [17](test_results/visual_studio_2019.txt)
 3. **Visual Studio 2017** misses [19](test_results/visual_studio_2017.txt)
 4. **Clang 20.1.8** misses [25](test_results/clang_20.1.8.txt)
@@ -32,15 +32,15 @@ Each test case compiled without a warning or error counts as a miss (👎). And 
 
 ⚠️ Highest Warning Level 
 -------------------------
-No, the highest warning level is NOT enabled by default. Instead, every compiler sets the default warning level to 'normal', whatever this means. And each one supports different options to be more pedantic:
+No, compilers don't enable the highest warning level by default. All have a default warning level of 'normal', far from highest. And each one supports different options to be more pedantic:
 
 | Compiler        | Options                           | Comment                                           |
 |-----------------|-----------------------------------|---------------------------------------------------|
 | *Clang*         | `-Weverything -pedantic`          |                                                   |
-| *clang-tidy*    | `-checks=*,-modernize*`           | hints how to modernize the code are switched off  |
+| *clang-tidy*    | `-checks=*,-modernize*`           | all checks except 'modernize' hints               |
 | *Cppcheck*      | `--enable=all`                    |                                                   |
 | *GCC*           | `-Wall -Wextra -pedantic -Wundef` | -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few. |
-| *Visual Studio* | `/Wall`                           |                                                   |
+| *Visual Studio* | `/Wall`                           | no bla bla 👍                                     |
 
 
 👮‍ Zero Warnings Policy 
