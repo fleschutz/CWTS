@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return alpha; // <- implicit conversion (double to float)
 	}
-}
+} // namespace test_suite

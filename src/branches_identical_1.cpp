@@ -13,4 +13,4 @@ namespace test_suite
 			return false;
 		}
 	}
-}
+} // namespace test_suite

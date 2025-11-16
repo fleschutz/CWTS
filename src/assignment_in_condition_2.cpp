@@ -8,4 +8,4 @@ namespace test_suite
 			return true;
 		return false;
 	}
-}
+} // namespace test_suite

@@ -11,4 +11,4 @@ namespace test_suite
 			return 2;
 		return 3;
 	}
-}
+} // namespace test_suite

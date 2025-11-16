@@ -8,4 +8,4 @@ namespace test_suite
 			return true;
 		return 0; // <- zero is NOT false
 	}
-}
+} // namespace test_suite

@@ -9,4 +9,4 @@ namespace test_suite
 		if (alpha == 0)
 			beta++; // <- variable used uninitialized
 	}
-}
+} // namespace test_suite

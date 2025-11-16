@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return value << 66; // <- shift count is too high
 	}
-}
+} // namespace test_suite

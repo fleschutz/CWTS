@@ -7,4 +7,4 @@ namespace test_suite
 		float abc[size]; // <- array size is not constant
 		abc[0] = 3.1415;
 	}
-}
+} // namespace test_suite

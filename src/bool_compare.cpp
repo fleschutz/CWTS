@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return (alpha > 0) == 2; // <- condition is always false
 	}
-}
+} // namespace test_suite

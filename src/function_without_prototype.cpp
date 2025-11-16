@@ -4,4 +4,4 @@ namespace test_suite
 	{
 		return 42;
 	}
-}
+} // namespace test_suite

@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return alpha / 2; 
 	}
-}
+} // namespace test_suite

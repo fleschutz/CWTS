@@ -8,4 +8,4 @@ namespace test_suite
 	{
 		printf("%s", 0); // <- zero pointer access
 	}
-}
+} // namespace test_suite

@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		  return static_cast<int *>(ptr); // <- cast not necessary
 	}
-}
+} // namespace test_suite

@@ -7,4 +7,4 @@ namespace test_suite
 		alpha &= !(1 << 7); // <- Ups, I meant '~' instead of '!'
 		return alpha;
 	}
-}
+} // namespace test_suite

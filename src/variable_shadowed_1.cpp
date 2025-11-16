@@ -9,4 +9,4 @@ namespace test_suite
 	{
 		return answer; // <- variable shadowed
 	}
-}
+} // namespace test_suite

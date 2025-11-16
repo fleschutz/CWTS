@@ -8,4 +8,4 @@ namespace test_suite
 	{
 		return INT_MAX << 10; // <- shift overflow
 	}
-}
+} // namespace test_suite

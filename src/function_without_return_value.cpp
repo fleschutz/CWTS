@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return; // <- return value is missing
 	}
-}
+} // namespace test_suite

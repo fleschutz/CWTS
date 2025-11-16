@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		int value = 0; // <- variable is unused
 	}
-}
+} // namespace test_suite

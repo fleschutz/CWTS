@@ -9,4 +9,4 @@ namespace test_suite
 		if (alpha = beta) // <- Ups, I meant "alpha == beta"
 			return;
 	}
-}
+} // namespace test_suite

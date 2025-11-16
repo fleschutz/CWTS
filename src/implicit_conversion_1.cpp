@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return alpha; // <- implicit conversion (short to char)
 	}
-}
+} // namespace test_suite

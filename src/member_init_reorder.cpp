@@ -6,4 +6,4 @@ namespace test_suite
 		int gamma;
 		Alpha(): gamma(0), beta(1) { } // <- member reordered
 	};
-}
+} // namespace test_suite

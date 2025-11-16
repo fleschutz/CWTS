@@ -8,4 +8,4 @@ namespace test_suite
 
 		return array; // <- returns stack address
 	}
-}
+} // namespace test_suite

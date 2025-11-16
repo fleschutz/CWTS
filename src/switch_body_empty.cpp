@@ -8,4 +8,4 @@ namespace test_suite
 		{
 		}
 	}
-}
+} // namespace test_suite

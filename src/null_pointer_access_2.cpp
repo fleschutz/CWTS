@@ -9,4 +9,4 @@ namespace test_suite
 			tmp = ptr + value;
 		*tmp = 1;  // <- tmp may be NULL
 	}
-}
+} // namespace test_suite

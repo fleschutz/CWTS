@@ -8,4 +8,4 @@ namespace test_suite
 	{
 		printf(""); // <- empty format string
 	}
-}
+} // namespace test_suite

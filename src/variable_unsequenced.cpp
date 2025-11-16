@@ -8,4 +8,4 @@ namespace test_suite
 	{
 		printf("%d,%d", value, ++value); // <- variable unsequenced
 	}
-}
+} // namespace test_suite

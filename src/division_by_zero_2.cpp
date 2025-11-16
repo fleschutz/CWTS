@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return alpha / 0.0; // <- division by zero
 	}
-}
+} // namespace test_suite

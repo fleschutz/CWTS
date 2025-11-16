@@ -7,4 +7,4 @@ namespace test_suite
 		int alpha = alpha; // <- variable initialized by itself
 		return alpha;
 	}
-}
+} // namespace test_suite

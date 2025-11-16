@@ -7,4 +7,4 @@ namespace test_suite
 	label_is_unused: // <- label is unused
 		return alpha;
 	}
-}
+} // namespace test_suite

@@ -8,4 +8,4 @@ namespace test_suite
 
 		*ptr = 0; // <- null pointer access
 	}
-}
+} // namespace test_suite

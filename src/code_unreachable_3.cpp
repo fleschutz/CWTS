@@ -15,4 +15,4 @@ namespace test_suite
 		alpha++; // <- code is unreachable
 		return 2;
 	}
-}
+} // namespace test_suite

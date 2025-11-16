@@ -14,4 +14,4 @@ namespace test_suite
 		}
 		return 3;
 	}
-}
+} // namespace test_suite

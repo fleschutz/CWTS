@@ -7,4 +7,4 @@ namespace test_suite
 		alpha * beta; // <- the result is unused
 		return alpha + beta;
 	}
-}
+} // namespace test_suite

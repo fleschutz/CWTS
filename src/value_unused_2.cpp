@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return alpha, beta; // <- only one is used
 	}
-}
+} // namespace test_suite

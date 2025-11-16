@@ -7,4 +7,4 @@ namespace test_suite
 		return;
 		alpha++; // <- code is unreachable
 	}
-}
+} // namespace test_suite

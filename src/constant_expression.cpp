@@ -7,4 +7,4 @@ namespace test_suite
 		for (unsigned int i = 10; i >= 0; i++) // <- condition is always true
 			;
 	}
-}
+} // namespace test_suite

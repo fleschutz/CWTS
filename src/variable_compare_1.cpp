@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return alpha == beta; // <- not same datatype
 	}
-}
+} // namespace test_suite

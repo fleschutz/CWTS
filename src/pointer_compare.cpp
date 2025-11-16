@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return (ptr == '\0'); // <- Ups, I meant "*ptr"
 	}
-}
+} // namespace test_suite

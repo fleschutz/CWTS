@@ -6,4 +6,4 @@ namespace test_suite
 	{
 		return value << -1; // <- shift count is negative
 	}
-}
+} // namespace test_suite
