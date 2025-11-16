@@ -31,7 +31,7 @@ Each test case compiled without a warning or error counts as a miss (👎). And 
 
 ⚠️ Highest Warning Level 
 -------------------------
-No, compilers don't enable the highest warning level by default. All have a default warning level of 'normal', far from highest. And each one supports different options to be more pedantic:
+No, compilers don't enable the highest warning level by default. All have a default warning level of 'normal', far from highest level. And each one supports different options to be more pedantic:
 
 | Compiler        | Options                           | Comment                                           |
 |-----------------|-----------------------------------|---------------------------------------------------|
@@ -66,6 +66,7 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
 
 
