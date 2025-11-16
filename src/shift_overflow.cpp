@@ -1,4 +1,4 @@
-#include <limits.h>
+#include <climits>
 
 namespace test_suite
 {

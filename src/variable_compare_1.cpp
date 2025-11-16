@@ -4,6 +4,6 @@ namespace test_suite
 
 	bool variable_compare_1(char alpha, unsigned char beta)
 	{
-		return alpha == beta; // <- not same datatype
+		return alpha == beta; // <- different datatypes
 	}
 } // namespace test_suite
