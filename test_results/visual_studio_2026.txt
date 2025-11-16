@@ -1,0 +1,93 @@
+1> Die CMake-Generierung für die Konfiguration wurde gestartet: "x64-Debug".
+1> Befehlszeile: "C:\Windows\system32\cmd.exe" /c "%SYSTEMROOT%\System32\chcp.com 65001 >NUL && "c:\program files\microsoft visual studio\18\insiders\common7\ide\commonextensions\microsoft\cmake\CMake\bin\cmake.exe"  -G "Ninja"  -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="C:\Repos\CWTS\src\out\install\x64-Debug" -DCMAKE_C_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe" -DCMAKE_CXX_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe"   -DCMAKE_MAKE_PROGRAM="c:\program files\microsoft visual studio\18\insiders\common7\ide\commonextensions\microsoft\cmake\Ninja\ninja.exe" "C:\Repos\CWTS\src" 2>&1"
+1> Arbeitsverzeichnis: C:\Repos\CWTS\src\out\build\x64-Debug
+1> [CMake] -- The C compiler identification is MSVC 19.50.35717.0
+1> [CMake] -- The CXX compiler identification is MSVC 19.50.35717.0
+1> [CMake] -- Detecting C compiler ABI info
+1> [CMake] -- Detecting C compiler ABI info - done
+1> [CMake] -- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe - skipped
+1> [CMake] -- Detecting C compile features
+1> [CMake] -- Detecting C compile features - done
+1> [CMake] -- Detecting CXX compiler ABI info
+1> [CMake] -- Detecting CXX compiler ABI info - done
+1> [CMake] -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Insiders/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe - skipped
+1> [CMake] -- Detecting CXX compile features
+1> [CMake] -- Detecting CXX compile features - done
+1> [CMake] -- Configuring done (2.3s)
+1> [CMake] -- Generating done (0.1s)
+1> [CMake] -- Build files have been written to: C:/Repos/CWTS/src/out/build/x64-Debug
+1> CMake-Variablen extrahiert.
+1> Quelldateien und Header extrahiert.
+1> Codemodell extrahiert.
+1> Toolkettenkonfigurationen extrahiert.
+1> Extrahierte Daten enthalten Pfade.
+1> CMake-Generierung abgeschlossen.
+
+>------ Erstellen gestartet: Projekt: CMakeLists, Konfiguration: Debug ------
+  [1/72] Building CXX object CMakeFiles\CWTS.dir\array_bounds_2.cpp.obj
+  [2/72] Building CXX object CMakeFiles\CWTS.dir\array_bounds_1.cpp.obj
+  [3/72] Building CXX object CMakeFiles\CWTS.dir\array_bounds_3.cpp.obj
+  [4/72] Building CXX object CMakeFiles\CWTS.dir\array_bounds_5.cpp.obj
+  [5/72] Building CXX object CMakeFiles\CWTS.dir\array_bounds_4.cpp.obj
+  [6/72] Building CXX object CMakeFiles\CWTS.dir\array_bounds_6.cpp.obj
+  [7/72] Building CXX object CMakeFiles\CWTS.dir\array_braces_missing.cpp.obj
+C:\Repos\CWTS\src\array_braces_missing.cpp(3): warning C5246: „numbers“: Die Initialisierung eines Teilobjekts muss in geschweifte Klammern eingeschlossen werden
+  [8/72] Building CXX object CMakeFiles\CWTS.dir\assignment_in_condition_1.cpp.obj
+C:\Repos\CWTS\src\assignment_in_condition_1.cpp(7): warning C4706: Zuweisung als Bedingung verwendet
+  C:\Repos\CWTS\src\assignment_in_condition_1.cpp(7): note: wenn eine Zuweisung beabsichtigt ist, können Sie sie in Klammern "(e1 = e2)" einschließen, um diese Warnung stumm zu schalten
+  [9/72] Building CXX object CMakeFiles\CWTS.dir\bool_cast.cpp.obj
+  [10/72] Building CXX object CMakeFiles\CWTS.dir\assignment_in_condition_2.cpp.obj
+C:\Repos\CWTS\src\assignment_in_condition_2.cpp(7): warning C4706: Zuweisung als Bedingung verwendet
+  C:\Repos\CWTS\src\assignment_in_condition_2.cpp(7): note: wenn eine Zuweisung beabsichtigt ist, können Sie sie in Klammern "(e1 = e2)" einschließen, um diese Warnung stumm zu schalten
+  [11/72] Building CXX object CMakeFiles\CWTS.dir\bool_compare.cpp.obj
+C:\Repos\CWTS\src\bool_compare.cpp(7): warning C4806: "==": unsichere Operation: kein Wert vom Typ "bool" erweitert auf Typ "int" kann mit der angegebenen Konstante übereinstimmen
+  [12/72] Building CXX object CMakeFiles\CWTS.dir\branches_identical_1.cpp.obj
+  [13/72] Building CXX object CMakeFiles\CWTS.dir\branches_identical_3.cpp.obj
+  [14/72] Building CXX object CMakeFiles\CWTS.dir\cast_unnecessary.cpp.obj
+  [15/72] Building CXX object CMakeFiles\CWTS.dir\branches_identical_2.cpp.obj
+  [16/72] Building CXX object CMakeFiles\CWTS.dir\code_unreachable_1.cpp.obj
+C:\Repos\CWTS\src\code_unreachable_1.cpp(8): warning C4702: Unerreichbarer Code
+  [17/72] Building CXX object CMakeFiles\CWTS.dir\code_unreachable_2.cpp.obj
+C:\Repos\CWTS\src\code_unreachable_2.cpp(8): warning C4702: Unerreichbarer Code
+  [18/72] Building CXX object CMakeFiles\CWTS.dir\code_unreachable_3.cpp.obj
+C:\Repos\CWTS\src\code_unreachable_3.cpp(15): warning C4702: Unerreichbarer Code
+  [19/72] Building CXX object CMakeFiles\CWTS.dir\comment.cpp.obj
+  [20/72] Building CXX object CMakeFiles\CWTS.dir\constant_overflow.cpp.obj
+C:\Repos\CWTS\src\constant_overflow.cpp(3): warning C4838: Konvertierung von "int" zu "char" erfordert eine einschränkende Konvertierung
+C:\Repos\CWTS\src\constant_overflow.cpp(3): warning C4305: "Initialisierung": Verkürzung von "int" in "char"
+C:\Repos\CWTS\src\constant_overflow.cpp(3): warning C4309: "Initialisierung": Verkürzung eines konstanten Wertes
+  [21/72] Building CXX object CMakeFiles\CWTS.dir\constant_expression.cpp.obj
+C:\Repos\CWTS\src\constant_expression.cpp(9): warning C4296: ">=": der Ausdruck ist immer "true"
+  [22/72] Building CXX object CMakeFiles\CWTS.dir\division_by_zero_1.cpp.obj
+C:\Repos\CWTS\src\division_by_zero_1.cpp(7): warning C4723: Mögliche Division durch 0 (Null)
+  [23/72] Building CXX object CMakeFiles\CWTS.dir\enum_unhandled.cpp.obj
+C:\Repos\CWTS\src\enum_unhandled.cpp(14): warning C4062: Der Enumerator „test_suite::blue" im Schalter der Enumeration „test_suite::Color“ wird nicht behandelt.
+  C:\Repos\CWTS\src\enum_unhandled.cpp(3): note: Siehe Deklaration von "test_suite::Color"
+  [24/72] Building CXX object CMakeFiles\CWTS.dir\division_by_zero_2.cpp.obj
+C:\Repos\CWTS\src\division_by_zero_2.cpp(7): warning C4244: "return": Konvertierung von "double" in "float", möglicher Datenverlust
+C:\Repos\CWTS\src\division_by_zero_2.cpp(7): warning C4723: Mögliche Division durch 0 (Null)
+  [25/72] Building CXX object CMakeFiles\CWTS.dir\file_empty.cpp.obj
+  [26/72] Building CXX object CMakeFiles\CWTS.dir\extra_tokens.cpp.obj
+  [27/72] Building CXX object CMakeFiles\CWTS.dir\enum_value.cpp.obj
+  [28/72] Building CXX object CMakeFiles\CWTS.dir\format_string_1.cpp.obj
+C:\Repos\CWTS\src\format_string_1.cpp(9): warning C4477: "printf": Die Formatzeichenfolge "%s" erfordert ein Argument vom Typ "char *", das variadic-Argument "1" weist aber den Typ "int" auf.
+C:\Repos\CWTS\src\format_string_1.cpp(9): warning C4313: „printf“: „%s“ in der Formatzeichenfolge steht mit dem Argument 1 vom Typ „int“ in Konflikt.
+  [29/72] Building CXX object CMakeFiles\CWTS.dir\format_string_2.cpp.obj
+  [30/72] Building CXX object CMakeFiles\CWTS.dir\function_without_prototype.cpp.obj
+  [31/72] Building CXX object CMakeFiles\CWTS.dir\function_without_return_value.cpp.obj
+  FAILED: CMakeFiles/CWTS.dir/function_without_return_value.cpp.obj 
+  C:\PROGRA~1\MICROS~3\18\Insiders\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /Wall /showIncludes /FoCMakeFiles\CWTS.dir\function_without_return_value.cpp.obj /FdCMakeFiles\CWTS.dir\ /FS -c C:\Repos\CWTS\src\function_without_return_value.cpp
+C:\Repos\CWTS\src\function_without_return_value.cpp(7): error C2561: "test_suite::function_without_return_value": Funktion muss einen Wert zurückgeben
+  C:\Repos\CWTS\src\function_without_return_value.cpp(5): note: Siehe Deklaration von "test_suite::function_without_return_value"
+  [32/72] Building CXX object CMakeFiles\CWTS.dir\format_string_3.cpp.obj
+C:\Repos\CWTS\src\format_string_3.cpp(9): warning C4774: "printf": Die im Argument "1" erwartete Formatzeichenfolge ist kein Zeichenfolgenliteral.
+  C:\Repos\CWTS\src\format_string_3.cpp(9): note: Beispiel: Verwenden Sie "printf("%s", name);" anstelle von "printf(name);", weil Formatspezifizierer in "name" ein Sicherheitsrisiko darstellen können.
+  C:\Repos\CWTS\src\format_string_3.cpp(9): note: Verwenden Sie ggf. den constexpr-Bezeichner für benannte Zeichenfolgenliterale.
+  [33/72] Building CXX object CMakeFiles\CWTS.dir\function_parameter_unused.cpp.obj
+C:\Repos\CWTS\src\function_parameter_unused.cpp(5): warning C4100: „beta“: nicht referenzierter Parameter
+  [34/72] Building CXX object CMakeFiles\CWTS.dir\identifier_undefined.cpp.obj
+C:\Repos\CWTS\src\identifier_undefined.cpp(1): warning C4668: "IDENTIFIER_UNDEFINED" ist nicht als ein Präprozessormakro definiert, wird durch "0" für "#if/#elif" ersetzt
+  [35/72] Building CXX object CMakeFiles\CWTS.dir\implicit_conversion_1.cpp.obj
+C:\Repos\CWTS\src\implicit_conversion_1.cpp(7): warning C4244: "return": Konvertierung von "short" in "char", möglicher Datenverlust
+  [36/72] Building CXX object CMakeFiles\CWTS.dir\implicit_conversion_2.cpp.obj
+C:\Repos\CWTS\src\implicit_conversion_2.cpp(7): warning C4242: "return": Konvertierung von "int" in "short", möglicher Datenverlust

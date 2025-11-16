@@ -16,7 +16,7 @@ elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	add_compile_options (-Wall -Wextra -pedantic -Wundef)
 else ()
-	add_compile_options (-Wall -Wextra -pedantic -Wundef)
+	add_compile_options (/Wall)
 endif()
 
 project (CWTS)
