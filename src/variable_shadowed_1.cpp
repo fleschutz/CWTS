@@ -1,12 +1,12 @@
 namespace test_suite
 {
-	extern int answer;
-	extern int variable_shadowed_1(int answer);
+	extern const int alpha;
+	extern int variable_shadowed_1(int alpha);
 
-	int answer = 0;
+	const int alpha = 0;
 
-	int variable_shadowed_1(int answer)
+	int variable_shadowed_1(int alpha)
 	{
-		return answer; // <- variable shadowed
+		return alpha; // <- variable shadowed
 	}
 } // namespace test_suite
