@@ -23,7 +23,7 @@ Each test case compiled without a warning or error counts as a miss (👎). And 
 1. **clang-tidy 20.1.8** which misses [2](test_results/clang-tidy_20.1.8.txt) only
 2. **Visual Studio 2019** misses [17](test_results/visual_studio_2019.txt)
 3. **Visual Studio 2017** misses [19](test_results/visual_studio_2017.txt)
-4. **Clang 20.1.8** misses [25](test_results/clang_20.1.8.txt)
+4. **Clang 20.1.8** misses [24](test_results/clang_20.1.8.txt)
 5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt)
 6. **Cppcheck 2.17.1** misses [32](test_results/cppcheck_2.17.1.txt)
 
