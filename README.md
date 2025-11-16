@@ -51,8 +51,6 @@ Introducing the *Zero Warnings Policy* by enabling the highest warning level oft
 
 As soon as there are no more warnings **turn warnings into errors** to enforce the *Zero Warnings Policy* from now on. That way warnings can no longer be ignored because the build fails. The corresponding compiler options are `-Werror` for Clang and GCC and `/WX` for Visual Studio.
 
-Dear API developers: introducing the *Zero Warnings Policy* heavily depends on the header files being used. Please make sure your header files do not produce any compiler warnings!
-
 Links
 -----
 * [Diagnostic flags in Clang](https://clang.llvm.org/docs/DiagnosticsReference.html)
@@ -69,6 +67,7 @@ Links
 📜 License & Copyright
 -----------------------
 This open source project is licensed under the CC0 license. All trademarks are the property of their respective owners.
+
 
 
 
