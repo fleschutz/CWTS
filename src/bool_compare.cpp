@@ -1,9 +1,9 @@
 namespace test_suite
 {
-	extern bool bool_compare(int alpha);
+	extern bool bool_compare(int number);
 
-	bool bool_compare(int alpha)
+	bool bool_compare(int number)
 	{
-		return (alpha > 0) == 2; // <- condition is always false
+		return (number > 0) == 2; // <- comparison is always false
 	}
 } // namespace test_suite
