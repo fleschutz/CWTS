@@ -3,6 +3,18 @@ Compiler Warnings Test Suite (CWTS)
 
 **Good compiler warnings prevent software bugs before they occur. Sadly, most warnings are either undetected or disabled by the default warning level. This repo checks the warning coverage of popular C++ compilers against 70 test cases in the 📂[src](src/) subfolder.**
 
+🏆 Hall of Fame 2025
+--------------------
+Each test case compiled without a warning or error is a miss (👎). And the winner is:
+
+1. **clang-tidy 20.1.8** which misses [2](test_results/clang-tidy_20.1.8.txt) only
+2. **Visual Studio 2019** misses [17](test_results/visual_studio_2019.txt)
+3. **Visual Studio 2017** misses [19](test_results/visual_studio_2017.txt)
+4. **Clang 20.1.8** misses [24](test_results/clang_20.1.8.txt)
+5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt)
+6. **Cppcheck 2.17.1** misses [32](test_results/cppcheck_2.17.1.txt)
+
+**Note:** Please find all details in 📂[test_results](test_results/) (including older versions). All results are based on the highest warning level.
 
 🔧 Installation 
 ----------------
@@ -15,18 +27,7 @@ Make sure a **C++ compiler** and **cmake** is installed. Then execute in a termi
 > make -k                                      # option '-k' means keep going, even on errors
 ```
 
-🏆 Hall of Fame 2025
---------------------
-Each test case compiled without a warning or error counts as a miss (👎). And the winner is:
 
-1. **clang-tidy 20.1.8** which misses [2](test_results/clang-tidy_20.1.8.txt) only
-2. **Visual Studio 2019** misses [17](test_results/visual_studio_2019.txt)
-3. **Visual Studio 2017** misses [19](test_results/visual_studio_2017.txt)
-4. **Clang 20.1.8** misses [24](test_results/clang_20.1.8.txt)
-5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt)
-6. **Cppcheck 2.17.1** misses [32](test_results/cppcheck_2.17.1.txt)
-
-**Note:** All test results based on highest warning level. See 📂[test_results](test_results/) for details (including older versions).
 
 
 ⚠️ Highest Warning Level 
