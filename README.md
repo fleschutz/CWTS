@@ -1,5 +1,5 @@
-Test Suite for Compiler Warnings (TSCW)
-=======================================
+Test Suite for Compiler Warnings 
+================================
 
 **Good compiler warnings prevent software bugs before they occur. Sadly, most warnings are either undetected or disabled by default. This repo checks the warning coverage of popular C++ compilers against 70 test cases in the 📂[src](src/) subfolder.**
 
