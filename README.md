@@ -1,7 +1,7 @@
 Test Suite for Compiler Warnings 
 ================================
 
-**Good compiler warnings prevent software bugs before they occur. Sadly, most warnings are either undetected or disabled by default. This repository checks the warning coverage of popular C++ compilers against 70 test cases in the 📂[src](src/) subfolder.**
+**Good compiler warnings prevent software bugs before they occur. Sadly, most warnings are either undetected or disabled by default. This repository checks the warning coverage of popular C++ compilers against 70 test cases.**
 
 🏆 Hall of Fame 2025
 --------------------
@@ -14,7 +14,7 @@ Each test case compiled without a warning or error is a miss. And the winner is:
 5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt).
 6. **Cppcheck 2.17.1** misses [32](test_results/cppcheck_2.17.1.txt).
 
-**Note:** Please find details in 📂[test_results](test_results/) (including older versions, highest warning level has been enabled).
+**Note:** The test cases are located in the 📂[src](src/) subfolder and here are the corresponding: 📂[test_results](test_results/) (including older versions, highest warning level has been enabled).
 
 🔧 Installation 
 ----------------
