@@ -1,7 +1,7 @@
 Test Suite for Compiler Warnings 
 ================================
 
-**Good compiler warnings prevent software bugs before they occur. Sadly, most warnings are either undetected or disabled by default. This repo checks the warning coverage of popular C++ compilers against 70 test cases in the 📂[src](src/) subfolder.**
+**Good compiler warnings prevent software bugs before they occur. Sadly, most warnings are either undetected or disabled by default. This repository checks the warning coverage of popular C++ compilers against 70 test cases in the 📂[src](src/) subfolder.**
 
 🏆 Hall of Fame 2025
 --------------------
