@@ -32,7 +32,7 @@ Requires a **C++ compiler**, **cmake** and optionally **git**. Then execute in a
 
 ⚠️ The Highest Warning Level 
 -----------------------------
-No, compilers don't enable the highest warning level by default. All have a default warning level of 'normal', far from highest level. And each one supports different options to be more pedantic:
+No, compilers don't enable the highest warning level by default. All have a default warning level of 'normal', far from highest level. And each compiler supports different options to be more pedantic:
 
 | Compiler        | Options                           | Comment                                           |
 |-----------------|-----------------------------------|---------------------------------------------------|
