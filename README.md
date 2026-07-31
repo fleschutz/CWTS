@@ -61,8 +61,8 @@ Links
 🤝 Contributing
 ----------------
 * Contributions, suggestions, and improvements are welcome!
-* Open an Issue if you encounter bugs or have feature ideas.
-* Create a Pull Request if you'd like to improve something.
+* Open an [Issue](https://github.com/fleschutz/CWTS/issues) if you encounter bugs or have feature ideas.
+* Create a [Pull Request](https://github.com/fleschutz/CWTS/pulls) if you'd like to improve something.
 
 📜 License & Copyright
 -----------------------
