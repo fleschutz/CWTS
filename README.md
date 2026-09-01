@@ -18,7 +18,7 @@ Each test case compiled without a warning or error is a miss. And the winner is:
 
 🔧 Installation 
 ----------------
-Requires a **C++ compiler**, **cmake** and optionally **git**. Then execute in a terminal window: 
+Requires *git*, *cmake*, and a *C++ compiler*. Then execute in a terminal window: 
 
 ```
 > git clone https://github.com/fleschutz/CWTS  # or download and unzip the ZIP file (click the green button)
