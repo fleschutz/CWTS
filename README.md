@@ -40,7 +40,7 @@ No, compilers don't enable the highest warning level by default. All have a defa
 | *clang-tidy*    | `-checks=*,-modernize*`           | all checks except 'modernize' hints               |
 | *Cppcheck*      | `--enable=all`                    |                                                   |
 | *GCC*           | `-Wall -Wextra -pedantic -Wundef` | -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few. |
-| *Visual Studio* | `/Wall`                           | good job, no bla bla 👌                           |
+| *Visual Studio* | `/Wall`                           | well done, no bla bla 👍                          |
 
 
 👮‍ Zero Warnings Policy 
