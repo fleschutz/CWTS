@@ -7,14 +7,14 @@ Test Suite for Compiler Warnings
 --------------------
 Each test case compiled without a warning or error is a miss. And the winner is:
 
-1. **clang-tidy 20.1.8** which misses [2](test_results/clang-tidy_20.1.8.txt) warnings only. Well done 👍
-2. **Visual Studio 2019** misses [17](test_results/visual_studio_2019.txt)
-3. **Visual Studio 2017** misses [19](test_results/visual_studio_2017.txt)
-4. **Clang 20.1.8** misses [24](test_results/clang_20.1.8.txt)
-5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt)
-6. **Cppcheck 2.19.0** misses [33](test_results/cppcheck_2.19.0.txt)
+1. **clang-tidy 20.1.8** which misses [2](results/clang-tidy_20.1.8.txt) warnings only. Well done 👍
+2. **Visual Studio 2019** misses [17](results/visual_studio_2019.txt)
+3. **Visual Studio 2017** misses [19](results/visual_studio_2017.txt)
+4. **Clang 20.1.8** misses [24](results/clang_20.1.8.txt)
+5. **GCC 15.2.0** misses [32](results/gcc_15.2.0.txt)
+6. **Cppcheck 2.19.0** misses [33](results/cppcheck_2.19.0.txt)
 
-**Note:** The 📂[src](src/) subfolder contains the test cases and the test results are located in: 📂[test_results](test_results/). They also include older versions and the highest warning level has been enabled.
+**Note:** The 📂[src](src/) subfolder contains the test cases and the test results are located in: 📂[results](results/). They also include older versions and the highest warning level has been enabled.
 
 🔧 Installation 
 ----------------
