@@ -28,19 +28,17 @@ Just requires *git*, *cmake*, and the *C++ compiler* itself. Then execute in a t
 ```
 
 
-
-
 ⚠️ The Highest Warning Level 
 -----------------------------
 No, compilers don't enable the highest warning level by default. All have a default warning level of 'normal', far from highest level. And each compiler supports different options to be more pedantic:
 
-| Compiler        | Options                           | Comment                                           |
+| Compiler        | Options Needed                    | Description                                       |
 |-----------------|-----------------------------------|---------------------------------------------------|
 | *Clang*         | `-Weverything -pedantic`          |                                                   |
 | *clang-tidy*    | `-checks=*,-modernize*`           | all checks except 'modernize' hints               |
 | *Cppcheck*      | `--enable=all`                    |                                                   |
 | *GCC*           | `-Wall -Wextra -pedantic -Wundef` | -Wall and -Wextra do not enable all warnings! To keep backwards compatibility, -Wall is basically, "All warnings as of 1990." -Wextra covers a lot of the newer warnings, but still misses a few. |
-| *Visual Studio* | `/Wall`                           | well done, no bla bla 👍                          |
+| *Visual Studio* | `/Wall`                           |                                                   |
 
 
 👮‍ Zero Warnings Policy 
