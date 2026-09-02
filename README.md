@@ -14,7 +14,7 @@ Each test case compiled without a warning or error is a miss. And the winner is:
 5. **GCC 15.2.0** misses [32](results/gcc_15.2.0.txt)
 6. **Cppcheck 2.19.0** misses [33](results/cppcheck_2.19.0.txt)
 
-**Note:** The 📂[src](src/) subfolder contains the test cases and the test results are located in: 📂[results](results/). They also include older versions and the highest warning level has been enabled.
+**Note:** The 📂[src](src/) subfolder contains the test cases and the test results are located in 📂[results](results/) (highest warning level has been enabled, also contains older/historic versions).
 
 🔧 Installation 
 ----------------
