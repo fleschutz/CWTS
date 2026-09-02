@@ -12,7 +12,7 @@ Each test case compiled without a warning or error is a miss. And the winner is:
 3. **Visual Studio 2017** misses [19](test_results/visual_studio_2017.txt)
 4. **Clang 20.1.8** misses [24](test_results/clang_20.1.8.txt)
 5. **GCC 15.2.0** misses [32](test_results/gcc_15.2.0.txt)
-6. **Cppcheck 2.17.1** misses [32](test_results/cppcheck_2.17.1.txt)
+6. **Cppcheck 2.19.0** misses [33](test_results/cppcheck_2.19.0.txt)
 
 **Note:** The 📂[src](src/) subfolder contains the test cases and the test results are located in: 📂[test_results](test_results/). They also include older versions and the highest warning level has been enabled.
 
