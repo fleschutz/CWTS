@@ -1,7 +1,7 @@
 Test Suite for Compiler Warnings 
 ================================
 
-**Compiler warnings prevent software bugs before(!) they occur. Sadly, most warnings are either undetected or disabled by default. This repository checks the warning coverage of popular C++ compilers against 70 test cases.**
+**Compiler warnings prevent software bugs BEFORE they occur. Sadly, most warnings are either undetected or disabled by default. This repository checks the warning coverage of popular C++ compilers against 70 test cases.**
 
 🏆 Hall of Fame 2025
 --------------------
@@ -32,7 +32,7 @@ Just requires *git*, *cmake*, and the *C++ compiler* itself. Then execute in a t
 -----------------------------
 No, compilers don't enable the highest warning level by default. All have a default warning level of 'normal', far from highest level. And each compiler supports different options to be more pedantic:
 
-| Compiler        | Necessary Option(s)               | Description                                       |
+| Compiler        | Compiler Option(s)                | Description                                       |
 |-----------------|-----------------------------------|---------------------------------------------------|
 | *Clang*         | `-Weverything -pedantic`          |                                                   |
 | *clang-tidy*    | `-checks=*,-modernize*`           | all checks except 'modernize' hints               |
