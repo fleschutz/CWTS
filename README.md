@@ -51,8 +51,8 @@ Introducing the *Zero Warnings Policy* by enabling the highest warning level oft
 
 As soon as there are no more warnings **turn warnings into errors** to enforce the *Zero Warnings Policy* from now on. That way warnings can no longer be ignored because the build fails. The corresponding compiler options are `-Werror` for Clang and GCC and `/WX` for Visual Studio.
 
-Links
------
+💡 More Information
+--------------------
 * [Diagnostic flags in Clang](https://clang.llvm.org/docs/DiagnosticsReference.html)
 * [GCC Warning Options](https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html)
 * [Visual Studio Compiler Warnings](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warnings-by-compiler-version)
