@@ -3,11 +3,11 @@ Test Suite for Compiler Warnings
 
 **Compiler warnings prevent software bugs BEFORE they occur. Sadly, most warnings are either undetected or disabled by default. This repository checks the warning coverage of popular C++ compilers against 70 test cases.**
 
-🏆 Hall of Fame 2025
+🏆 Hall of Fame 2026
 --------------------
 Each test case compiled without a warning or error is a miss. And the winner is:
 
-1. **clang-tidy 20.1.8** which misses [2](results/clang-tidy_20.1.8.txt) warnings only. Well done 👍
+1. **clang-tidy 21.1.8** which misses [2](results/clang-tidy_21.1.8.txt) warnings only. Well done 👍
 2. **Visual Studio 2019** misses [17](results/visual_studio_2019.txt)
 3. **Visual Studio 2017** misses [19](results/visual_studio_2017.txt)
 4. **Clang 20.1.8** misses [24](results/clang_20.1.8.txt)
