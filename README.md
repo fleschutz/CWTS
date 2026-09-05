@@ -9,7 +9,7 @@ Each test case compiled without a warning or error is a miss. And the winner is:
 
 1. **clang-tidy 21.1.8** which misses [2](results/clang-tidy_21.1.8.txt) warnings only. Well done 👍
 2. **Visual Studio 2026** misses [17](results/visual_studio_2026.txt)
-3. **Clang 20.1.8** misses [24](results/clang_20.1.8.txt)
+3. **Clang 21.1.8** misses [24](results/clang_21.1.8.txt)
 4. **GCC 15.2.0** misses [32](results/gcc_15.2.0.txt)
 5. **Cppcheck 2.19.0** misses [33](results/cppcheck_2.19.0.txt)
 
