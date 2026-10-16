@@ -1,4 +1,5 @@
-Test Cases Folder
-=================
+The Test Cases Folder
+=====================
 
-* Contains 72 test cases, each in a seperate .cpp file.
+* Contains a total of 72 test cases.
+* Each .cpp source code file contains a single test case.
