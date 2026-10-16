@@ -31,7 +31,7 @@ Required is *cmake* and the *C++ compiler* (*git* optionally). Then execute in a
 -----------------------------
 No, compilers don't enable the highest warning level by default. All have a default warning level of 'normal', far from highest level. And each compiler supports different options to be more pedantic:
 
-| Compiler        | Compiler Option(s)                | Description                                       |
+| Compiler        | Options Needed                    | Description                                       |
 |-----------------|-----------------------------------|---------------------------------------------------|
 | *Clang*         | `-Weverything -pedantic`          |                                                   |
 | *clang-tidy*    | `-checks=*,-modernize*`           | all checks except 'modernize' hints               |
